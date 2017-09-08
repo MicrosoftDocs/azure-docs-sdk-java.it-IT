@@ -1,0 +1,64 @@
+- name: Azure per sviluppatori Java
+  href: index.yml
+  items:
+    - name: Guide introduttive su Java
+      expanded: true
+      items:
+        - name: App Web
+          href: /azure/app-service-web/app-service-web-get-started-java
+        - name: Database SQL
+          href: /azure/sql-database/sql-database-connect-query-java
+        - name: MySQL
+          href: /azure/mysql/connect-java
+        - name: PostgreSQL
+          href: /azure/postgresql/connect-java
+        - name: Cosmos DB
+          href: /azure/cosmos-db/create-documentdb-java
+    - name: Introduzione a Java
+      href: java-sdk-azure-get-started.md
+    - name: Strumenti
+      href: java-azure-tools.md
+    - name: Esercitazioni su Java
+      items:
+        - name: Spring Boot e MySQL
+          href: /azure/app-service-web/app-service-web-tutorial-java-mysql
+        - name: Integrazione continua e distribuzione continua di Jenkins per il servizio app
+          href: /azure/jenkins/java-deploy-webapp-tutorial
+        - name: Eseguire la distribuzione nel servizio app con Maven
+          href: /azure/app-service-web/app-service-web-deploy-spring-boot-app-with-maven-plugin
+        - name: Distribuire i contenitori nel servizio app
+          href: /azure/app-service-web/app-service-web-deploy-containerized-spring-boot-app-with-maven-plugin
+        - name: Eseguire la distribuzione nel servizio app dal Registro contenitori di Azure
+          href: /azure/app-service-web/app-service-web-deploy-spring-boot-app-from-container-registry-using-maven-plugin
+    - name: Procedure
+      items:
+        - name: API di gestione
+          items:
+            - name: Autenticazione
+              href: java-sdk-azure-authenticate.md
+            - name: Concetti
+              href: java-sdk-azure-concepts.md
+        - name: Spring Boot
+          items:
+            - name: Eseguire la distribuzione con Docker e Kubernetes
+              href: /azure/container-service/container-service-deploy-spring-boot-app-on-kubernetes
+              maintainContext: true
+            - name: Eseguire la distribuzione nel servizio app
+              href: /azure/app-service/app-service-deploy-spring-boot-web-app-on-azure
+              maintainContext: true
+        - name: Distribuire con Maven
+          href: /azure/app-service-web/app-service-web-deploy-spring-boot-app-with-maven-plugin
+    - name: Esempi di codice Java
+      items:
+        - name: Macchine virtuali
+          href: java-sdk-azure-virtual-machine-samples.md
+        - name: App Web
+          href: java-sdk-azure-web-apps-samples.md
+        - name: Database SQL
+          href: java-sdk-azure-sql-database-samples.md
+        - name: Sicurezza
+          href: java-sdk-azure-security-samples.md
+        - name: Contenitori
+          href: java-sdk-azure-containers-samples.md
+        - name: Tutti gli esempi Java
+          href: 'https://azure.microsoft.com/resources/samples/?platform=java'

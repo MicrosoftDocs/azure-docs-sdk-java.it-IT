@@ -1,0 +1,81 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Azure per sviluppatori Java
+metadata:
+  document_id: 1152a217-eb0e-45e9-b01b-bd27080d615e
+  title: 'Azure per sviluppatori Java - Esercitazioni, informazioni di riferimento sulle API'
+  description: 'Per iniziare a sviluppare app con Azure, è possibile usare le risorse seguenti che offrono esercitazioni e strumenti utili per gli sviluppatori Java.'
+  keywords: 'Azure, Java, SDK, API, Maven, Spring'
+  author: rloutlaw
+  ms.author: routlaw
+  manager: douge
+  ms.date: 07/13/2017
+  ms.topic: article
+  ms.prod: azure
+  ms.technology: azure
+  ms.devlang: java
+  ms.service: multiple
+sections:
+  - items:
+      - type: markdown
+        text: |
+          Per iniziare a sviluppare app con Azure, è possibile usare le risorse seguenti che offrono esercitazioni e strumenti utili per gli sviluppatori Java.
+  - items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 2
+        items:
+          - href: 'https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-java'
+            html: <p>Distribuire la prima app Web in Azure</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
+            title: Attività iniziali
+          - href: 'https://azure.microsoft.com/resources/samples/?platform=java&view=azure-java'
+            html: <p>Esempi di codice di Azure che usano Java</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_code-samples.svg'
+            title: Esempi di codice
+          - href: java-azure-tools.md
+            html: <p>Strumenti per sviluppatori</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_download-install.svg'
+            title: SDK e strumenti
+          - href: java-sdk-azure-install.md
+            html: <p>Librerie di Azure per Java</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
+            title: Informazioni di riferimento sulle API
+  - title: Guide introduttive di 5 minuti
+    items:
+      - type: paragraph
+        text: Informazioni su come creare app Java con i servizi di Azure.
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 2
+        items:
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/app-service-web.svg'
+            title: Distribuire la prima app Web in Azure
+            href: 'https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-java'
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/MySQL.svg'
+            title: Connettersi a Database di Azure per MySQL
+            href: 'https://docs.microsoft.com/azure/mysql/connect-java'
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/CosmosDB_rgb_ui_lighttheme.svg'
+            title: Creare un'app Web con Cosmos DB
+            href: 'https://docs.microsoft.com/azure/cosmos-db/create-documentdb-java'
+          - image:
+              src: 'https://docs.microsoft.com/java/docs-ref-conceptual/media/jenkins_logo.svg'
+            title: Integrazione continua e distribuzione continua per il servizio app con Jenkins
+            href: 'https://docs.microsoft.com/azure/jenkins/java-deploy-webapp-tutorial'
+  - title: Esempi
+    items:
+      - type: list
+        style: unordered
+        items:
+          - html: '<a href="https://github.com/Azure-Samples/mysql-spring-boot-todo">Creare un''app Web con Spring Boot e MySQL</a>'
+          - html: '<a href="https://azure.microsoft.com/resources/samples/storage-blob-java-getting-started/">Archiviazione BLOB di Azure con Java</a>'
+          - html: '<a href="https://azure.microsoft.com/resources/samples/azure-cosmos-db-mongodb-java-getting-started/">Connettersi ad Azure Cosmos DB con l''API MongoDB</a>'

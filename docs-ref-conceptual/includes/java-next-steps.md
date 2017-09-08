@@ -1,0 +1,1 @@
+Per altre informazioni sulla creazione e distribuzione di app Java in Azure, vedere il [Centro per sviluppatori Java](https://docs.microsoft.com/java/api).
