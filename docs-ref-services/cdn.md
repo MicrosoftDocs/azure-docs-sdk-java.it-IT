@@ -11,37 +11,37 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: cdn
-ms.openlocfilehash: e4605b1a7dd7fe34d191337acb2f20cbca2e7037
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: db9fb8a9a8f9f21061f1e16b77e3145d1fb1b119
+ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/09/2017
 ---
-# <a name="azure-cdn-libraries-for-java"></a><span data-ttu-id="a1eaa-104">Librerie della rete CDN di Azure per Java</span><span class="sxs-lookup"><span data-stu-id="a1eaa-104">Azure CDN libraries for Java</span></span>
+# <a name="azure-cdn-libraries-for-java"></a><span data-ttu-id="05198-104">Librerie della rete CDN di Azure per Java</span><span class="sxs-lookup"><span data-stu-id="05198-104">Azure CDN libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="a1eaa-105">Panoramica</span><span class="sxs-lookup"><span data-stu-id="a1eaa-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="05198-105">Panoramica</span><span class="sxs-lookup"><span data-stu-id="05198-105">Overview</span></span>
 
-<span data-ttu-id="a1eaa-106">La [rete per la distribuzione di contenuti (CDN) di Azure](/azure/cdn/cdn-overview) consente di memorizzare nella cache il contenuto Web statico in località strategiche per offrire la massima velocità effettiva agli utenti.</span><span class="sxs-lookup"><span data-stu-id="a1eaa-106">Cache static web content at strategically placed locations to provide maximum throughput for users with [Azure Content Delivery Network](/azure/cdn/cdn-overview) (CDN).</span></span>
+<span data-ttu-id="05198-106">La [rete per la distribuzione di contenuti (CDN) di Azure](/azure/cdn/cdn-overview) consente di memorizzare nella cache il contenuto Web statico in località strategiche per offrire la massima velocità effettiva agli utenti.</span><span class="sxs-lookup"><span data-stu-id="05198-106">Cache static web content at strategically placed locations to provide maximum throughput for users with [Azure Content Delivery Network](/azure/cdn/cdn-overview) (CDN).</span></span>
 
-<span data-ttu-id="a1eaa-107">Per iniziare a usare la rete CDN di Azure, vedere [Introduzione alla rete CDN di Azure](/azure/cdn/cdn-create-new-endpoint).</span><span class="sxs-lookup"><span data-stu-id="a1eaa-107">To get started with Azure CDN, see [Getting started with Azure CDN](/azure/cdn/cdn-create-new-endpoint).</span></span>
+<span data-ttu-id="05198-107">Per iniziare a usare la rete CDN di Azure, vedere [Introduzione alla rete CDN di Azure](/azure/cdn/cdn-create-new-endpoint).</span><span class="sxs-lookup"><span data-stu-id="05198-107">To get started with Azure CDN, see [Getting started with Azure CDN](/azure/cdn/cdn-create-new-endpoint).</span></span>
 
-## <a name="management-api"></a><span data-ttu-id="a1eaa-108">API di gestione</span><span class="sxs-lookup"><span data-stu-id="a1eaa-108">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="05198-108">API di gestione</span><span class="sxs-lookup"><span data-stu-id="05198-108">Management API</span></span>
 
-<span data-ttu-id="a1eaa-109">Creare profili CDN, definire gli endpoint e aggiungere contenuto alla rete CDN usando l'API di gestione.</span><span class="sxs-lookup"><span data-stu-id="a1eaa-109">Create CDN profiles, define endpoints, and add content to the CDN using the management API.</span></span>
+<span data-ttu-id="05198-109">Creare profili CDN, definire gli endpoint e aggiungere contenuto alla rete CDN usando l'API di gestione.</span><span class="sxs-lookup"><span data-stu-id="05198-109">Create CDN profiles, define endpoints, and add content to the CDN using the management API.</span></span>
 
-<span data-ttu-id="a1eaa-110">[Aggiungere una dipendenza](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) al file `pom.xml` di Maven per usare l'API di gestione nel progetto.</span><span class="sxs-lookup"><span data-stu-id="a1eaa-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
+<span data-ttu-id="05198-110">[Aggiungere una dipendenza](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) al file `pom.xml` di Maven per usare l'API di gestione nel progetto.</span><span class="sxs-lookup"><span data-stu-id="05198-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
 
 ```XML
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-cdn</artifactId>
-    <version>1.1.2</version>
+    <version>1.2.1</version>
 </dependency>
 ```   
 
-### <a name="example"></a><span data-ttu-id="a1eaa-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="a1eaa-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="05198-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="05198-111">Example</span></span>
 
-<span data-ttu-id="a1eaa-112">Creare un profilo CDN, assegnare gli endpoint e caricare contenuto nella rete CDN.</span><span class="sxs-lookup"><span data-stu-id="a1eaa-112">Create a CDN profile, assign endpoints, and load content into the CDN.</span></span>
+<span data-ttu-id="05198-112">Creare un profilo CDN, assegnare gli endpoint e caricare contenuto nella rete CDN.</span><span class="sxs-lookup"><span data-stu-id="05198-112">Create a CDN profile, assign endpoints, and load content into the CDN.</span></span>
 
 ```java
 CdnProfile profile = azure.cdnProfiles().define("testCDN")
@@ -62,10 +62,10 @@ for (CdnEndpoint endpoint : profile.endpoints().values()) {
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="a1eaa-113">Esplorare le API di gestione</span><span class="sxs-lookup"><span data-stu-id="a1eaa-113">Explore the Management APIs</span></span>](/java/api/overview/azure/cdn/managementapi)
+> [<span data-ttu-id="05198-113">Esplorare le API di gestione</span><span class="sxs-lookup"><span data-stu-id="05198-113">Explore the Management APIs</span></span>](/java/api/overview/azure/cdn/managementapi)
 
-## <a name="samples"></a><span data-ttu-id="a1eaa-114">Esempi</span><span class="sxs-lookup"><span data-stu-id="a1eaa-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="05198-114">Esempi</span><span class="sxs-lookup"><span data-stu-id="05198-114">Samples</span></span>
 
-[<span data-ttu-id="a1eaa-115">Gestire reti CDN con Java</span><span class="sxs-lookup"><span data-stu-id="a1eaa-115">Manage CDNs with Java</span></span>](https://github.com/Azure-Samples/cdn-java-manage-cdn)
+[<span data-ttu-id="05198-115">Gestire reti CDN con Java</span><span class="sxs-lookup"><span data-stu-id="05198-115">Manage CDNs with Java</span></span>](https://github.com/Azure-Samples/cdn-java-manage-cdn)
 
-<span data-ttu-id="a1eaa-116">Esplorare altri [esempi di codice Java per la rete CDN di Azure](https://azure.microsoft.com/resources/samples/?platform=java&term=cdn) disponibili per l'uso nelle app.</span><span class="sxs-lookup"><span data-stu-id="a1eaa-116">Explore more [sample Java code for Azure CDN](https://azure.microsoft.com/resources/samples/?platform=java&term=cdn) you can use in your apps.</span></span>
+<span data-ttu-id="05198-116">Esplorare altri [esempi di codice Java per la rete CDN di Azure](https://azure.microsoft.com/resources/samples/?platform=java&term=cdn) disponibili per l'uso nelle app.</span><span class="sxs-lookup"><span data-stu-id="05198-116">Explore more [sample Java code for Azure CDN](https://azure.microsoft.com/resources/samples/?platform=java&term=cdn) you can use in your apps.</span></span>
