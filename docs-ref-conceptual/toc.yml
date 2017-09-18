@@ -18,6 +18,16 @@
       href: java-sdk-azure-get-started.md
     - name: Strumenti
       href: java-azure-tools.md
+      items:
+        - name: IntelliJ
+          href: intellij/azure-toolkit-for-intellij.md
+        - name: Eclipse
+          href: eclipse/azure-toolkit-for-eclipse.md
+        - name: Plug-in Maven
+          href: 'https://github.com/Microsoft/azure-maven-plugins'
+          items:
+            - name: 'App Web di Azure '
+              href: 'https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin'
     - name: Esercitazioni su Java
       items:
         - name: Spring Boot e MySQL
