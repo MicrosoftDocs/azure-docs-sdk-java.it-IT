@@ -315,11 +315,11 @@ La versione di anteprima di Azure Plugin for Eclipse rilasciata a luglio 2012 ri
 
 <!-- URL List -->
 
-[Toolkit di Azure per IntelliJ]: ../intellij/azure-toolkit-for-intellij.md
-[Installare il Toolkit di Azure per Eclipse.]: azure-toolkit-for-eclipse-installation.md
+[Azure Toolkit per IntelliJ]: ../intellij/azure-toolkit-for-intellij.md
+[Installare il Toolkit di Azure per Eclipse]: azure-toolkit-for-eclipse-installation.md
 
 [Istruzioni di accesso ad Azure per il Toolkit di Azure per Eclipse]: azure-toolkit-for-eclipse-sign-in-instructions.md
-[Come pubblicare un'app Web come contenitore Docker usando il Toolkit di Azure per Eclipse]: ./azure-toolkit-for-eclipse-publish-as-docker-container.md
+[Come pubblicare un'app Web come contenitore Docker con il Toolkit di Azure per Eclipse]: ./azure-toolkit-for-eclipse-publish-as-docker-container.md
 [Gestione degli account di archiviazione con Azure Explorer per Eclipse]: ./azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md
 [Gestione delle macchine virtuali con Azure Explorer per Eclipse]: ./azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md
 
