@@ -32,7 +32,7 @@ Incluso in Azure Toolkit for IntelliJ, Azure Explorer offre agli sviluppatori Ja
 
 Per creare un account di archiviazione con Azure Explorer, eseguire queste operazioni:
 
-1. Accedere al proprio account Azure seguendo le [Istruzioni di accesso ad Azure per Azure Toolkit for Intellij]. 
+1. Accedere al proprio account Azure seguendo le [Istruzioni di accesso per Azure Toolkit for IntelliJ]. 
 
 2. Nella visualizzazione **Azure Explorer** espandere il nodo **Azure**, fare clic con il pulsante destro del mouse su **Account di archiviazione** e quindi fare clic su **Crea account di archiviazione**.
 

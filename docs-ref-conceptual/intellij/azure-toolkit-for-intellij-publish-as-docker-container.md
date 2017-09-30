@@ -105,7 +105,7 @@ I contenitori Docker sono un metodo molto diffuso per la distribuzione di applic
 
         a. Nella scheda **VM Credentials** (Credenziali VM) specificare le informazioni seguenti per le credenziali di accesso alla macchina virtuale dell'host Docker: * **Username** (Nome utente): nome utente delle credenziali di accesso alla macchina virtuale.
              * **Password** e **Confirm** (Conferma): consente di specificare la password per accedere alla macchina virtuale.
-             * **SSH**: immettere le impostazioni Secure Shell (SSH) per l'host Docker. È possibile selezionare una delle opzioni seguenti: **None** (Nessuna): specifica che la macchina virtuale non consente le connessioni SSH.
+             * **SSH**: immettere le impostazioni Secure Shell (SSH) per l'host Docker. È possibile selezionare una delle opzioni seguenti: * **None** (Nessuna): specifica che la macchina virtuale non consente le connessioni SSH.
                 * **Auto-generate** (Genera automaticamente): crea automaticamente le impostazioni necessarie per la connessione tramite SSH.
                 * **Import from directory** (Importa da directory): consente di specificare una directory che contiene un set di impostazioni SSH salvate in precedenza. La directory deve contenere i due file seguenti:
                 
@@ -188,7 +188,7 @@ Per altre risorse per Docker, vedere il [sito Web Docker] ufficiale.
 
 <!-- URL List -->
 
-[Sito Web Docker]: https://www.docker.com/
+[sito Web Docker]: https://www.docker.com/
 [Configuring Artifacts]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html (Configurazione di elementi)
 
 <!-- IMG List -->
