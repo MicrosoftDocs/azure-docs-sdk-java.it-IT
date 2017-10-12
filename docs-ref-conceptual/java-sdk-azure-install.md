@@ -10,11 +10,11 @@ ms.devlang: java
 ms.topic: reference
 ms.technology: Azure
 ms.date: 3/06/2016
-ms.openlocfilehash: 02500ff538402b39a74d032584ac4c0898f60cda
-ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
+ms.openlocfilehash: 28cefcfa6c86e233e15a780ec819e61bf91e0a72
+ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="azure-libraries-for-java"></a>Librerie di Azure per Java
 
@@ -23,7 +23,7 @@ Le librerie di Azure aiutano a usare i servizi di Azure nelle app Java con inter
 | | | | |
 |:-------------:|:----------:|:----:|:---:|
 | [Archiviazione di Azure](#azure-storage) | [Database SQL](#sql-database)  | [Cache Redis](#redis-cache)   | [DocumentDB](#documentdb) |
-| [Bus di servizio](#servicebus)  | [Azure Active Directory](#azuread) | [Insieme di credenziali delle chiavi](#keyvault)  | [Hub eventi](#eventhub)
+| [Bus di servizio](#servicebus)  | [Azure Active Directory](#azuread) | [Insieme di credenziali di chiave](#keyvault)  | [Hub eventi](#eventhub)
 | [Servizio IoT](#iotservice) | [Dispositivo IoT](#iotdevice) | [Data Lake](#datalake)  | [AppInsights](#appinsights) | 
 | [Batch](#batch) | [Manage Azure resources (Gestire risorse di Azure)](#management) |
 
@@ -37,7 +37,7 @@ Per includere, ad esempio, la versione più recente delle [librerie di gestione 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure</artifactId>
-    <version>1.2.1</version>
+    <version>1.3.0</version>
 </dependency>
 ```
 
@@ -147,7 +147,7 @@ Gestione delle identità e accesso sicuro per le applicazioni.
  
 <a name="keyvault"></a>
 
-### <a name="key-vaultazurekey-vault"></a>[Insieme di credenziali delle chiavi](/azure/key-vault) 
+### <a name="key-vaultazurekey-vault"></a>[Insieme di credenziali di chiave](/azure/key-vault) 
 
 Accesso sicuro a chiavi e segreti dalle applicazioni. 
 
@@ -267,7 +267,7 @@ Creare, aggiornare ed eliminare le risorse di Azure dal codice dell'applicazione
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure</artifactId>
-    <version>1.2.1</version>
+    <version>1.3.0</version>
 </dependency>
 ```
 
