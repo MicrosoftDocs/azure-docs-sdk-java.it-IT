@@ -10,25 +10,25 @@ ms.devlang: java
 ms.topic: reference
 ms.technology: Azure
 ms.date: 3/06/2016
-ms.openlocfilehash: c0d5c4b3702d3bee4e93de51cec36e72aeaf598f
-ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
+ms.openlocfilehash: 015cb0615c28711ebb8feb5cea584a8a3779fa54
+ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="release-notes"></a>Note sulla versione 
 
-## <a name="june-30-2017---110"></a>30 giugno 2017 - 1.1.0 
+## <a name="october-5-2017---130"></a>5 ottobre 2017 - 1.3.0 
 
-La versione 1.1 è compatibile con la versione 1.0 nelle API destinate all'uso pubblico che hanno raggiunto la fase di disponibilità generale (stabile) nella versione 1.0.
+La versione 1.3.0 è compatibile con le versioni precedenti per l'uso di funzionalità e servizi per cui è stata raggiunta la fase di disponibilità generale (stabile) nelle versioni precedenti.
 
-Alcune modifiche di rilievo sono state introdotte nelle API contrassegnate con l'annotazione @Beta nella versione 1.0
+Eventuali modifiche significative rispetto alle versioni di anteprima per tali servizi sono contrassegnate con l'annotazione @Beta.
 
-Se si esegue la migrazione del codice alla versione 1.1.0, è possibile usare [queste note](https://github.com/Azure/azure-sdk-for-java/blob/master/notes/prepare-for-1.1.0.md) per la preparazione del codice per la versione 1.1.0 dalla versione 1.0.0.
+Se si esegue la migrazione del codice alla versione 1.3.0, è possibile usare [queste note](https://github.com/Azure/azure-sdk-for-java/blob/master/notes/prepare-for-1.3.0.md) per preparare il codice esistente per la versione 1.3.
 
-### <a name="generally-availabile-in-v11"></a>Disponibile a livello generale nella versione 1.1
+### <a name="generally-availabile-in-v13"></a>Disponibilità generale nella versione 1.3
 
-Alcune delle API disponibili come Beta nella versione 1.0 sono ora disponibili a livello generale nella versione 1.1, in particolare:
+Alcune API disponibili come Beta nelle versioni precedenti sono ora disponibili a livello generale, in particolare:
 
 - Metodi asincroni
 - Tutti i metodi della rete CDN disponibili in precedenza come versione Beta
@@ -36,14 +36,16 @@ Alcune delle API disponibili come Beta nella versione 1.0 sono ora disponibili a
 
  Alcune parti della libreria sono ancora disponibili in anteprima. Per informazioni sullo stato attuale delle librerie, vedere la tabella seguente:
 
-Servizio o funzionalità | Disponibile a livello generale | Disponibile come anteprima  | Presto disponibile |
----------|---------|---------|---------|
-Calcolo  | Macchine virtuali ed estensioni di VM, set di scalabilità di macchine virtuali, Managed Disks   | Servizio contenitore di Azure, Registro contenitori di Azure |    |
-Archiviazione   |  Account di archiviazione       |         |   Crittografia      |
-Database SQL  | Database, firewall, pool elastici        |         |   Altre funzionalità      |
-Rete    |  Reti virtuali, interfacce di rete, indirizzi IP, tabelle di routing, gruppi di sicurezza di rete, DNS, strumenti di gestione traffico gateway, applicazione  |    Servizi di bilanciamento del carico     |   VPN, watcher di rete   |
-Altri servizi    |  Resource Manager, Key Vault, Redis, rete CDN, Batch       |  App Web, app per le funzioni, bus di servizio, Controllo degli accessi in base al ruolo per Graph, DocumentDB   | Monitoraggio, Utilità di pianificazione, gestione delle funzioni, Ricerca, altre funzionalità di Controllo degli accessi in base al ruolo per Graph        |
-Concetti fondamentali     |   Autenticazione, core, metodi asincroni       |      |         |
+Servizio o funzionalità | Disponibile a livello generale | Disponibile come anteprima 
+---------|---------|---------|-
+Calcolo  | Macchine virtuali ed estensioni di VM, set di scalabilità di macchine virtuali, Managed Disks   | Servizio contenitore di Azure, Registro contenitori di Azure 
+Archiviazione   |  Account di archiviazione       |    Crittografia     
+Database SQL  | Database, firewall, pool elastici              
+Rete    |  Reti virtuali, interfacce di rete, indirizzi IP, tabelle di routing, gruppi di sicurezza di rete, DNS, strumenti di gestione traffico gateway, applicazione  |    Servizi di bilanciamento del carico, peering reti, gateway di rete virtuale, watcher di rete 
+Altri servizi    |  Resource Manager, Key Vault, Redis, rete CDN, Batch       |  App Web, app per le funzioni, bus di servizio, controllo degli accessi in base al ruolo per Graph, Cosmos DB, Ricerca  
+Nozioni fondamentali     |   Autenticazione: di base, metodi asincroni, identità del servizio gestito      |      |
+
+> Le funzionalità in anteprima sono contrassegnate con l'annotazione `@Beta` a livello di classe, di interfaccia o di metodo nelle librerie. Queste funzionalità sono soggette a modifiche. In futuro potrebbero essere modificate in qualsiasi modo o addirittura rimosse.
 
 ### <a name="import-with-maven"></a>Eseguire l'importazione con Maven
 
@@ -51,16 +53,12 @@ Concetti fondamentali     |   Autenticazione, core, metodi asincroni       |    
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure</artifactId>
-    <version>1.2.1</version>
+    <version>1.3.0</version>
 </dependency>
 ```
 
 ### <a name="get-help-and-give-feedback"></a>Ottenere supporto e inviare commenti
 
 Per ottenere supporto per l'uso delle librerie nel codice, vedere la community di [Stack Overflow](http://stackoverflow.com/questions/tagged/azure-java-sdk). Se si rilevano bug o se si vogliono inviare suggerimenti per il miglioramento delle librerie, inviare commenti tramite [GitHub](https://github.com/Azure/azure-sdk-for-java/issues).
-
-### <a name="migrate-from-previous-releases"></a>Eseguire la migrazione da versioni precedenti
-
-[Migrate from 1.0.0-beta5](https://github.com/Azure/azure-sdk-for-java/blob/master/notes/prepare-for-1.0.0.md) (Eseguire la migrazione da 1.0.0-beta5) [Migrate from 1.1.0](https://github.com/Azure/azure-sdk-for-java/blob/master/notes/prepare-for-1.1.0.md) (Eseguire la migrazione da 1.1.0)
 
 
