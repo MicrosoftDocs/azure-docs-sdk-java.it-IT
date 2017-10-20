@@ -11,23 +11,23 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: data-lake-store
-ms.openlocfilehash: 4b73f6b03258e7d99bcca235cc2728d5e085b32a
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 56199b87fa64e9cbf0a14716a58c01f11f0e433b
+ms.sourcegitcommit: 4b63ecd2c92a9115dfae018618e4e4046b061b3e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 10/14/2017
 ---
-# <a name="azure-resource-manager-libraries-for-java"></a><span data-ttu-id="04d8e-104">Librerie di Azure Resource Manager per Java</span><span class="sxs-lookup"><span data-stu-id="04d8e-104">Azure Resource Manager libraries for Java</span></span>
+# <a name="azure-resource-manager-libraries-for-java"></a><span data-ttu-id="c8a1b-104">Librerie di Azure Resource Manager per Java</span><span class="sxs-lookup"><span data-stu-id="c8a1b-104">Azure Resource Manager libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="04d8e-105">Panoramica</span><span class="sxs-lookup"><span data-stu-id="04d8e-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="c8a1b-105">Panoramica</span><span class="sxs-lookup"><span data-stu-id="c8a1b-105">Overview</span></span>
 
-<span data-ttu-id="04d8e-106">[Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview) consente di distribuire, monitorare e gestire le risorse nei gruppi.</span><span class="sxs-lookup"><span data-stu-id="04d8e-106">Deploy, monitor, and manage resources in groups with [Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview).</span></span>
+<span data-ttu-id="c8a1b-106">[Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) consente di distribuire, monitorare e gestire le risorse nei gruppi.</span><span class="sxs-lookup"><span data-stu-id="c8a1b-106">Deploy, monitor, and manage resources in groups with [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview).</span></span>
 
-## <a name="management-api"></a><span data-ttu-id="04d8e-107">API di gestione</span><span class="sxs-lookup"><span data-stu-id="04d8e-107">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="c8a1b-107">API di gestione</span><span class="sxs-lookup"><span data-stu-id="c8a1b-107">Management API</span></span>
 
-<span data-ttu-id="04d8e-108">Usare l'API di gestione per creare gruppi di risorse e distribuire le risorse dai modelli.</span><span class="sxs-lookup"><span data-stu-id="04d8e-108">Use the management API to create resource groups and deploy resources from templates.</span></span>
+<span data-ttu-id="c8a1b-108">Usare l'API di gestione per creare gruppi di risorse e distribuire le risorse dai modelli.</span><span class="sxs-lookup"><span data-stu-id="c8a1b-108">Use the management API to create resource groups and deploy resources from templates.</span></span>
 
-<span data-ttu-id="04d8e-109">[Aggiungere una dipendenza](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) al file `pom.xml` di Maven per usare l'API di gestione nel progetto.</span><span class="sxs-lookup"><span data-stu-id="04d8e-109">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
+<span data-ttu-id="c8a1b-109">[Aggiungere una dipendenza](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) al file `pom.xml` di Maven per usare l'API di gestione nel progetto.</span><span class="sxs-lookup"><span data-stu-id="c8a1b-109">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
 
 
 ```XML
@@ -38,9 +38,9 @@ ms.lasthandoff: 10/09/2017
 </dependency>
 ```
 
-## <a name="example"></a><span data-ttu-id="04d8e-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="04d8e-110">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c8a1b-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="c8a1b-110">Example</span></span>
 
-<span data-ttu-id="04d8e-111">Creare un nuovo gruppo di risorse nell'area di Azure Stati Uniti orientali.</span><span class="sxs-lookup"><span data-stu-id="04d8e-111">Create a new resource group in the Azure Eastern US region.</span></span>
+<span data-ttu-id="c8a1b-111">Creare un nuovo gruppo di risorse nell'area di Azure Stati Uniti orientali.</span><span class="sxs-lookup"><span data-stu-id="c8a1b-111">Create a new resource group in the Azure Eastern US region.</span></span>
 
 ```java
 ResourceGroup resourceGroup = azure.resourceGroups().define("myResourceGroup")
@@ -49,15 +49,15 @@ ResourceGroup resourceGroup = azure.resourceGroups().define("myResourceGroup")
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="04d8e-112">Esplorare le API di gestione</span><span class="sxs-lookup"><span data-stu-id="04d8e-112">Explore the Management APIs</span></span>](/java/api/overview/azure/resources/managementapi)
+> [<span data-ttu-id="c8a1b-112">Esplorare le API di gestione</span><span class="sxs-lookup"><span data-stu-id="c8a1b-112">Explore the Management APIs</span></span>](/java/api/overview/azure/resources/managementapi)
 
-## <a name="samples"></a><span data-ttu-id="04d8e-113">Esempi</span><span class="sxs-lookup"><span data-stu-id="04d8e-113">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="c8a1b-113">Esempi</span><span class="sxs-lookup"><span data-stu-id="c8a1b-113">Samples</span></span>
 
-<span data-ttu-id="04d8e-114">[Gestire gruppi di risorse di Azure con Java][1] 
-[Distribuire le risorse con un modello di Azure Resource Manager][2]</span><span class="sxs-lookup"><span data-stu-id="04d8e-114">[Manage Azure Resource Groups with Java][1] 
+<span data-ttu-id="c8a1b-114">[Gestire gruppi di risorse di Azure con Java][1] 
+[Distribuire le risorse con un modello di Azure Resource Manager][2]</span><span class="sxs-lookup"><span data-stu-id="c8a1b-114">[Manage Azure Resource Groups with Java][1] 
 [Deploy resources using an ARM template][2]</span></span>
 
 [1]: https://github.com/Azure-Samples/resources-java-manage-resource-group
 [2]: https://github.com/Azure-Samples/resources-java-deploy-using-arm-template
 
-<span data-ttu-id="04d8e-115">Visualizzare l'[elenco completo](https://azure.microsoft.com/resources/samples/?platform=java&term=resource) degli esempi di Azure Resource Manager.</span><span class="sxs-lookup"><span data-stu-id="04d8e-115">View the [complete list](https://azure.microsoft.com/resources/samples/?platform=java&term=resource) of Azure Resource Manager samples.</span></span>
+<span data-ttu-id="c8a1b-115">Visualizzare l'[elenco completo](https://azure.microsoft.com/resources/samples/?platform=java&term=resource) degli esempi di Azure Resource Manager.</span><span class="sxs-lookup"><span data-stu-id="c8a1b-115">View the [complete list](https://azure.microsoft.com/resources/samples/?platform=java&term=resource) of Azure Resource Manager samples.</span></span>
