@@ -10,11 +10,11 @@ ms.devlang: java
 ms.topic: reference
 ms.technology: Azure
 ms.date: 3/06/2016
-ms.openlocfilehash: 28cefcfa6c86e233e15a780ec819e61bf91e0a72
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 570f820e1349e1dfd01a6c7f323b5312c14c40c6
+ms.sourcegitcommit: 4b63ecd2c92a9115dfae018618e4e4046b061b3e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 10/14/2017
 ---
 # <a name="azure-libraries-for-java"></a>Librerie di Azure per Java
 
@@ -275,7 +275,7 @@ Creare, aggiornare ed eliminare le risorse di Azure dal codice dell'applicazione
 
 <a name="servicebus"></a>
 
-### <a name="servicebushttpsdocsmicrosoftcomen-usazureservice-bus-messagingservice-bus-messaging-overview"></a>[Bus di servizio](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview) 
+### <a name="servicebushttpsdocsmicrosoftcomazureservice-bus-messagingservice-bus-messaging-overview"></a>[Bus di servizio](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) 
    
 Il bus di servizio è un servizio di piattaforma di messaggistica transazionale di livello aziendale.
 
