@@ -4,7 +4,7 @@
     - name: Installa
       href: azure-toolkit-for-intellij-installation.md
     - name: Attività iniziali
-      href: /azure/app-service-web/app-service-web-intellij-create-hello-world-web-app
+      href: azure-toolkit-for-intellij-create-hello-world-web-app.md
       maintainContext: true
     - name: Esercitazioni
       items:
@@ -27,4 +27,4 @@
             - name: Cache Redis di Azure
               href: azure-toolkit-for-intellij-managing-redis-caches-using-azure-explorer.md
     - name: Note sulla versione
-      href: azure-toolkit-for-intellij-whats-new.md
+      href: 'https://github.com/Microsoft/azure-tools-for-java/releases'

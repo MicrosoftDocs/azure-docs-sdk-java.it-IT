@@ -12,13 +12,13 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 09/11/2017
+ms.date: 10/19/2017
 ms.author: robmcm
-ms.openlocfilehash: 44d2ade8a0900b60222f06dfb9f93c1df17228c8
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: cb79f4c10cdaf5597106590b7aaf36dec266391f
+ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>Gestire gli account di archiviazione usando Azure Explorer per IntelliJ
 
@@ -48,7 +48,7 @@ Per creare un account di archiviazione con Azure Explorer, eseguire queste opera
 
    * **Prestazioni**: specifica l'account di archiviazione offerto da usare dall'autore selezionato, ad esempio "Premium". Per altre informazioni, vedere [Obiettivi di scalabilità e prestazioni per Archiviazione di Azure]. 
 
-   * **Replica**: specifica la replica per l'account di archiviazione, ad esempio "Con ridondanza della zona". Per altre informazioni, vedere [Replica di Archiviazione di Azure]. 
+   * **Replica**: specifica la replica per l'account di archiviazione di account, ad esempio "Con ridondanza della zona". Per altre informazioni, vedere [Replica di Archiviazione di Azure]. 
 
    * **Sottoscrizione**: specifica la sottoscrizione di Azure da usare per il nuovo account di archiviazione.
 
