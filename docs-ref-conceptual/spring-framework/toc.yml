@@ -1,0 +1,27 @@
+- name: Spring Framework in Azure
+  href: ./index.yml
+  items:
+    - name: Attività iniziali
+      items:
+        - name: Distribuire un'applicazione Spring Boot nel servizio app di Azure
+          href: deploy-spring-boot-java-web-app-on-azure.md
+        - name: Come usare il plug-in Maven per App Web di Azure per distribuire un'app Spring Boot in Azure
+          href: deploy-spring-boot-java-app-with-maven-plugin.md
+    - name: Esercitazioni
+      items:
+        - name: Distribuire un'app Spring Boot su Kubernetes nel servizio contenitore di Azure
+          href: deploy-spring-boot-java-app-on-kubernetes.md
+        - name: Distribuire un'app Web Spring Boot su Linux nel servizio contenitore di Azure
+          href: deploy-spring-boot-java-app-on-linux.md
+        - name: Distribuire un'app Spring Boot con il plug-in Maven Fabric8
+          href: deploy-spring-boot-java-app-using-fabric8-maven-plugin.md
+    - name: Procedura
+      items:
+        - name: Come configurare un'app Spring Boot Initializer per l'uso della cache Redis
+          href: configure-spring-boot-initializer-java-app-with-redis-cache.md
+        - name: Come usare Spring Boot Starter con un'API DocumentDB per Azure Cosmos DB
+          href: configure-spring-boot-starter-java-app-with-cosmos-db.md
+        - name: Come usare il plug-in Maven per App Web di Azure per distribuire un'app Spring Boot in contenitore in Azure
+          href: deploy-containerized-spring-boot-java-app-with-maven-plugin.md
+        - name: Come usare il plug-in Maven per App Web di Azure per distribuire un'app Spring Boot del registro contenitori di Azure nel servizio app di Azure
+          href: deploy-spring-boot-java-app-from-container-registry-using-maven-plugin.md
