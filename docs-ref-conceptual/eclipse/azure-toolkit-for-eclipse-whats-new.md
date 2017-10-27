@@ -14,16 +14,21 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 09/11/2017
 ms.author: robmcm;asirveda;martinsawicki
-ms.openlocfilehash: 31af7e6494f978f341e1f99a30117c57ef30a05b
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: ed21f4308b2f6e45f022608a2ba32fe7db6922d3
+ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-eclipse"></a>Novità di Azure Toolkit for Eclipse
 
 ## <a name="azure-toolkit-for-eclipse-releases"></a>Versioni di Azure Toolkit for Eclipse
 Questo articolo include informazioni sulle diverse versioni e sugli aggiornamenti più recenti di Azure Toolkit for Eclipse.
+
+> [!NOTE]
+> Per le informazioni più recenti, vedere la pagina Web seguente:
+> 
+> <https://github.com/Microsoft/azure-tools-for-java/releases>
 
 > [!NOTE]
 > Esiste anche un Toolkit di Azure per l’IDE di IntelliJ. Per ulteriori informazioni, vedere [Azure Toolkit per IntelliJ].
@@ -280,12 +285,12 @@ La versione di anteprima di Azure Plugin for Eclipse rilasciata a luglio 2012 ri
 * **Pagina delle proprietà del ruolo di configurazione del server:** consente di cambiare facilmente i JDK, i server applicazioni e le applicazioni Java associati alla distribuzione dopo la creazione del progetto. Per altre informazioni, vedere [Proprietà di configurazione del server].
 * **&quot;Procedura guidata &quot;Publish to cloud:** offre un modo semplice per distribuire il progetto in Azure direttamente da Eclipse, automatizzando il precedente processo impegnativo di recuperare le credenziali, accedere al portale di gestione di Azure, caricare il pacchetti e così via. Per un esempio di distribuzione diretta del progetto in Azure, vedere [Creazione di un'applicazione Hello World per Azure in Eclipse].
 * **Barra degli strumenti di Azure:** in Eclipse è disponibile una barra degli strumenti di Azure che contiene i pulsanti per richiamare le funzionalità seguenti:
-  * ![][ic710879] **Run in Azure Emulator**: esegue il progetto nell'emulatore.
+  * ![][ic710879]**Run in Azure Emulator**: esegue il progetto nell'emulatore.
   * ![][ic710880] **Reset Azure Emulator**: reimposta l'emulatore.
-  * ![][ic710881] **Build Cloud Package for Azure**: compila il pacchetto per la distribuzione.
-  * ![][ic710876] **New Azure Deployment Project**: crea un nuovo progetto di distribuzione di Azure.
+  * ![][ic710881]**Build Cloud Package for Azure**: compila il pacchetto per la distribuzione.
+  * ![][ic710876]**New Azure Deployment Project**: crea un nuovo progetto di distribuzione di Azure.
   * ![][ic710882] **Publish to Azure Cloud**: pubblica il progetto in Azure.
-  * ![][ic710883] **Unpublish**: elimina la distribuzione.
+  * ![][ic710883]**Unpublish**: elimina la distribuzione.
   * Molti di questi pulsanti della barra degli strumenti di Azure vengono usati in [Creazione di un'applicazione Hello World per Azure in Eclipse].
 * **Azure Libraries for Java:** disponibile come parte della singola libreria Package for Azure Libraries for Java in Eclipse, accompagna l'installazione del plug-in e include anche tutte le dipendenze necessarie. Basta aggiungere un riferimento alla libreria nel progetto Java per evitare di scaricare altri elementi separatamente. Per altre informazioni, vedere [Installare il Toolkit di Azure per Eclipse].
 * **Microsoft JDBC Driver 4.0 per SQL Server disponibile durante l'installazione del plug-in:** durante l'installazione del nuovo plug-in è possibile installare la versione più recente di Microsoft JDBC Driver per SQL Server.
