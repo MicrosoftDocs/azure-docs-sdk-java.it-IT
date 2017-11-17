@@ -64,9 +64,9 @@ sections:
             title: Creare una funzione Java senza server
             href: 'https://docs.microsoft.com/azure/azure-functions/functions-create-first-java-maven'
           - image:
-              src: 'https://docs.microsoft.com/azure/media/index/MySQL.svg'
-            title: Connettersi a Database di Azure per MySQL
-            href: 'https://docs.microsoft.com/azure/mysql/connect-java'
+              src: 'https://docs.microsoft.com/javascript/azure/media/k8s_logo.svg'
+            title: Eseguire la distribuzione in Kubernetes
+            href: 'https://docs.microsoft.com/azure/container-service/kubernetes/container-service-deploy-spring-boot-app-on-kubernetes'
           - image:
               src: 'https://docs.microsoft.com/azure/media/index/CosmosDB_rgb_ui_lighttheme.svg'
             title: Creare un'app Web con Cosmos DB
@@ -77,7 +77,7 @@ sections:
             href: 'https://docs.microsoft.com/azure/jenkins/java-deploy-webapp-tutorial'
   - title: Esempi
     items:
-      - type: listgit check
+      - type: list
         style: unordered
         items:
           - html: '<a href="https://github.com/Azure-Samples/mysql-spring-boot-todo">Creare un''app Web con Spring Boot e MySQL</a>'
