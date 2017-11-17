@@ -1,0 +1,27 @@
+- name: Toolkit di Azure per Eclipse
+  href: azure-toolkit-for-eclipse.md
+  items:
+    - name: Installa
+      href: azure-toolkit-for-eclipse-installation.md
+    - name: Attività iniziali
+      href: /azure/app-service-web/app-service-web-eclipse-create-hello-world-web-app
+    - name: Esercitazioni
+      items:
+        - name: Distribuire i contenitori nelle VM di Azure
+          href: azure-toolkit-for-eclipse-publish-as-docker-container.md
+        - name: Distribuire un'app Web in Servizio app di Azure
+          href: azure-toolkit-for-eclipse-publish-spring-boot-docker-app.md
+    - name: Procedura
+      items:
+        - name: Configurare l'autenticazione
+          href: azure-toolkit-for-eclipse-sign-in-instructions.md
+        - name: Gestire le risorse di Azure
+          items:
+            - name: Macchine virtuali
+              href: azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md
+            - name: Account di archiviazione
+              href: azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md
+            - name: Cache Redis di Azure
+              href: azure-toolkit-for-eclipse-managing-redis-caches-using-azure-explorer.md
+    - name: Note sulla versione
+      href: 'https://github.com/Microsoft/azure-tools-for-java/releases'

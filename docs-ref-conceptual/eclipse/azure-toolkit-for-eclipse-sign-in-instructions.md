@@ -1,0 +1,165 @@
+---
+title: Istruzioni di accesso per Azure Toolkit for Eclipse
+description: Informazioni su come accedere a Microsoft Azure con il Toolkit di Azure per Eclipse.
+services: 
+documentationcenter: java
+author: rmcmurray
+manager: routlaw
+editor: 
+ms.assetid: 
+ms.service: multiple
+ms.workload: na
+ms.tgt_pltfrm: multiple
+ms.devlang: Java
+ms.topic: article
+ms.date: 09/11/2017
+ms.author: robmcm
+ms.openlocfilehash: 6c10d3e11dd75679fca0736e02d15de1d782dcec
+ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 09/13/2017
+---
+# <a name="azure-sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="315b0-103">Istruzioni di accesso ad Azure per il Toolkit di Azure per Eclipse</span><span class="sxs-lookup"><span data-stu-id="315b0-103">Azure Sign In Instructions for the Azure Toolkit for Eclipse</span></span>
+
+<span data-ttu-id="315b0-104">Il Toolkit di Azure per Eclipse consente di accedere all'account Azure in due metodi diversi:</span><span class="sxs-lookup"><span data-stu-id="315b0-104">The Azure Toolkit for Eclipse provides two methods for signing into your Azure account:</span></span>
+
+  * <span data-ttu-id="315b0-105">**Automatico**: viene creato un file di credenziali che contiene i dati dell'entità servizio e in seguito è possibile usare tale file per accedere automaticamente all'account Azure.</span><span class="sxs-lookup"><span data-stu-id="315b0-105">**Automated** - when you are using this method, you will create a credentials file which contains your service principal data, after which you can use the credentials file to automatically sign into your Azure account.</span></span>
+  * <span data-ttu-id="315b0-106">**Interattivo**: le credenziali di Azure vengono immesse ogni volta che si accede all'account Azure.</span><span class="sxs-lookup"><span data-stu-id="315b0-106">**Interactive** - when you are using this method, you will enter your Azure credentials each time you sign into your Azure account.</span></span>
+
+<span data-ttu-id="315b0-107">I passaggi nelle sezioni seguenti descrivono come usare ogni metodo.</span><span class="sxs-lookup"><span data-stu-id="315b0-107">The steps in the following sections will describe how to use each method.</span></span>
+
+[!INCLUDE [azure-toolkit-for-eclipse-prerequisites](../includes/azure-toolkit-for-eclipse-prerequisites.md)]
+
+## <a name="signing-into-your-azure-account-automatically-and-creating-a-credentials-file-to-use-in-the-future"></a><span data-ttu-id="315b0-108">Accesso automatico all'account Azure e creazione di un file di credenziali da usare in seguito</span><span class="sxs-lookup"><span data-stu-id="315b0-108">Signing into your Azure account automatically and creating a credentials file to use in the future</span></span>
+
+<span data-ttu-id="315b0-109">I passaggi seguenti illustrano come creare un file di credenziali che contiene i dati dell'entità servizio.</span><span class="sxs-lookup"><span data-stu-id="315b0-109">The following steps will walk you through creating a credentials file which contains your service principal data.</span></span> <span data-ttu-id="315b0-110">Dopo aver completato questi passaggi, Eclipse userà automaticamente il file di credenziali per l'accesso ad Azure ogni volta che si apre il progetto.</span><span class="sxs-lookup"><span data-stu-id="315b0-110">Once you have completed these steps, Eclipse will automatically use the credentials file to automatically sign you into Azure each time you open your project.</span></span>
+
+1. <span data-ttu-id="315b0-111">Aprire il progetto con Eclipse.</span><span class="sxs-lookup"><span data-stu-id="315b0-111">Open your project with Eclipse.</span></span>
+
+1. <span data-ttu-id="315b0-112">Fare clic su **Tools** (Strumenti), su **Azure** e quindi fare clic su **Sign In** (Accedi).</span><span class="sxs-lookup"><span data-stu-id="315b0-112">Click **Tools**, then click **Azure**, and then click **Sign In**.</span></span>
+
+   ![Menu di Eclipse per l'accesso ad Azure][A01]
+
+1. <span data-ttu-id="315b0-114">Quando viene visualizzata la finestra di dialogo **Azure Sign In** (Accesso ad Azure), selezionare **Automated** (Automatico) e quindi fare clic su **New** (Nuovo).</span><span class="sxs-lookup"><span data-stu-id="315b0-114">When the **Azure Sign In** dialog box appears, select **Automated**, and then click **New**.</span></span>
+
+   ![Finestra di dialogo di accesso][A02]
+
+1. <span data-ttu-id="315b0-116">Quando viene visualizzata la finestra di dialogo **Azure Log In** (Accedi ad Azure), immettere le credenziali di Azure e quindi fare clic su **Sign In** (Accedi).</span><span class="sxs-lookup"><span data-stu-id="315b0-116">When the **Azure Log In** dialog box appears, enter your Azure credentials, and then click **Sign In**.</span></span>
+
+   ![Finestra di dialogo di accesso ad Azure][A03]
+
+1. <span data-ttu-id="315b0-118">Quando viene visualizzata la finestra di dialogo **Create authentication files** (Crea file di autenticazione), selezionare le sottoscrizioni da usare, scegliere la directory di destinazione e quindi fare cli su **Start** (Avvio).</span><span class="sxs-lookup"><span data-stu-id="315b0-118">When the **Create authentication files** dialog box appears, select the subscriptions that you want to use, choose your destination directory, and then click **Start**.</span></span>
+
+   ![Finestra di dialogo di accesso ad Azure][A04]
+
+1. <span data-ttu-id="315b0-120">Verrà visualizzata la finestra di dialogo **Service Principal Creatation Status** (Stato creazione entità servizio) e al termine della creazione dei file fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="315b0-120">The **Service Principal Creatation Status** dialog box will be displayed, and after your files have been created successfully, click **OK**.</span></span>
+
+   ![Finestra di dialogo Stato creazione entità servizio][A05]
+
+1. <span data-ttu-id="315b0-122">Quando viene visualizzata la finestra di dialogo **Azure Sign In** (Accesso ad Azure), fare clic su **Accedi**.</span><span class="sxs-lookup"><span data-stu-id="315b0-122">When the **Azure Sign In** dialog box appears, click **Sign In**.</span></span>
+
+   ![Finestra di dialogo di accesso ad Azure][A06]
+
+1. <span data-ttu-id="315b0-124">Quando viene selezionata la finestra di dialogo **Select Subscriptions** (Seleziona sottoscrizioni), selezionare le sottoscrizioni da usare e quindi fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="315b0-124">When the **Select Subscriptions** dialog box appears, select the subscriptions that you want to use, and then click **OK**.</span></span>
+
+   ![Finestra di dialogo Seleziona sottoscrizioni][A07]
+
+## <a name="signing-out-of-your-azure-account-when-you-signed-in-automatically"></a><span data-ttu-id="315b0-126">Disconnessione dell'account Azure quando l'accesso è stato eseguito in modo automatico</span><span class="sxs-lookup"><span data-stu-id="315b0-126">Signing out of your Azure account when you signed in automatically</span></span>
+
+<span data-ttu-id="315b0-127">Dopo aver configurato i passaggi nella sezione precedente, l'accesso automatico ad Azure verrà eseguito a ogni riavvio di Eclipse.</span><span class="sxs-lookup"><span data-stu-id="315b0-127">After you have configured the steps in the previous section, the Azure Toolkit will automatically sign you into your Azure account each time you restart Eclipse.</span></span> <span data-ttu-id="315b0-128">Per disconnettersi dall'account Azure e impedire l'accesso automatico eseguito dal Toolkit di Azure, eseguire queste operazioni.</span><span class="sxs-lookup"><span data-stu-id="315b0-128">However, to sign out of your Azure account and prevent the Azure Toolkit from signing you in automatically, use the following steps.</span></span>
+
+1. <span data-ttu-id="315b0-129">In Eclipse fare clic su **Tools** (Strumenti), su **Azure** e quindi su **Sign Out** (Disconnetti).</span><span class="sxs-lookup"><span data-stu-id="315b0-129">In Eclipse, click **Tools**, then click **Azure**, and then click **Sign Out**.</span></span>
+
+   ![Menu di Eclipse per la disconnessione da Azure][L01]
+
+1. <span data-ttu-id="315b0-131">Quando viene visualizzata la finestra di dialogo **Azure Sign Out** (Disconnessione da Azure), fare clic su **Yes** (Sì).</span><span class="sxs-lookup"><span data-stu-id="315b0-131">When the **Azure Sign Out** dialog box appears, click **Yes**.</span></span>
+
+   ![Finestra di dialogo di disconnessione][L03]
+
+## <a name="signing-into-your-azure-account-automatically-using-a-credentials-file-which-you-have-already-created"></a><span data-ttu-id="315b0-133">Accesso automatico all'account Azure usando un file di credenziali già creato</span><span class="sxs-lookup"><span data-stu-id="315b0-133">Signing into your Azure account automatically using a credentials file which you have already created</span></span>
+
+<span data-ttu-id="315b0-134">Se ci si disconnette da Azure quando si usa Eclipse, è necessario riconfigurare il Toolkit di Azure per Eclipse per usare un file di credenziali creato in precedenza per accedere automaticamente all'account Azure.</span><span class="sxs-lookup"><span data-stu-id="315b0-134">If you sign out of Azure when you are using Eclipse, you will need to reconfigure the Azure Toolkit for Eclipse to use a credentials file which have created before you can automatically sign into your Azure acccount.</span></span> <span data-ttu-id="315b0-135">I passaggi seguenti illustrano come configurare il Toolkit di Azure per usare un file di credenziali esistente.</span><span class="sxs-lookup"><span data-stu-id="315b0-135">The following steps will walk you through configuring the Azure Toolkit to use an existing credentials file.</span></span>
+
+1. <span data-ttu-id="315b0-136">Aprire il progetto con Eclipse.</span><span class="sxs-lookup"><span data-stu-id="315b0-136">Open your project with Eclipse.</span></span>
+
+1. <span data-ttu-id="315b0-137">Fare clic su **Tools** (Strumenti), su **Azure** e quindi fare clic su **Sign In** (Accedi).</span><span class="sxs-lookup"><span data-stu-id="315b0-137">Click **Tools**, then click **Azure**, and then click **Sign In**.</span></span>
+
+   ![Menu di Eclipse per l'accesso ad Azure][A01]
+
+1. <span data-ttu-id="315b0-139">Quando viene visualizzata la finestra di dialogo **Azure Sign In** (Accesso ad Azure), selezionare **Automated** (Automatico) e quindi fare clic su **Browse** (Sfoglia).</span><span class="sxs-lookup"><span data-stu-id="315b0-139">When the **Azure Sign In** dialog box appears, select **Automated**, and then click **Browse**.</span></span>
+
+   ![Finestra di dialogo di accesso][A02]
+
+1. <span data-ttu-id="315b0-141">Quando viene visualizzata al finestra di dialogo **Select Authenticated File** (Seleziona file autenticazione), selezionare un file di credenziali creato in precedenza e quindi fare clic su **Select** (Seleziona).</span><span class="sxs-lookup"><span data-stu-id="315b0-141">When the **Select Authenticated File** dialog box appears, select a credentials file which you created earlier, and then click **Select**.</span></span>
+
+   ![Finestra di dialogo di accesso][A08]
+
+1. <span data-ttu-id="315b0-143">Quando viene visualizzata la finestra di dialogo **Azure Sign In** (Accesso ad Azure), fare clic su **Accedi**.</span><span class="sxs-lookup"><span data-stu-id="315b0-143">When the **Azure Sign In** dialog box appears, click **Sign In**.</span></span>
+
+   ![Finestra di dialogo di accesso ad Azure][A06]
+
+1. <span data-ttu-id="315b0-145">Quando viene selezionata la finestra di dialogo **Select Subscriptions** (Seleziona sottoscrizioni), selezionare le sottoscrizioni da usare e quindi fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="315b0-145">When the **Select Subscriptions** dialog box appears, select the subscriptions that you want to use, and then click **OK**.</span></span>
+
+   ![Finestra di dialogo Seleziona sottoscrizioni][A07]
+
+## <a name="signing-into-your-azure-account-interactively"></a><span data-ttu-id="315b0-147">Accesso all'account Azure in modo interattivo</span><span class="sxs-lookup"><span data-stu-id="315b0-147">Signing into your Azure account interactively</span></span>
+
+<span data-ttu-id="315b0-148">I passaggi seguenti illustrano come accedere ad Azure immettendo manualmente le credenziali.</span><span class="sxs-lookup"><span data-stu-id="315b0-148">The following steps will illustrate how to sign into Azure by manually entering your Azure credentials.</span></span>
+
+1. <span data-ttu-id="315b0-149">Aprire il progetto con Eclipse.</span><span class="sxs-lookup"><span data-stu-id="315b0-149">Open your project with Eclipse.</span></span>
+
+1. <span data-ttu-id="315b0-150">Fare clic su **Tools** (Strumenti), su **Azure** e quindi fare clic su **Sign In** (Accedi).</span><span class="sxs-lookup"><span data-stu-id="315b0-150">Click **Tools**, then click **Azure**, and then click **Sign In**.</span></span>
+
+   ![Menu di Eclipse per l'accesso ad Azure][I01]
+
+1. <span data-ttu-id="315b0-152">Quando viene visualizzata la finestra di dialogo **Azure Sign In** (Accesso ad Azure), selezionare **Interactive** (Interattivo) e quindi fare clic su **Sign In** (Accedi).</span><span class="sxs-lookup"><span data-stu-id="315b0-152">When the **Azure Sign In** dialog box appears, select **Interactive**, and then click **Sign In**.</span></span>
+
+   ![Finestra di dialogo di accesso][I02]
+
+1. <span data-ttu-id="315b0-154">Quando viene visualizzata la finestra di dialogo **Azure Log In** (Accedi ad Azure), immettere le credenziali di Azure e quindi fare clic su **Sign In** (Accedi).</span><span class="sxs-lookup"><span data-stu-id="315b0-154">When the **Azure Log In** dialog box appears, enter your Azure credentials, and then click **Sign In**.</span></span>
+
+   ![Finestra di dialogo di accesso ad Azure][I03]
+
+1. <span data-ttu-id="315b0-156">Quando viene selezionata la finestra di dialogo **Select Subscriptions** (Seleziona sottoscrizioni), selezionare le sottoscrizioni da usare e quindi fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="315b0-156">When the **Select Subscriptions** dialog box appears, select the subscriptions that you want to use, and then click **OK**.</span></span>
+
+   ![Finestra di dialogo Seleziona sottoscrizioni][I04]
+
+## <a name="signing-out-of-your-azure-account-when-you-signed-in-interactively"></a><span data-ttu-id="315b0-158">Disconnessione dell'account di Azure quando l'accesso è stato eseguito in modo interattivo</span><span class="sxs-lookup"><span data-stu-id="315b0-158">Signing out of your Azure account when you signed in interactively</span></span>
+
+<span data-ttu-id="315b0-159">Dopo aver configurato i passaggi nella sezione precedente, la disconnessione dell'account Azure verrà eseguita automaticamente ogni riavvio di Eclipse.</span><span class="sxs-lookup"><span data-stu-id="315b0-159">After you have configured the steps in the previous section, you will automatically signed out of your Azure account each time you restart Eclipse.</span></span> <span data-ttu-id="315b0-160">Se tuttavia si vuole disconnettersi dall'account di Azure senza riavviare Eclipse, eseguire queste operazioni.</span><span class="sxs-lookup"><span data-stu-id="315b0-160">However, if you want to sign out of your Azure account without restarting Eclipse, use the following steps.</span></span>
+
+1. <span data-ttu-id="315b0-161">In Eclipse fare clic su **Tools** (Strumenti), su **Azure** e quindi su **Sign Out** (Disconnetti).</span><span class="sxs-lookup"><span data-stu-id="315b0-161">In Eclipse, click **Tools**, then click **Azure**, and then click **Sign Out**.</span></span>
+
+   ![Menu di Eclipse per la disconnessione da Azure][L01]
+
+1. <span data-ttu-id="315b0-163">Quando viene visualizzata la finestra di dialogo **Azure Sign Out** (Disconnessione da Azure), fare clic su **Yes** (Sì).</span><span class="sxs-lookup"><span data-stu-id="315b0-163">When the **Azure Sign Out** dialog box appears, click **Yes**.</span></span>
+
+   ![Finestra di dialogo di disconnessione][L02]
+
+## <a name="next-steps"></a><span data-ttu-id="315b0-165">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="315b0-165">Next steps</span></span>
+
+[!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
+
+<!-- URL List -->
+
+
+<!-- IMG List -->
+
+[I01]: media/azure-toolkit-for-eclipse-sign-in-instructions/I01.png
+[I02]: media/azure-toolkit-for-eclipse-sign-in-instructions/I02.png
+[I03]: media/azure-toolkit-for-eclipse-sign-in-instructions/I03.png
+[I04]: media/azure-toolkit-for-eclipse-sign-in-instructions/I04.png
+
+[A01]: media/azure-toolkit-for-eclipse-sign-in-instructions/A01.png
+[A02]: media/azure-toolkit-for-eclipse-sign-in-instructions/A02.png
+[A03]: media/azure-toolkit-for-eclipse-sign-in-instructions/A03.png
+[A04]: media/azure-toolkit-for-eclipse-sign-in-instructions/A04.png
+[A05]: media/azure-toolkit-for-eclipse-sign-in-instructions/A05.png
+[A06]: media/azure-toolkit-for-eclipse-sign-in-instructions/A06.png
+[A07]: media/azure-toolkit-for-eclipse-sign-in-instructions/A07.png
+[A08]: media/azure-toolkit-for-eclipse-sign-in-instructions/A08.png
+
+[L01]: media/azure-toolkit-for-eclipse-sign-in-instructions/L01.png
+[L02]: media/azure-toolkit-for-eclipse-sign-in-instructions/L02.png
+[L03]: media/azure-toolkit-for-eclipse-sign-in-instructions/L03.png

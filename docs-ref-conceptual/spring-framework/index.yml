@@ -1,0 +1,66 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Spring Framework in Azure
+metadata:
+  document_id: null
+  title: Spring Framework in Azure
+  description: Introduzione all'uso di Spring Framework su Microsoft Azure.
+  keywords: 'Azure, Java, Maven, Spring, Boot'
+  author: rmcmurray
+  ms.author: robmcm
+  manager: routlaw
+  ms.date: 10/11/2017
+  ms.topic: article
+  ms.prod: azure
+  ms.technology: azure
+  ms.devlang: java
+  ms.service: multiple
+sections:
+  - items:
+      - type: markdown
+        text: |
+          [Spring Framework](http://spring.io/) è una soluzione open source che consente agli sviluppatori Java di creare applicazioni di livello enterprise. Uno dei progetti più comuni che si basa su questa piattaforma è [Spring Boot](https://projects.spring.io/spring-boot/), che fornisce un approccio semplificato per la creazione di applicazioni Java autonome. Gli sviluppatori possono combinare queste tecnologie con Microsoft Azure per creare applicazioni avanzate basate sul cloud.
+          Per semplificare le operazioni iniziali con Spring Boot per gli sviluppatori, alcuni pacchetti Spring Boot di esempio sono disponibili all'indirizzo <https://github.com/spring-guides/>. Oltre a consentire di scegliere dall'elenco di progetti Spring Boot di base, **[Spring Initializr]** semplifica le operazioni iniziali degli sviluppatori per la creazione di applicazioni Spring Boot personalizzate.
+  - title: Attività iniziali
+    items:
+      - type: paragraph
+        text: Introduzione allo sviluppo di app tramite Spring Framework con Microsoft Azure con le risorse seguenti.
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 2
+        items:
+          - href: deploy-spring-boot-java-web-app-on-azure.md
+            html: <p>Distribuire un'applicazione Spring Boot nel servizio app di Azure</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
+            title: Distribuire un'applicazione Spring Boot nel servizio app di Azure
+          - href: 'https://spring.io/'
+            html: <p>Spring Framework</p>
+            image:
+              src: 'https://docs.microsoft.com/java/azure/spring-framework/media/index/i_spring_logo.png'
+            title: Spring Framework
+  - title: Documentazione ufficiale di Spring
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 2
+        items:
+          - href: 'https://spring.io/docs'
+            html: <p>Informazioni su Spring</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_reference.svg'
+            title: Informazioni su Spring
+          - href: 'https://spring.io/docs/reference'
+            html: <p>Documentazione di riferimento</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
+            title: Documentazione di riferimento
+  - title: Esempi
+    items:
+      - type: list
+        style: unordered
+        items:
+          - html: '<a href="https://github.com/spring-guides/">Spring Guides</a> (Guide di Spring)'
+          - html: '<a href="https://github.com/Microsoft/azure-spring-boot/">Spring Boot Starters for Azure</a> (Avviatori di Spring Boot per Azure)'
