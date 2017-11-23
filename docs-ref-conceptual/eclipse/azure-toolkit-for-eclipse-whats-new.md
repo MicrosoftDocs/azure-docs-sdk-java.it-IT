@@ -12,13 +12,13 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 09/11/2017
+ms.date: 11/01/2017
 ms.author: robmcm;asirveda;martinsawicki
-ms.openlocfilehash: ed21f4308b2f6e45f022608a2ba32fe7db6922d3
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: 128995cfd9122bbd6e32f2a31c35f206b5108ad6
+ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-eclipse"></a>Novità di Azure Toolkit for Eclipse
 
@@ -316,7 +316,7 @@ La versione di anteprima di Azure Plugin for Eclipse rilasciata a luglio 2012 ri
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
+[!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
 <!-- URL List -->
 
