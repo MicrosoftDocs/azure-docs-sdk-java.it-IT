@@ -12,20 +12,20 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 10/19/2017
+ms.date: 11/01/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: dc93b0b490eb61baa2b7cf86c7df7ac13925305f
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: 630bb80190b8821778d1855d5edf5f943b14d6d1
+ms.sourcegitcommit: 062e07cbd42cda74f02c82b933ce90da646a50a0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="azure-toolkit-for-intellij"></a>Toolkit di Azure per IntelliJ
-Il Toolkit di Azure per IntelliJ offre modelli e funzionalità per creare, sviluppare, testare e distribuire con facilità applicazioni di Azure tramite l'ambiente di sviluppo integrato (IDE) di IntelliJ. Si tratta di un progetto open source, il cui codice sorgente è disponibile con la [licenza MIT dal sito del progetto](https://github.com/microsoft/azure-tools-for-java).
+Il Toolkit di Azure per IntelliJ offre modelli e funzionalità per creare, sviluppare, testare e distribuire con facilità applicazioni di Azure tramite l'ambiente di sviluppo integrato (IDE) di IntelliJ.
 
 > [!NOTE]
-> Esiste anche un Toolkit di Azure per l’IDE di Eclipse. Per ulteriori informazioni, vedere [Toolkit di Azure per Eclipse](../eclipse/azure-toolkit-for-eclipse.md).
 > 
+> Esiste anche un Toolkit di Azure per l’IDE di Eclipse. Per ulteriori informazioni, vedere [Toolkit di Azure per Eclipse](../eclipse/azure-toolkit-for-eclipse.md).
 > 
 
 ## <a name="get-started-with-the-azure-toolkit-for-intellij"></a>Introduzione al Toolkit di Azure per IntelliJ
@@ -67,7 +67,12 @@ Per altre informazioni su Azure Toolkit for IntelliJ, vedere le pagine seguenti:
 
 Per altre informazioni su come usare Java con Azure, vedere il [Centro per sviluppatori Java di Azure](https://azure.microsoft.com/develop/java/) e gli [strumenti Java per Visual Studio Team Services](https://java.visualstudio.com/).
 
-<!-- [!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)] -->
+> [!NOTE]
+> 
+> Azure Toolkit for IntelliJ è un progetto open source il cui codice sorgente è disponibile con la [licenza MIT dal sito del progetto](https://github.com/microsoft/azure-tools-for-java).
+> 
+
+<!-- [!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)] -->
 
 <!-- URL List -->
 

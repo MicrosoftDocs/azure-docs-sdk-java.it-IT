@@ -12,20 +12,20 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 10/19/2017
+ms.date: 11/01/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: d3f91a7b501adfd9496991e955024298b637b90d
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: f94900ab5fa25a5d9dac19f665705b970db7c8b7
+ms.sourcegitcommit: 062e07cbd42cda74f02c82b933ce90da646a50a0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="azure-toolkit-for-eclipse"></a>Toolkit di Azure per Eclipse
-Il Toolkit di Azure per Eclipse offre modelli e funzionalità per creare, sviluppare, testare e distribuire con facilità applicazioni di Azure tramite l'ambiente di sviluppo integrato (IDE) di Eclipse. Si tratta di un progetto open source, il cui codice sorgente è disponibile con la [licenza MIT dal sito del progetto](https://github.com/microsoft/azure-tools-for-java).
+Il Toolkit di Azure per Eclipse offre modelli e funzionalità per creare, sviluppare, testare e distribuire con facilità applicazioni di Azure tramite l'ambiente di sviluppo integrato (IDE) di Eclipse.
 
 > [!NOTE]
-> Esiste anche un Toolkit di Azure per l’IDE di IntelliJ. Per ulteriori informazioni, vedere [Azure Toolkit per IntelliJ](../intellij/azure-toolkit-for-intellij.md).
 > 
+> Esiste anche un Toolkit di Azure per l’IDE di IntelliJ. Per ulteriori informazioni, vedere [Azure Toolkit per IntelliJ](../intellij/azure-toolkit-for-intellij.md).
 > 
 
 ## <a name="get-started-with-the-azure-toolkit-for-eclipse"></a>Introduzione al Toolkit di Azure per Eclipse
@@ -67,7 +67,12 @@ Per altre informazioni su Azure Toolkit for Eclipse, vedere le pagine seguenti:
 
 Per altre informazioni su come usare Java con Azure, vedere il [Centro per sviluppatori Java di Azure](https://azure.microsoft.com/develop/java/) e gli [strumenti Java per Visual Studio Team Services](https://java.visualstudio.com/).
 
-<!-- [!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)] -->
+<!-- [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)] -->
+
+> [!NOTE]
+> 
+> Azure Toolkit for Eclipse è un progetto open source il cui codice sorgente è disponibile con la [licenza MIT dal sito del progetto](https://github.com/microsoft/azure-tools-for-java).
+> 
 
 <!-- URL List -->
 
