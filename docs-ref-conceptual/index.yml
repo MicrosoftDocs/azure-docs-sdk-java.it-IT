@@ -37,15 +37,15 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_code-samples.svg'
             title: Esempi di codice
           - href: java-azure-tools.md
-            html: <p>Strumenti per sviluppatori</p>
+            html: <p>Strumenti e plug-in IDE</p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_download-install.svg'
-            title: Strumenti e plug-in IDE
+            title: 'Plug-in per IntelliJ, Maven, Eclipse e Visual Studio Code'
           - href: java-sdk-azure-install.md
-            html: <p>Librerie di Azure per Java</p>
+            html: <p>Informazioni di riferimento sulle API</p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
-            title: Informazioni di riferimento sulle API
+            title: Librerie di Azure per Java
   - title: Guide introduttive di 5 minuti
     items:
       - type: paragraph
