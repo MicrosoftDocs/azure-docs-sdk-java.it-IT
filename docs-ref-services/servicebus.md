@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: service-bus
-ms.openlocfilehash: f7c2b1fd35fbb9dbdc782577c3464b7a38977254
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 6fccbc76a3600e2bbe43e4332c6146d2be81b6c9
+ms.sourcegitcommit: fcf1189ede712ae30f8c7626bde50c9b8bb561bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="service-bus-libraries-for-java"></a>Librerie del bus di servizio per Java
 
@@ -29,7 +29,7 @@ Essendo incentrato su una messaggistica durevole con un livello elevato di dispo
 
 Il bus di servizio Premium è un'offerta completamente gestita con capacità dedicata riservata per ogni tenant, che garantisce prestazioni prevedibili con un semplice modello di determinazione prezzi orientato alla capacità e con costi complessivi decisamente più bassi di quelli dei broker locali commerciali. Per molti clienti, il bus di servizio Service Bus Premium può sostituire i cluster di messaggistica locali dedicati oggi stesso, anche se i carichi di lavoro collegati non vengono eseguiti nel cloud. 
 
-Per altre informazioni sul bus di servizio, vedere la [sezione sulla documentazione della messaggistica](https://docs.microsoft.com/en-us/azure/service-bus-messaging/) 
+Per altre informazioni sul bus di servizio, vedere la [sezione sulla documentazione della messaggistica](https://docs.microsoft.com/azure/service-bus-messaging/) 
 
 Per gli sviluppatori Java, il bus di servizio fornisce un'API nativa supportata da Microsoft e può anche essere usato con librerie conformi con AMQP 1.0, ad esempio il provider JMS di Apache Qpid Proton.
 

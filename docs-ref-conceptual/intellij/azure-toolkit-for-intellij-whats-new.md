@@ -14,11 +14,11 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm;asirveda;martinsawicki
-ms.openlocfilehash: 40d93306b840736bd7eb860933cdbfe03c82691c
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: 14d9b4630546dbcb16506834678b86fa56a69c76
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-intellij"></a>Novità del Toolkit di Azure per IntelliJ
 
@@ -85,6 +85,6 @@ La versione del Toolkit di Azure per IntelliJ rilasciata ad aprile 2016 include 
 [Gestione degli account di archiviazione con Azure Explorer per IntelliJ]: ./azure-toolkit-for-intellij-managing-storage-accounts-using-azure-explorer.md
 [Gestione delle macchine virtuali con Azure Explorer per IntelliJ]: ./azure-toolkit-for-intellij-managing-virtual-machines-using-azure-explorer.md
 
-[Azure Java Developer Center]: https://docs.microsoft.com/java/azure
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure
 
 [plug-in degli strumenti HDInsight per IntelliJ]: /azure/hdinsight/hdinsight-apache-spark-intellij-tool-plugin

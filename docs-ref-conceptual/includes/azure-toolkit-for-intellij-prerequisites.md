@@ -2,9 +2,7 @@
 Per completare la procedura illustrata in questo articolo, sarà necessario installare Azure Toolkit for IntelliJ, che richiede i componenti software seguenti:
 
 * IntelliJ IDEA Ultimate Edition o Community Edition, scaricabile dal [sito Web di JetBrains](https://www.jetbrains.com/idea/download/).
-
 * Java Developer Kit (JDK) versione 1.8 o successiva.
-
 * Un sistema operativo. Azure Toolkit for IntelliJ è stato testato sui sistemi operativi seguenti:
   
   * Windows 10, Windows 8.1, Windows 8 e Windows 7
