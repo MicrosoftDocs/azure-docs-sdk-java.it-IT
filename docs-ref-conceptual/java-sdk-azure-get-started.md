@@ -12,40 +12,40 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.openlocfilehash: 69c75984f6274b5423614bd51c40957d3d509802
-ms.sourcegitcommit: 1f6a80e067a8bdbbb4b2da2e2145fda73d5fe65a
+ms.openlocfilehash: 2f40fa22244e5ffa3be76d4de579959dcb5591d6
+ms.sourcegitcommit: 0676cbb530207544090c1fd051a2f09760873cd8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/14/2017
 ---
-# <a name="get-started-with-cloud-development-using-the-azure-libraries-for-java"></a><span data-ttu-id="f8326-104">Introduzione allo sviluppo per il cloud con le librerie di Azure per Java</span><span class="sxs-lookup"><span data-stu-id="f8326-104">Get started with cloud development using the Azure libraries for Java</span></span>
+# <a name="get-started-with-cloud-development-using-the-azure-libraries-for-java"></a><span data-ttu-id="815e2-104">Introduzione allo sviluppo per il cloud con le librerie di Azure per Java</span><span class="sxs-lookup"><span data-stu-id="815e2-104">Get started with cloud development using the Azure libraries for Java</span></span>
 
-<span data-ttu-id="f8326-105">Questa guida illustra la configurazione di un ambiente di sviluppo per lo sviluppo di Azure in Java.</span><span class="sxs-lookup"><span data-stu-id="f8326-105">This guide walks you through setting up a development environment for Azure development in Java.</span></span> <span data-ttu-id="f8326-106">Verranno quindi create alcune risorse di Azure che verranno connesse per eseguire alcune attività di base, come caricare un file o distribuire un'applicazione Web.</span><span class="sxs-lookup"><span data-stu-id="f8326-106">You'll then create some Azure resources and connect them to to perform some basic tasks, like uploading a file or deploying a web application.</span></span> <span data-ttu-id="f8326-107">Al termine sarà possibile iniziare a usare i servizi di Azure nelle proprie applicazioni Java.</span><span class="sxs-lookup"><span data-stu-id="f8326-107">When you're done, you'll be ready to start using Azure services in your own Java applications.</span></span>
+<span data-ttu-id="815e2-105">Questa guida illustra la configurazione di un ambiente di sviluppo per lo sviluppo di Azure in Java.</span><span class="sxs-lookup"><span data-stu-id="815e2-105">This guide walks you through setting up a development environment for Azure development in Java.</span></span> <span data-ttu-id="815e2-106">Verranno quindi create alcune risorse di Azure che verranno connesse per eseguire alcune attività di base, come caricare un file o distribuire un'applicazione Web.</span><span class="sxs-lookup"><span data-stu-id="815e2-106">You'll then create some Azure resources and connect them to to perform some basic tasks, like uploading a file or deploying a web application.</span></span> <span data-ttu-id="815e2-107">Al termine sarà possibile iniziare a usare i servizi di Azure nelle proprie applicazioni Java.</span><span class="sxs-lookup"><span data-stu-id="815e2-107">When you're done, you'll be ready to start using Azure services in your own Java applications.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="f8326-108">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="f8326-108">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="815e2-108">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="815e2-108">Prerequisites</span></span>
 
-- <span data-ttu-id="f8326-109">Un account Azure.</span><span class="sxs-lookup"><span data-stu-id="f8326-109">An Azure account.</span></span> <span data-ttu-id="f8326-110">Se non è disponibile, [ottenere una versione di valutazione gratuita](https://azure.microsoft.com/free/)</span><span class="sxs-lookup"><span data-stu-id="f8326-110">If you don't have one, [get a free trial](https://azure.microsoft.com/free/)</span></span>
-- <span data-ttu-id="f8326-111">[Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) o [interfaccia della riga di comando di Azure 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).</span><span class="sxs-lookup"><span data-stu-id="f8326-111">[Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) or [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).</span></span>
-- <span data-ttu-id="f8326-112">[Java 8](https://www.azul.com/downloads/zulu/) (incluso in Azure Cloud Shell)</span><span class="sxs-lookup"><span data-stu-id="f8326-112">[Java 8](https://www.azul.com/downloads/zulu/) (included in Azure Cloud Shell)</span></span>
-- <span data-ttu-id="f8326-113">[Maven 3](http://maven.apache.org/download.cgi) (incluso in Azure Cloud Shell)</span><span class="sxs-lookup"><span data-stu-id="f8326-113">[Maven 3](http://maven.apache.org/download.cgi) (included in Azure Cloud Shell)</span></span>
+- <span data-ttu-id="815e2-109">Un account Azure.</span><span class="sxs-lookup"><span data-stu-id="815e2-109">An Azure account.</span></span> <span data-ttu-id="815e2-110">Se non è disponibile, [ottenere una versione di valutazione gratuita](https://azure.microsoft.com/free/)</span><span class="sxs-lookup"><span data-stu-id="815e2-110">If you don't have one, [get a free trial](https://azure.microsoft.com/free/)</span></span>
+- <span data-ttu-id="815e2-111">[Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) o [interfaccia della riga di comando di Azure 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).</span><span class="sxs-lookup"><span data-stu-id="815e2-111">[Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) or [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).</span></span>
+- <span data-ttu-id="815e2-112">[Java 8](https://www.azul.com/downloads/zulu/) (incluso in Azure Cloud Shell)</span><span class="sxs-lookup"><span data-stu-id="815e2-112">[Java 8](https://www.azul.com/downloads/zulu/) (included in Azure Cloud Shell)</span></span>
+- <span data-ttu-id="815e2-113">[Maven 3](http://maven.apache.org/download.cgi) (incluso in Azure Cloud Shell)</span><span class="sxs-lookup"><span data-stu-id="815e2-113">[Maven 3](http://maven.apache.org/download.cgi) (included in Azure Cloud Shell)</span></span>
 
-## <a name="set-up-authentication"></a><span data-ttu-id="f8326-114">Configurare l'autenticazione</span><span class="sxs-lookup"><span data-stu-id="f8326-114">Set up authentication</span></span>
+## <a name="set-up-authentication"></a><span data-ttu-id="815e2-114">Configurare l'autenticazione</span><span class="sxs-lookup"><span data-stu-id="815e2-114">Set up authentication</span></span>
 
-<span data-ttu-id="f8326-115">L'applicazione Java deve leggere e creare le autorizzazioni nella sottoscrizione di Azure per eseguire il codice di esempio in questa esercitazione.</span><span class="sxs-lookup"><span data-stu-id="f8326-115">Your Java application needs read and create permissions in your Azure subscription to run the sample code in this tutorial.</span></span> <span data-ttu-id="f8326-116">Creare un'entità servizio e configurare l'applicazione per l'esecuzione con le rispettive credenziali.</span><span class="sxs-lookup"><span data-stu-id="f8326-116">Create a service principal and configure your application to run with its credentials.</span></span> <span data-ttu-id="f8326-117">Le entità servizio consentono di creare un account non interattivo associato all'identità a cui vengono concessi solo i privilegi necessari per l'esecuzione dell'app.</span><span class="sxs-lookup"><span data-stu-id="f8326-117">Service principals provide a way to create a non-interactive account associated with your identity to which you grant only the privileges your app needs to run.</span></span>
+<span data-ttu-id="815e2-115">L'applicazione Java deve leggere e creare le autorizzazioni nella sottoscrizione di Azure per eseguire il codice di esempio in questa esercitazione.</span><span class="sxs-lookup"><span data-stu-id="815e2-115">Your Java application needs read and create permissions in your Azure subscription to run the sample code in this tutorial.</span></span> <span data-ttu-id="815e2-116">Creare un'entità servizio e configurare l'applicazione per l'esecuzione con le rispettive credenziali.</span><span class="sxs-lookup"><span data-stu-id="815e2-116">Create a service principal and configure your application to run with its credentials.</span></span> <span data-ttu-id="815e2-117">Le entità servizio consentono di creare un account non interattivo associato all'identità a cui vengono concessi solo i privilegi necessari per l'esecuzione dell'app.</span><span class="sxs-lookup"><span data-stu-id="815e2-117">Service principals provide a way to create a non-interactive account associated with your identity to which you grant only the privileges your app needs to run.</span></span>
 
-<span data-ttu-id="f8326-118">[Crea un'entità servizio usando l'interfaccia della riga di comando di Azure 2.0](/cli/azure/create-an-azure-service-principal-azure-cli) e acquisire l'output.</span><span class="sxs-lookup"><span data-stu-id="f8326-118">[Create a service principal using the Azure CLI 2.0](/cli/azure/create-an-azure-service-principal-azure-cli) and capture the output.</span></span> <span data-ttu-id="f8326-119">Specificare una [password di protezione](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy) nell'argomento password invece di `MY_SECURE_PASSWORD`.</span><span class="sxs-lookup"><span data-stu-id="f8326-119">Provide a [secure password](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy) in the password argument instead of `MY_SECURE_PASSWORD`.</span></span> <span data-ttu-id="f8326-120">La password deve contenere da 8 a 16 caratteri e soddisfare almeno 3 dei 4 criteri seguenti:</span><span class="sxs-lookup"><span data-stu-id="f8326-120">Your password must be 8 to 16 characters and match at least 3 out of the 4 following criteria:</span></span>
+<span data-ttu-id="815e2-118">[Crea un'entità servizio usando l'interfaccia della riga di comando di Azure 2.0](/cli/azure/create-an-azure-service-principal-azure-cli) e acquisire l'output.</span><span class="sxs-lookup"><span data-stu-id="815e2-118">[Create a service principal using the Azure CLI 2.0](/cli/azure/create-an-azure-service-principal-azure-cli) and capture the output.</span></span> <span data-ttu-id="815e2-119">Specificare una [password di protezione](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy) nell'argomento password invece di `MY_SECURE_PASSWORD`.</span><span class="sxs-lookup"><span data-stu-id="815e2-119">Provide a [secure password](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy) in the password argument instead of `MY_SECURE_PASSWORD`.</span></span> <span data-ttu-id="815e2-120">La password deve contenere da 8 a 16 caratteri e soddisfare almeno 3 dei 4 criteri seguenti:</span><span class="sxs-lookup"><span data-stu-id="815e2-120">Your password must be 8 to 16 characters and match at least 3 out of the 4 following criteria:</span></span>
 
-* <span data-ttu-id="f8326-121">Includere caratteri minuscoli</span><span class="sxs-lookup"><span data-stu-id="f8326-121">Include lowercase characters</span></span>
-* <span data-ttu-id="f8326-122">Includere caratteri maiuscoli</span><span class="sxs-lookup"><span data-stu-id="f8326-122">Include uppercase characters</span></span>
-* <span data-ttu-id="f8326-123">Includere numeri</span><span class="sxs-lookup"><span data-stu-id="f8326-123">Include numbers</span></span>
-* <span data-ttu-id="f8326-124">Includere uno dei simboli seguenti: @ # $ % ^ & * - _ !</span><span class="sxs-lookup"><span data-stu-id="f8326-124">Include one of the following symbols: @ # $ % ^ & * - _ !</span></span> <span data-ttu-id="f8326-125">+ = [ ] { } | \ : ‘ , .</span><span class="sxs-lookup"><span data-stu-id="f8326-125">+ = [ ] { } | \ : ‘ , .</span></span> <span data-ttu-id="f8326-126">?</span><span class="sxs-lookup"><span data-stu-id="f8326-126">?</span></span> <span data-ttu-id="f8326-127">/ \` ~ “ ( ) ;</span><span class="sxs-lookup"><span data-stu-id="f8326-127">/ \` ~ “ ( ) ;</span></span>
+* <span data-ttu-id="815e2-121">Includere caratteri minuscoli</span><span class="sxs-lookup"><span data-stu-id="815e2-121">Include lowercase characters</span></span>
+* <span data-ttu-id="815e2-122">Includere caratteri maiuscoli</span><span class="sxs-lookup"><span data-stu-id="815e2-122">Include uppercase characters</span></span>
+* <span data-ttu-id="815e2-123">Includere numeri</span><span class="sxs-lookup"><span data-stu-id="815e2-123">Include numbers</span></span>
+* <span data-ttu-id="815e2-124">Includere uno dei simboli seguenti: @ # $ % ^ & * - _ !</span><span class="sxs-lookup"><span data-stu-id="815e2-124">Include one of the following symbols: @ # $ % ^ & * - _ !</span></span> <span data-ttu-id="815e2-125">+ = [ ] { } | \ : ‘ , .</span><span class="sxs-lookup"><span data-stu-id="815e2-125">+ = [ ] { } | \ : ‘ , .</span></span> <span data-ttu-id="815e2-126">?</span><span class="sxs-lookup"><span data-stu-id="815e2-126">?</span></span> <span data-ttu-id="815e2-127">/ \` ~ “ ( ) ;</span><span class="sxs-lookup"><span data-stu-id="815e2-127">/ \` ~ “ ( ) ;</span></span>
 
 
 ```azurecli-interactive
 az ad sp create-for-rbac --name AzureJavaTest --password "MY_SECURE_PASSWORD"
 ```
 
-<span data-ttu-id="f8326-128">Restituisce una risposta nel formato seguente:</span><span class="sxs-lookup"><span data-stu-id="f8326-128">Which gives you a reply in the following format:</span></span>
+<span data-ttu-id="815e2-128">Restituisce una risposta nel formato seguente:</span><span class="sxs-lookup"><span data-stu-id="815e2-128">Which gives you a reply in the following format:</span></span>
 
 ```json
 {
@@ -57,7 +57,7 @@ az ad sp create-for-rbac --name AzureJavaTest --password "MY_SECURE_PASSWORD"
 }
 ```
 
-<span data-ttu-id="f8326-129">Copiare quindi il codice seguente in un file di testo nel sistema:</span><span class="sxs-lookup"><span data-stu-id="f8326-129">Next, copy the following into a text file on your system:</span></span>
+<span data-ttu-id="815e2-129">Copiare quindi il codice seguente in un file di testo nel sistema:</span><span class="sxs-lookup"><span data-stu-id="815e2-129">Next, copy the following into a text file on your system:</span></span>
 
 ```text
 # sample management library properties file
@@ -71,33 +71,33 @@ authURL=https\://login.windows.net/
 graphURL=https\://graph.windows.net/
 ```
 
-<span data-ttu-id="f8326-130">Sostituire i primi quattro valori con i seguenti:</span><span class="sxs-lookup"><span data-stu-id="f8326-130">Replace the top four values with the following:</span></span>
+<span data-ttu-id="815e2-130">Sostituire i primi quattro valori con i seguenti:</span><span class="sxs-lookup"><span data-stu-id="815e2-130">Replace the top four values with the following:</span></span>
 
-- <span data-ttu-id="f8326-131">subscription: usare il valore *id* da `az account show` nell'interfaccia della riga di comando di Azure 2.0.</span><span class="sxs-lookup"><span data-stu-id="f8326-131">subscription: use the *id* value from `az account show` in the Azure CLI 2.0.</span></span>
-- <span data-ttu-id="f8326-132">client: usare il valore *appId* dell'output di un'entità servizio.</span><span class="sxs-lookup"><span data-stu-id="f8326-132">client: use the *appId* value from the output taken from a service principal output.</span></span>
-- <span data-ttu-id="f8326-133">key: usare il valore *password* dell'output dell'entità servizio.</span><span class="sxs-lookup"><span data-stu-id="f8326-133">key: use the *password* value from the service principal output.</span></span>
-- <span data-ttu-id="f8326-134">tenant: usare il valore *tenant* dell'output dell'entità servizio.</span><span class="sxs-lookup"><span data-stu-id="f8326-134">tenant: use the *tenant* value from the service principal output.</span></span>
+- <span data-ttu-id="815e2-131">subscription: usare il valore *id* da `az account show` nell'interfaccia della riga di comando di Azure 2.0.</span><span class="sxs-lookup"><span data-stu-id="815e2-131">subscription: use the *id* value from `az account show` in the Azure CLI 2.0.</span></span>
+- <span data-ttu-id="815e2-132">client: usare il valore *appId* dell'output di un'entità servizio.</span><span class="sxs-lookup"><span data-stu-id="815e2-132">client: use the *appId* value from the output taken from a service principal output.</span></span>
+- <span data-ttu-id="815e2-133">key: usare il valore *password* dell'output dell'entità servizio.</span><span class="sxs-lookup"><span data-stu-id="815e2-133">key: use the *password* value from the service principal output.</span></span>
+- <span data-ttu-id="815e2-134">tenant: usare il valore *tenant* dell'output dell'entità servizio.</span><span class="sxs-lookup"><span data-stu-id="815e2-134">tenant: use the *tenant* value from the service principal output.</span></span>
 
-<span data-ttu-id="f8326-135">Salvare questo file nel sistema in una posizione sicura e leggibile dal codice.</span><span class="sxs-lookup"><span data-stu-id="f8326-135">Save this file in a secure location on your system where your code can read it.</span></span> <span data-ttu-id="f8326-136">È possibile usare questo file per il codice futuro, quindi è consigliabile archiviarlo in una posizione esterna rispetto all'applicazione descritta in questo articolo.</span><span class="sxs-lookup"><span data-stu-id="f8326-136">You may use this file for future code so it's recommended to store it somewhere external to the application in this article.</span></span>
+<span data-ttu-id="815e2-135">Salvare questo file nel sistema in una posizione sicura e leggibile dal codice.</span><span class="sxs-lookup"><span data-stu-id="815e2-135">Save this file in a secure location on your system where your code can read it.</span></span> <span data-ttu-id="815e2-136">È possibile usare questo file per il codice futuro, quindi è consigliabile archiviarlo in una posizione esterna rispetto all'applicazione descritta in questo articolo.</span><span class="sxs-lookup"><span data-stu-id="815e2-136">You may use this file for future code so it's recommended to store it somewhere external to the application in this article.</span></span>
 
-<span data-ttu-id="f8326-137">Impostare una variabile di ambiente `AZURE_AUTH_LOCATION` con il percorso completo del file di autenticazione nella shell.</span><span class="sxs-lookup"><span data-stu-id="f8326-137">Set an environment variable `AZURE_AUTH_LOCATION` with the full path to the authentication file in your shell.</span></span>   
+<span data-ttu-id="815e2-137">Impostare una variabile di ambiente `AZURE_AUTH_LOCATION` con il percorso completo del file di autenticazione nella shell.</span><span class="sxs-lookup"><span data-stu-id="815e2-137">Set an environment variable `AZURE_AUTH_LOCATION` with the full path to the authentication file in your shell.</span></span>   
 
 ```bash
 export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
 ```
 
-<span data-ttu-id="f8326-138">Se si lavora in ambiente Windows, aggiungere la variabile alle proprietà del sistema.</span><span class="sxs-lookup"><span data-stu-id="f8326-138">If you're working in a windows environment, add the variable to your system properties.</span></span> <span data-ttu-id="f8326-139">Aprire PowerShell, sostituire la seconda variabile con il percorso del file e quindi immettere il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="f8326-139">Open PowerShell and, after replacing the second variable with the path to your file, enter the following command:</span></span>
+<span data-ttu-id="815e2-138">Se si lavora in ambiente Windows, aggiungere la variabile alle proprietà del sistema.</span><span class="sxs-lookup"><span data-stu-id="815e2-138">If you're working in a windows environment, add the variable to your system properties.</span></span> <span data-ttu-id="815e2-139">Aprire PowerShell, sostituire la seconda variabile con il percorso del file e quindi immettere il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="815e2-139">Open PowerShell and, after replacing the second variable with the path to your file, enter the following command:</span></span>
 
 ```powershell
 [Environment]::SetEnvironmentVariable("AZURE_AUTH_LOCATION", "C:\<fullpath>\azureauth.properties", "Machine")
 ```
 
-## <a name="create-a-new-maven-project"></a><span data-ttu-id="f8326-140">Creare un nuovo progetto Maven</span><span class="sxs-lookup"><span data-stu-id="f8326-140">Create a new Maven project</span></span>
+## <a name="create-a-new-maven-project"></a><span data-ttu-id="815e2-140">Creare un nuovo progetto Maven</span><span class="sxs-lookup"><span data-stu-id="815e2-140">Create a new Maven project</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f8326-141">Questa guida usa lo strumento di compilazione Maven per compilare ed eseguire il codice di esempio, ma con le librerie di Azure per Java si possono usare anche altri strumenti di compilazione, ad esempio Gradle.</span><span class="sxs-lookup"><span data-stu-id="f8326-141">This guide uses Maven build tool to build and run the sample code, but other build tools such as Gradle also work with the Azure libraries for Java.</span></span> 
+> <span data-ttu-id="815e2-141">Questa guida usa lo strumento di compilazione Maven per compilare ed eseguire il codice di esempio, ma con le librerie di Azure per Java si possono usare anche altri strumenti di compilazione, ad esempio Gradle.</span><span class="sxs-lookup"><span data-stu-id="815e2-141">This guide uses Maven build tool to build and run the sample code, but other build tools such as Gradle also work with the Azure libraries for Java.</span></span> 
 
-<span data-ttu-id="f8326-142">Creare un progetto Maven dalla riga di comando in una nuova directory del sistema:</span><span class="sxs-lookup"><span data-stu-id="f8326-142">Create a Maven project from the command line in a new directory on your system:</span></span>
+<span data-ttu-id="815e2-142">Creare un progetto Maven dalla riga di comando in una nuova directory del sistema:</span><span class="sxs-lookup"><span data-stu-id="815e2-142">Create a Maven project from the command line in a new directory on your system:</span></span>
 
 ```
 mkdir java-azure-test
@@ -106,7 +106,7 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \
 -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 ```
 
-<span data-ttu-id="f8326-143">Viene creato un progetto Maven di base nella cartella `testAzureApp`.</span><span class="sxs-lookup"><span data-stu-id="f8326-143">This creates a basic Maven project under the `testAzureApp` folder.</span></span> <span data-ttu-id="f8326-144">Aggiungere le voci seguenti nel progetto `pom.xml` per importare le librerie usate nel codice di esempio in questa esercitazione.</span><span class="sxs-lookup"><span data-stu-id="f8326-144">Add the following entries into the project `pom.xml` to import the libraries used in the sample code in this tutorial.</span></span>
+<span data-ttu-id="815e2-143">Viene creato un progetto Maven di base nella cartella `testAzureApp`.</span><span class="sxs-lookup"><span data-stu-id="815e2-143">This creates a basic Maven project under the `testAzureApp` folder.</span></span> <span data-ttu-id="815e2-144">Aggiungere le voci seguenti nel progetto `pom.xml` per importare le librerie usate nel codice di esempio in questa esercitazione.</span><span class="sxs-lookup"><span data-stu-id="815e2-144">Add the following entries into the project `pom.xml` to import the libraries used in the sample code in this tutorial.</span></span>
 
 ```XML
 <dependency>
@@ -126,7 +126,7 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \
 </dependency>
 ```
 
-<span data-ttu-id="f8326-145">Aggiungere una voce `build` sotto l'elemento `project` di primo livello per usare [maven-exec-plugin](http://www.mojohaus.org/exec-maven-plugin/) per eseguire gli esempi:</span><span class="sxs-lookup"><span data-stu-id="f8326-145">Add a `build` entry under the top-level `project` element to use the [maven-exec-plugin](http://www.mojohaus.org/exec-maven-plugin/) to run the samples:</span></span>
+<span data-ttu-id="815e2-145">Aggiungere una voce `build` sotto l'elemento `project` di primo livello per usare [maven-exec-plugin](http://www.mojohaus.org/exec-maven-plugin/) per eseguire gli esempi:</span><span class="sxs-lookup"><span data-stu-id="815e2-145">Add a `build` entry under the top-level `project` element to use the [maven-exec-plugin](http://www.mojohaus.org/exec-maven-plugin/) to run the samples:</span></span>
 
 ```XML
 <build>
@@ -135,19 +135,19 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
             <configuration>
-                <mainClass>com.fabrikam.testAzureApp.AzureApp</mainClass>
+                <mainClass>com.fabrikam.AzureApp</mainClass>
             </configuration>
         </plugin>
     </plugins>
 </build>
  ```
    
-## <a name="create-a-linux-virtual-machine"></a><span data-ttu-id="f8326-146">Creare una macchina virtuale Linux</span><span class="sxs-lookup"><span data-stu-id="f8326-146">Create a Linux virtual machine</span></span>
+## <a name="create-a-linux-virtual-machine"></a><span data-ttu-id="815e2-146">Creare una macchina virtuale Linux</span><span class="sxs-lookup"><span data-stu-id="815e2-146">Create a Linux virtual machine</span></span>
 
-<span data-ttu-id="f8326-147">Creare un nuovo file denominato `AzureApp.java` nella directory `src/main/java` del progetto e incollare il blocco di codice seguente.</span><span class="sxs-lookup"><span data-stu-id="f8326-147">Create a new file named `AzureApp.java` in the project's `src/main/java` directory and paste in the following block of code.</span></span> <span data-ttu-id="f8326-148">Aggiornare le variabili `userName` e `sshKey` con i valori reali del computer in uso.</span><span class="sxs-lookup"><span data-stu-id="f8326-148">Update the `userName` and `sshKey` variables with real values for your machine.</span></span> <span data-ttu-id="f8326-149">Questo codice crea una nuova VM Linux denominata `testLinuxVM` in un gruppo di risorse `sampleResourceGroup` in esecuzione nell'area di Azure Stati Uniti orientali.</span><span class="sxs-lookup"><span data-stu-id="f8326-149">The code creates a new Linux VM with name `testLinuxVM` in a resource group `sampleResourceGroup` running in the US East Azure region.</span></span>
+<span data-ttu-id="815e2-147">Creare un nuovo file denominato `AzureApp.java` nella directory `src/main/java/com/fabirkam` del progetto e incollare il blocco di codice seguente.</span><span class="sxs-lookup"><span data-stu-id="815e2-147">Create a new file named `AzureApp.java` in the project's `src/main/java/com/fabirkam` directory and paste in the following block of code.</span></span> <span data-ttu-id="815e2-148">Aggiornare le variabili `userName` e `sshKey` con i valori reali del computer in uso.</span><span class="sxs-lookup"><span data-stu-id="815e2-148">Update the `userName` and `sshKey` variables with real values for your machine.</span></span> <span data-ttu-id="815e2-149">Questo codice crea una nuova VM Linux denominata `testLinuxVM` in un gruppo di risorse `sampleResourceGroup` in esecuzione nell'area di Azure Stati Uniti orientali.</span><span class="sxs-lookup"><span data-stu-id="815e2-149">The code creates a new Linux VM with name `testLinuxVM` in a resource group `sampleResourceGroup` running in the US East Azure region.</span></span>
 
 ```java
-package com.fabrikam.AzureApp;
+package com.fabrikam;
 
 import com.microsoft.azure.management.Azure;
 import com.microsoft.azure.management.compute.VirtualMachine;
@@ -212,27 +212,27 @@ public class AzureApp {
 }
 ```
 
-<span data-ttu-id="f8326-150">Eseguire l'esempio dalla riga di comando:</span><span class="sxs-lookup"><span data-stu-id="f8326-150">Run the sample from the command line:</span></span>
+<span data-ttu-id="815e2-150">Eseguire l'esempio dalla riga di comando:</span><span class="sxs-lookup"><span data-stu-id="815e2-150">Run the sample from the command line:</span></span>
 
 ```
 mvn compile exec:java
 ```
 
-<span data-ttu-id="f8326-151">Verranno visualizzate alcune richieste e risposte REST nella console perché l'SDK esegue le chiamate sottostanti all'API REST di Azure per configurare la macchina virtuale e le risorse.</span><span class="sxs-lookup"><span data-stu-id="f8326-151">You'll see some REST requests and responses in the console as the SDK makes the underlying calls to the Azure REST API to configure the virtual machine and its resources.</span></span> <span data-ttu-id="f8326-152">Al termine del programma, verificare la macchina virtuale nella sottoscrizione con l'interfaccia della riga di comando di Azure 2.0:</span><span class="sxs-lookup"><span data-stu-id="f8326-152">When the program finishes, verify the virtual machine in your subscription with the Azure CLI 2.0:</span></span>
+<span data-ttu-id="815e2-151">Verranno visualizzate alcune richieste e risposte REST nella console perché l'SDK esegue le chiamate sottostanti all'API REST di Azure per configurare la macchina virtuale e le risorse.</span><span class="sxs-lookup"><span data-stu-id="815e2-151">You'll see some REST requests and responses in the console as the SDK makes the underlying calls to the Azure REST API to configure the virtual machine and its resources.</span></span> <span data-ttu-id="815e2-152">Al termine del programma, verificare la macchina virtuale nella sottoscrizione con l'interfaccia della riga di comando di Azure 2.0:</span><span class="sxs-lookup"><span data-stu-id="815e2-152">When the program finishes, verify the virtual machine in your subscription with the Azure CLI 2.0:</span></span>
 
 ```azurecli-interactive
 az vm list --resource-group sampleVmResourceGroup
 ```
 
-<span data-ttu-id="f8326-153">Dopo avere verificato che il codice abbia funzionato, usare l'interfaccia della riga di comando per eliminare la VM e le risorse.</span><span class="sxs-lookup"><span data-stu-id="f8326-153">Once you've verified that the code worked, use the CLI to delete the VM and its resources.</span></span>
+<span data-ttu-id="815e2-153">Dopo avere verificato che il codice abbia funzionato, usare l'interfaccia della riga di comando per eliminare la VM e le risorse.</span><span class="sxs-lookup"><span data-stu-id="815e2-153">Once you've verified that the code worked, use the CLI to delete the VM and its resources.</span></span>
 
 ```azurecli-interactive
 az group delete --name sampleVmResourceGroup
 ```
 
-## <a name="deploy-a-web-app-from-a-github-repo"></a><span data-ttu-id="f8326-154">Distribuire un'app Web da un repository di GitHub</span><span class="sxs-lookup"><span data-stu-id="f8326-154">Deploy a web app from a GitHub repo</span></span>
+## <a name="deploy-a-web-app-from-a-github-repo"></a><span data-ttu-id="815e2-154">Distribuire un'app Web da un repository di GitHub</span><span class="sxs-lookup"><span data-stu-id="815e2-154">Deploy a web app from a GitHub repo</span></span>
 
-<span data-ttu-id="f8326-155">Sostituire il metodo principale in `AzureApp.java` con quello seguente, aggiornando la variabile `appName` a un valore univoco prima di eseguire il codice.</span><span class="sxs-lookup"><span data-stu-id="f8326-155">Replace the main method in `AzureApp.java` with the one below, updating the `appName` variable to a unique value before running the code.</span></span> <span data-ttu-id="f8326-156">Questo codice sviluppa un'applicazione Web dal ramo `master` di un repository di GitHub pubblico in una nuova [app Web del servizio app di Azure](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview) in esecuzione nel piano tariffario gratuito.</span><span class="sxs-lookup"><span data-stu-id="f8326-156">This code deploys a web application from the `master` branch in a public GitHub repo into a new [Azure App Service Web App](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview) running in the free pricing tier.</span></span>
+<span data-ttu-id="815e2-155">Sostituire il metodo principale in `AzureApp.java` con quello seguente, aggiornando la variabile `appName` a un valore univoco prima di eseguire il codice.</span><span class="sxs-lookup"><span data-stu-id="815e2-155">Replace the main method in `AzureApp.java` with the one below, updating the `appName` variable to a unique value before running the code.</span></span> <span data-ttu-id="815e2-156">Questo codice sviluppa un'applicazione Web dal ramo `master` di un repository di GitHub pubblico in una nuova [app Web del servizio app di Azure](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview) in esecuzione nel piano tariffario gratuito.</span><span class="sxs-lookup"><span data-stu-id="815e2-156">This code deploys a web application from the `master` branch in a public GitHub repo into a new [Azure App Service Web App](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview) running in the free pricing tier.</span></span>
 
 ```java
     public static void main(String[] args) {
@@ -264,28 +264,28 @@ az group delete --name sampleVmResourceGroup
     }
 ```
 
-<span data-ttu-id="f8326-157">Eseguire il codice come prima usando Maven:</span><span class="sxs-lookup"><span data-stu-id="f8326-157">Run the code as before using Maven:</span></span>
+<span data-ttu-id="815e2-157">Eseguire il codice come prima usando Maven:</span><span class="sxs-lookup"><span data-stu-id="815e2-157">Run the code as before using Maven:</span></span>
 
 ```
 mvn clean compile exec:java
 ```
 
-<span data-ttu-id="f8326-158">Aprire un browser che punta all'applicazione usando l'interfaccia della riga di comando:</span><span class="sxs-lookup"><span data-stu-id="f8326-158">Open a browser pointed to the application using the CLI:</span></span>
+<span data-ttu-id="815e2-158">Aprire un browser che punta all'applicazione usando l'interfaccia della riga di comando:</span><span class="sxs-lookup"><span data-stu-id="815e2-158">Open a browser pointed to the application using the CLI:</span></span>
 
 ```azurecli-interactive
 az appservice web browse --resource-group sampleWebResourceGroup --name YOUR_APP_NAME
 ```
 
-<span data-ttu-id="f8326-159">Rimuovere l'app Web e il piano dalla sottoscrizione dopo avere verificato la distribuzione.</span><span class="sxs-lookup"><span data-stu-id="f8326-159">Remove the web app and plan from your subscription once you've verified the deployment.</span></span>
+<span data-ttu-id="815e2-159">Rimuovere l'app Web e il piano dalla sottoscrizione dopo avere verificato la distribuzione.</span><span class="sxs-lookup"><span data-stu-id="815e2-159">Remove the web app and plan from your subscription once you've verified the deployment.</span></span>
 
 ```azurecli-interactive
 az group delete --name sampleWebResourceGroup
 ```
 
-## <a name="connect-to-an-azure-sql-database"></a><span data-ttu-id="f8326-160">Connettersi a un database SQL di Azure</span><span class="sxs-lookup"><span data-stu-id="f8326-160">Connect to an Azure SQL database</span></span>
+## <a name="connect-to-an-azure-sql-database"></a><span data-ttu-id="815e2-160">Connettersi a un database SQL di Azure</span><span class="sxs-lookup"><span data-stu-id="815e2-160">Connect to an Azure SQL database</span></span>
 
-<span data-ttu-id="f8326-161">Sostituire il metodo principale corrente in `AzureApp.java` con il codice seguente, impostando un valore reale per la variabile `dbPassword`.</span><span class="sxs-lookup"><span data-stu-id="f8326-161">Replace the current main method in `AzureApp.java` with the code below, setting a real value for the `dbPassword` variable.</span></span>
-<span data-ttu-id="f8326-162">Questo codice crea un nuovo database SQL con una regola del firewall che consente l'accesso remoto e quindi vi si connette usando il driver JBDC del database SQL.</span><span class="sxs-lookup"><span data-stu-id="f8326-162">This code creates a new SQL database with a firewall rule allowing remote access,  and then connects to it using the SQL Database JBDC driver.</span></span> 
+<span data-ttu-id="815e2-161">Sostituire il metodo principale corrente in `AzureApp.java` con il codice seguente, impostando un valore reale per la variabile `dbPassword`.</span><span class="sxs-lookup"><span data-stu-id="815e2-161">Replace the current main method in `AzureApp.java` with the code below, setting a real value for the `dbPassword` variable.</span></span>
+<span data-ttu-id="815e2-162">Questo codice crea un nuovo database SQL con una regola del firewall che consente l'accesso remoto e quindi vi si connette usando il driver JBDC del database SQL.</span><span class="sxs-lookup"><span data-stu-id="815e2-162">This code creates a new SQL database with a firewall rule allowing remote access,  and then connects to it using the SQL Database JBDC driver.</span></span> 
 
 ```java
 
@@ -348,21 +348,21 @@ az group delete --name sampleWebResourceGroup
         }
     }
 ```
-<span data-ttu-id="f8326-163">Eseguire l'esempio dalla riga di comando:</span><span class="sxs-lookup"><span data-stu-id="f8326-163">Run the sample from the command line:</span></span>
+<span data-ttu-id="815e2-163">Eseguire l'esempio dalla riga di comando:</span><span class="sxs-lookup"><span data-stu-id="815e2-163">Run the sample from the command line:</span></span>
 
 ```
 mvn clean compile exec:java
 ```
 
-<span data-ttu-id="f8326-164">Pulire quindi le risorse usando l'interfaccia della riga di comando:</span><span class="sxs-lookup"><span data-stu-id="f8326-164">Then clean up the resources using the CLI:</span></span>
+<span data-ttu-id="815e2-164">Pulire quindi le risorse usando l'interfaccia della riga di comando:</span><span class="sxs-lookup"><span data-stu-id="815e2-164">Then clean up the resources using the CLI:</span></span>
 
 ```azurecli-interactive
 az group delete --name sampleSqlResourceGroup
 ```
 
-## <a name="write-a-blob-into-a-new-storage-account"></a><span data-ttu-id="f8326-165">Scrivere un BLOB in un nuovo account di archiviazione</span><span class="sxs-lookup"><span data-stu-id="f8326-165">Write a blob into a new storage account</span></span>
+## <a name="write-a-blob-into-a-new-storage-account"></a><span data-ttu-id="815e2-165">Scrivere un BLOB in un nuovo account di archiviazione</span><span class="sxs-lookup"><span data-stu-id="815e2-165">Write a blob into a new storage account</span></span>
 
-<span data-ttu-id="f8326-166">Sostituire il metodo principale corrente in `AzureApp.java` con il codice seguente.</span><span class="sxs-lookup"><span data-stu-id="f8326-166">Replace the current main method in `AzureApp.java` with the code below.</span></span> <span data-ttu-id="f8326-167">Questo codice crea un [account di archiviazione di Azure](https://docs.microsoft.com/azure/storage/storage-introduction) e quindi usa le librerie di archiviazione di Azure per Java per creare un nuovo file di testo nel cloud.</span><span class="sxs-lookup"><span data-stu-id="f8326-167">This code creates an [Azure storage account](https://docs.microsoft.com/azure/storage/storage-introduction) and then uses the Azure Storage libraries for Java to create a new text file in the cloud.</span></span>
+<span data-ttu-id="815e2-166">Sostituire il metodo principale corrente in `AzureApp.java` con il codice seguente.</span><span class="sxs-lookup"><span data-stu-id="815e2-166">Replace the current main method in `AzureApp.java` with the code below.</span></span> <span data-ttu-id="815e2-167">Questo codice crea un [account di archiviazione di Azure](https://docs.microsoft.com/azure/storage/storage-introduction) e quindi usa le librerie di archiviazione di Azure per Java per creare un nuovo file di testo nel cloud.</span><span class="sxs-lookup"><span data-stu-id="815e2-167">This code creates an [Azure storage account](https://docs.microsoft.com/azure/storage/storage-introduction) and then uses the Azure Storage libraries for Java to create a new text file in the cloud.</span></span>
 
 ```java
 public static void main(String[] args) {
@@ -415,28 +415,28 @@ public static void main(String[] args) {
 }
 ```
 
-<span data-ttu-id="f8326-168">Eseguire l'esempio dalla riga di comando:</span><span class="sxs-lookup"><span data-stu-id="f8326-168">Run the sample from the command line:</span></span>
+<span data-ttu-id="815e2-168">Eseguire l'esempio dalla riga di comando:</span><span class="sxs-lookup"><span data-stu-id="815e2-168">Run the sample from the command line:</span></span>
 
 ```
 mvn clean compile exec:java
 ```
 
-<span data-ttu-id="f8326-169">È possibile cercare il file `helloazure.txt` nell'account di archiviazione tramite il portale di Azure o con [Azure Storage Explorer](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs).</span><span class="sxs-lookup"><span data-stu-id="f8326-169">You can browse for the `helloazure.txt` file in your storage account through the Azure portal or with [Azure Storage Explorer](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs).</span></span>
+<span data-ttu-id="815e2-169">È possibile cercare il file `helloazure.txt` nell'account di archiviazione tramite il portale di Azure o con [Azure Storage Explorer](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs).</span><span class="sxs-lookup"><span data-stu-id="815e2-169">You can browse for the `helloazure.txt` file in your storage account through the Azure portal or with [Azure Storage Explorer](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs).</span></span>
 
-<span data-ttu-id="f8326-170">Pulire l'account di archiviazione usando l'interfaccia della riga di comando:</span><span class="sxs-lookup"><span data-stu-id="f8326-170">Clean up the storage account using the CLI:</span></span>
+<span data-ttu-id="815e2-170">Pulire l'account di archiviazione usando l'interfaccia della riga di comando:</span><span class="sxs-lookup"><span data-stu-id="815e2-170">Clean up the storage account using the CLI:</span></span>
 
 ```azurecli-interactive
 az group delete --name sampleStorageResourceGroup
 ```
 
-## <a name="explore-more-samples"></a><span data-ttu-id="f8326-171">Esplorare altri esempi</span><span class="sxs-lookup"><span data-stu-id="f8326-171">Explore more samples</span></span>
+## <a name="explore-more-samples"></a><span data-ttu-id="815e2-171">Esplorare altri esempi</span><span class="sxs-lookup"><span data-stu-id="815e2-171">Explore more samples</span></span>
 
-<span data-ttu-id="f8326-172">Per altre informazioni su come usare le librerie di gestione di Azure per Java per gestire le risorse e l'automazione delle attività, vedere il codice di esempio per [macchine virtuali](java-sdk-azure-virtual-machine-samples.md), [app Web](java-sdk-azure-web-apps-samples.md) e [database SQL](java-sdk-azure-sql-database-samples.md).</span><span class="sxs-lookup"><span data-stu-id="f8326-172">To learn more about how to use the Azure management libraries for Java to manage resources and automate tasks, see our sample code for [virtual machines](java-sdk-azure-virtual-machine-samples.md), [web apps](java-sdk-azure-web-apps-samples.md) and [SQL database](java-sdk-azure-sql-database-samples.md).</span></span>
+<span data-ttu-id="815e2-172">Per altre informazioni su come usare le librerie di gestione di Azure per Java per gestire le risorse e l'automazione delle attività, vedere il codice di esempio per [macchine virtuali](java-sdk-azure-virtual-machine-samples.md), [app Web](java-sdk-azure-web-apps-samples.md) e [database SQL](java-sdk-azure-sql-database-samples.md).</span><span class="sxs-lookup"><span data-stu-id="815e2-172">To learn more about how to use the Azure management libraries for Java to manage resources and automate tasks, see our sample code for [virtual machines](java-sdk-azure-virtual-machine-samples.md), [web apps](java-sdk-azure-web-apps-samples.md) and [SQL database](java-sdk-azure-sql-database-samples.md).</span></span>
 
-## <a name="reference-and-release-notes"></a><span data-ttu-id="f8326-173">Informazioni di riferimento e note sulla versione</span><span class="sxs-lookup"><span data-stu-id="f8326-173">Reference and release notes</span></span>
+## <a name="reference-and-release-notes"></a><span data-ttu-id="815e2-173">Informazioni di riferimento e note sulla versione</span><span class="sxs-lookup"><span data-stu-id="815e2-173">Reference and release notes</span></span>
 
-<span data-ttu-id="f8326-174">Le [informazioni di riferimento](http://docs.microsoft.com/java/api) sono disponibili per tutti i pacchetti.</span><span class="sxs-lookup"><span data-stu-id="f8326-174">A [reference](http://docs.microsoft.com/java/api) is available for all packages.</span></span>
+<span data-ttu-id="815e2-174">Le [informazioni di riferimento](http://docs.microsoft.com/java/api) sono disponibili per tutti i pacchetti.</span><span class="sxs-lookup"><span data-stu-id="815e2-174">A [reference](http://docs.microsoft.com/java/api) is available for all packages.</span></span>
 
-## <a name="get-help-and-give-feedback"></a><span data-ttu-id="f8326-175">Ottenere supporto e inviare commenti</span><span class="sxs-lookup"><span data-stu-id="f8326-175">Get help and give feedback</span></span>
+## <a name="get-help-and-give-feedback"></a><span data-ttu-id="815e2-175">Ottenere supporto e inviare commenti</span><span class="sxs-lookup"><span data-stu-id="815e2-175">Get help and give feedback</span></span>
 
-<span data-ttu-id="f8326-176">Pubblicare le domande per la community in [Stack Overflow](http://stackoverflow.com/questions/tagged/azure+java).</span><span class="sxs-lookup"><span data-stu-id="f8326-176">Post questions to the community on [Stack Overflow](http://stackoverflow.com/questions/tagged/azure+java).</span></span> <span data-ttu-id="f8326-177">Segnalare bug e problemi in sospeso relativi alle librerie di Azure per Java nel [progetto GitHub](https://github.com/Azure/azure-sdk-for-java).</span><span class="sxs-lookup"><span data-stu-id="f8326-177">Report bugs and open issues against the Azure libraries for Java on the [project GitHub](https://github.com/Azure/azure-sdk-for-java).</span></span>
+<span data-ttu-id="815e2-176">Pubblicare le domande per la community in [Stack Overflow](http://stackoverflow.com/questions/tagged/azure+java).</span><span class="sxs-lookup"><span data-stu-id="815e2-176">Post questions to the community on [Stack Overflow](http://stackoverflow.com/questions/tagged/azure+java).</span></span> <span data-ttu-id="815e2-177">Segnalare bug e problemi in sospeso relativi alle librerie di Azure per Java nel [progetto GitHub](https://github.com/Azure/azure-sdk-for-java).</span><span class="sxs-lookup"><span data-stu-id="815e2-177">Report bugs and open issues against the Azure libraries for Java on the [project GitHub](https://github.com/Azure/azure-sdk-for-java).</span></span>
