@@ -6,26 +6,23 @@ documentationcenter: java
 author: rmcmurray
 manager: routlaw
 editor: 
-keywords: Spring, Spring Boot, Spring Framework
 ms.assetid: 
 ms.service: multiple
 ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: java
 ms.topic: article
-ms.date: 11/01/2017
+ms.date: 12/01/2017
 ms.author: asirveda;robmcm
-ms.openlocfilehash: 7a4234aefd4eb33f80c1978fb84721f2dbcb2e4f
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: b520cc80360f8162c929bb2cc88c24311a7e20f8
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="deploy-a-spring-boot-application-to-the-azure-app-service"></a>Distribuire un'applicazione Spring Boot nel servizio app di Azure
 
-**[Spring Framework]** è una soluzione open source che consente agli sviluppatori Java di creare applicazioni di livello enterprise; uno dei progetti più comuni che si basa su questa piattaforma è [Spring Boot], che fornisce un approccio semplificato per la creazione di applicazioni Java autonome.
-
-In questa esercitazione verrà illustrata tuttavia la creazione di una app Web Introduzione a Spring Boot Guida di esempio e la sua distribuzione nel [servizio app di Azure].
+Questa esercitazione illustra la creazione di un esempio di app Web introduttiva di [Spring Boot] e la sua distribuzione nel [servizio app di Azure].
 
 ### <a name="prerequisites"></a>Prerequisiti
 
@@ -199,7 +196,7 @@ Per altre informazioni sull'uso delle applicazioni Spring Boot in Azure, vedere 
 
 * [Distribuire un'applicazione Spring Boot in un cluster Kubernetes nel servizio contenitore di Azure](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Per altre informazioni su come usare Azure con Java, vedere il [Centro per sviluppatori Java di Azure] e gli [strumenti Java per Visual Studio Team Services].
+Per altre informazioni su come usare Azure con Java, vedere [Azure per sviluppatori Java] e [Java Tools for Visual Studio Team Services (Strumenti Java per Visual Studio Team Services)].
 
 Per altre informazioni sulla distribuzione di app Web in Azure tramite FTP, vedere [Distribuire l'app nel servizio app di Azure usando FTP/S].
 
@@ -213,14 +210,14 @@ Per altre informazioni sulla configurazione delle impostazioni aggiuntive per l'
 
 [servizio app di Azure]: https://azure.microsoft.com/services/app-service/
 [Azure Container Service]: https://azure.microsoft.com/services/container-service/
-[Centro per sviluppatori Java di Azure]: https://azure.microsoft.com/develop/java/
+[Azure per sviluppatori Java]: https://docs.microsoft.com/java/azure/
 [portale di Azure]: https://portal.azure.com/
 [Configurare app Web in Servizio app di Azure]: /azure/app-service/web-sites-configure
 [Distribuire l'app nel servizio app di Azure usando FTP/S]: https://docs.microsoft.com/azure/app-service/app-service-deploy-ftp
 [account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
-[strumenti Java per Visual Studio Team Services]: https://java.visualstudio.com/
+[Java Tools for Visual Studio Team Services (Strumenti Java per Visual Studio Team Services)]: https://java.visualstudio.com/
 [Maven]: http://maven.apache.org/
 [vantaggi per i sottoscrittori di MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/

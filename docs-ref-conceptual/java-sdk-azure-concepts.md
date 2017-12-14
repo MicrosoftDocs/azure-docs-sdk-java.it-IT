@@ -1,6 +1,6 @@
 ---
-title: Concetti e modelli di utilizzo delle librerie di gestione di Azure per Java
-description: 
+title: Guida alle librerie di gestione di Azure per sviluppatori Java
+description: Modelli e concetti per l'uso delle librerie di gestione Java per gestire le risorse cloud con Java in Azure.
 keywords: "Azure, Java, SDK, API, Maven, Gradle, autenticazione, active directory, entità servizio"
 author: rloutlaw
 ms.author: routlaw
@@ -12,13 +12,15 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: f452468b-7aae-4944-abad-0b1aaf19170d
-ms.openlocfilehash: 052c4de1e8f9ff0ece5f36d1c3514bad8c04cfec
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 8b52981ddfaadb7227cea4c7df014011196339cb
+ms.sourcegitcommit: 1f6a80e067a8bdbbb4b2da2e2145fda73d5fe65a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="azure-management-library-concepts"></a>Concetti relativi alle librerie di gestione di Azure
+# <a name="patterns-and-best-practices-for-development-with-the-azure-libraries-for-java"></a>Modelli e procedure consigliate per lo sviluppo con le librerie di Azure per Java 
+
+Questo articolo elenca una serie di modelli e procedure consigliate per l'uso delle librerie di Azure per Java nei progetti. Sviluppare con questi modelli e linee guida per ridurre la quantità di codice da gestire e semplificare l'aggiunta o la configurazione di altre risorse negli aggiornamenti futuri delle librerie di gestione.
 
 ## <a name="build-resources-through-a-fluent-interface"></a>Creare risorse tramite un'interfaccia Fluent
 

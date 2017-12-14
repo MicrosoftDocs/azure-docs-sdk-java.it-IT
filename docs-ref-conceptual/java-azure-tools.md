@@ -10,27 +10,13 @@ ms.service: Azure
 ms.technology: Azure
 ms.date: 4/10/2017
 ms.author: routlaw;asirveda
-ms.openlocfilehash: ff3ea805daefb3c0a413b109e431d2235a5dc5b8
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 425d4c3a5a347e4706e9c37ebd7247cf0d8c9846
+ms.sourcegitcommit: f0dadb22efb191182c3b79dcaa97a76cfcdcc324
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="azure-tools-for-java-developers"></a>Strumenti di Azure per gli sviluppatori Java
-
-## <a name="client-and-management-libraries"></a>Librerie client e di gestione
-
-Connettersi ai servizi e gestire le risorse di Azure dalle applicazioni con le librerie di Azure per Java. Importare le librerie di gestione nei progetti Maven aggiungendo questa dipendenza al progetto *pom.xml*.
-
-```XML
-<dependency>
-    <groupId>com.microsoft.azure</groupId>
-    <artifactId>azure</artifactId>
-    <version>1.3.0</version>
-</dependency>
-```
-
-Visualizzare l'[elenco completo di librerie](java-sdk-azure-install.md) e [iniziare a usare](java-sdk-azure-get-started.md) le librerie di Azure per Java.
 
 ## <a name="eclipse-and-intellij-plugins"></a>Plug-in di Eclipse e IntelliJ
 
@@ -39,6 +25,13 @@ Gestire le risorse di Azure e distribuire app dall'IDE con i toolkit di Azure pe
 ![Toolkit per IntelliJ con Azure Explorer](media/intelliJ-azure-explorer.png)
 
 [Introduzione ad Azure Toolkit for Eclipse](https://docs.microsoft.com/azure/app-service-web/app-service-web-eclipse-create-hello-world-web-app) | [Introduzione ad Azure Toolkit for IntelliJ](https://docs.microsoft.com/azure/app-service-web/app-service-web-intellij-create-hello-world-web-app) 
+
+## <a name="visual-studio-code"></a>Visual Studio Code
+
+VS Code è un editor di codice leggero, ma potente disponibile per MacOS, Windows e Linux. VS Code supporta un flusso di lavoro di sviluppo Java semplice e moderno grazie a un set di estensioni che forniscono supporto per i progetti, completamento del codice, debug, analisi ed esplorazione.
+
+[Get Started with VS Code and Java](https://code.visualstudio.com/docs/java) (Introduzione a VS Code e Java)
+[Java extension pack for VS Code](https://code.visualstudio.com/docs/java/extensions) (Java Extension Pack per VS Code)  
 
 ## <a name="azure-cli-20"></a>Interfaccia della riga di comando di Azure 2.0
 

@@ -14,11 +14,11 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: f94900ab5fa25a5d9dac19f665705b970db7c8b7
-ms.sourcegitcommit: 062e07cbd42cda74f02c82b933ce90da646a50a0
+ms.openlocfilehash: 1cd0430a6649b1c979da5650b4d817bfb35b5f8c
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="azure-toolkit-for-eclipse"></a>Toolkit di Azure per Eclipse
 Il Toolkit di Azure per Eclipse offre modelli e funzionalità per creare, sviluppare, testare e distribuire con facilità applicazioni di Azure tramite l'ambiente di sviluppo integrato (IDE) di Eclipse.
@@ -35,7 +35,7 @@ Gli articoli seguenti consentiranno di iniziare a usare il Toolkit di Azure per 
 
 * [Istruzioni di accesso per Azure Toolkit for Eclipse](azure-toolkit-for-eclipse-sign-in-instructions.md)
 
-* [Creare un'app Web Hello World per Azure in Eclipse](/azure/app-service-web/app-service-web-eclipse-create-hello-world-web-app)
+* [Creare un'app Web Hello World per Azure in Eclipse](azure-toolkit-for-eclipse-create-hello-world-web-app.md)
 
 ## <a name="use-the-azure-toolkit-for-eclipse-with-your-java-projects"></a>Usare Azure Toolkit for Eclipse con i progetti Java
 Gli articoli seguenti illustrano l'uso del Toolkit di Azure per Eclipse per aggiungere funzionalità di Azure ai progetti Java:
@@ -65,7 +65,7 @@ Per altre informazioni su Azure Toolkit for Eclipse, vedere le pagine seguenti:
 
 * [Azure Toolkit for Eclipse in the Eclipse Marketplace](http://marketplace.eclipse.org/content/azure-toolkit-eclipse) (Azure Toolkit for Eclipse in Eclipse Marketplace)
 
-Per altre informazioni su come usare Java con Azure, vedere il [Centro per sviluppatori Java di Azure](https://azure.microsoft.com/develop/java/) e gli [strumenti Java per Visual Studio Team Services](https://java.visualstudio.com/).
+Per altre informazioni su come usare Java con Azure, vedere [Azure per sviluppatori Java](https://docs.microsoft.com/java/azure/) e [Strumenti Java per Visual Studio Team Services](https://java.visualstudio.com/).
 
 <!-- [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)] -->
 
@@ -76,7 +76,7 @@ Per altre informazioni su come usare Java con Azure, vedere il [Centro per svilu
 
 <!-- URL List -->
 
-[Azure Java Developer Center]: https://docs.microsoft.com/java/azure
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 
 <!-- Temporarily Deprecated URLs -->

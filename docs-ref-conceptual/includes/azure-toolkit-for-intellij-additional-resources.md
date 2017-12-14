@@ -8,6 +8,6 @@ Per altre informazioni su Azure Toolkit for IntelliJ IDEA, vedere i collegamenti
 
 Per altre informazioni sull'uso di Java con Azure, vedere i collegamenti seguenti: 
 
-* [Centro per sviluppatori Java di Azure](https://azure.microsoft.com/develop/java/) 
+* [Azure per sviluppatori Java](https://docs.microsoft.com/java/azure/) 
 * [Strumenti Java per Visual Studio Team Services](https://java.visualstudio.com/) 
 <!-- TODO: Add URLs for Java in VSCode here --> 
