@@ -42,13 +42,13 @@ I passaggi seguenti illustrano i passaggi necessari per creare una semplice appl
    md C:\SpringBoot
    cd C:\SpringBoot
    ```
-   - o-
+   - o -
    ```
    md /users/robert/SpringBoot
    cd /users/robert/SpringBoot
    ```
 
-1. Clonare il progetto di esempio [Introduzione a Spring Boot ] nella directory appena creata, ad esempio:
+1. Clonare il progetto di esempio [Introduzione a Spring Boot] nella directory appena creata, ad esempio:
    ```
    git clone https://github.com/spring-guides/gs-spring-boot.git
    ```
@@ -200,7 +200,7 @@ Per altre informazioni su come usare Azure con Java, vedere [Azure per sviluppat
 
 Per altre informazioni sulla distribuzione di app Web in Azure tramite FTP, vedere [Distribuire l'app nel servizio app di Azure usando FTP/S].
 
-Per altre informazioni sul progetto di esempio Spring Boot, vedere [Introduzione a Spring Boot ].
+Per altre informazioni sul progetto di esempio Spring Boot, vedere [Introduzione a Spring Boot].
 
 Per informazioni sulla Guida introduttiva con le proprie applicazioni Spring Boot, vedere **Spring Initializr** (Inizializzazione di SpringBoot) all'indirizzo https://start.spring.io/.
 
@@ -221,7 +221,7 @@ Per altre informazioni sulla configurazione delle impostazioni aggiuntive per l'
 [Maven]: http://maven.apache.org/
 [vantaggi per i sottoscrittori di MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
-[Introduzione a Spring Boot ]: https://github.com/spring-guides/gs-spring-boot
+[Introduzione a Spring Boot]: https://github.com/spring-guides/gs-spring-boot
 [Spring Framework]: https://spring.io/
 
 <!-- IMG List -->
