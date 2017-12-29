@@ -42,7 +42,7 @@ I passaggi seguenti illustrano i passaggi necessari per creare una semplice appl
    md C:\SpringBoot
    cd C:\SpringBoot
    ```
-   - o -
+   -- o --
    ```
    md /users/robert/SpringBoot
    cd /users/robert/SpringBoot
