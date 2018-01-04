@@ -1,6 +1,6 @@
 ---
 title: Toolkit di Azure per Eclipse
-description: Informazioni su come usare il Toolkit di Azure per Eclipse
+description: Informazioni sul modo in cui il plug-in Azure Toolkit for Eclipse semplifica la creazione e la distribuzione di applicazioni cloud in Azure.
 services: 
 documentationcenter: java
 author: rmcmurray
@@ -14,14 +14,15 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: 1cd0430a6649b1c979da5650b4d817bfb35b5f8c
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: 21b757f961096970b7560beac9f15f216f072516
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="azure-toolkit-for-eclipse"></a>Toolkit di Azure per Eclipse
-Il Toolkit di Azure per Eclipse offre modelli e funzionalità per creare, sviluppare, testare e distribuire con facilità applicazioni di Azure tramite l'ambiente di sviluppo integrato (IDE) di Eclipse.
+
+Azure Toolkit for Eclipse offre modelli e funzionalità per creare, sviluppare, testare e distribuire con facilità applicazioni cloud in Azure dall'ambiente di sviluppo integrato di Eclipse.
 
 > [!NOTE]
 > 
@@ -31,7 +32,7 @@ Il Toolkit di Azure per Eclipse offre modelli e funzionalità per creare, svilup
 ## <a name="get-started-with-the-azure-toolkit-for-eclipse"></a>Introduzione al Toolkit di Azure per Eclipse
 Gli articoli seguenti consentiranno di iniziare a usare il Toolkit di Azure per Eclipse:
 
-* [Installare il Toolkit di Azure per Eclipse.](azure-toolkit-for-eclipse-installation.md)
+* [Installare il Toolkit di Azure per Eclipse](azure-toolkit-for-eclipse-installation.md)
 
 * [Istruzioni di accesso per Azure Toolkit for Eclipse](azure-toolkit-for-eclipse-sign-in-instructions.md)
 

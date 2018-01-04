@@ -1,6 +1,6 @@
 ---
-title: Come configurare un'app Spring Boot Initializer per l'uso della cache Redis
-description: Informazioni su come configurare un'applicazione Spring Boot creata con Spring Initializr per l'uso di Cache Redis di Azure.
+title: Configurare un'app Spring Boot Initializer per l'uso della cache Redis di Azure
+description: Configurare un'applicazione Spring Boot creata con Spring Initializr per l'uso di Redis sul cloud con la cache Redis di Azure.
 services: redis-cache
 documentationcenter: java
 author: rmcmurray
@@ -14,19 +14,17 @@ ms.devlang: java
 ms.topic: article
 ms.date: 12/01/2017
 ms.author: robmcm;zhijzhao;yidon
-ms.openlocfilehash: e46a90413321845cb94d72fff893e42aa2353491
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: c029a1518584a953c96870110f7ab3b79409f8ca
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="how-to-configure-a-spring-boot-initializer-app-to-use-redis-cache"></a>Come configurare un'app Spring Boot Initializer per l'uso della cache Redis
+# <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Configurare un'app Spring Boot Initializer per l'uso di Redis sul cloud con la cache Redis di Azure
 
-## <a name="overview"></a>Panoramica
+Questo articolo illustra in modo dettagliato come creare una cache Redis sul cloud usando il portale di Azure, quindi usare **[Spring Initializr]** per creare un'applicazione personalizzata e infine creare un'applicazione Web Java che archivia e recupera i dati tramite la cache Redis.
 
-Questo articolo illustra in modo dettagliato come creare una cache Redis usando il portale di Azure, quindi usare **[Spring Initializr]** per creare un'applicazione personalizzata e infine creare un'applicazione Web Java che archivia e recupera i dati tramite la cache Redis.
-
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>prerequisiti
 
 I prerequisiti seguenti sono necessari per seguire le procedure disponibili in questo articolo:
 
@@ -115,7 +113,7 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
 
    > [!NOTE] 
    > 
-   > Se si usa un client Redis diverso, come Jedis che consente l'uso di SSL, specificare la porta 6380 nel file *application.properties*. ad esempio:
+   > Se si usa un client Redis diverso, come Jedis che consente l'uso di SSL, specificare la porta 6380 nel file *application.properties*. Ad esempio: 
    > 
    > ```yaml
    > spring.redis.host=myspringbootcache.redis.cache.windows.net

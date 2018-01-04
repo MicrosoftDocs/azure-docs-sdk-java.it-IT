@@ -1,6 +1,6 @@
 ---
-title: Distribuire un'applicazione Spring Boot nel servizio app di Azure
-description: "Questa esercitazione fornirà agli sviluppatori i passaggi per distribuire l'app Web Introduzione a Spring Boot nel servizio app di Azure."
+title: Distribuire un'applicazione Spring Boot sul cloud con il servizio app di Azure
+description: "Questa esercitazione fornirà agli sviluppatori i passaggi per distribuire l'app Web Introduzione a Spring Boot sul cloud tramite il servizio app di Azure."
 services: app-service
 documentationcenter: java
 author: rmcmurray
@@ -14,17 +14,17 @@ ms.devlang: java
 ms.topic: article
 ms.date: 12/01/2017
 ms.author: asirveda;robmcm
-ms.openlocfilehash: b520cc80360f8162c929bb2cc88c24311a7e20f8
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: 4dba6a6cbce2c8f6d4956717b3358c4e5b501e71
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="deploy-a-spring-boot-application-to-the-azure-app-service"></a>Distribuire un'applicazione Spring Boot nel servizio app di Azure
+# <a name="deploy-a-spring-boot-application-to-the-cloud-with-azure-app-service"></a>Distribuire un'applicazione Spring Boot sul cloud con il servizio app di Azure
 
 Questa esercitazione illustra la creazione di un esempio di app Web introduttiva di [Spring Boot] e la sua distribuzione nel [servizio app di Azure].
 
-### <a name="prerequisites"></a>Prerequisiti
+### <a name="prerequisites"></a>prerequisiti
 
 Per completare i passaggi di questa esercitazione, sono necessari gli elementi seguenti:
 
@@ -48,7 +48,7 @@ I passaggi seguenti illustrano i passaggi necessari per creare una semplice appl
    cd /users/robert/SpringBoot
    ```
 
-1. Clonare il progetto di esempio [Introduzione a Spring Boot] nella directory appena creata, ad esempio:
+1. Clonare il progetto di esempio [Introduzione a Spring Boot ] nella directory appena creata, ad esempio:
    ```
    git clone https://github.com/spring-guides/gs-spring-boot.git
    ```
@@ -119,7 +119,7 @@ I passaggi seguenti illustrano la creazione di un'app Web di Azure, la configura
 
    d. Scegliere **Newest Tomcat 8.5** [Tomcat 8.5 più recente] per il contenitore Web. (Questo contenitore non verrà effettivamente usato; Azure userà il contenitore dall'app Spring Boot.)
 
-   e. Fare clic su **Salva**.
+   e. Fare clic su **Save**.
 
    ![Impostazioni dell'applicazione][AZ07]
 
@@ -129,7 +129,7 @@ I passaggi seguenti illustrano la creazione di un'app Web di Azure, la configura
 
    b. Specificare il proprio nome utente e la password.
 
-   c. Fare clic su **Salva**.
+   c. Fare clic su **Save**.
 
    ![Specificare le credenziali di distribuzione][AZ08]
 
@@ -160,7 +160,7 @@ La procedura seguente illustra i passaggi per distribuire l'app Web Spring Boot 
    </configuration>
    ```
 
-1. Dopo aver salvato il file *web.config* nel sistema, effettuare la connessione all'app Web tramite FTP usando l'URL, il nome utente e la password della sezione precedente di questa esercitazione. ad esempio:
+1. Dopo aver salvato il file *web.config* nel sistema, effettuare la connessione all'app Web tramite FTP usando l'URL, il nome utente e la password della sezione precedente di questa esercitazione. Ad esempio: 
    ```
    ftp
    open waws-prod-sn0-000.ftp.azurewebsites.windows.net
@@ -168,7 +168,7 @@ La procedura seguente illustra i passaggi per distribuire l'app Web Spring Boot 
    pass ********
    ```
 
-1. Modificare la directory remota nella cartella radice dell'app Web (ovvero */sito/wwwroot*), quindi copiare il file JAR dall'applicazione Spring Boot e il file *web.config* salvato in precedenza. ad esempio:
+1. Modificare la directory remota nella cartella radice dell'app Web (ovvero */sito/wwwroot*), quindi copiare il file JAR dall'applicazione Spring Boot e il file *web.config* salvato in precedenza. Ad esempio: 
    ```
    cd site/wwwroot
    put gs-spring-boot-0.1.0.jar
@@ -200,7 +200,7 @@ Per altre informazioni su come usare Azure con Java, vedere [Azure per sviluppat
 
 Per altre informazioni sulla distribuzione di app Web in Azure tramite FTP, vedere [Distribuire l'app nel servizio app di Azure usando FTP/S].
 
-Per altre informazioni sul progetto di esempio Spring Boot, vedere [Introduzione a Spring Boot].
+Per altre informazioni sul progetto di esempio Spring Boot, vedere [Introduzione a Spring Boot ].
 
 Per informazioni sulla Guida introduttiva con le proprie applicazioni Spring Boot, vedere **Spring Initializr** (Inizializzazione di SpringBoot) all'indirizzo https://start.spring.io/.
 
@@ -221,7 +221,7 @@ Per altre informazioni sulla configurazione delle impostazioni aggiuntive per l'
 [Maven]: http://maven.apache.org/
 [vantaggi per i sottoscrittori di MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
-[Introduzione a Spring Boot]: https://github.com/spring-guides/gs-spring-boot
+[Introduzione a Spring Boot ]: https://github.com/spring-guides/gs-spring-boot
 [Spring Framework]: https://spring.io/
 
 <!-- IMG List -->

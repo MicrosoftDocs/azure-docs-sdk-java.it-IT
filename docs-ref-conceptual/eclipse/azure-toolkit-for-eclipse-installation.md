@@ -1,6 +1,6 @@
 ---
-title: Installare il Toolkit di Azure per Eclipse.
-description: Informazioni su come installare Azure Toolkit for Eclipse.
+title: Installare Azure Toolkit for Eclipse
+description: Informazioni su come installare il plug-in Azure Toolkit for Eclipse per creare e distribuire applicazioni cloud in Azure.
 services: 
 documentationcenter: java
 author: rmcmurray
@@ -14,15 +14,15 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 1f06b02a4c0b23d98ecd394d42f41f7148b6c8e8
-ms.sourcegitcommit: 062e07cbd42cda74f02c82b933ce90da646a50a0
+ms.openlocfilehash: 54f636f1291832702bfed2b49888b531d358cb73
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="installing-the-azure-toolkit-for-eclipse"></a>Installare il Toolkit di Azure per Eclipse.
+# <a name="install-the-azure-toolkit-for-eclipse"></a>Installare Azure Toolkit for Eclipse
 
-Il Toolkit di Azure per Eclipse offre modelli e funzionalità che permettono di creare, sviluppare, testare e distribuire con facilità applicazioni di Azure tramite l'ambiente di sviluppo Eclipse.
+Azure Toolkit for Eclipse offre modelli e funzionalità che permettono di creare, sviluppare, testare e distribuire con facilità applicazioni cloud in Azure dall'ambiente di sviluppo di Eclipse.
 
 > [!NOTE] 
 > 
@@ -51,7 +51,7 @@ La procedura seguente mostra come installare il Toolkit di Azure per Eclipse.
 
 1. Espandendo **Azure Toolkit for Eclipse**, viene visualizzato un elenco di componenti che verranno installati, ad esempio:
 
-   | Funzionalità | Descrizione | 
+   | Funzionalità | DESCRIZIONE | 
    |---|---| 
    | **Plug-in di Application Insights per Java** | Consente di usare servizi di analisi e di registrazione dei dati di telemetria di Azure per le applicazioni e le istanze del server. | 
    | **Plug-in Azure Common** | Offre le funzionalità comuni necessarie per gli altri componenti del toolkit. | 
