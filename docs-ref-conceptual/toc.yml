@@ -14,6 +14,8 @@
           href: /azure/postgresql/connect-java
         - name: Cosmos DB
           href: /azure/cosmos-db/create-documentdb-java
+        - name: Archiviazione BLOB
+          href: /azure/storage/blobs/storage-quickstart-blobs-java
         - name: Librerie di Azure per Java
           items:
             - name: Maven
@@ -55,7 +57,7 @@
       items:
         - name: API di gestione
           items:
-            - name: Autenticazione
+            - name: Authentication
               href: java-sdk-azure-authenticate.md
             - name: Concetti
               href: java-sdk-azure-concepts.md
