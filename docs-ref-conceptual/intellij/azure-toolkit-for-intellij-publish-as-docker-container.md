@@ -14,11 +14,11 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 3db8bf06892ca6c53cf93ee4ce151549044806d1
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: ed63d73e8a0c89af14613b1b1a880f1d40495b8d
+ms.sourcegitcommit: 558d875e9a255deb5b83b3f1646bd1dd9eee0a0d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>Pubblicare un'app Web come contenitore Docker usando Azure Toolkit for IntelliJ
 
@@ -114,16 +114,16 @@ I contenitori Docker sono un metodo molto diffuso per la distribuzione di applic
             
         b. Nella scheda **Docker Daemon Access** (Accesso daemon Docker) specificare le informazioni seguenti:
 
-          ![Creare un host Docker][PUB06]
+         ![Creare un host Docker][PUB06]
     
-             * **Docker Daemon port**: Enter the unique TCP port for your Docker host.
-             * **TLS Security**: Enter the Transport Layer Security settings for your Docker host. You can choose from the following options:
-                * **None**: Specifies that your virtual machine does not allow TLS connections.
-                * **Auto-generate**: Automatically creates the requisite settings for connecting via TLS.
-                * **Import from directory**: Specifies a directory that contains a set of previously saved TLS settings. The directory must contain the following six files: 
-                   * *ca.pem* and *ca-key.pem*: Contain the certificate and public key for the TLS Certificate Authority.
-                   * *cert.pem* and *key.pem*: Contain client certificate and public key which will be used for TLS authentication.
-                   * *server.pem* and *server-key.pem*: Contain the client certificate and public key that is used for TLS authentication.
+           * **Docker Daemon port** (Porta Daemon Docker): immettere la porta TCP univoca per l'host Docker.
+           * **Sicurezza TLS**: immettere le impostazioni Transport Layer Security per l'host Docker. È possibile scegliere tra le opzioni seguenti:
+                * **None** (Nessuna): specifica che la macchina virtuale non consente connessioni TLS.
+                * **Auto-generate** (Genera automaticamente): crea automaticamente le impostazioni necessarie per la connessione tramite TLS.
+                * **Import from directory** (Importa da directory): specifica una directory che contiene un set di impostazioni TLS salvate in precedenza. La directory deve contenere i sei file seguenti: 
+                   * *ca.pem* e *ca-key.pem*: contengono il certificato e la chiave pubblica per l'Autorità di certificazione TLS.
+                   * *cert.pem* e *key.pem*: contengono il certificato client e la chiave pubblica da usare per l'autenticazione TLS.
+                   * *server.pem* e *server-key.pem*: contengono il certificato client e la chiave pubblica usati per l'autenticazione TLS.
 
 7. Dopo aver immesso le informazioni richieste, fare clic su **Finish** (Fine).  
     Verrà visualizzata nuovamente la procedura guidata **Deploy Docker Container on Azure** (Distribuisci contenitore Docker in Azure).
