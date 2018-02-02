@@ -14,11 +14,11 @@ ms.devlang: java
 ms.topic: article
 ms.date: 11/29/2017
 ms.author: robmcm
-ms.openlocfilehash: 8b35a972a00c995730dfa59b1b6a47fab7716b76
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: 165a108147ef5ef7575820bbb6c2ee526888f722
+ms.sourcegitcommit: 558d875e9a255deb5b83b3f1646bd1dd9eee0a0d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Come usare l'utilità di avvio Spring Boot per Azure Key Vault
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 12/06/2017
 
 Questo articolo illustra la creazione di un'app con **[Spring Initializr]** che usa l'utilità di avvio Spring Boot per Azure Key Vault per recuperare una stringa di connessione archiviata come segreto in un insieme di credenziali delle chiavi.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>prerequisiti
 
 I prerequisiti seguenti sono necessari per seguire le procedure disponibili in questo articolo:
 
@@ -85,8 +85,9 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
        }
      }
    ]
+   ```
 
-1. Specify the GUID for the account you want to use with Azure; for example:
+1. Specificare il GUID per l'account che si vuole usare con Azure, ad esempio:
 
    ```azurecli
    az account set -s ssssssss-ssss-ssss-ssss-ssssssssssss
@@ -99,7 +100,7 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
    az group create --name wingtiptoysresources --location westus
    ```
    Dove:
-   | Parametro | Descrizione |
+   | Parametro | DESCRIZIONE |
    |---|---|
    | `name` | Specifica un nome univoco per il gruppo di risorse. |
    | `location` | Specifica l'[area di Azure](https://azure.microsoft.com/regions/) in cui verrà ospitato il gruppo di risorse. |
@@ -123,7 +124,7 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
    ```shell
    az ad sp create-for-rbac --name "wingtiptoysuser"
    ```
-   | Parametro | Descrizione |
+   | Parametro | DESCRIZIONE |
    |---|---|
    | `id` | Specifica il GUID della registrazione per l'applicazione precedente. |
 
@@ -144,7 +145,7 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
    az keyvault create --name wingtiptoyskeyvault --resource-group wingtiptoysresources --location westus --enabled-for-deployment true --enabled-for-disk-encryption true --enabled-for-template-deployment true --sku standard --query properties.vaultUri
    ```
    Dove:
-   | Parametro | Descrizione |
+   | Parametro | DESCRIZIONE |
    |---|---|
    | `name` | Specifica un nome univoco per l'insieme di credenziali delle chiavi. |
    | `location` | Specifica l'[area di Azure](https://azure.microsoft.com/regions/) in cui verrà ospitato il gruppo di risorse. |
@@ -165,7 +166,7 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
    az keyvault set-policy --name wingtiptoyskeyvault --secret-permission set get list delete --spn "iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii"
    ```
    Dove:
-   | Parametro | Descrizione |
+   | Parametro | DESCRIZIONE |
    |---|---|
    | `name` | Specifica il nome dell'insieme di credenziali delle chiavi precedente. |
    | `secret-permission` | Specifica i [criteri di sicurezza](https://docs.microsoft.com/en-us/cli/azure/keyvault) per l'insieme di credenziali delle chiavi. |
@@ -194,7 +195,7 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
    az keyvault secret set --vault-name "wingtiptoyskeyvault" --name "connectionString" --value "jdbc:sqlserver://SERVER.database.windows.net:1433;database=DATABASE;"
    ```
    Dove:
-   | Parametro | Descrizione |
+   | Parametro | DESCRIZIONE |
    |---|---|
    | `vault-name` | Specifica il nome dell'insieme di credenziali delle chiavi precedente. |
    | `name` | Specifica il nome del segreto. |
@@ -236,7 +237,7 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
    azure.keyvault.client-key=pppppppp-pppp-pppp-pppp-pppppppppppp
    ```
    Dove:
-   | Parametro | Descrizione |
+   | Parametro | DESCRIZIONE |
    |---|---|
    | `azure.keyvault.uri` | Specifica l'URI di quando è stato creato l'insieme di credenziali delle chiavi. |
    | `azure.keyvault.client-id` | Specifica il GUID *appId* di quando è stata creata l'entità servizio. |
@@ -287,7 +288,7 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
 
    ![Stato di compilazione dell'applicazione Spring Boot][build-application-01]
 
-1. Eseguire l'applicazione Spring Boot con Maven. L'applicazione visualizzerà la stringa di connessione dall'insieme di credenziali delle chiavi, ad esempio:
+1. Eseguire l'applicazione Spring Boot con Maven. L'applicazione visualizzerà la stringa di connessione dall'insieme di credenziali delle chiavi, Ad esempio: 
 
    ```bash
    mvn spring-boot:run
