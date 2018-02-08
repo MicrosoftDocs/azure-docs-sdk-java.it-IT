@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: Java
-ms.topic: article
-ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: a2aa6b0aa0689893143073be94539345e229e5f2
-ms.sourcegitcommit: 062e07cbd42cda74f02c82b933ce90da646a50a0
+ms.date: 02/01/2018
+ms.devlang: Java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: b54c10dc33324d902a0e778770df8ec4d71dc9a1
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a>Pubblicare un'app Spring Boot come contenitore Docker usando il Toolkit di Azure per Eclipse
 
@@ -94,7 +94,7 @@ I passaggi seguenti illustrano la clonazione del repository Docker Spring Boot n
 
    a. Specificare il nome del progetto.
    
-   b. Fare clic su **Finish**.
+   b. Fare clic su **Fine**.
 
    ![Pagina Import Projects (Importa progetti)][CL08]
 
@@ -128,7 +128,7 @@ Il repository Docker Spring Boot contiene un progetto Maven completato che verr√
    
    c. Selezionare la casella per il file **pom.xml** nel progetto.
    
-   d. Fare clic su **Finish**.
+   d. Fare clic su **Fine**.
 
    ![Pagina Maven Projects (Progetti Maven)][MV02]
 

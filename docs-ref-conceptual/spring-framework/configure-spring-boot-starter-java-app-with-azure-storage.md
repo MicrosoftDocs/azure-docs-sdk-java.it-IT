@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: storage
-ms.workload: storage
-ms.tgt_pltfrm: na
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: yungez;robmcm
-ms.openlocfilehash: 0979c810711a01464c0b2c6e12a582a3f5eefef1
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: storage
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.workload: storage
+ms.openlocfilehash: 50c8475c66250c8e872849007349277fd3fe797b
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Come usare l'utilità di avvio Spring Boot per Archiviazione di Azure
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 12/06/2017
 
 Questo articolo illustra come creare un'applicazione personalizzata con **Spring Initializr** e come usarla per accedere ad Archiviazione di Azure.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>prerequisiti
 
 I prerequisiti seguenti sono necessari per seguire le procedure disponibili in questo articolo:
 
@@ -107,7 +107,7 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
    az group create --name wingtiptoysresources --location westus
    ```
    Dove:
-   | Parametro | Descrizione |
+   | Parametro | DESCRIZIONE |
    |---|---|
    | `name` | Specifica un nome univoco per il gruppo di risorse. |
    | `location` | Specifica l'[area di Azure](https://azure.microsoft.com/regions/) in cui verrà ospitato il gruppo di risorse. |
@@ -132,7 +132,7 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
    az storage account create --name wingtiptoysstorage --resource-group wingtiptoysresources --location westus --sku Standard_LRS
    ```
    Dove:
-   | Parametro | Descrizione |
+   | Parametro | DESCRIZIONE |
    |---|---|
    | `name` | Specifica un nome univoco per l'account di archiviazione. |
    | `resource-group` | Specifica il nome del gruppo di risorse creato nel passaggio precedente. |
@@ -161,7 +161,7 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
    az storage account show-connection-string --name wingtiptoysstorage --resource-group wingtiptoysresources
    ```
    Dove:
-   | Parametro | Descrizione |
+   | Parametro | DESCRIZIONE |
    | ---|---|
    | `name` | Specifica un nome univoco dell'account di archiviazione che è stato creato nei passaggi precedenti. |
    | `resource-group` | Specifica il nome del gruppo di risorse creato nei passaggi precedenti. |

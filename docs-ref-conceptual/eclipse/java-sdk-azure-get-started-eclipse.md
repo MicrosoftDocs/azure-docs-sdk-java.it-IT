@@ -2,26 +2,29 @@
 title: Introduzione ad Azure per Java con Eclipse
 description: Introduzione all'uso di base delle librerie di Azure per Java con la propria sottoscrizione di Azure.
 keywords: Azure, Java, SDK, API, autenticare, introduzione
+services: 
+documentationcenter: java
 author: roygara
-ms.author: v-rogara
 manager: timlt
-ms.date: 10/30/2017
-ms.topic: get-started-article
+editor: 
+ms.author: v-rogara
+ms.date: 02/01/2018
+ms.devlang: java
 ms.prod: azure
 ms.technology: azure
-ms.devlang: java
+ms.topic: get-started-article
 ms.service: multiple
-ms.openlocfilehash: 1c1ef7b8646824c5c8bfcbbf5e0507c95ac1ee79
-ms.sourcegitcommit: fcf1189ede712ae30f8c7626bde50c9b8bb561bc
+ms.openlocfilehash: 7903b84f013fea07feee04419b1773f38494d4d0
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="get-started-with-the-azure-libraries-using-eclipse"></a>Introduzione alle librerie di Azure con Eclipse
 
 Questa guida illustra la configurazione di un ambiente di sviluppo e l'uso delle librerie di Azure per Java. Si creerà un'entità servizio per l'autenticazione con Azure e verrà eseguito un codice di esempio che crea e usa risorse di Azure nella sottoscrizione. L'uso di Eclipse è facoltativo per lo sviluppo Java con Azure. È possibile usare qualsiasi IDE con integrazione Maven. In alternativa, è possibile eseguire il codice dalla riga di comando usando Maven, se si preferisce non usare IDE.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>prerequisiti
 
 - Un account Azure. Se non è disponibile, [ottenere una versione di valutazione gratuita](https://azure.microsoft.com/free/)
 - [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) o [interfaccia della riga di comando di Azure 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).
