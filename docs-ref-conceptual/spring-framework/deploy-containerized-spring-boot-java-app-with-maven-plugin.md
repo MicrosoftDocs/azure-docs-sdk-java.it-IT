@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: app-service
-ms.workload: web
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: robmcm;kevinzha
-ms.openlocfilehash: 1ab19a4805884773239c4d99090b9e117b3859cd
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: app-service
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: web
+ms.openlocfilehash: 515cf350f32fc8252644e7022846cc2c9d264ed0
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-containerized-spring-boot-app-to-azure"></a>Come usare il plug-in Maven per App Web di Azure per distribuire un'app Spring Boot in contenitore in Azure
 
@@ -31,7 +31,7 @@ Questo articolo illustra l'uso del [plug-in Maven per App Web di Azure](https://
 > Il plug-in Maven per App Web di Azure è attualmente disponibile in anteprima. Per il momento è supportata solo la pubblicazione FTP, ma sono previste in futuro funzionalità aggiuntive.
 > 
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>prerequisiti
 
 Per completare la procedura di questa esercitazione, sono necessari i prerequisiti seguenti:
 
@@ -56,7 +56,7 @@ In questa sezione si clona e si testa in locale un'applicazione Spring Boot in c
    md C:\SpringBoot
    cd C:\SpringBoot
    ```
-   - o-
+   -- o --
    ```shell
    md /users/robert/SpringBoot
    cd /users/robert/SpringBoot
@@ -105,7 +105,11 @@ In questa sezione si crea un'entità servizio di Azure che verrà usata dal plug
    ```shell
    az ad sp create-for-rbac --name "uuuuuuuu" --password "pppppppp"
    ```
-   `uuuuuuuu` è il nome utente e `pppppppp` è la password dell'entità servizio.
+   Dove:
+   | Parametro | DESCRIZIONE |
+   |---|---|
+   | `uuuuuuuu` | Specifica il nome utente per l'entità servizio. |
+   | `pppppppp` | Specifica la password per l'entità servizio. |
 
 1. Azure restituisce una risposta JSON simile all'esempio seguente:
    ```json
@@ -149,13 +153,13 @@ In questa sezione si usano i valori dell'entità servizio di Azure per configura
    </servers>
    ```
    Dove:
-   Elemento | Descrizione
-   ---|---|---
-   `<id>` | Specifica un nome univoco che viene usato da Maven per cercare le impostazioni di sicurezza quando si distribuisce l'app Web in Azure.
-   `<client>` | Contiene il valore `appId` dell'entità servizio.
-   `<tenant>` | Contiene il valore `tenant` dell'entità servizio.
-   `<key>` | Contiene il valore `password` dell'entità servizio.
-   `<environment>` | Definisce l'ambiente cloud di Azure di destinazione, che in questo esempio è `AZURE`. Un elenco completo degli ambienti è disponibile nella documentazione del [plug-in Maven per App Web di Azure].
+   | Elemento | DESCRIZIONE |
+   |---|---|
+   | `<id>` | Specifica un nome univoco che viene usato da Maven per cercare le impostazioni di sicurezza quando si distribuisce l'app Web in Azure. |
+   | `<client>` | Contiene il valore `appId` dell'entità servizio. |
+   | `<tenant>` | Contiene il valore `tenant` dell'entità servizio. |
+   | `<key>` | Contiene il valore `password` dell'entità servizio. |
+   | `<environment>` | Definisce l'ambiente cloud di Azure di destinazione, che in questo esempio è `AZURE`. Un elenco completo degli ambienti è disponibile nella documentazione del [plug-in Maven per App Web di Azure]. |
 
 1. Salvare e chiudere il file *settings.xml*.
 
@@ -218,14 +222,14 @@ Aprire il file `pom.xml` per l'applicazione Spring Boot in un editor di testo e 
 
 È possibile modificare diversi valori per il plug-in Maven. Una descrizione dettagliata di ognuno di questi elementi è disponibile nella documentazione del [plug-in Maven per App Web di Azure]. Dopo questa premessa, in questo articolo è opportuno evidenziare diversi valori:
 
-Elemento | Descrizione
----|---|---
-`<version>` | Specifica la versione del [plug-in Maven per App Web di Azure]. È consigliabile controllare la versione riportata nel [repository centrale Maven](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) per assicurarsi di usare l'ultima versione.
-`<authentication>` | Specifica le informazioni di autenticazione per Azure, che in questo esempio includono un elemento `<serverId>` contenente `azure-auth`. Maven usa questo valore per cercare i valori dell'entità servizio di Azure nel file *settings.xml* di Maven, in base a quanto definito in una sezione precedente di questo articolo.
-`<resourceGroup>` | Specifica il gruppo di risorse di destinazione, che in questo esempio è `maven-plugin`. Se non esiste già, questo gruppo di risorse verrà creato durante la distribuzione.
-`<appName>` | Specifica il nome di destinazione dell'app Web. In questo esempio, il nome di destinazione è `maven-linux-app-${maven.build.timestamp}` e il suffisso `${maven.build.timestamp}` viene accodato per evitare conflitti. Il timestamp è facoltativo. Come nome dell'app è possibile specificare qualsiasi stringa univoca.
-`<region>` | Specifica l'area di destinazione, che in questo esempio è `westus`. Un elenco completo è disponibile nella documentazione del [plug-in Maven per App Web di Azure].
-`<appSettings>` | Specifica qualsiasi impostazione univoca che dovrà essere usata da Maven durante la distribuzione dell'app Web in Azure. In questo esempio, un elemento `<property>` contiene una coppia nome-valore di elementi figlio che specificano la porta dell'app.
+| Elemento | DESCRIZIONE |
+|---|---|
+| `<version>` | Specifica la versione del [plug-in Maven per App Web di Azure]. È consigliabile controllare la versione riportata nel [repository centrale Maven](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) per assicurarsi di usare l'ultima versione. |
+| `<authentication>` | Specifica le informazioni di autenticazione per Azure, che in questo esempio includono un elemento `<serverId>` contenente `azure-auth`. Maven usa questo valore per cercare i valori dell'entità servizio di Azure nel file *settings.xml* di Maven, in base a quanto definito in una sezione precedente di questo articolo. |
+| `<resourceGroup>` | Specifica il gruppo di risorse di destinazione, che in questo esempio è `maven-plugin`. Se non esiste già, questo gruppo di risorse verrà creato durante la distribuzione. |
+| `<appName>` | Specifica il nome di destinazione dell'app Web. In questo esempio, il nome di destinazione è `maven-linux-app-${maven.build.timestamp}` e il suffisso `${maven.build.timestamp}` viene accodato per evitare conflitti. Il timestamp è facoltativo. Come nome dell'app è possibile specificare qualsiasi stringa univoca. |
+| `<region>` | Specifica l'area di destinazione, che in questo esempio è `westus`. Un elenco completo è disponibile nella documentazione del [plug-in Maven per App Web di Azure]. |
+| `<appSettings>` | Specifica qualsiasi impostazione univoca che dovrà essere usata da Maven durante la distribuzione dell'app Web in Azure. In questo esempio, un elemento `<property>` contiene una coppia nome-valore di elementi figlio che specificano la porta dell'app. |
 
 > [!NOTE]
 >

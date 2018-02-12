@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: cache
-ms.workload: na
-ms.tgt_pltfrm: cache-redis
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: robmcm;zhijzhao;yidon
-ms.openlocfilehash: c029a1518584a953c96870110f7ab3b79409f8ca
-ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: cache
+ms.tgt_pltfrm: cache-redis
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: 8bfe7c2ddd238e0e5a259de9078b831a97b1b1a4
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Configurare un'app Spring Boot Initializer per l'uso di Redis sul cloud con la cache Redis di Azure
 
@@ -26,7 +26,7 @@ Questo articolo illustra in modo dettagliato come creare una cache Redis sul clo
 
 ## <a name="prerequisites"></a>prerequisiti
 
-I prerequisiti seguenti sono necessari per seguire le procedure disponibili in questo articolo:
+I prerequisiti seguenti sono necessari per completare le procedure disponibili in questo articolo:
 
 * Sottoscrizione di Azure; se non si ha una sottoscrizione di Azure, è possibile attivare i [vantaggi per i sottoscrittori di MSDN] oppure iscriversi per ottenere un [account Azure gratuito].
 * [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) versione 1.7 o successiva.
@@ -59,7 +59,7 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
 
 ## <a name="create-a-redis-cache-on-azure"></a>Creare una cache Redis in Azure
 
-1. Passare al portale di Azure all'indirizzo <https://portal.azure.com/> e fare clic sulla voce **+Nuovo**.
+1. Passare al portale di Azure all'indirizzo <https://portal.azure.com/> e fare clic su **+Nuovo**.
 
    ![Portale di Azure][AZ01]
 
@@ -113,12 +113,16 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
 
    > [!NOTE] 
    > 
-   > Se si usa un client Redis diverso, come Jedis che consente l'uso di SSL, specificare la porta 6380 nel file *application.properties*. Ad esempio: 
+   > Se si usa un client Redis diverso, come Jedis che consente l'uso di SSL, specificare che si intende usare SSL e la porta 6380 nel file *application.properties*. Ad esempio: 
    > 
    > ```yaml
+   > # Specify the DNS URI of your Redis cache.
    > spring.redis.host=myspringbootcache.redis.cache.windows.net
+   > # Specify the access key for your Redis cache.
    > spring.redis.password=57686f6120447564652c2049495320526f636b73=
+   > # Specify that you want to use SSL.
    > spring.redis.ssl=true
+   > # Specify the SSL port for your Redis cache.
    > spring.redis.port=6380
    > ```
    > 

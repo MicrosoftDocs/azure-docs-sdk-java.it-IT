@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: yuwzho;robmcm
-ms.openlocfilehash: 6e33c43d3fb4b63cff1f1c7c04cbf9523aa97770
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: 396d0ecfb051109924f09ae8b5d9b8074e49c404
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a>Distribuire un'app Spring Boot con il plug-in Maven Fabric8
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 12/06/2017
 
 Questa esercitazione illustra l'uso del plug-in Fabric8 per Maven per sviluppare e distribuire un'applicazione in un host Linux nel [servizio contenitore di Azure].
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>prerequisiti
 
 Per completare la procedura di questa esercitazione, sono necessari i prerequisiti seguenti:
 
@@ -51,7 +51,7 @@ La procedura seguente illustra come creare un'applicazione Web di Spring Boot e 
    md /home/GenaSoto/SpringBoot
    cd /home/GenaSoto/SpringBoot
    ```
-   - o-
+   -- o --
    ```shell
    md C:\SpringBoot
    cd C:\SpringBoot
@@ -66,7 +66,7 @@ La procedura seguente illustra come creare un'applicazione Web di Spring Boot e 
    ```shell
    cd gs-spring-boot-docker/complete
    ```
-   - o-
+   -- o --
    ```shell
    cd gs-spring-boot-docker\complete
    ```
@@ -253,10 +253,12 @@ La procedura seguente illustra come creare un'applicazione Web di Spring Boot e 
    ```azurecli
    az acr create --admin-enabled --resource-group wingtiptoys-kubernetes --location westeurope --name wingtiptoysregistry --sku Basic
    ```
-   Dove:  
-      * *wingtiptoys kubernetes* è il nome del gruppo di risorse creato in precedenza in questo articolo  
-      * *wingtiptoysregistry* è un nome univoco per il registro privato
-      * *westeurope* è una posizione geografica appropriata per l'applicazione  
+   Dove:
+   | Parametro | DESCRIZIONE |
+   |---|---|
+   | `wingtiptoys-kubernetes` | Specifica il nome del gruppo di risorse creato in precedenza in questo articolo. |
+   | `wingtiptoysregistry` | Specifica un nome univoco per il registro privato. |
+   | `westeurope` | Specifica una posizione geografica appropriata per l'applicazione. |
 
    Nell'interfaccia della riga di comando di Azure verranno visualizzati i risultati della creazione del registro, ad esempio:  
 
