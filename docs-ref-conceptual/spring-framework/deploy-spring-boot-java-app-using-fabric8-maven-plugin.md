@@ -7,96 +7,96 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: yuwzho;robmcm
-ms.openlocfilehash: 6e33c43d3fb4b63cff1f1c7c04cbf9523aa97770
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: 396d0ecfb051109924f09ae8b5d9b8074e49c404
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a><span data-ttu-id="0bddb-103">Distribuire un'app Spring Boot con il plug-in Maven Fabric8</span><span class="sxs-lookup"><span data-stu-id="0bddb-103">Deploy a Spring Boot app using the Fabric8 Maven Plugin</span></span>
+# <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a><span data-ttu-id="2fc54-103">Distribuire un'app Spring Boot con il plug-in Maven Fabric8</span><span class="sxs-lookup"><span data-stu-id="2fc54-103">Deploy a Spring Boot app using the Fabric8 Maven Plugin</span></span>
 
-<span data-ttu-id="0bddb-104">**[Fabric8]**  è una soluzione open source basata su  **[Kubernetes]** che consente agli sviluppatori di creare applicazioni in contenitori Linux.</span><span class="sxs-lookup"><span data-stu-id="0bddb-104">**[Fabric8]** is an open-source solution that is built on **[Kubernetes]**, which helps developers create applications in Linux containers.</span></span>
+<span data-ttu-id="2fc54-104">**[Fabric8]**  è una soluzione open source basata su  **[Kubernetes]** che consente agli sviluppatori di creare applicazioni in contenitori Linux.</span><span class="sxs-lookup"><span data-stu-id="2fc54-104">**[Fabric8]** is an open-source solution that is built on **[Kubernetes]**, which helps developers create applications in Linux containers.</span></span>
 
-<span data-ttu-id="0bddb-105">Questa esercitazione illustra l'uso del plug-in Fabric8 per Maven per sviluppare e distribuire un'applicazione in un host Linux nel [servizio contenitore di Azure].</span><span class="sxs-lookup"><span data-stu-id="0bddb-105">This tutorial walks you through using the Fabric8 plugin for Maven to develop to deploy an application to a Linux host in the [Azure Container Service (AKS)].</span></span>
+<span data-ttu-id="2fc54-105">Questa esercitazione illustra l'uso del plug-in Fabric8 per Maven per sviluppare e distribuire un'applicazione in un host Linux nel [servizio contenitore di Azure].</span><span class="sxs-lookup"><span data-stu-id="2fc54-105">This tutorial walks you through using the Fabric8 plugin for Maven to develop to deploy an application to a Linux host in the [Azure Container Service (AKS)].</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="0bddb-106">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="0bddb-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="2fc54-106">prerequisiti</span><span class="sxs-lookup"><span data-stu-id="2fc54-106">Prerequisites</span></span>
 
-<span data-ttu-id="0bddb-107">Per completare la procedura di questa esercitazione, sono necessari i prerequisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="0bddb-107">In order to complete the steps in this tutorial, you need to have the following prerequisites:</span></span>
+<span data-ttu-id="2fc54-107">Per completare la procedura di questa esercitazione, sono necessari i prerequisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="2fc54-107">In order to complete the steps in this tutorial, you need to have the following prerequisites:</span></span>
 
-* <span data-ttu-id="0bddb-108">Sottoscrizione di Azure; se non si ha una sottoscrizione di Azure, è possibile attivare i [vantaggi per i sottoscrittori di MSDN] oppure iscriversi per ottenere un [account Azure gratuito].</span><span class="sxs-lookup"><span data-stu-id="0bddb-108">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
-* <span data-ttu-id="0bddb-109">[Interfaccia della riga di comando di Azure].</span><span class="sxs-lookup"><span data-stu-id="0bddb-109">The [Azure Command-Line Interface (CLI)].</span></span>
-* <span data-ttu-id="0bddb-110">Un [Java Developer Kit (JDK)] aggiornato.</span><span class="sxs-lookup"><span data-stu-id="0bddb-110">An up-to-date [Java Developer Kit (JDK)].</span></span>
-* <span data-ttu-id="0bddb-111">Lo strumento di compilazione [Maven] di Apache (versione 3).</span><span class="sxs-lookup"><span data-stu-id="0bddb-111">Apache's [Maven] build tool (Version 3).</span></span>
-* <span data-ttu-id="0bddb-112">Un client [Git].</span><span class="sxs-lookup"><span data-stu-id="0bddb-112">A [Git] client.</span></span>
-* <span data-ttu-id="0bddb-113">Un client [Docker].</span><span class="sxs-lookup"><span data-stu-id="0bddb-113">A [Docker] client.</span></span>
+* <span data-ttu-id="2fc54-108">Sottoscrizione di Azure; se non si ha una sottoscrizione di Azure, è possibile attivare i [vantaggi per i sottoscrittori di MSDN] oppure iscriversi per ottenere un [account Azure gratuito].</span><span class="sxs-lookup"><span data-stu-id="2fc54-108">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
+* <span data-ttu-id="2fc54-109">[Interfaccia della riga di comando di Azure].</span><span class="sxs-lookup"><span data-stu-id="2fc54-109">The [Azure Command-Line Interface (CLI)].</span></span>
+* <span data-ttu-id="2fc54-110">Un [Java Developer Kit (JDK)] aggiornato.</span><span class="sxs-lookup"><span data-stu-id="2fc54-110">An up-to-date [Java Developer Kit (JDK)].</span></span>
+* <span data-ttu-id="2fc54-111">Lo strumento di compilazione [Maven] di Apache (versione 3).</span><span class="sxs-lookup"><span data-stu-id="2fc54-111">Apache's [Maven] build tool (Version 3).</span></span>
+* <span data-ttu-id="2fc54-112">Un client [Git].</span><span class="sxs-lookup"><span data-stu-id="2fc54-112">A [Git] client.</span></span>
+* <span data-ttu-id="2fc54-113">Un client [Docker].</span><span class="sxs-lookup"><span data-stu-id="2fc54-113">A [Docker] client.</span></span>
 
 > [!NOTE]
 >
-> <span data-ttu-id="0bddb-114">A causa dei requisiti di virtualizzazione di questa esercitazione, non è possibile seguire la procedura illustrata in questo articolo in una macchina virtuale. È necessario usare un computer fisico in cui sono abilitate le funzionalità di virtualizzazione.</span><span class="sxs-lookup"><span data-stu-id="0bddb-114">Due to the virtualization requirements of this tutorial, you cannot follow the steps in this article on a virtual machine; you must use a physical computer with virtualization features enabled.</span></span>
+> <span data-ttu-id="2fc54-114">A causa dei requisiti di virtualizzazione di questa esercitazione, non è possibile seguire la procedura illustrata in questo articolo in una macchina virtuale. È necessario usare un computer fisico in cui sono abilitate le funzionalità di virtualizzazione.</span><span class="sxs-lookup"><span data-stu-id="2fc54-114">Due to the virtualization requirements of this tutorial, you cannot follow the steps in this article on a virtual machine; you must use a physical computer with virtualization features enabled.</span></span>
 >
 
-## <a name="create-the-spring-boot-on-docker-getting-started-web-app"></a><span data-ttu-id="0bddb-115">Creare l'app Web introduttiva di Spring Boot in Docker</span><span class="sxs-lookup"><span data-stu-id="0bddb-115">Create the Spring Boot on Docker Getting Started web app</span></span>
+## <a name="create-the-spring-boot-on-docker-getting-started-web-app"></a><span data-ttu-id="2fc54-115">Creare l'app Web introduttiva di Spring Boot in Docker</span><span class="sxs-lookup"><span data-stu-id="2fc54-115">Create the Spring Boot on Docker Getting Started web app</span></span>
 
-<span data-ttu-id="0bddb-116">La procedura seguente illustra come creare un'applicazione Web di Spring Boot e come testarla in locale.</span><span class="sxs-lookup"><span data-stu-id="0bddb-116">The following steps walk you through building a Spring Boot web application and testing it locally.</span></span>
+<span data-ttu-id="2fc54-116">La procedura seguente illustra come creare un'applicazione Web di Spring Boot e come testarla in locale.</span><span class="sxs-lookup"><span data-stu-id="2fc54-116">The following steps walk you through building a Spring Boot web application and testing it locally.</span></span>
 
-1. <span data-ttu-id="0bddb-117">Aprire un prompt dei comandi e creare una directory locale in cui contenere l'applicazione, quindi passare a tale directory. Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0bddb-117">Open a command-prompt and create a local directory to hold your application, and change to that directory; for example:</span></span>
+1. <span data-ttu-id="2fc54-117">Aprire un prompt dei comandi e creare una directory locale in cui contenere l'applicazione, quindi passare a tale directory. Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="2fc54-117">Open a command-prompt and create a local directory to hold your application, and change to that directory; for example:</span></span>
    ```shell
    md /home/GenaSoto/SpringBoot
    cd /home/GenaSoto/SpringBoot
    ```
-   <span data-ttu-id="0bddb-118">- o-</span><span class="sxs-lookup"><span data-stu-id="0bddb-118">-- or --</span></span>
+   <span data-ttu-id="2fc54-118">-- o --</span><span class="sxs-lookup"><span data-stu-id="2fc54-118">-- or --</span></span>
    ```shell
    md C:\SpringBoot
    cd C:\SpringBoot
    ```
 
-1. <span data-ttu-id="0bddb-119">Clonare il progetto di esempio [Spring Boot on Docker Getting Started] (Introduzione a Spring Boot in Docker) nella directory.</span><span class="sxs-lookup"><span data-stu-id="0bddb-119">Clone the [Spring Boot on Docker Getting Started] sample project into the directory.</span></span>
+1. <span data-ttu-id="2fc54-119">Clonare il progetto di esempio [Spring Boot on Docker Getting Started] (Introduzione a Spring Boot in Docker) nella directory.</span><span class="sxs-lookup"><span data-stu-id="2fc54-119">Clone the [Spring Boot on Docker Getting Started] sample project into the directory.</span></span>
    ```shell
    git clone https://github.com/spring-guides/gs-spring-boot-docker.git
    ```
 
-1. <span data-ttu-id="0bddb-120">Passare alla directory del progetto completato. Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0bddb-120">Change directory to the completed project; for example:</span></span>
+1. <span data-ttu-id="2fc54-120">Passare alla directory del progetto completato. Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="2fc54-120">Change directory to the completed project; for example:</span></span>
    ```shell
    cd gs-spring-boot-docker/complete
    ```
-   <span data-ttu-id="0bddb-121">- o-</span><span class="sxs-lookup"><span data-stu-id="0bddb-121">-- or --</span></span>
+   <span data-ttu-id="2fc54-121">-- o --</span><span class="sxs-lookup"><span data-stu-id="2fc54-121">-- or --</span></span>
    ```shell
    cd gs-spring-boot-docker\complete
    ```
 
-1. <span data-ttu-id="0bddb-122">Usare Maven per compilare ed eseguire l'app di esempio.</span><span class="sxs-lookup"><span data-stu-id="0bddb-122">Use Maven to build and run the sample app.</span></span>
+1. <span data-ttu-id="2fc54-122">Usare Maven per compilare ed eseguire l'app di esempio.</span><span class="sxs-lookup"><span data-stu-id="2fc54-122">Use Maven to build and run the sample app.</span></span>
    ```shell
    mvn clean package spring-boot:run
    ```
 
-1. <span data-ttu-id="0bddb-123">Testare l'app Web passando a http://localhost:8080 oppure eseguendo il comando `curl` seguente:</span><span class="sxs-lookup"><span data-stu-id="0bddb-123">Test the web app by browsing to http://localhost:8080, or with the following `curl` command:</span></span>
+1. <span data-ttu-id="2fc54-123">Testare l'app Web passando a http://localhost:8080 oppure eseguendo il comando `curl` seguente:</span><span class="sxs-lookup"><span data-stu-id="2fc54-123">Test the web app by browsing to http://localhost:8080, or with the following `curl` command:</span></span>
    ```shell
    curl http://localhost:8080
    ```
 
-   <span data-ttu-id="0bddb-124">Dovrebbe essere visualizzato il messaggio **Hello Docker World**.</span><span class="sxs-lookup"><span data-stu-id="0bddb-124">You should see a **Hello Docker World** message displayed.</span></span>
+   <span data-ttu-id="2fc54-124">Dovrebbe essere visualizzato il messaggio **Hello Docker World**.</span><span class="sxs-lookup"><span data-stu-id="2fc54-124">You should see a **Hello Docker World** message displayed.</span></span>
 
    ![Esplorare l'applicazione di esempio localmente][SB01]
 
 
-## <a name="install-the-kubernetes-command-line-interface-and-create-an-azure-resource-group-using-the-azure-cli"></a><span data-ttu-id="0bddb-126">Installare l'interfaccia della riga di comando di Kubernetes e creare un gruppo di risorse di Azure usando l'interfaccia della riga di comando di Azure</span><span class="sxs-lookup"><span data-stu-id="0bddb-126">Install the Kubernetes command-line interface and create an Azure resource group using the Azure CLI</span></span>
+## <a name="install-the-kubernetes-command-line-interface-and-create-an-azure-resource-group-using-the-azure-cli"></a><span data-ttu-id="2fc54-126">Installare l'interfaccia della riga di comando di Kubernetes e creare un gruppo di risorse di Azure usando l'interfaccia della riga di comando di Azure</span><span class="sxs-lookup"><span data-stu-id="2fc54-126">Install the Kubernetes command-line interface and create an Azure resource group using the Azure CLI</span></span>
 
-1. <span data-ttu-id="0bddb-127">Aprire un prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="0bddb-127">Open a command prompt.</span></span>
+1. <span data-ttu-id="2fc54-127">Aprire un prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="2fc54-127">Open a command prompt.</span></span>
 
-1. <span data-ttu-id="0bddb-128">Accedere al proprio account di Azure digitando il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="0bddb-128">Type the following command to log in to your Azure account:</span></span>
+1. <span data-ttu-id="2fc54-128">Accedere al proprio account di Azure digitando il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="2fc54-128">Type the following command to log in to your Azure account:</span></span>
    ```azurecli
    az login
    ```
-   <span data-ttu-id="0bddb-129">Seguire le istruzioni per completare il processo di accesso</span><span class="sxs-lookup"><span data-stu-id="0bddb-129">Follow the instructions to complete the login process</span></span>
+   <span data-ttu-id="2fc54-129">Seguire le istruzioni per completare il processo di accesso</span><span class="sxs-lookup"><span data-stu-id="2fc54-129">Follow the instructions to complete the login process</span></span>
    
-   <span data-ttu-id="0bddb-130">Nell'interfaccia della riga di comando di Azure verrà visualizzato un elenco degli account, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0bddb-130">The Azure CLI will display a list of your accounts; for example:</span></span>
+   <span data-ttu-id="2fc54-130">Nell'interfaccia della riga di comando di Azure verrà visualizzato un elenco degli account, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="2fc54-130">The Azure CLI will display a list of your accounts; for example:</span></span>
 
    ```json
    [
@@ -115,16 +115,16 @@ ms.lasthandoff: 12/06/2017
    ]
    ```
 
-1. <span data-ttu-id="0bddb-131">Se non si dispone ancora dell'interfaccia della riga di comando di Kubernetes (`kubectl`) installata, è possibile installarla tramite l'interfaccia della riga di comando di Azure, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0bddb-131">If you do not already have the Kubernetes command-line interface (`kubectl`) installed, you can install using the Azure CLI; for example:</span></span>
+1. <span data-ttu-id="2fc54-131">Se non si dispone ancora dell'interfaccia della riga di comando di Kubernetes (`kubectl`) installata, è possibile installarla tramite l'interfaccia della riga di comando di Azure, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="2fc54-131">If you do not already have the Kubernetes command-line interface (`kubectl`) installed, you can install using the Azure CLI; for example:</span></span>
    ```azurecli
    az acs kubernetes install-cli
    ```
 
    > [!NOTE]
    >
-   > <span data-ttu-id="0bddb-132">È possibile che gli utenti Linux debbano aggiungere al comando il prefisso `sudo`, perché distribuisce l'interfaccia della riga di comando di Kubernetes in `/usr/local/bin`.</span><span class="sxs-lookup"><span data-stu-id="0bddb-132">Linux users may have to prefix this command with `sudo` since it deploys the Kubernetes CLI to `/usr/local/bin`.</span></span>
+   > <span data-ttu-id="2fc54-132">È possibile che gli utenti Linux debbano aggiungere al comando il prefisso `sudo`, perché distribuisce l'interfaccia della riga di comando di Kubernetes in `/usr/local/bin`.</span><span class="sxs-lookup"><span data-stu-id="2fc54-132">Linux users may have to prefix this command with `sudo` since it deploys the Kubernetes CLI to `/usr/local/bin`.</span></span>
    >
-   > <span data-ttu-id="0bddb-133">Se si dispone già di `kubectl` installato e la versione di `kubectl` è obsoleta, potrebbe essere visualizzato un messaggio di errore simile all'esempio seguente quando si tenta di completare la procedura descritta più avanti in questo articolo:</span><span class="sxs-lookup"><span data-stu-id="0bddb-133">If you already have `kubectl`) installed and your version of `kubectl` is too old, you may see an error message similar to the following example when you attempt to complete the steps listed later in this article:</span></span>
+   > <span data-ttu-id="2fc54-133">Se si dispone già di `kubectl` installato e la versione di `kubectl` è obsoleta, potrebbe essere visualizzato un messaggio di errore simile all'esempio seguente quando si tenta di completare la procedura descritta più avanti in questo articolo:</span><span class="sxs-lookup"><span data-stu-id="2fc54-133">If you already have `kubectl`) installed and your version of `kubectl` is too old, you may see an error message similar to the following example when you attempt to complete the steps listed later in this article:</span></span>
    >
    > ```
    > error: group map[autoscaling:0x0000000000 batch:0x0000000000 certificates.k8s.io
@@ -134,18 +134,18 @@ ms.lasthandoff: 12/06/2017
    > onentconfig:0x0000000000] is already registered
    > ```
    >
-   > <span data-ttu-id="0bddb-134">In questo caso, sarà necessario reinstallare `kubectl` per aggiornare la versione in uso.</span><span class="sxs-lookup"><span data-stu-id="0bddb-134">If this happens, you will need to reinstall `kubectl` to update your version.</span></span>
+   > <span data-ttu-id="2fc54-134">In questo caso, sarà necessario reinstallare `kubectl` per aggiornare la versione in uso.</span><span class="sxs-lookup"><span data-stu-id="2fc54-134">If this happens, you will need to reinstall `kubectl` to update your version.</span></span>
    >
 
-1. <span data-ttu-id="0bddb-135">Creare un gruppo di risorse per le risorse di Azure che verranno usate in questa esercitazione, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0bddb-135">Create a resource group for the Azure resources that you will use in this tutorial; for example:</span></span>
+1. <span data-ttu-id="2fc54-135">Creare un gruppo di risorse per le risorse di Azure che verranno usate in questa esercitazione, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="2fc54-135">Create a resource group for the Azure resources that you will use in this tutorial; for example:</span></span>
    ```azurecli
    az group create --name=wingtiptoys-kubernetes --location=westeurope
    ```
-   <span data-ttu-id="0bddb-136">Dove:</span><span class="sxs-lookup"><span data-stu-id="0bddb-136">Where:</span></span>  
-      * <span data-ttu-id="0bddb-137">*wingtiptoys-kubernetes* è un nome univoco per il gruppo di risorse</span><span class="sxs-lookup"><span data-stu-id="0bddb-137">*wingtiptoys-kubernetes* is a unique name for your resource group</span></span>  
-      * <span data-ttu-id="0bddb-138">*westeurope* è una posizione geografica appropriata per l'applicazione</span><span class="sxs-lookup"><span data-stu-id="0bddb-138">*westeurope* is an appropriate geographic location for your application</span></span>  
+   <span data-ttu-id="2fc54-136">Dove:</span><span class="sxs-lookup"><span data-stu-id="2fc54-136">Where:</span></span>  
+      * <span data-ttu-id="2fc54-137">*wingtiptoys-kubernetes* è un nome univoco per il gruppo di risorse</span><span class="sxs-lookup"><span data-stu-id="2fc54-137">*wingtiptoys-kubernetes* is a unique name for your resource group</span></span>  
+      * <span data-ttu-id="2fc54-138">*westeurope* è una posizione geografica appropriata per l'applicazione</span><span class="sxs-lookup"><span data-stu-id="2fc54-138">*westeurope* is an appropriate geographic location for your application</span></span>  
 
-   <span data-ttu-id="0bddb-139">Nell'interfaccia della riga di comando di Azure verranno visualizzati i risultati della creazione del gruppo di risorse, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0bddb-139">The Azure CLI will display the results of your resource group creation; for example:</span></span>  
+   <span data-ttu-id="2fc54-139">Nell'interfaccia della riga di comando di Azure verranno visualizzati i risultati della creazione del gruppo di risorse, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="2fc54-139">The Azure CLI will display the results of your resource group creation; for example:</span></span>  
 
    ```json
    {
@@ -161,18 +161,18 @@ ms.lasthandoff: 12/06/2017
    ```
 
 
-## <a name="create-a-kubernetes-cluster-using-the-azure-cli"></a><span data-ttu-id="0bddb-140">Creare un cluster Kubernetes usando l'interfaccia della riga di comando di Azure</span><span class="sxs-lookup"><span data-stu-id="0bddb-140">Create a Kubernetes cluster using the Azure CLI</span></span>
+## <a name="create-a-kubernetes-cluster-using-the-azure-cli"></a><span data-ttu-id="2fc54-140">Creare un cluster Kubernetes usando l'interfaccia della riga di comando di Azure</span><span class="sxs-lookup"><span data-stu-id="2fc54-140">Create a Kubernetes cluster using the Azure CLI</span></span>
 
-1. <span data-ttu-id="0bddb-141">Creare un cluster Kubernetes nel nuovo gruppo di risorse, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0bddb-141">Create a Kubernetes cluster in your new resource group; for example:</span></span>  
+1. <span data-ttu-id="2fc54-141">Creare un cluster Kubernetes nel nuovo gruppo di risorse, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="2fc54-141">Create a Kubernetes cluster in your new resource group; for example:</span></span>  
    ```azurecli 
    az acs create --orchestrator-type kubernetes --resource-group wingtiptoys-kubernetes --name wingtiptoys-cluster --generate-ssh-keys --dns-prefix=wingtiptoys
    ```
-   <span data-ttu-id="0bddb-142">Dove:</span><span class="sxs-lookup"><span data-stu-id="0bddb-142">Where:</span></span>  
-      * <span data-ttu-id="0bddb-143">*wingtiptoys kubernetes* è il nome del gruppo di risorse creato in precedenza in questo articolo</span><span class="sxs-lookup"><span data-stu-id="0bddb-143">*wingtiptoys-kubernetes* is the name of your resource group from earlier in this article</span></span>  
-      * <span data-ttu-id="0bddb-144">*wingtiptoys-cluster* è un nome univoco per il cluster Kubernetes</span><span class="sxs-lookup"><span data-stu-id="0bddb-144">*wingtiptoys-cluster* is a unique name for your Kubernetes cluster</span></span>
-      * <span data-ttu-id="0bddb-145">*wingtiptoys* è un nome DNS univoco per l'applicazione</span><span class="sxs-lookup"><span data-stu-id="0bddb-145">*wingtiptoys* is a unique name DNS name for your application</span></span>
+   <span data-ttu-id="2fc54-142">Dove:</span><span class="sxs-lookup"><span data-stu-id="2fc54-142">Where:</span></span>  
+      * <span data-ttu-id="2fc54-143">*wingtiptoys kubernetes* è il nome del gruppo di risorse creato in precedenza in questo articolo</span><span class="sxs-lookup"><span data-stu-id="2fc54-143">*wingtiptoys-kubernetes* is the name of your resource group from earlier in this article</span></span>  
+      * <span data-ttu-id="2fc54-144">*wingtiptoys-cluster* è un nome univoco per il cluster Kubernetes</span><span class="sxs-lookup"><span data-stu-id="2fc54-144">*wingtiptoys-cluster* is a unique name for your Kubernetes cluster</span></span>
+      * <span data-ttu-id="2fc54-145">*wingtiptoys* è un nome DNS univoco per l'applicazione</span><span class="sxs-lookup"><span data-stu-id="2fc54-145">*wingtiptoys* is a unique name DNS name for your application</span></span>
 
-   <span data-ttu-id="0bddb-146">Nell'interfaccia della riga di comando di Azure verranno visualizzati i risultati della creazione del cluster, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0bddb-146">The Azure CLI will display the results of your cluster creation; for example:</span></span>  
+   <span data-ttu-id="2fc54-146">Nell'interfaccia della riga di comando di Azure verranno visualizzati i risultati della creazione del cluster, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="2fc54-146">The Azure CLI will display the results of your cluster creation; for example:</span></span>  
 
    ```json
    {
@@ -226,17 +226,17 @@ ms.lasthandoff: 12/06/2017
    }
    ```
 
-1. <span data-ttu-id="0bddb-147">Scaricare le credenziali per il nuovo cluster Kubernetes, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0bddb-147">Download your credentials for your new Kubernetes cluster; for example:</span></span>  
+1. <span data-ttu-id="2fc54-147">Scaricare le credenziali per il nuovo cluster Kubernetes, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="2fc54-147">Download your credentials for your new Kubernetes cluster; for example:</span></span>  
    ```azurecli 
    az acs kubernetes get-credentials --resource-group=wingtiptoys-kubernetes --name wingtiptoys-cluster
    ```
 
-1. <span data-ttu-id="0bddb-148">Verificare la connessione con il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="0bddb-148">Verify your connection with the following command:</span></span>
+1. <span data-ttu-id="2fc54-148">Verificare la connessione con il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="2fc54-148">Verify your connection with the following command:</span></span>
    ```shell 
    kubectl get nodes
    ```
 
-   <span data-ttu-id="0bddb-149">Verrà visualizzato un elenco di nodi e stati, come nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="0bddb-149">You should see a list of nodes and statuses like the following example:</span></span>
+   <span data-ttu-id="2fc54-149">Verrà visualizzato un elenco di nodi e stati, come nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="2fc54-149">You should see a list of nodes and statuses like the following example:</span></span>
 
    ```shell
    NAME                    STATUS                     AGE       VERSION
@@ -247,18 +247,20 @@ ms.lasthandoff: 12/06/2017
    ```
 
 
-## <a name="create-a-private-azure-container-registry-using-the-azure-cli"></a><span data-ttu-id="0bddb-150">Creare un registro contenitori di Azure privato usando l'interfaccia della riga di comando di Azure</span><span class="sxs-lookup"><span data-stu-id="0bddb-150">Create a private Azure container registry using the Azure CLI</span></span>
+## <a name="create-a-private-azure-container-registry-using-the-azure-cli"></a><span data-ttu-id="2fc54-150">Creare un registro contenitori di Azure privato usando l'interfaccia della riga di comando di Azure</span><span class="sxs-lookup"><span data-stu-id="2fc54-150">Create a private Azure container registry using the Azure CLI</span></span>
 
-1. <span data-ttu-id="0bddb-151">Creare un registro contenitori di Azure privato nel gruppo di risorse per ospitare l'immagine di Docker, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0bddb-151">Create a private Azure container registry in your resource group to host your Docker image; for example:</span></span>
+1. <span data-ttu-id="2fc54-151">Creare un registro contenitori di Azure privato nel gruppo di risorse per ospitare l'immagine di Docker, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="2fc54-151">Create a private Azure container registry in your resource group to host your Docker image; for example:</span></span>
    ```azurecli
    az acr create --admin-enabled --resource-group wingtiptoys-kubernetes --location westeurope --name wingtiptoysregistry --sku Basic
    ```
-   <span data-ttu-id="0bddb-152">Dove:</span><span class="sxs-lookup"><span data-stu-id="0bddb-152">Where:</span></span>  
-      * <span data-ttu-id="0bddb-153">*wingtiptoys kubernetes* è il nome del gruppo di risorse creato in precedenza in questo articolo</span><span class="sxs-lookup"><span data-stu-id="0bddb-153">*wingtiptoys-kubernetes* is the name of your resource group from earlier in this article</span></span>  
-      * <span data-ttu-id="0bddb-154">*wingtiptoysregistry* è un nome univoco per il registro privato</span><span class="sxs-lookup"><span data-stu-id="0bddb-154">*wingtiptoysregistry* is a unique name for your private registry</span></span>
-      * <span data-ttu-id="0bddb-155">*westeurope* è una posizione geografica appropriata per l'applicazione</span><span class="sxs-lookup"><span data-stu-id="0bddb-155">*westeurope* is an appropriate geographic location for your application</span></span>  
+   <span data-ttu-id="2fc54-152">Dove:</span><span class="sxs-lookup"><span data-stu-id="2fc54-152">Where:</span></span>
+   | <span data-ttu-id="2fc54-153">Parametro</span><span class="sxs-lookup"><span data-stu-id="2fc54-153">Parameter</span></span> | <span data-ttu-id="2fc54-154">DESCRIZIONE</span><span class="sxs-lookup"><span data-stu-id="2fc54-154">Description</span></span> |
+   |---|---|
+   | `wingtiptoys-kubernetes` | <span data-ttu-id="2fc54-155">Specifica il nome del gruppo di risorse creato in precedenza in questo articolo.</span><span class="sxs-lookup"><span data-stu-id="2fc54-155">Specifies the name of your resource group from earlier in this article.</span></span> |
+   | `wingtiptoysregistry` | <span data-ttu-id="2fc54-156">Specifica un nome univoco per il registro privato.</span><span class="sxs-lookup"><span data-stu-id="2fc54-156">Specifies a unique name for your private registry.</span></span> |
+   | `westeurope` | <span data-ttu-id="2fc54-157">Specifica una posizione geografica appropriata per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="2fc54-157">Specifies an appropriate geographic location for your application.</span></span> |
 
-   <span data-ttu-id="0bddb-156">Nell'interfaccia della riga di comando di Azure verranno visualizzati i risultati della creazione del registro, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0bddb-156">The Azure CLI will display the results of your registry creation; for example:</span></span>  
+   <span data-ttu-id="2fc54-158">Nell'interfaccia della riga di comando di Azure verranno visualizzati i risultati della creazione del registro, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="2fc54-158">The Azure CLI will display the results of your registry creation; for example:</span></span>  
 
    ```json
    {
@@ -282,12 +284,12 @@ ms.lasthandoff: 12/06/2017
    }
    ```
 
-1. <span data-ttu-id="0bddb-157">Recuperare la password per il registro contenitori dall'interfaccia della riga di comando di Azure.</span><span class="sxs-lookup"><span data-stu-id="0bddb-157">Retrieve the password for your container registry from the Azure CLI.</span></span>
+1. <span data-ttu-id="2fc54-159">Recuperare la password per il registro contenitori dall'interfaccia della riga di comando di Azure.</span><span class="sxs-lookup"><span data-stu-id="2fc54-159">Retrieve the password for your container registry from the Azure CLI.</span></span>
    ```azurecli
    az acr credential show --name wingtiptoysregistry --query passwords[0]
    ```
 
-   <span data-ttu-id="0bddb-158">Nell'interfaccia della riga di comando di Azure verrà visualizzata la password del registro, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0bddb-158">The Azure CLI will display the password for your registry; for example:</span></span>  
+   <span data-ttu-id="2fc54-160">Nell'interfaccia della riga di comando di Azure verrà visualizzata la password del registro, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="2fc54-160">The Azure CLI will display the password for your registry; for example:</span></span>  
 
    ```json
    {
@@ -296,10 +298,10 @@ ms.lasthandoff: 12/06/2017
    }
    ```
 
-1. <span data-ttu-id="0bddb-159">Passare alla directory di configurazione dell'installazione di Maven (impostazione predefinita: ~/.m2/ or C:\Users\nomeutente\.m2) e aprire il file *settings.xml* con un editor di testo.</span><span class="sxs-lookup"><span data-stu-id="0bddb-159">Navigate to the configuration directory for your Maven installation (default ~/.m2/ or C:\Users\username\.m2) and open the *settings.xml* file with a text editor.</span></span>
+1. <span data-ttu-id="2fc54-161">Passare alla directory di configurazione dell'installazione di Maven (impostazione predefinita: ~/.m2/ or C:\Users\nomeutente\.m2) e aprire il file *settings.xml* con un editor di testo.</span><span class="sxs-lookup"><span data-stu-id="2fc54-161">Navigate to the configuration directory for your Maven installation (default ~/.m2/ or C:\Users\username\.m2) and open the *settings.xml* file with a text editor.</span></span>
 
-1. <span data-ttu-id="0bddb-160">Aggiungere l'URL, il nome utente e la password di Registro contenitori di Azure a una nuova raccolta `<server>` nel file *settings.xml*.</span><span class="sxs-lookup"><span data-stu-id="0bddb-160">Add your Azure Container Registry URL, username and password to a new `<server>` collection in the *settings.xml* file.</span></span>
-<span data-ttu-id="0bddb-161">I valori `id` e `username` corrispondono al nome del registro.</span><span class="sxs-lookup"><span data-stu-id="0bddb-161">The `id` and `username` are the name of the registry.</span></span> <span data-ttu-id="0bddb-162">Usare il valore `password` del comando precedente, senza virgolette.</span><span class="sxs-lookup"><span data-stu-id="0bddb-162">Use the `password` value from the previous command (without quotes).</span></span>
+1. <span data-ttu-id="2fc54-162">Aggiungere l'URL, il nome utente e la password di Registro contenitori di Azure a una nuova raccolta `<server>` nel file *settings.xml*.</span><span class="sxs-lookup"><span data-stu-id="2fc54-162">Add your Azure Container Registry URL, username and password to a new `<server>` collection in the *settings.xml* file.</span></span>
+<span data-ttu-id="2fc54-163">I valori `id` e `username` corrispondono al nome del registro.</span><span class="sxs-lookup"><span data-stu-id="2fc54-163">The `id` and `username` are the name of the registry.</span></span> <span data-ttu-id="2fc54-164">Usare il valore `password` del comando precedente, senza virgolette.</span><span class="sxs-lookup"><span data-stu-id="2fc54-164">Use the `password` value from the previous command (without quotes).</span></span>
 
    ```xml
    <servers>
@@ -311,9 +313,9 @@ ms.lasthandoff: 12/06/2017
    </servers>
    ```
 
-1. <span data-ttu-id="0bddb-163">Passare alla directory del progetto completato per l'applicazione Spring Boot (ad esempio, "*C:\SpringBoot\gs-spring-boot-docker\complete*" o "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*") e aprire il file *pom.xml* con un editor di testo.</span><span class="sxs-lookup"><span data-stu-id="0bddb-163">Navigate to the completed project directory for your Spring Boot application (for example, "*C:\SpringBoot\gs-spring-boot-docker\complete*" or "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*"), and open the *pom.xml* file with a text editor.</span></span>
+1. <span data-ttu-id="2fc54-165">Passare alla directory del progetto completato per l'applicazione Spring Boot (ad esempio, "*C:\SpringBoot\gs-spring-boot-docker\complete*" o "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*") e aprire il file *pom.xml* con un editor di testo.</span><span class="sxs-lookup"><span data-stu-id="2fc54-165">Navigate to the completed project directory for your Spring Boot application (for example, "*C:\SpringBoot\gs-spring-boot-docker\complete*" or "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*"), and open the *pom.xml* file with a text editor.</span></span>
 
-1. <span data-ttu-id="0bddb-164">Aggiornare la raccolta `<properties>` nel file *pom.xml* con il valore del server di accesso per il registro contenitori di Azure.</span><span class="sxs-lookup"><span data-stu-id="0bddb-164">Update the `<properties>` collection in the *pom.xml* file with the login server value for your Azure Container Registry.</span></span>
+1. <span data-ttu-id="2fc54-166">Aggiornare la raccolta `<properties>` nel file *pom.xml* con il valore del server di accesso per il registro contenitori di Azure.</span><span class="sxs-lookup"><span data-stu-id="2fc54-166">Update the `<properties>` collection in the *pom.xml* file with the login server value for your Azure Container Registry.</span></span>
 
    ```xml
    <properties>
@@ -322,7 +324,7 @@ ms.lasthandoff: 12/06/2017
    </properties>
    ```
 
-1. <span data-ttu-id="0bddb-165">Aggiornare la raccolta `<plugins>` nel file *pom.xml* in modo che `<plugin>` contenga l'indirizzo del server di accesso e il nome del registro per il registro contenitori di Azure.</span><span class="sxs-lookup"><span data-stu-id="0bddb-165">Update the `<plugins>` collection in the *pom.xml* file so that the `<plugin>` contains the login server address and registry name for your Azure Container Registry.</span></span>
+1. <span data-ttu-id="2fc54-167">Aggiornare la raccolta `<plugins>` nel file *pom.xml* in modo che `<plugin>` contenga l'indirizzo del server di accesso e il nome del registro per il registro contenitori di Azure.</span><span class="sxs-lookup"><span data-stu-id="2fc54-167">Update the `<plugins>` collection in the *pom.xml* file so that the `<plugin>` contains the login server address and registry name for your Azure Container Registry.</span></span>
 
    ```xml
    <plugin>
@@ -337,13 +339,13 @@ ms.lasthandoff: 12/06/2017
    </plugin>
    ```
 
-1. <span data-ttu-id="0bddb-166">Passare alla directory del progetto completato per l'applicazione Spring Boot ed eseguire il comando Maven seguente per creare il contenitore Docker ed effettuare il push dell'immagine nel registro:</span><span class="sxs-lookup"><span data-stu-id="0bddb-166">Navigate to the completed project directory for your Spring Boot application, and run the following Maven command to build the Docker container and push the image to your registry:</span></span>
+1. <span data-ttu-id="2fc54-168">Passare alla directory del progetto completato per l'applicazione Spring Boot ed eseguire il comando Maven seguente per creare il contenitore Docker ed effettuare il push dell'immagine nel registro:</span><span class="sxs-lookup"><span data-stu-id="2fc54-168">Navigate to the completed project directory for your Spring Boot application, and run the following Maven command to build the Docker container and push the image to your registry:</span></span>
 
    ```shell
    mvn package dockerfile:build -DpushImage
    ```
 
-   <span data-ttu-id="0bddb-167">Maven visualizzerà i risultati della compilazione, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0bddb-167">Maven will display the results of your build; for example:</span></span>  
+   <span data-ttu-id="2fc54-169">Maven visualizzerà i risultati della compilazione, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="2fc54-169">Maven will display the results of your build; for example:</span></span>  
 
    ```shell
    [INFO] ----------------------------------------------------
@@ -356,11 +358,11 @@ ms.lasthandoff: 12/06/2017
    ```
 
 
-## <a name="configure-your-spring-boot-app-to-use-the-fabric8-maven-plugin"></a><span data-ttu-id="0bddb-168">Configurare l'app Spring Boot per usare il plug-in Maven Fabric8</span><span class="sxs-lookup"><span data-stu-id="0bddb-168">Configure your Spring Boot app to use the Fabric8 Maven plugin</span></span>
+## <a name="configure-your-spring-boot-app-to-use-the-fabric8-maven-plugin"></a><span data-ttu-id="2fc54-170">Configurare l'app Spring Boot per usare il plug-in Maven Fabric8</span><span class="sxs-lookup"><span data-stu-id="2fc54-170">Configure your Spring Boot app to use the Fabric8 Maven plugin</span></span>
 
-1. <span data-ttu-id="0bddb-169">Passare alla directory del progetto completato per l'applicazione Spring Boot (ad esempio, "*C:\SpringBoot\gs-spring-boot-docker\complete*" o "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*") e aprire il file *pom.xml* con un editor di testo.</span><span class="sxs-lookup"><span data-stu-id="0bddb-169">Navigate to the completed project directory for your Spring Boot application, (for example: "*C:\SpringBoot\gs-spring-boot-docker\complete*" or "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*"), and open the *pom.xml* file with a text editor.</span></span>
+1. <span data-ttu-id="2fc54-171">Passare alla directory del progetto completato per l'applicazione Spring Boot (ad esempio, "*C:\SpringBoot\gs-spring-boot-docker\complete*" o "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*") e aprire il file *pom.xml* con un editor di testo.</span><span class="sxs-lookup"><span data-stu-id="2fc54-171">Navigate to the completed project directory for your Spring Boot application, (for example: "*C:\SpringBoot\gs-spring-boot-docker\complete*" or "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*"), and open the *pom.xml* file with a text editor.</span></span>
 
-1. <span data-ttu-id="0bddb-170">Aggiornare la raccolta `<plugins>` nel file *pom.xml* per aggiungere il plug-in Maven Fabric8:</span><span class="sxs-lookup"><span data-stu-id="0bddb-170">Update the `<plugins>` collection in the *pom.xml* file to add the Fabric8 Maven plugin:</span></span>
+1. <span data-ttu-id="2fc54-172">Aggiornare la raccolta `<plugins>` nel file *pom.xml* per aggiungere il plug-in Maven Fabric8:</span><span class="sxs-lookup"><span data-stu-id="2fc54-172">Update the `<plugins>` collection in the *pom.xml* file to add the Fabric8 Maven plugin:</span></span>
 
    ```xml
    <plugin>
@@ -374,11 +376,11 @@ ms.lasthandoff: 12/06/2017
    </plugin>
    ```
 
-1. <span data-ttu-id="0bddb-171">Passare alla directory principale di origine per l'applicazione Spring Boot (ad esempio: "*C:\SpringBoot\gs-spring-boot-docker\complete\src\main*" o "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete/src/main*") e creare una nuova cartella denominata "*fabric8*".</span><span class="sxs-lookup"><span data-stu-id="0bddb-171">Navigate to the main source directory for your Spring Boot application, (for example: "*C:\SpringBoot\gs-spring-boot-docker\complete\src\main*" or "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete/src/main*"), and create a new folder named "*fabric8*".</span></span>
+1. <span data-ttu-id="2fc54-173">Passare alla directory principale di origine per l'applicazione Spring Boot (ad esempio: "*C:\SpringBoot\gs-spring-boot-docker\complete\src\main*" o "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete/src/main*") e creare una nuova cartella denominata "*fabric8*".</span><span class="sxs-lookup"><span data-stu-id="2fc54-173">Navigate to the main source directory for your Spring Boot application, (for example: "*C:\SpringBoot\gs-spring-boot-docker\complete\src\main*" or "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete/src/main*"), and create a new folder named "*fabric8*".</span></span>
 
-1. <span data-ttu-id="0bddb-172">Creare tre file di frammenti YAML nella nuova cartella *fabric8*:</span><span class="sxs-lookup"><span data-stu-id="0bddb-172">Create three YAML fragment files in the new *fabric8* folder:</span></span>
+1. <span data-ttu-id="2fc54-174">Creare tre file di frammenti YAML nella nuova cartella *fabric8*:</span><span class="sxs-lookup"><span data-stu-id="2fc54-174">Create three YAML fragment files in the new *fabric8* folder:</span></span>
 
-   <span data-ttu-id="0bddb-173">a.</span><span class="sxs-lookup"><span data-stu-id="0bddb-173">a.</span></span> <span data-ttu-id="0bddb-174">Creare un file denominato **deployment.yml** con il contenuto seguente:</span><span class="sxs-lookup"><span data-stu-id="0bddb-174">Create a file named **deployment.yml** with the following contents:</span></span>
+   <span data-ttu-id="2fc54-175">a.</span><span class="sxs-lookup"><span data-stu-id="2fc54-175">a.</span></span> <span data-ttu-id="2fc54-176">Creare un file denominato **deployment.yml** con il contenuto seguente:</span><span class="sxs-lookup"><span data-stu-id="2fc54-176">Create a file named **deployment.yml** with the following contents:</span></span>
       ```yaml
       apiVersion: extensions/v1beta1
       kind: Deployment
@@ -411,7 +413,7 @@ ms.lasthandoff: 12/06/2017
               - name: mysecrets
       ```
 
-   <span data-ttu-id="0bddb-175">b.</span><span class="sxs-lookup"><span data-stu-id="0bddb-175">b.</span></span> <span data-ttu-id="0bddb-176">Creare un file denominato **secrets.yml** con il contenuto seguente:</span><span class="sxs-lookup"><span data-stu-id="0bddb-176">Create a file named **secrets.yml** with the following contents:</span></span>
+   <span data-ttu-id="2fc54-177">b.</span><span class="sxs-lookup"><span data-stu-id="2fc54-177">b.</span></span> <span data-ttu-id="2fc54-178">Creare un file denominato **secrets.yml** con il contenuto seguente:</span><span class="sxs-lookup"><span data-stu-id="2fc54-178">Create a file named **secrets.yml** with the following contents:</span></span>
       ```yaml
       apiVersion: v1
       kind: Secret
@@ -423,7 +425,7 @@ ms.lasthandoff: 12/06/2017
       type: kubernetes.io/dockercfg
       ```
 
-   <span data-ttu-id="0bddb-177">c.</span><span class="sxs-lookup"><span data-stu-id="0bddb-177">c.</span></span> <span data-ttu-id="0bddb-178">Creare un file denominato **service.yml** con il contenuto seguente:</span><span class="sxs-lookup"><span data-stu-id="0bddb-178">Create a file named **service.yml** with the following contents:</span></span>
+   <span data-ttu-id="2fc54-179">c.</span><span class="sxs-lookup"><span data-stu-id="2fc54-179">c.</span></span> <span data-ttu-id="2fc54-180">Creare un file denominato **service.yml** con il contenuto seguente:</span><span class="sxs-lookup"><span data-stu-id="2fc54-180">Create a file named **service.yml** with the following contents:</span></span>
       ```yaml
       apiVersion: v1
       kind: Service
@@ -438,15 +440,15 @@ ms.lasthandoff: 12/06/2017
         type: LoadBalancer
       ```
 
-1. <span data-ttu-id="0bddb-179">Eseguire il comando seguente di Maven per compilare il file dell'elenco di risorse di Kubernetes:</span><span class="sxs-lookup"><span data-stu-id="0bddb-179">Run the following Maven command to build the Kubernetes resource list file:</span></span>
+1. <span data-ttu-id="2fc54-181">Eseguire il comando seguente di Maven per compilare il file dell'elenco di risorse di Kubernetes:</span><span class="sxs-lookup"><span data-stu-id="2fc54-181">Run the following Maven command to build the Kubernetes resource list file:</span></span>
 
    ```shell
    mvn fabric8:resource
    ```
 
-   <span data-ttu-id="0bddb-180">Questo comando unisce in tutti i file YAML delle risorse Kubernetes nella cartella *src/main/fabric8* in un unico file YAML che contiene un elenco di risorse Kubernetes, può essere applicato al cluster Kubernetes direttamente o esportato in un grafico di Helm.</span><span class="sxs-lookup"><span data-stu-id="0bddb-180">This command merges all Kubernetes resource yaml files under the *src/main/fabric8* folder to a YAML file that contains a Kubernetes resource list, which can be applied to Kubernetes cluster directly or export to a helm chart.</span></span>
+   <span data-ttu-id="2fc54-182">Questo comando unisce in tutti i file YAML delle risorse Kubernetes nella cartella *src/main/fabric8* in un unico file YAML che contiene un elenco di risorse Kubernetes, può essere applicato al cluster Kubernetes direttamente o esportato in un grafico di Helm.</span><span class="sxs-lookup"><span data-stu-id="2fc54-182">This command merges all Kubernetes resource yaml files under the *src/main/fabric8* folder to a YAML file that contains a Kubernetes resource list, which can be applied to Kubernetes cluster directly or export to a helm chart.</span></span>
 
-   <span data-ttu-id="0bddb-181">Maven visualizzerà i risultati della compilazione, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0bddb-181">Maven will display the results of your build; for example:</span></span>  
+   <span data-ttu-id="2fc54-183">Maven visualizzerà i risultati della compilazione, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="2fc54-183">Maven will display the results of your build; for example:</span></span>  
 
    ```shell
    [INFO] ----------------------------------------------------
@@ -458,13 +460,13 @@ ms.lasthandoff: 12/06/2017
    [INFO] ----------------------------------------------------
    ```
 
-1. <span data-ttu-id="0bddb-182">Eseguire il comando seguente di Maven per applicare il file dell'elenco di risorse al cluster Kubernetes:</span><span class="sxs-lookup"><span data-stu-id="0bddb-182">Run the following Maven command to apply the resource list file to your Kubernetes cluster:</span></span>
+1. <span data-ttu-id="2fc54-184">Eseguire il comando seguente di Maven per applicare il file dell'elenco di risorse al cluster Kubernetes:</span><span class="sxs-lookup"><span data-stu-id="2fc54-184">Run the following Maven command to apply the resource list file to your Kubernetes cluster:</span></span>
 
    ```shell
    mvn fabric8:apply
    ```
 
-   <span data-ttu-id="0bddb-183">Maven visualizzerà i risultati della compilazione, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0bddb-183">Maven will display the results of your build; for example:</span></span>  
+   <span data-ttu-id="2fc54-185">Maven visualizzerà i risultati della compilazione, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="2fc54-185">Maven will display the results of your build; for example:</span></span>  
 
    ```shell
    [INFO] ----------------------------------------------------
@@ -476,12 +478,12 @@ ms.lasthandoff: 12/06/2017
    [INFO] ----------------------------------------------------
    ```
 
-1. <span data-ttu-id="0bddb-184">Dopo la distribuzione dell'app nel cluster, eseguire una query sull'indirizzo IP esterno tramite l'applicazione `kubectl`, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0bddb-184">Once the app is deployed to the cluster, query the external IP address using the `kubectl` application; for example:</span></span>
+1. <span data-ttu-id="2fc54-186">Dopo la distribuzione dell'app nel cluster, eseguire una query sull'indirizzo IP esterno tramite l'applicazione `kubectl`, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="2fc54-186">Once the app is deployed to the cluster, query the external IP address using the `kubectl` application; for example:</span></span>
    ```shell
    kubectl get svc -w
    ```
 
-   <span data-ttu-id="0bddb-185">In `kubectl` verranno visualizzati gli indirizzi IP interni ed esterni, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0bddb-185">`kubectl` will display your internal and external IP addresses; for example:</span></span>
+   <span data-ttu-id="2fc54-187">In `kubectl` verranno visualizzati gli indirizzi IP interni ed esterni, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="2fc54-187">`kubectl` will display your internal and external IP addresses; for example:</span></span>
    
    ```shell
    NAME                    CLUSTER-IP   EXTERNAL-IP   PORT(S)        AGE
@@ -489,35 +491,35 @@ ms.lasthandoff: 12/06/2017
    gs-spring-boot-docker   10.0.242.8   13.65.196.3   80:31215/TCP   3m
    ```
    
-   <span data-ttu-id="0bddb-186">Per aprire l'applicazione in un Web browser, è possibile usare l'indirizzo IP esterno.</span><span class="sxs-lookup"><span data-stu-id="0bddb-186">You can use the external IP address to open your application in a web browser.</span></span>
+   <span data-ttu-id="2fc54-188">Per aprire l'applicazione in un Web browser, è possibile usare l'indirizzo IP esterno.</span><span class="sxs-lookup"><span data-stu-id="2fc54-188">You can use the external IP address to open your application in a web browser.</span></span>
 
    ![Esplorare l'applicazione di esempio esternamente][SB02]
 
-## <a name="delete-your-kubernetes-cluster"></a><span data-ttu-id="0bddb-188">Eliminare il cluster Kubernetes</span><span class="sxs-lookup"><span data-stu-id="0bddb-188">Delete your Kubernetes cluster</span></span>
+## <a name="delete-your-kubernetes-cluster"></a><span data-ttu-id="2fc54-190">Eliminare il cluster Kubernetes</span><span class="sxs-lookup"><span data-stu-id="2fc54-190">Delete your Kubernetes cluster</span></span>
 
-<span data-ttu-id="0bddb-189">Quando il cluster Kubernetes non è più necessario, è possibile usare il comando `az group delete` per rimuovere il gruppo di risorse e, di conseguenza, tutte le relative risorse, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0bddb-189">When your Kubernetes cluster is no longer needed, you can use the `az group delete` command to remove the resource group, which will remove all of its related resources; for example:</span></span>
+<span data-ttu-id="2fc54-191">Quando il cluster Kubernetes non è più necessario, è possibile usare il comando `az group delete` per rimuovere il gruppo di risorse e, di conseguenza, tutte le relative risorse, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="2fc54-191">When your Kubernetes cluster is no longer needed, you can use the `az group delete` command to remove the resource group, which will remove all of its related resources; for example:</span></span>
 
    ```azurecli
    az group delete --name wingtiptoys-kubernetes --yes --no-wait
    ```
 
-## <a name="next-steps"></a><span data-ttu-id="0bddb-190">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="0bddb-190">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="2fc54-192">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="2fc54-192">Next steps</span></span>
 
-<span data-ttu-id="0bddb-191">Per altre informazioni sull'uso delle applicazioni Spring Boot in Azure, vedere gli articoli seguenti:</span><span class="sxs-lookup"><span data-stu-id="0bddb-191">For more information about using Spring Boot applications on Azure, see the following articles:</span></span>
+<span data-ttu-id="2fc54-193">Per altre informazioni sull'uso delle applicazioni Spring Boot in Azure, vedere gli articoli seguenti:</span><span class="sxs-lookup"><span data-stu-id="2fc54-193">For more information about using Spring Boot applications on Azure, see the following articles:</span></span>
 
-* [<span data-ttu-id="0bddb-192">Distribuire un'applicazione Spring Boot nel servizio app di Azure</span><span class="sxs-lookup"><span data-stu-id="0bddb-192">Deploy a Spring Boot Application to the Azure App Service</span></span>](deploy-spring-boot-java-web-app-on-azure.md)
-* [<span data-ttu-id="0bddb-193">Distribuire un'applicazione Spring Boot in Linux nel servizio contenitore di Azure</span><span class="sxs-lookup"><span data-stu-id="0bddb-193">Deploy a Spring Boot application on Linux in the Azure Container Service</span></span>](deploy-spring-boot-java-app-on-linux.md)
-* [<span data-ttu-id="0bddb-194">Distribuire un'applicazione Spring Boot in un cluster Kubernetes nel servizio contenitore di Azure</span><span class="sxs-lookup"><span data-stu-id="0bddb-194">Deploy a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service</span></span>](deploy-spring-boot-java-app-on-kubernetes.md)
+* [<span data-ttu-id="2fc54-194">Distribuire un'applicazione Spring Boot nel servizio app di Azure</span><span class="sxs-lookup"><span data-stu-id="2fc54-194">Deploy a Spring Boot Application to the Azure App Service</span></span>](deploy-spring-boot-java-web-app-on-azure.md)
+* [<span data-ttu-id="2fc54-195">Distribuire un'applicazione Spring Boot in Linux nel servizio contenitore di Azure</span><span class="sxs-lookup"><span data-stu-id="2fc54-195">Deploy a Spring Boot application on Linux in the Azure Container Service</span></span>](deploy-spring-boot-java-app-on-linux.md)
+* [<span data-ttu-id="2fc54-196">Distribuire un'applicazione Spring Boot in un cluster Kubernetes nel servizio contenitore di Azure</span><span class="sxs-lookup"><span data-stu-id="2fc54-196">Deploy a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service</span></span>](deploy-spring-boot-java-app-on-kubernetes.md)
 
-<span data-ttu-id="0bddb-195">Per altre informazioni su come usare Azure con Java, vedere [Azure per sviluppatori Java] e [Java Tools for Visual Studio Team Services (Strumenti Java per Visual Studio Team Services)].</span><span class="sxs-lookup"><span data-stu-id="0bddb-195">For more information about using Azure with Java, see the [Azure for Java Developers] and the [Java Tools for Visual Studio Team Services].</span></span>
+<span data-ttu-id="2fc54-197">Per altre informazioni su come usare Azure con Java, vedere [Azure per sviluppatori Java] e [Java Tools for Visual Studio Team Services (Strumenti Java per Visual Studio Team Services)].</span><span class="sxs-lookup"><span data-stu-id="2fc54-197">For more information about using Azure with Java, see the [Azure for Java Developers] and the [Java Tools for Visual Studio Team Services].</span></span>
 
-<span data-ttu-id="0bddb-196">Per maggiori dettagli sul progetto di esempio di Spring Boot in Docker, vedere [Spring Boot on Docker Getting Started] (Introduzione a Spring Boot in Docker).</span><span class="sxs-lookup"><span data-stu-id="0bddb-196">For further details about the Spring Boot on Docker sample project, see [Spring Boot on Docker Getting Started].</span></span>
+<span data-ttu-id="2fc54-198">Per maggiori dettagli sul progetto di esempio di Spring Boot in Docker, vedere [Spring Boot on Docker Getting Started] (Introduzione a Spring Boot in Docker).</span><span class="sxs-lookup"><span data-stu-id="2fc54-198">For further details about the Spring Boot on Docker sample project, see [Spring Boot on Docker Getting Started].</span></span>
 
-<span data-ttu-id="0bddb-197">Per informazioni su come iniziare a creare applicazioni Spring Boot proprie, vedere **Spring Initializr** all'indirizzo <https://start.spring.io/>.</span><span class="sxs-lookup"><span data-stu-id="0bddb-197">For help with getting started with your own Spring Boot applications, see the **Spring Initializr** at <https://start.spring.io/>.</span></span>
+<span data-ttu-id="2fc54-199">Per informazioni su come iniziare a creare applicazioni Spring Boot proprie, vedere **Spring Initializr** all'indirizzo <https://start.spring.io/>.</span><span class="sxs-lookup"><span data-stu-id="2fc54-199">For help with getting started with your own Spring Boot applications, see the **Spring Initializr** at <https://start.spring.io/>.</span></span>
 
-<span data-ttu-id="0bddb-198">Per altre informazioni su come iniziare a creare una semplice applicazione Spring Boot, vedere Spring Initializr all'indirizzo <https://start.spring.io/>.</span><span class="sxs-lookup"><span data-stu-id="0bddb-198">For more information about getting started with creating a simple Spring Boot application, see the Spring Initializr at <https://start.spring.io/>.</span></span>
+<span data-ttu-id="2fc54-200">Per altre informazioni su come iniziare a creare una semplice applicazione Spring Boot, vedere Spring Initializr all'indirizzo <https://start.spring.io/>.</span><span class="sxs-lookup"><span data-stu-id="2fc54-200">For more information about getting started with creating a simple Spring Boot application, see the Spring Initializr at <https://start.spring.io/>.</span></span>
 
-<span data-ttu-id="0bddb-199">Per altri esempi sull'uso delle immagini personalizzate di Docker con Azure, vedere [Uso di un'immagine Docker personalizzata per App Web di Azure in Linux].</span><span class="sxs-lookup"><span data-stu-id="0bddb-199">For additional examples for how to use custom Docker images with Azure, see [Using a custom Docker image for Azure Web App on Linux].</span></span>
+<span data-ttu-id="2fc54-201">Per altri esempi sull'uso delle immagini personalizzate di Docker con Azure, vedere [Uso di un'immagine Docker personalizzata per App Web di Azure in Linux].</span><span class="sxs-lookup"><span data-stu-id="2fc54-201">For additional examples for how to use custom Docker images with Azure, see [Using a custom Docker image for Azure Web App on Linux].</span></span>
 
 <!-- URL List -->
 
