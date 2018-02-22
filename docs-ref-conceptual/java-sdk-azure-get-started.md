@@ -12,17 +12,17 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.openlocfilehash: 2f40fa22244e5ffa3be76d4de579959dcb5591d6
-ms.sourcegitcommit: 0676cbb530207544090c1fd051a2f09760873cd8
+ms.openlocfilehash: f069183c96cdc42d590d2e58a5a6a500be5ab69a
+ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="get-started-with-cloud-development-using-the-azure-libraries-for-java"></a>Introduzione allo sviluppo per il cloud con le librerie di Azure per Java
 
 Questa guida illustra la configurazione di un ambiente di sviluppo per lo sviluppo di Azure in Java. Verranno quindi create alcune risorse di Azure che verranno connesse per eseguire alcune attività di base, come caricare un file o distribuire un'applicazione Web. Al termine sarà possibile iniziare a usare i servizi di Azure nelle proprie applicazioni Java.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>prerequisiti
 
 - Un account Azure. Se non è disponibile, [ottenere una versione di valutazione gratuita](https://azure.microsoft.com/free/)
 - [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) o [interfaccia della riga di comando di Azure 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).
@@ -86,10 +86,10 @@ Impostare una variabile di ambiente `AZURE_AUTH_LOCATION` con il percorso comple
 export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
 ```
 
-Se si lavora in ambiente Windows, aggiungere la variabile alle proprietà del sistema. Aprire PowerShell, sostituire la seconda variabile con il percorso del file e quindi immettere il comando seguente:
+Se si lavora in ambiente Windows, aggiungere la variabile alle proprietà del sistema. Aprire una finestra di PowerShell con privilegi di amministratore, sostituire la seconda variabile con il percorso del file e quindi immettere il comando seguente:
 
 ```powershell
-[Environment]::SetEnvironmentVariable("AZURE_AUTH_LOCATION", "C:\<fullpath>\azureauth.properties", "Machine")
+setx AZURE_AUTH_LOCATION "C:\<fullpath>\azureauth.properties" /m
 ```
 
 ## <a name="create-a-new-maven-project"></a>Creare un nuovo progetto Maven

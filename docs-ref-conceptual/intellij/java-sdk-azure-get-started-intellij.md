@@ -15,11 +15,11 @@ ms.prod: azure
 ms.service: multiple
 ms.topic: get-started-article
 ms.technology: azure
-ms.openlocfilehash: 0a059366f7cdc139dcb5a8e7e9ca78254384d19e
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 5c122b09d9d431ddcec667e61230eb53968c52e7
+ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="get-started-with-the-azure-libraries-using-intellij"></a>Introduzione alle librerie di Azure con Intellij
 
@@ -88,10 +88,10 @@ Impostare una variabile di ambiente `AZURE_AUTH_LOCATION` con il percorso comple
 export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
 ```
 
-Se si lavora in ambiente Windows, aggiungere la variabile alle proprietà del sistema. Aprire PowerShell, sostituire la seconda variabile con il percorso del file e quindi immettere il comando seguente:
+Se si lavora in ambiente Windows, aggiungere la variabile alle proprietà del sistema. Aprire una finestra di PowerShell con privilegi di amministratore, sostituire la seconda variabile con il percorso del file e quindi immettere il comando seguente:
 
 ```powershell
-[Environment]::SetEnvironmentVariable("AZURE_AUTH_LOCATION", "C:\<fullpath>\azureauth.properties", "Machine")
+setx AZURE_AUTH_LOCATION "C:\<fullpath>\azureauth.properties" /m
 ```
 
 ## <a name="create-a-new-maven-project"></a>Creare un nuovo progetto Maven
