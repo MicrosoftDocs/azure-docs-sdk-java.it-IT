@@ -1,4 +1,4 @@
-- name: Spring in Azure
+- name: Documentazione su Spring in Azure
   href: ./index.yml
   items:
     - name: Guide introduttive
@@ -9,7 +9,7 @@
           href: configure-spring-boot-starter-java-app-with-azure-storage.md
         - name: Azure Active Directory
           href: configure-spring-boot-starter-java-app-with-azure-active-directory.md
-        - name: Insieme di credenziali chiave Azure
+        - name: Azure Key Vault
           href: configure-spring-boot-starter-java-app-with-azure-key-vault.md
     - name: Esercitazioni
       items:
@@ -37,7 +37,7 @@
           href: 'https://github.com/Azure-Samples/mysql-spring-boot-todo'
         - name: Spring Initializr
           href: 'https://start.spring.io/'
-    - name: riferimento
+    - name: Riferimenti
       items:
         - name: Spring Framework
           href: 'https://spring.io/'
