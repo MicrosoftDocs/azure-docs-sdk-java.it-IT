@@ -1,12 +1,12 @@
 ---
 title: Pubblicare un contenitore Docker usando Azure Toolkit for IntelliJ
 description: Informazioni su come pubblicare un'app Web in Microsoft Azure come contenitore Docker usando il Toolkit di Azure per IntelliJ.
-services: 
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: f92040b34b9897d9feea8d2ec5e8748e75fff7f7
-ms.sourcegitcommit: 381a865f2849be8e3044d24cd4b3b54e9bbb7abc
+ms.openlocfilehash: 64cefc1ace5d0377dea25fdbdc83d8dada31ddf7
+ms.sourcegitcommit: ed130145f9e5c2d803791d96bb118023175e644a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>Pubblicare un'app Web come contenitore Docker usando Azure Toolkit for IntelliJ
 
@@ -103,27 +103,43 @@ I contenitori Docker sono un metodo molto diffuso per la distribuzione di applic
 
       * **New log in credentials** (Nuove credenziali di accesso): consente di creare un nuovo set di credenziali di accesso. Se si seleziona questa opzione, seguire questa procedura:
 
-        a. Nella scheda **VM Credentials** (Credenziali VM) specificare le informazioni seguenti per le credenziali di accesso alla macchina virtuale dell'host Docker: * **Username** (Nome utente): nome utente delle credenziali di accesso alla macchina virtuale.
-             * **Password** e **Confirm** (Conferma): consente di specificare la password per accedere alla macchina virtuale.
-             * **SSH**: immettere le impostazioni Secure Shell (SSH) per l'host Docker. È possibile selezionare una delle opzioni seguenti: **None** (Nessuna): specifica che la macchina virtuale non consente le connessioni SSH.
-                * **Auto-generate** (Genera automaticamente): crea automaticamente le impostazioni necessarie per la connessione tramite SSH.
-                * **Import from directory** (Importa da directory): consente di specificare una directory che contiene un set di impostazioni SSH salvate in precedenza. La directory deve contenere i due file seguenti:
-                
-                  * *id_rsa*: Contains the RSA identification for a user.
-                  * *id_rsa.pub*: Contains the RSA public key that is used for authentication.
-            
-        b. Nella scheda **Docker Daemon Access** (Accesso daemon Docker) specificare le informazioni seguenti:
+    a. Nella scheda **VM Credentials** (Credenziali macchina virtuale) fornire le informazioni seguenti per le credenziali di accesso alla macchina virtuale dell'host Docker:
 
-          ![Creare un host Docker][PUB06]
+    * **Username** (Nome utente): immettere il nome utente per le credenziali di accesso alla macchina virtuale.
+
+    * **Password** e **Confirm** (Conferma): immettere la password per le credenziali di accesso alla macchina virtuale.
+
+    * **SSH**: immettere le impostazioni Secure Shell (SSH) per l'host Docker. È possibile selezionare una delle opzioni seguenti:
+
+        * **None** (Nessuna): specifica che la macchina virtuale non consente connessioni SSH.
+
+        * **Auto-generate** (Genera automaticamente): crea automaticamente le impostazioni necessarie per la connessione tramite SSH.
+
+        * **Import from directory**: (Importa da directory): permette di specificare una directory contenente un insieme di impostazioni SSH salvate in precedenza. La directory deve contenere i due file seguenti:
+
+            * *id_rsa*: contiene l'identificazione RSA per un utente.
+
+            * *id_rsa.pub*: contiene la chiave pubblica RSA usata per l'autenticazione.
+
+    b. Nella scheda **Docker Daemon Access** (Accesso daemon Docker) specificare le informazioni seguenti:
+
+    ![Creare un host Docker][PUB06]
     
-             * **Docker Daemon port**: Enter the unique TCP port for your Docker host.
-             * **TLS Security**: Enter the Transport Layer Security settings for your Docker host. You can choose from the following options:
-                * **None**: Specifies that your virtual machine does not allow TLS connections.
-                * **Auto-generate**: Automatically creates the requisite settings for connecting via TLS.
-                * **Import from directory**: Specifies a directory that contains a set of previously saved TLS settings. The directory must contain the following six files: 
-                   * *ca.pem* and *ca-key.pem*: Contain the certificate and public key for the TLS Certificate Authority.
-                   * *cert.pem* and *key.pem*: Contain client certificate and public key which will be used for TLS authentication.
-                   * *server.pem* and *server-key.pem*: Contain the client certificate and public key that is used for TLS authentication.
+    * **Docker Daemon port** (Porta Daemon Docker): immettere la porta TCP univoca per l'host Docker.
+    
+    * **Sicurezza TLS**: immettere le impostazioni Transport Layer Security per l'host Docker. È possibile scegliere tra le opzioni seguenti:
+    
+        * **None** (Nessuna): specifica che la macchina virtuale non consente connessioni TLS.
+        
+        * **Auto-generate** (Genera automaticamente): crea automaticamente le impostazioni necessarie per la connessione tramite TLS.
+        
+        * **Import from directory** (Importa da directory): specifica una directory che contiene un set di impostazioni TLS salvate in precedenza. La directory deve contenere i sei file seguenti:
+        
+            * *ca.pem* e *ca-key.pem*: contengono il certificato e la chiave pubblica per l'Autorità di certificazione TLS.
+            
+            * *cert.pem* e *key.pem*: contengono il certificato client e la chiave pubblica da usare per l'autenticazione TLS.
+            
+            * *server.pem* e *server-key.pem*: contengono il certificato client e la chiave pubblica usati per l'autenticazione TLS.
 
 7. Dopo aver immesso le informazioni richieste, fare clic su **Finish** (Fine).  
     Verrà visualizzata nuovamente la procedura guidata **Deploy Docker Container on Azure** (Distribuisci contenitore Docker in Azure).
