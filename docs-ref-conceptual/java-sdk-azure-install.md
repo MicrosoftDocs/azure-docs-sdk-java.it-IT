@@ -10,11 +10,11 @@ ms.devlang: java
 ms.topic: reference
 ms.technology: Azure
 ms.date: 3/06/2016
-ms.openlocfilehash: 570f820e1349e1dfd01a6c7f323b5312c14c40c6
-ms.sourcegitcommit: 4b63ecd2c92a9115dfae018618e4e4046b061b3e
+ms.openlocfilehash: 5c8bb4b81080461285551573eefc0d76b47b2d3d
+ms.sourcegitcommit: 61030d025614b084e897809e603b2ec79900ec8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="azure-libraries-for-java"></a>Librerie di Azure per Java
 
@@ -22,7 +22,7 @@ Le librerie di Azure aiutano a usare i servizi di Azure nelle app Java con inter
 
 | | | | |
 |:-------------:|:----------:|:----:|:---:|
-| [Archiviazione di Azure](#azure-storage) | [Database SQL](#sql-database)  | [Cache Redis](#redis-cache)   | [DocumentDB](#documentdb) |
+| [Archiviazione di Azure](#azure-storage) | [Database SQL](#sql-database)  | [Cache Redis](#redis-cache)   | [Azure Cosmos DB](#cosmos-db) |
 | [Bus di servizio](#servicebus)  | [Azure Active Directory](#azuread) | [Insieme di credenziali di chiave](#keyvault)  | [Hub eventi](#eventhub)
 | [Servizio IoT](#iotservice) | [Dispositivo IoT](#iotdevice) | [Data Lake](#datalake)  | [AppInsights](#appinsights) | 
 | [Batch](#batch) | [Manage Azure resources (Gestire risorse di Azure)](#management) |
@@ -97,9 +97,9 @@ Archivio di coppie chiave-valore a bassa latenza e ad alte prestazioni.
 
 [Esempi](/azure/redis-cache/cache-java-get-started) | [Riferimenti](http://xetorthio.github.io/jedis)  | [GitHub](https://github.com/xetorthio/jedis)  | [Note sulla versione](https://github.com/xetorthio/jedis/releases)  
 
-<a name="documentdb"></a>
+<a name="cosmos-db"></a>
 
-### <a name="cosmos-dbazuredocumentdbdocumentdb-introduction"></a>[Cosmos DB](/azure/documentdb/documentdb-introduction)
+### <a name="azure-cosmos-dbazurecosmos-dbintroduction"></a>[Azure Cosmos DB](/azure/cosmos-db/introduction)
 
 Database NoSQL scalabile con documenti JSON e una sintassi di query SQL o JavaScript.   
 
@@ -111,7 +111,7 @@ Database NoSQL scalabile con documenti JSON e una sintassi di query SQL o JavaSc
 </dependency>
 ```
 
-[Esempi](/azure/documentdb/documentdb-java-application) | [Riferimenti](http://azure.github.io/azure-documentdb-java/) | [GitHub](https://github.com/Azure/azure-documentdb-java)   | [Note sulla versione](https://github.com/Azure/azure-documentdb-java/blob/master/changelog.md)
+[Esempi](/azure/cosmos-db/sql-api-java-application) | [Riferimenti](http://azure.github.io/azure-documentdb-java/) | [GitHub](https://github.com/Azure/azure-documentdb-java)   | [Note sulla versione](https://github.com/Azure/azure-documentdb-java/blob/master/changelog.md)
 
 <a name="servicebus"></a>
  
