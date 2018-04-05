@@ -1,7 +1,7 @@
 ---
 title: Eseguire l'autenticazione con le librerie di gestione di Azure per Java
-description: "Eseguire l'autenticazione con un'entità servizio nelle librerie di gestione di Azure per Java"
-keywords: "Azure, Java, SDK, API, Maven, Gradle, autenticazione, active directory, entità servizio"
+description: Eseguire l'autenticazione con un'entità servizio nelle librerie di gestione di Azure per Java
+keywords: Azure, Java, SDK, API, Maven, Gradle, autenticazione, active directory, entità servizio
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -12,11 +12,11 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: 10f457e3-578b-4655-8cd1-51339226ee7d
-ms.openlocfilehash: dd1273d5fc79f513e8dae5420eb6a6988d327d58
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 3808c6d56b04f28c84a89a25219e4ec523f87964
+ms.sourcegitcommit: 61030d025614b084e897809e603b2ec79900ec8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="authenticate-with-the-azure-libraries-for-java"></a>Eseguire l'autenticazione con le librerie di Azure per Java 
 
@@ -42,7 +42,7 @@ final String storageConnection = "DefaultEndpointsProtocol=https;"
         + ";EndpointSuffix=core.windows.net";
 ```
 
-Le stringhe di connessione dei servizi vengono usate per eseguire l'autenticazione ad altri servizi di Azure, ad esempio [DocumentDB](https://docs.microsoft.com/azure/documentdb/documentdb-java-application#a-iduseserviceastep-4-using-the-documentdb-service-in-a-java-application), [Cache Redis](https://docs.microsoft.com/azure/redis-cache/cache-java-get-started) e [Bus di servizio](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-java-how-to-use-queues). Per ottenere le stringhe di connessione, è possibile usare il portale di Azure o l'interfaccia della riga di comando.  È anche possibile usare le librerie di gestione di Azure per Java per eseguire query nelle risorse per creare stringhe di connessione nel codice. 
+Le stringhe di connessione dei servizi vengono usate per eseguire l'autenticazione ad altri servizi di Azure, ad esempio [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/sql-api-java-application#UseService), [Cache Redis](https://docs.microsoft.com/azure/redis-cache/cache-java-get-started) e [Bus di servizio](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-java-how-to-use-queues). Per ottenere le stringhe di connessione, è possibile usare il portale di Azure o l'interfaccia della riga di comando.  È anche possibile usare le librerie di gestione di Azure per Java per eseguire query nelle risorse per creare stringhe di connessione nel codice. 
 
 Questo codice, ad esempio, usa le librerie di gestione per creare una stringa di connessione dell'account di archiviazione:
 
