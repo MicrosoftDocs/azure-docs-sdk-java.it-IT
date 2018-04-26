@@ -11,25 +11,25 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: redis-cache
-ms.openlocfilehash: 6d436c49124fd0a406486e0c7bac4d1605de5d32
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: dd03825d9ae7cba32087f92262d5ef213cf3af0b
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="redis-cache-libraries-for-java"></a><span data-ttu-id="e6e29-104">Librerie di Cache Redis per Java</span><span class="sxs-lookup"><span data-stu-id="e6e29-104">Redis Cache libraries for Java</span></span>
+# <a name="redis-cache-libraries-for-java"></a><span data-ttu-id="c58d6-104">Librerie di Cache Redis per Java</span><span class="sxs-lookup"><span data-stu-id="c58d6-104">Redis Cache libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="e6e29-105">Panoramica</span><span class="sxs-lookup"><span data-stu-id="e6e29-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="c58d6-105">Panoramica</span><span class="sxs-lookup"><span data-stu-id="c58d6-105">Overview</span></span>
 
-<span data-ttu-id="e6e29-106">Cache Redis di Azure è un archivio chiave-valore distribuito basato sulla popolare cache open source [Redis](https://redis.io/).</span><span class="sxs-lookup"><span data-stu-id="e6e29-106">Azure Redis Cache is a secure, distributed key-value store based on the popular open source [Redis](https://redis.io/) cache.</span></span> 
+<span data-ttu-id="c58d6-106">Cache Redis di Azure è un archivio chiave-valore distribuito basato sulla popolare cache open source [Redis](https://redis.io/).</span><span class="sxs-lookup"><span data-stu-id="c58d6-106">Azure Redis Cache is a secure, distributed key-value store based on the popular open source [Redis](https://redis.io/) cache.</span></span> 
 
-<span data-ttu-id="e6e29-107">Per iniziare a usare Cache Redis di Azure, vedere [Come usare Cache Redis di Azure con Java](/azure/redis-cache/cache-java-get-started).</span><span class="sxs-lookup"><span data-stu-id="e6e29-107">To get started with Azure Redis Cache, see [How to use Azure Redis Cache with Java](/azure/redis-cache/cache-java-get-started).</span></span>
+<span data-ttu-id="c58d6-107">Per iniziare a usare Cache Redis di Azure, vedere [Come usare Cache Redis di Azure con Java](/azure/redis-cache/cache-java-get-started).</span><span class="sxs-lookup"><span data-stu-id="c58d6-107">To get started with Azure Redis Cache, see [How to use Azure Redis Cache with Java](/azure/redis-cache/cache-java-get-started).</span></span>
 
-## <a name="client-library"></a><span data-ttu-id="e6e29-108">Libreria client</span><span class="sxs-lookup"><span data-stu-id="e6e29-108">Client library</span></span>
+## <a name="client-library"></a><span data-ttu-id="c58d6-108">Libreria client</span><span class="sxs-lookup"><span data-stu-id="c58d6-108">Client library</span></span>
 
-<span data-ttu-id="e6e29-109">Connettere Cache Redis di Azure e l'archivio per recuperare i valori dalla cache con il client open source [Jedis](https://github.com/xetorthio/jedis).</span><span class="sxs-lookup"><span data-stu-id="e6e29-109">Connect to Azure Redis Cache and store and retrieve values from the cache using the open-source [Jedis](https://github.com/xetorthio/jedis) client.</span></span>  
+<span data-ttu-id="c58d6-109">Connettere Cache Redis di Azure e l'archivio per recuperare i valori dalla cache con il client open source [Jedis](https://github.com/xetorthio/jedis).</span><span class="sxs-lookup"><span data-stu-id="c58d6-109">Connect to Azure Redis Cache and store and retrieve values from the cache using the open-source [Jedis](https://github.com/xetorthio/jedis) client.</span></span>  
 
-<span data-ttu-id="e6e29-110">[Aggiungere una dipendenza](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) al file `pom.xml` di Maven per usare la libreria client nel progetto.</span><span class="sxs-lookup"><span data-stu-id="e6e29-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>   
+<span data-ttu-id="c58d6-110">[Aggiungere una dipendenza](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) al file `pom.xml` di Maven per usare la libreria client nel progetto.</span><span class="sxs-lookup"><span data-stu-id="c58d6-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>   
 
 ```XML
 <dependency>
@@ -40,9 +40,9 @@ ms.lasthandoff: 10/09/2017
 </dependency>
 ```
 
-## <a name="example"></a><span data-ttu-id="e6e29-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="e6e29-111">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c58d6-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="c58d6-111">Example</span></span>
 
-<span data-ttu-id="e6e29-112">Connettersi a Cache Redis di Azure e inserire una stringa nella cache.</span><span class="sxs-lookup"><span data-stu-id="e6e29-112">Connect to Azure Redis and insert a string into the cache.</span></span>
+<span data-ttu-id="c58d6-112">Connettersi a Cache Redis di Azure e inserire una stringa nella cache.</span><span class="sxs-lookup"><span data-stu-id="c58d6-112">Connect to Azure Redis and insert a string into the cache.</span></span>
 
 ```java
 JedisShardInfo shardInfo = new JedisShardInfo("<name>.redis.cache.windows.net", 6380, useSsl);
@@ -51,9 +51,9 @@ JedisShardInfo shardInfo = new JedisShardInfo("<name>.redis.cache.windows.net", 
     jedis.set("foo", "bar");
 ```
 
-## <a name="management-api"></a><span data-ttu-id="e6e29-113">API di gestione</span><span class="sxs-lookup"><span data-stu-id="e6e29-113">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="c58d6-113">API di gestione</span><span class="sxs-lookup"><span data-stu-id="c58d6-113">Management API</span></span>
 
-<span data-ttu-id="e6e29-114">Creare e scalare le risorse di Cache Redis di Azure e gestire le chiavi di accesso con l'API di gestione.</span><span class="sxs-lookup"><span data-stu-id="e6e29-114">Create and scale Azure Redis resources and manage access keys to with the management API.</span></span>
+<span data-ttu-id="c58d6-114">Creare e scalare le risorse di Cache Redis di Azure e gestire le chiavi di accesso con l'API di gestione.</span><span class="sxs-lookup"><span data-stu-id="c58d6-114">Create and scale Azure Redis resources and manage access keys to with the management API.</span></span>
 
 ```XML
 <dependency>
@@ -63,9 +63,9 @@ JedisShardInfo shardInfo = new JedisShardInfo("<name>.redis.cache.windows.net", 
 </dependency>
 ```
 
-## <a name="example"></a><span data-ttu-id="e6e29-115">Esempio</span><span class="sxs-lookup"><span data-stu-id="e6e29-115">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c58d6-115">Esempio</span><span class="sxs-lookup"><span data-stu-id="c58d6-115">Example</span></span>
 
-<span data-ttu-id="e6e29-116">Creare una nuova istanza di Cache Redis di Azure nel [livello standard a due nodi](https://azure.microsoft.com/services/cache/).</span><span class="sxs-lookup"><span data-stu-id="e6e29-116">Create a new Azure Redis Cache in the [two-node standard tier](https://azure.microsoft.com/services/cache/).</span></span> 
+<span data-ttu-id="c58d6-116">Creare una nuova istanza di Cache Redis di Azure nel [livello standard a due nodi](https://azure.microsoft.com/services/cache/).</span><span class="sxs-lookup"><span data-stu-id="c58d6-116">Create a new Azure Redis Cache in the [two-node standard tier](https://azure.microsoft.com/services/cache/).</span></span> 
 
 ```java
 RedisCache cache = azure.redisCaches().define(redisCacheName1)
@@ -75,10 +75,10 @@ RedisCache cache = azure.redisCaches().define(redisCacheName1)
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="e6e29-117">Esplorare le API di gestione</span><span class="sxs-lookup"><span data-stu-id="e6e29-117">Explore the Management APIs</span></span>](/java/api/overview/azure/rediscache/managementapi)
+> [<span data-ttu-id="c58d6-117">Esplorare le API di gestione</span><span class="sxs-lookup"><span data-stu-id="c58d6-117">Explore the Management APIs</span></span>](/java/api/overview/azure/rediscache/management)
 
-## <a name="samples"></a><span data-ttu-id="e6e29-118">Esempi</span><span class="sxs-lookup"><span data-stu-id="e6e29-118">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="c58d6-118">Esempi</span><span class="sxs-lookup"><span data-stu-id="c58d6-118">Samples</span></span>
 
-[<span data-ttu-id="e6e29-119">Gestire Cache Redis di Azure</span><span class="sxs-lookup"><span data-stu-id="e6e29-119">Manage Azure Redis Cache</span></span>](https://github.com/Azure-Samples/redis-java-manage-cache)   
+[<span data-ttu-id="c58d6-119">Gestire Cache Redis di Azure</span><span class="sxs-lookup"><span data-stu-id="c58d6-119">Manage Azure Redis Cache</span></span>](https://github.com/Azure-Samples/redis-java-manage-cache)   
 
-<span data-ttu-id="e6e29-120">Esplorare altri [esempi di codice Java per Cache Redis di Azure](https://azure.microsoft.com/resources/samples/?platform=java&term=redis) disponibili per l'uso nelle app.</span><span class="sxs-lookup"><span data-stu-id="e6e29-120">Explore more [sample Java code for Azure Redis Cache](https://azure.microsoft.com/resources/samples/?platform=java&term=redis) you can use in your apps.</span></span>
+<span data-ttu-id="c58d6-120">Esplorare altri [esempi di codice Java per Cache Redis di Azure](https://azure.microsoft.com/resources/samples/?platform=java&term=redis) disponibili per l'uso nelle app.</span><span class="sxs-lookup"><span data-stu-id="c58d6-120">Explore more [sample Java code for Azure Redis Cache](https://azure.microsoft.com/resources/samples/?platform=java&term=redis) you can use in your apps.</span></span>
