@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: networking
-ms.openlocfilehash: 6eed6f45ee239db1286e94f210341febb189378d
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: bb74ccd8826df7b627e0b5f4e4ffd2da44b2642d
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-network-libraries-for-java"></a>Librerie della rete di Azure per Java
 
@@ -55,7 +55,7 @@ Network virtualNetwork1 = azure.networks().define(vnetName1)
 ```
 
 > [!div class="nextstepaction"]
-> [Esplorare le API di gestione](/java/api/overview/azure/networking/managementapi)
+> [Esplorare le API di gestione](/java/api/overview/azure/networking/management)
 
 ## <a name="samples"></a>Esempi
 

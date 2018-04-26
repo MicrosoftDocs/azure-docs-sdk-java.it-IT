@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: data-lake-store
-ms.openlocfilehash: 70cfe1417d460172df0cb753d2b719a635978ca8
-ms.sourcegitcommit: 4b63ecd2c92a9115dfae018618e4e4046b061b3e
+ms.openlocfilehash: c14c89f961951d114362adee4fec6239e78cffb3
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-data-lake-analytics-libraries-for-java"></a>Librerie di Azure Data Lake Analytics per Java
 
@@ -65,7 +65,7 @@ JobInformation jobInfo = adlaJobClient.getJobOperations().create(accountName, jo
 ```
 
 > [!div class="nextstepaction"]
-> [Esplorare le API client](/java/api/overview/azure/datalakeanalytics/managementapi)
+> [Esplorare le API di gestione](/java/api/overview/azure/datalakeanalytics/management)
 
 ## <a name="samples"></a>Esempi
 

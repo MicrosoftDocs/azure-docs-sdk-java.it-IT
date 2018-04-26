@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: data-lake-store
-ms.openlocfilehash: 66ff566e74203d3b5a8e9bcc170f4c21cf310645
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: bcd1fd17759f7d171006d7b2126019d00d06d1db
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-data-lake-store-libraries-for-java"></a>Librerie di Azure Data Lake Store per Java
 
@@ -63,7 +63,7 @@ out.close();
 ```
 
 > [!div class="nextstepaction"]
-> [Esplorare le API client](/java/api/overview/azure/datalakestore/clientlibrary)
+> [Esplorare le API client](/java/api/overview/azure/datalakestore/client)
 
 
 ## <a name="management-api"></a>API di gestione
@@ -82,7 +82,7 @@ Usare l'API di gestione per gestire gli account, le regole del firewall e i prov
 ```
 
 > [!div class="nextstepaction"]
-> [Esplorare le API di gestione](/java/api/overview/azure/datalakestore/managementapi)
+> [Esplorare le API di gestione](/java/api/overview/azure/datalakestore/management)
 
 ## <a name="samples"></a>Esempi
 

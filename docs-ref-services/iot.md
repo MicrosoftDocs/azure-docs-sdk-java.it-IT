@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: iot-hub
-ms.openlocfilehash: c1af3dae0fe37eb4919db02da87beed193c547a7
-ms.sourcegitcommit: acc83bb537d77568b2a5427479d6354d6ae30885
+ms.openlocfilehash: 5e6a102b062b2fff6b297c7e3dda423d1448bcb0
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-iot-libraries-for-java"></a>Librerie di Azure IoT per Java
 
@@ -52,7 +52,7 @@ Consente di inviare messaggi al cloud e ricevere messaggi nei dispositivi usando
 ```
 
 > [!div class="nextstepaction"]
-> [Esplorare le API client](/java/api/overview/azure/iot/clientlibrary)   
+> [Esplorare le API client](/java/api/overview/azure/iot/client)   
 
 ## <a name="example"></a>Esempio
 

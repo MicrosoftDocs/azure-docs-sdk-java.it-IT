@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: service-bus
-ms.openlocfilehash: 6fccbc76a3600e2bbe43e4332c6146d2be81b6c9
-ms.sourcegitcommit: fcf1189ede712ae30f8c7626bde50c9b8bb561bc
+ms.openlocfilehash: 7468d9b920debc778e7e3d298fbcb913add6afdd
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="service-bus-libraries-for-java"></a>Librerie del bus di servizio per Java
 
@@ -51,7 +51,7 @@ Aggiungere una dipendenza al file `pom.xml` del progetto Maven per usare la libr
 </dependency>
 ```
 
-## <a name="examples"></a>esempi
+## <a name="examples"></a>Esempi
 
 Il [repository dei codici di esempio](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/) contiene esempi su come applicare [QueueClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithQueueClient.java), [TopicClient, SubscriptionClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithTopicSubscriptionClient.java), [MessageSender e MessageReceiver](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/SendReceiveWithMessageSenderReceiver.java) ai messaggi dal bus di servizio.
 
@@ -116,7 +116,7 @@ public class BasicSendReceiveWithQueueClient {
 ```
 
 > [!div class="nextstepaction"]
-> [Esplorare le API client](/java/api/overview/azure/servicebus/clientlibrary)
+> [Esplorare le API client](/java/api/overview/azure/servicebus/client)
 
 ## <a name="management-api"></a>API di gestione
 
@@ -133,10 +133,10 @@ Creare e gestire spazi dei nomi, argomenti, code e sottoscrizioni con l'API di g
 ```
 
 > [!div class="nextstepaction"]
-> [Esplorare le API di gestione](/java/api/overview/azure/servicebus/managementapi)
+> [Esplorare le API di gestione](/java/api/overview/azure/servicebus/management)
 
 
-## <a name="examples"></a>esempi
+## <a name="examples"></a>Esempi
 
 [Gestire le code del bus di servizio](https://github.com/Azure-Samples/service-bus-java-manage-queue-with-basic-features)
 [Creare e sottoscrivere argomenti del bus di servizio](https://github.com/Azure-Samples/service-bus-java-manage-publish-subscribe-with-basic-features)

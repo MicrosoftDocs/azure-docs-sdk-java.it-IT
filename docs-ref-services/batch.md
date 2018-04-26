@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: batch
-ms.openlocfilehash: 2c9fab2834ea6d9c906d9483aed839a0411aaa40
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 67381d68d23f98579a472aefbebaa929af622b8d
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-batch-libraries-for-java"></a>Librerie di Azure Batch per Java
 
@@ -54,7 +54,7 @@ client.poolOperations().createPool(poolId, poolVMSize, configuration, poolVMCoun
 ```
 
 > [!div class="nextstepaction"]
-> [Esplorare le API client](/java/api/overview/azure/batch/clientlibrary)
+> [Esplorare le API client](/java/api/overview/azure/batch/client)
 
 
 ## <a name="management-api"></a>API di gestione
@@ -89,7 +89,7 @@ BatchAccount batchAccount = azure.batchAccounts().define("newBatchAcct")
 ```
 
 > [!div class="nextstepaction"]
-> [Esplorare le API di gestione](/java/api/overview/azure/batch/managementapi)
+> [Esplorare le API di gestione](/java/api/overview/azure/batch/management)
 
 
 ## <a name="samples"></a>Esempi

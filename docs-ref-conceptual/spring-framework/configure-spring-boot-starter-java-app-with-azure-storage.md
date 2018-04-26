@@ -1,12 +1,12 @@
 ---
-title: "Come usare l'utilità di avvio Spring Boot per Archiviazione di Azure"
-description: "Informazioni su come configurare un'app Spring Boot Initializer con l'utilità di avvio Archiviazione di Azure."
+title: Come usare l'utilità di avvio Spring Boot per Archiviazione di Azure
+description: Informazioni su come configurare un'app Spring Boot Initializer con l'utilità di avvio Archiviazione di Azure.
 services: storage
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: yungez;robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -14,11 +14,11 @@ ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: 50c8475c66250c8e872849007349277fd3fe797b
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: e10ecfb7f6d705aa3ccffc49d354d1019f7f1a0b
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Come usare l'utilità di avvio Spring Boot per Archiviazione di Azure
 
@@ -93,8 +93,9 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
        }
      }
    ]
+   ```
 
-1. Specify the GUID for the account you want to use with Azure; for example:
+1. Specificare il GUID per l'account che si vuole usare con Azure, ad esempio:
 
    ```azurecli
    az account set -s ssssssss-ssss-ssss-ssss-ssssssssssss

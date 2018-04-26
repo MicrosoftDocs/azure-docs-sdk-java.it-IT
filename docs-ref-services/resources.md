@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: data-lake-store
-ms.openlocfilehash: 56199b87fa64e9cbf0a14716a58c01f11f0e433b
-ms.sourcegitcommit: 4b63ecd2c92a9115dfae018618e4e4046b061b3e
+ms.openlocfilehash: 326357e5b4667cc06a6058cb29e9685428174dee
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-resource-manager-libraries-for-java"></a>Librerie di Azure Resource Manager per Java
 
@@ -49,7 +49,7 @@ ResourceGroup resourceGroup = azure.resourceGroups().define("myResourceGroup")
 ```
 
 > [!div class="nextstepaction"]
-> [Esplorare le API di gestione](/java/api/overview/azure/resources/managementapi)
+> [Esplorare le API di gestione](/java/api/overview/azure/resources/management)
 
 ## <a name="samples"></a>Esempi
 
