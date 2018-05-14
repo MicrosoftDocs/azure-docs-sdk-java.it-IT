@@ -1,11 +1,11 @@
 ---
 title: Installare Azure Toolkit for Eclipse
 description: Informazioni su come installare il plug-in Azure Toolkit for Eclipse per creare e distribuire applicazioni cloud in Azure.
-services: 
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 9e93ff6a-f42b-4d99-b55b-624136b4a730
 ms.author: robmcm
 ms.date: 02/01/2018
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 81a784a09c07e0ace4d12989c745c80f55cd70cd
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: d5f685fa62ad74c8b8cd842b3667f8161e7c5760
+ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="install-the-azure-toolkit-for-eclipse"></a>Installare Azure Toolkit for Eclipse
 
@@ -45,7 +45,7 @@ La procedura seguente mostra come installare il Toolkit di Azure per Eclipse.
 
 1. Nella finestra di dialogo **Available Software** (Software disponibile), nella casella di testo **Work with** (Usa), digitare `http://dl.microsoft.com/eclipse/` e quindi premere il tasto **Invio**.
 
-1. Nel riquadro **Nome**, controllare il **Toolkit di Azure per Eclipse**, e deselezionare **Contattare tutti i siti di aggiornamento durante l'installazione per trovare il software richiesto**. Verrà visualizzata una schermata simile alla seguente:
+1. Nel riquadro **Nome**, controllare il **Toolkit di Azure per Java** e deselezionare **Contattare tutti i siti di aggiornamento durante l'installazione per trovare il software richiesto**. Verrà visualizzata una schermata simile alla seguente:
    
    ![Installare il Toolkit di Azure per Eclipse.][02]
 

@@ -5,8 +5,8 @@ services: app-service\web
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: c430581a9a67365430d87c1af925c1f4d27eca2b
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: d281f37b027d4011ea2e3106990c5e45b69ebc88
+ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-intellij"></a>Distribuire un'app Web Hello World in un contenitore Linux sul cloud tramite Azure Toolkit for IntelliJ
 
@@ -38,7 +38,7 @@ Questo articolo indica i passaggi necessari per creare un'app Web Hello World di
 
 ## <a name="create-a-new-web-app-project"></a>Creare un nuovo progetto di app Web
 
-1. Avviare IntelliJ e accedere all'account Azure seguendo i passaggi contenuti nell'articolo [Istruzioni di accesso per Azure Toolkit for IntelliJ].
+1. Avviare IntelliJ e accedere all'account Azure seguendo i passaggi contenuti nell'articolo [Istruzioni di accesso per Azure Toolkit for IntelliJ](https://docs.microsoft.com/java/azure/intellij/azure-toolkit-for-intellij-sign-in-instructions).
 
 1. Scegliere **New** (Nuovo) dal menu **File** e quindi fare clic su **Project** (Progetto).
    
