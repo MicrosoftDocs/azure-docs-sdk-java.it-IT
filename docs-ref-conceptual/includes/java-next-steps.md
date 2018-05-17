@@ -1,1 +1,1 @@
-Per altre informazioni sulla creazione e distribuzione di app Java in Azure, vedere il [Centro per sviluppatori Java](https://docs.microsoft.com/java/api).
+<span data-ttu-id="ebcd6-101">Per altre informazioni sulla creazione e distribuzione di app Java in Azure, vedere il [Centro per sviluppatori Java](https://docs.microsoft.com/java/api).</span><span class="sxs-lookup"><span data-stu-id="ebcd6-101">For more information on creating and deploying Java apps on Azure, visit the [Java developer center](https://docs.microsoft.com/java/api).</span></span>
