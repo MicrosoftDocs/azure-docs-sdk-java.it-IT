@@ -1,12 +1,12 @@
 ---
 title: Istruzioni di accesso per Azure Toolkit for Eclipse
 description: Informazioni su come accedere a Microsoft Azure con il Toolkit di Azure per Eclipse.
-services: 
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 498a22c455e54b8038169cf4e9f6ac7d7287c0bb
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: eb6099ab0c19bf3588cb7fd668f070771e58fe74
+ms.sourcegitcommit: 8230cf6b15ac51a9f8a209e9b76411a0385029aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="azure-sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a>Istruzioni di accesso ad Azure per il Toolkit di Azure per Eclipse
 
@@ -91,7 +91,7 @@ Se ci si disconnette da Azure quando si usa Eclipse, è necessario riconfigurare
 
    ![Finestra di dialogo di accesso][A02]
 
-1. Quando viene visualizzata al finestra di dialogo **Select Authenticated File** (Seleziona file autenticazione), selezionare un file di credenziali creato in precedenza e quindi fare clic su **Select** (Seleziona).
+1. Quando viene visualizzata al finestra di dialogo **Select Authenticated File** (Seleziona file autenticazione), selezionare un file di credenziali creato in precedenza e quindi fare clic su **Open** (Apri).
 
    ![Finestra di dialogo di accesso][A08]
 
