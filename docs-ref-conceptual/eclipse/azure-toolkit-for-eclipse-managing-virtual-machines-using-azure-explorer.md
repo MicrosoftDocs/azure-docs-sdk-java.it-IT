@@ -1,12 +1,12 @@
 ---
 title: Gestire macchine virtuali con Azure Explorer per Eclipse
 description: Informazioni su come gestire macchine virtuali di Azure con Azure Explorer per Eclipse.
-services: 
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: a02f8d02f8c5c32091dd106e036b636b1d11cff0
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: ec67ed44ec570da7b826c12a9f8a24a5b0170e99
+ms.sourcegitcommit: 3d3460289ab6b9165c2cf6a3dd56eafd0692501e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-eclipse"></a>Gestire macchine virtuali con Azure Explorer per Eclipse
 
@@ -32,7 +32,7 @@ Incluso in Toolkit di Azure per Eclipse, Azure Explorer offre agli sviluppatori 
 
 Per creare una macchina virtuale con Azure Explorer, eseguire queste operazioni:
 
-1. Accedere al proprio account Azure seguendo le [Istruzioni di accesso ad Azure per Azure Toolkit for Eclipse].
+1. Accedere al proprio account Azure seguendo [Istruzioni di accesso per Azure Toolkit for Eclipse](https://docs.microsoft.com/java/azure/eclipse/azure-toolkit-for-eclipse-sign-in-instructions).
 
 1. Nella visualizzazione **Azure Explorer** espandere il nodo **Azure**, fare clic con il pulsante destro del mouse su **Macchine virtuali** e quindi fare clic su **Crea macchina virtuale**.
 

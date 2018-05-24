@@ -1,12 +1,12 @@
 ---
 title: Gestire gli account di archiviazione con Azure Explorer per Eclipse
 description: Informazioni su come gestire gli account di archiviazione di Azure con Azure Explorer per Eclipse.
-services: 
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 7b493097e94580df42efcfb8c56736e1f179b280
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 310d95436189af09f794154f4c9f0e71c47d88c8
+ms.sourcegitcommit: 3d3460289ab6b9165c2cf6a3dd56eafd0692501e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-eclipse"></a>Gestire gli account di archiviazione con Azure Explorer per Eclipse
 
@@ -32,7 +32,7 @@ Incluso nel Toolkit di Azure per Eclipse, Azure Explorer offre agli sviluppatori
 
 Per creare un account di archiviazione con Azure Explorer, eseguire queste operazioni:
 
-1. Accedere al proprio account Azure seguendo le [Istruzioni di accesso ad Azure per Azure Toolkit for Eclipse].
+1. Accedere al proprio account Azure seguendo le [Istruzioni di accesso ad Azure per il Toolkit di Azure per Eclipse](https://docs.microsoft.com/java/azure/eclipse/azure-toolkit-for-eclipse-sign-in-instructions).
 
 1. Nella visualizzazione **Azure Explorer** espandere il nodo **Azure**, fare clic con il pulsante destro del mouse su **Account di archiviazione** e quindi fare clic su **Crea account di archiviazione**.
 
