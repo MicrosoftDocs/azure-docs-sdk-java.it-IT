@@ -15,6 +15,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931167"
 ---
 # <a name="manage-azure-virtual-machines-from-your-java-applications"></a><span data-ttu-id="49356-103">Gestire le macchine virtuali di Azure dalle applicazioni Java</span><span class="sxs-lookup"><span data-stu-id="49356-103">Manage Azure virtual machines from your Java applications</span></span>
 

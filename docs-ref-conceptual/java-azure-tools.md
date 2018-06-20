@@ -15,6 +15,7 @@ ms.sourcegitcommit: f0dadb22efb191182c3b79dcaa97a76cfcdcc324
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/05/2017
+ms.locfileid: "26288310"
 ---
 # <a name="azure-tools-for-java-developers"></a><span data-ttu-id="ec09b-103">Strumenti di Azure per gli sviluppatori Java</span><span class="sxs-lookup"><span data-stu-id="ec09b-103">Azure tools for Java developers</span></span>
 

@@ -1,6 +1,6 @@
 ---
-title: "Gestire set di scalabilità di macchine virtuali con Java | Microsoft Docs"
-description: "Codice di esempio per la gestione di set di scalabilità di macchine virtuali di Azure con Azure SDK per Java"
+title: Gestire set di scalabilità di macchine virtuali con Java | Microsoft Docs
+description: Codice di esempio per la gestione di set di scalabilità di macchine virtuali di Azure con Azure SDK per Java
 author: rloutlaw
 manager: douge
 ms.assetid: b55923b7-d60a-460d-b77c-af5fac67f1cc
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931157"
 ---
 # <a name="manage-azure-virtual-machine-scale-sets-from-your-java-applications"></a><span data-ttu-id="e1a3c-103">Gestire set di scalabilità di macchine virtuali di Azure dalle applicazioni Java</span><span class="sxs-lookup"><span data-stu-id="e1a3c-103">Manage Azure virtual machine scale sets from your Java applications</span></span>
 

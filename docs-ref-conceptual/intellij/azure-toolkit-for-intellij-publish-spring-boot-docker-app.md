@@ -1,12 +1,12 @@
 ---
 title: Pubblicare un'app Spring Boot come contenitore Docker usando il Toolkit di Azure per IntelliJ
 description: Informazioni su come pubblicare un'app Web in Microsoft Azure come contenitore Docker usando il Toolkit di Azure per IntelliJ.
-services: 
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954732"
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a><span data-ttu-id="e8c35-103">Pubblicare un'app Spring Boot come contenitore Docker usando il Toolkit di Azure per IntelliJ</span><span class="sxs-lookup"><span data-stu-id="e8c35-103">Publish a Spring Boot app as a Docker container by using the Azure Toolkit for IntelliJ</span></span>
 

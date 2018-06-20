@@ -16,6 +16,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21930797"
 ---
 # <a name="java-samples-for-azure-active-directory"></a><span data-ttu-id="cc17b-104">Esempi Java per Azure Active Directory</span><span class="sxs-lookup"><span data-stu-id="cc17b-104">Java samples for Azure Active Directory</span></span>
 

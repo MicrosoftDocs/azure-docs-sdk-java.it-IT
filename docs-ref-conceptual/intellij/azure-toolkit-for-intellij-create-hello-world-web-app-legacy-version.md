@@ -5,8 +5,8 @@ services: app-service
 documentationcenter: java
 author: selvasingh
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm;asirveda
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954782"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-intellij"></a><span data-ttu-id="c4f0f-103">Creare un'app Web Hello World per Azure con il toolkit legacy per IntelliJ</span><span class="sxs-lookup"><span data-stu-id="c4f0f-103">Create a Hello World web app for Azure using the legacy toolkit for IntelliJ</span></span>
 
@@ -244,6 +245,7 @@ ms.lasthandoff: 02/03/2018
 [Azure Toolkit for Eclipse]: ../eclipse/azure-toolkit-for-eclipse.md
 [eclipse-hello-world]: ../eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md
 [Panoramica delle App Web]: /azure/app-service/app-service-web-overview
+[Web Apps Overview]: /azure/app-service/app-service-web-overview
 [Apache Tomcat]: http://tomcat.apache.org/
 [Jetty]: http://www.eclipse.org/jetty/
 [Updated Version]: azure-toolkit-for-intellij-create-hello-world-web-app.md

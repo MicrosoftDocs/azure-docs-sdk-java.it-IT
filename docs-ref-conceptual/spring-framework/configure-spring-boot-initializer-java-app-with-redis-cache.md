@@ -5,8 +5,8 @@ services: redis-cache
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm;zhijzhao;yidon
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954582"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a><span data-ttu-id="45414-103">Configurare un'app Spring Boot Initializer per l'uso di Redis sul cloud con la cache Redis di Azure</span><span class="sxs-lookup"><span data-stu-id="45414-103">Configure a Spring Boot Initializer app to use Redis in the cloud with Azure Redis Cache</span></span>
 
@@ -212,9 +213,13 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [Azure per sviluppatori Java]: https://docs.microsoft.com/java/azure/
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
+[free Azure account]: https://azure.microsoft.com/pricing/free-trial/
 [Java Tools for Visual Studio Team Services (Strumenti Java per Visual Studio Team Services)]: https://java.visualstudio.com/
+[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [vantaggi per i sottoscrittori di MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
+[MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/
 [Spring Framework]: https://spring.io/

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d3460289ab6b9165c2cf6a3dd56eafd0692501e
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34283025"
 ---
 # <a name="azure-event-hub-libraries-for-java"></a><span data-ttu-id="8f7eb-104">Librerie di Hub eventi di Azure per Java</span><span class="sxs-lookup"><span data-stu-id="8f7eb-104">Azure Event Hub libraries for Java</span></span>
 

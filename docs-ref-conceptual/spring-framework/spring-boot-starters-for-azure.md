@@ -1,12 +1,12 @@
 ---
-title: "Utilità di avvio Spring Boot per Azure"
-description: "Questo articolo descrive le diverse utilità di avvio di Spring Boot disponibili per Azure."
-services: 
+title: Utilità di avvio Spring Boot per Azure
+description: Questo articolo descrive le diverse utilità di avvio di Spring Boot disponibili per Azure.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954442"
 ---
 # <a name="spring-boot-starters-for-azure"></a><span data-ttu-id="eb019-103">Utilità di avvio Spring Boot per Azure</span><span class="sxs-lookup"><span data-stu-id="eb019-103">Spring Boot Starters for Azure</span></span>
 
@@ -237,9 +238,12 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [Azure per sviluppatori Java]: https://docs.microsoft.com/java/azure/
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Java Tools for Visual Studio Team Services (Strumenti Java per Visual Studio Team Services)]: https://java.visualstudio.com/
+[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring in Azure]: https://docs.microsoft.com/java/azure/spring-framework/
+[Spring on Azure]: https://docs.microsoft.com/java/azure/spring-framework/
 [Spring Framework]: https://spring.io/
 [Spring Initializr]: https://start.spring.io/
 

@@ -1,6 +1,6 @@
 ---
 title: Note sulla versione delle librerie di gestione di Azure per Java | Microsoft Docs
-description: "Informazioni sulle novità e sulle modifiche di rilievo nelle librerie di gestione di Azure per Java"
+description: Informazioni sulle novità e sulle modifiche di rilievo nelle librerie di gestione di Azure per Java
 keywords: Azure, Java, API, informazioni di riferimento, note, aggiornamenti, deprecare
 author: routlaw
 manager: douge
@@ -15,6 +15,7 @@ ms.sourcegitcommit: acc83bb537d77568b2a5427479d6354d6ae30885
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/03/2017
+ms.locfileid: "23982163"
 ---
 # <a name="release-notes"></a><span data-ttu-id="04186-104">Note sulla versione</span><span class="sxs-lookup"><span data-stu-id="04186-104">Release Notes</span></span> 
 

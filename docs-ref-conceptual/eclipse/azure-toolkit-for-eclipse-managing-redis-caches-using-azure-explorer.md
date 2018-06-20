@@ -1,12 +1,12 @@
 ---
 title: Gestione delle Cache Redis con Azure Explorer per Eclipse
 description: Informazioni su come gestire le Cache Redis di Azure con Azure Explorer per Eclipse.
-services: 
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954822"
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-eclipse"></a><span data-ttu-id="4347b-103">Gestione delle Cache Redis con Azure Explorer per Eclipse</span><span class="sxs-lookup"><span data-stu-id="4347b-103">Managing Redis Caches using the Azure Explorer for Eclipse</span></span>
 
@@ -101,9 +102,13 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [Prezzi di Cache Redis]: https://azure.microsoft.com/pricing/details/cache/
+[Redis Cache Pricing]: https://azure.microsoft.com/pricing/details/cache/
 [Cache Redis di Azure]: https://azure.microsoft.com/services/cache/
+[Azure Redis Cache]: https://azure.microsoft.com/services/cache/
 [Documentazione di Cache Redis]: /azure/redis-cache/
+[Redis Cache Documentation]: /azure/redis-cache/
 [Come configurare Cache Redis di Azure]: /azure/redis-cache/cache-configure
+[How to configure Azure Redis Cache]: /azure/redis-cache/cache-configure
 
 <!-- IMG List -->
 

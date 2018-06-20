@@ -16,6 +16,7 @@ ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31823774"
 ---
 # <a name="azure-data-lake-analytics-libraries-for-java"></a><span data-ttu-id="8b0ec-104">Librerie di Azure Data Lake Analytics per Java</span><span class="sxs-lookup"><span data-stu-id="8b0ec-104">Azure Data Lake Analytics libraries for Java</span></span>
 

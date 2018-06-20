@@ -16,6 +16,7 @@ ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31823654"
 ---
 # <a name="azure-storage-libraries-for-java"></a><span data-ttu-id="47135-103">Librerie di Archiviazione di Azure per Java</span><span class="sxs-lookup"><span data-stu-id="47135-103">Azure Storage libraries for Java</span></span>
 

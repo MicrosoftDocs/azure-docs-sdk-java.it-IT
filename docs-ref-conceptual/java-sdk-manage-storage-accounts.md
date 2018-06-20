@@ -15,6 +15,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931057"
 ---
 # <a name="manage-azure-storage-accounts-from-your-java-applications"></a><span data-ttu-id="ed572-103">Gestire gli account di archiviazione di Azure dalle applicazioni Java</span><span class="sxs-lookup"><span data-stu-id="ed572-103">Manage Azure storage accounts from your Java applications</span></span>
 

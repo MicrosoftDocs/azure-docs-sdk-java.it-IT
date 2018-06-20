@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d3460289ab6b9165c2cf6a3dd56eafd0692501e
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34283015"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-eclipse"></a><span data-ttu-id="14928-103">Gestire gli account di archiviazione con Azure Explorer per Eclipse</span><span class="sxs-lookup"><span data-stu-id="14928-103">Manage storage accounts by using the Azure Explorer for Eclipse</span></span>
 

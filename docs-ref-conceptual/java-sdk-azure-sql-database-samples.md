@@ -17,6 +17,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21930777"
 ---
 # <a name="azure-management-libraries-for-java-samples-for-sql-database"></a><span data-ttu-id="4eee6-104">Esempi di librerie di gestione di Azure per Java per il database SQL</span><span class="sxs-lookup"><span data-stu-id="4eee6-104">Azure management libraries for Java samples for SQL Database</span></span>
 

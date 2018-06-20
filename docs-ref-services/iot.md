@@ -16,6 +16,7 @@ ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31823614"
 ---
 # <a name="azure-iot-libraries-for-java"></a><span data-ttu-id="aa783-104">Librerie di Azure IoT per Java</span><span class="sxs-lookup"><span data-stu-id="aa783-104">Azure IoT libraries for Java</span></span>
 

@@ -19,6 +19,7 @@ ms.sourcegitcommit: ed130145f9e5c2d803791d96bb118023175e644a
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30223378"
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a><span data-ttu-id="8d0ef-103">Pubblicare un'app Web come contenitore Docker usando Azure Toolkit for IntelliJ</span><span class="sxs-lookup"><span data-stu-id="8d0ef-103">Publish a web app as a Docker container by using the Azure Toolkit for IntelliJ</span></span>
 
@@ -205,7 +206,9 @@ ms.lasthandoff: 03/28/2018
 <!-- URL List -->
 
 [sito Web Docker]: https://www.docker.com/
+[Docker website]: https://www.docker.com/
 [Configuring Artifacts]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html (Configurazione di elementi)
+[Configuring artifacts]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html
 
 <!-- IMG List -->
 

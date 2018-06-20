@@ -1,12 +1,12 @@
 ---
 title: Gestire macchine virtuali con Azure Explorer per IntelliJ
 description: Informazioni su come gestire macchine virtuali di Azure con Azure Explorer per IntelliJ.
-services: 
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954872"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-intellij"></a><span data-ttu-id="ed361-103">Gestire macchine virtuali con Azure Explorer per IntelliJ</span><span class="sxs-lookup"><span data-stu-id="ed361-103">Manage virtual machines by using the Azure Explorer for IntelliJ</span></span>
 
@@ -156,10 +157,15 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [Istruzioni di accesso per Azure Toolkit for IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
+[Sign-in instructions for the Azure Toolkit for IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
 [Dimensioni per le macchine virtuali Windows in Azure]: /azure/virtual-machines/virtual-machines-windows-sizes
+[Sizes for Windows virtual machines in Azure]: /azure/virtual-machines/virtual-machines-windows-sizes
 [Dimensioni delle macchine virtuali Linux in Azure]: /azure/virtual-machines/virtual-machines-linux-sizes
+[Sizes for Linux virtual machines in Azure]: /azure/virtual-machines/virtual-machines-linux-sizes
 [Prezzi delle macchine virtuali in Windows]: /pricing/details/virtual-machines/windows/
+[Windows virtual-machine pricing]: /pricing/details/virtual-machines/windows/
 [Prezzi delle macchine virtuali in Linux]: /pricing/details/virtual-machines/linux/
+[Linux virtual-machine pricing]: /pricing/details/virtual-machines/linux/
 
 <!-- IMG List -->
 

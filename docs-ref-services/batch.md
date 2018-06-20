@@ -16,6 +16,7 @@ ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31823594"
 ---
 # <a name="azure-batch-libraries-for-java"></a><span data-ttu-id="1ef80-104">Librerie di Azure Batch per Java</span><span class="sxs-lookup"><span data-stu-id="1ef80-104">Azure Batch libraries for Java</span></span>
 

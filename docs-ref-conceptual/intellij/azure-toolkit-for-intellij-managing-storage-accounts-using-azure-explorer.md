@@ -1,12 +1,12 @@
 ---
 title: Gestire gli account di archiviazione usando Azure Explorer per IntelliJ
 description: Informazioni su come gestire gli account di archiviazione di Azure con Azure Explorer per IntelliJ.
-services: 
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954842"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a><span data-ttu-id="a1f17-103">Gestire gli account di archiviazione usando Azure Explorer per IntelliJ</span><span class="sxs-lookup"><span data-stu-id="a1f17-103">Manage storage accounts by using the Azure Explorer for IntelliJ</span></span>
 
@@ -114,16 +115,24 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [Istruzioni di accesso per Azure Toolkit for IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
+[Sign-in instructions for the Azure Toolkit for IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
 [Introduzione ad Archiviazione di Microsoft Azure]: /azure/storage/storage-introduction
+[Introduction to Microsoft Azure Storage]: /azure/storage/storage-introduction
 [Informazioni sugli account di archiviazione di Azure]: /azure/storage/storage-create-storage-account
+[About Azure storage accounts]: /azure/storage/storage-create-storage-account
 [Replica di Archiviazione di Azure]: /azure/storage/storage-redundancy
+[Azure storage replication]: /azure/storage/storage-redundancy
 [Obiettivi di scalabilità e prestazioni per Archiviazione di Azure]: /azure/storage/storage-scalability-targets
+[Azure storage scalability and Performance Targets]: /azure/storage/storage-scalability-targets
 [Denominazione e riferimento a contenitori, BLOB e metadati]: http://go.microsoft.com/fwlink/?LinkId=255555
+[Naming and referencing containers, blobs, and metadata]: http://go.microsoft.com/fwlink/?LinkId=255555
 
 [Sizes for Windows storage accounts in Azure]: /azure/virtual-machines/virtual-machines-windows-sizes (Dimensioni degli account di archiviazione Windows in Azure)
 [Sizes for Linux storage accounts in Azure]: /azure/virtual-machines/virtual-machines-linux-sizes (Dimensioni degli account di archiviazione Linux in Azure)
 [Prezzi per gli account di archiviazione Windows]: /pricing/details/virtual-machines/windows/
+[Windows storage-account pricing]: /pricing/details/virtual-machines/windows/
 [Prezzi per gli account di archiviazione Linux]: /pricing/details/virtual-machines/linux/
+[Linux storage-account pricing]: /pricing/details/virtual-machines/linux/
 
 <!-- IMG List -->
 

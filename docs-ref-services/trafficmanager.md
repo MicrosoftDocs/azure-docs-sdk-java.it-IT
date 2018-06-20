@@ -16,6 +16,7 @@ ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31823744"
 ---
 # <a name="azure-traffic-manager-libraries-for-java"></a><span data-ttu-id="90a66-104">Librerie di Gestione traffico di Azure per Java</span><span class="sxs-lookup"><span data-stu-id="90a66-104">Azure Traffic Manager libraries for Java</span></span>
 

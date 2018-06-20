@@ -1,11 +1,11 @@
 ---
 title: Toolkit di Azure per Eclipse
 description: Informazioni sul modo in cui il plug-in Azure Toolkit for Eclipse semplifica la creazione e la distribuzione di applicazioni cloud in Azure.
-services: 
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: ef2f3839-2549-4471-9b53-0deb7f4c128b
 ms.author: robmcm;asirveda
 ms.date: 02/01/2018
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954212"
 ---
 # <a name="azure-toolkit-for-eclipse"></a><span data-ttu-id="19e86-103">Toolkit di Azure per Eclipse</span><span class="sxs-lookup"><span data-stu-id="19e86-103">Azure Toolkit for Eclipse</span></span>
 

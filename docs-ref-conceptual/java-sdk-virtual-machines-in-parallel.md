@@ -14,6 +14,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931197"
 ---
 # <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a><span data-ttu-id="ac967-103">Creare macchine virtuali in più aree dalle applicazioni Java</span><span class="sxs-lookup"><span data-stu-id="ac967-103">Create virtual machines across multiple regions from your Java applications</span></span>
 

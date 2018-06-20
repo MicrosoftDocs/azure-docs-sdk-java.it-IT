@@ -2,10 +2,10 @@
 title: Distribuire un'app Web Java in Azure in cinque minuti con Maven | Microsoft Docs
 description: Creare e distribuire un'app Java compilata con Maven in Azure
 services: app-service\web
-documentationcenter: 
+documentationcenter: ''
 author: rloutlaw
 manager: douge
-editor: 
+editor: ''
 ms.service: app-service-web
 ms.workload: web
 ms.tgt_pltfrm: na
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 30d502b3150fa14bcc1251f5f88c7c0dd83e531e
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 09/12/2017
+ms.locfileid: "22033633"
 ---
 # <a name="create-and-deploy-a-java-app-to-azure-with-maven"></a><span data-ttu-id="f3263-103">Creare e distribuire un'app Java in Azure con Maven</span><span class="sxs-lookup"><span data-stu-id="f3263-103">Create and deploy a Java app to Azure with Maven</span></span>
 
