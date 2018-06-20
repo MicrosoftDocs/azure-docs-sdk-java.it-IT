@@ -1,11 +1,11 @@
 ---
 title: Toolkit di Azure per IntelliJ
 description: Informazioni sul Toolkit di Azure per IntelliJ
-services: 
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 115a095d-1b70-41d6-adb4-78f24b2a4451
 ms.author: robmcm;asirveda
 ms.date: 02/01/2018
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954792"
 ---
 # <a name="azure-toolkit-for-intellij"></a>Toolkit di Azure per IntelliJ
 Il Toolkit di Azure per IntelliJ offre modelli e funzionalità per creare, sviluppare, testare e distribuire con facilità applicazioni di Azure tramite l'ambiente di sviluppo integrato (IDE) di IntelliJ.

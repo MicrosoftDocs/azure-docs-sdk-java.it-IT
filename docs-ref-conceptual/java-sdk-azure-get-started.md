@@ -17,6 +17,7 @@ ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/09/2018
+ms.locfileid: "29065528"
 ---
 # <a name="get-started-with-cloud-development-using-the-azure-libraries-for-java"></a>Introduzione allo sviluppo per il cloud con le librerie di Azure per Java
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21930897"
 ---
 # <a name="azure-management-libraries-for-java-samples-for-web-apps"></a>Esempi di librerie di gestione di Azure per app Web Java
 

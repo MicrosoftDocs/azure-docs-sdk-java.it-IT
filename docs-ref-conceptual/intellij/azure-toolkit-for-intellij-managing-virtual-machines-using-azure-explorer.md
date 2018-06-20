@@ -1,12 +1,12 @@
 ---
 title: Gestire macchine virtuali con Azure Explorer per IntelliJ
 description: Informazioni su come gestire macchine virtuali di Azure con Azure Explorer per IntelliJ.
-services: 
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954872"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-intellij"></a>Gestire macchine virtuali con Azure Explorer per IntelliJ
 

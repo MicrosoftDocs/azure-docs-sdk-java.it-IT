@@ -1,11 +1,11 @@
 ---
-title: "Novità del Toolkit di Azure per IntelliJ"
-description: "Sono disponibili informazioni sulle funzionalità più recenti del Toolkit di Azure per IntelliJ."
-services: 
+title: Novità del Toolkit di Azure per IntelliJ
+description: Sono disponibili informazioni sulle funzionalità più recenti del Toolkit di Azure per IntelliJ.
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 46ed791f-df59-416a-809e-f52345ad973c
 ms.author: robmcm;asirveda;martinsawicki
 ms.date: 02/01/2018
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954402"
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-intellij"></a>Novità del Toolkit di Azure per IntelliJ
 

@@ -15,6 +15,7 @@ ms.sourcegitcommit: f0dadb22efb191182c3b79dcaa97a76cfcdcc324
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/05/2017
+ms.locfileid: "26288310"
 ---
 # <a name="azure-tools-for-java-developers"></a>Strumenti di Azure per gli sviluppatori Java
 

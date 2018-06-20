@@ -1,12 +1,12 @@
 ---
 title: Distribuire un'applicazione Spring Boot sul cloud con il servizio app di Azure
-description: "Questa esercitazione fornirà agli sviluppatori i passaggi per distribuire l'app Web Introduzione a Spring Boot sul cloud tramite il servizio app di Azure."
+description: Questa esercitazione fornirà agli sviluppatori i passaggi per distribuire l'app Web Introduzione a Spring Boot sul cloud tramite il servizio app di Azure.
 services: app-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: asirveda;robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954524"
 ---
 # <a name="deploy-a-spring-boot-application-to-the-cloud-with-azure-app-service"></a>Distribuire un'applicazione Spring Boot sul cloud con il servizio app di Azure
 

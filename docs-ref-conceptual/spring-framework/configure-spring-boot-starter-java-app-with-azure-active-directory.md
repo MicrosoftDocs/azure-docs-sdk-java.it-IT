@@ -1,12 +1,12 @@
 ---
-title: "Come usare l'utilità di avvio Spring Boot per Azure Active Directory"
-description: "Informazioni su come configurare un'app Spring Boot Initializer con l'utilità di avvio Azure Active Directory."
+title: Come usare l'utilità di avvio Spring Boot per Azure Active Directory
+description: Informazioni su come configurare un'app Spring Boot Initializer con l'utilità di avvio Azure Active Directory.
 services: active-directory
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954682"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-active-directory"></a>Come usare l'utilità di avvio Spring Boot per Azure Active Directory
 
