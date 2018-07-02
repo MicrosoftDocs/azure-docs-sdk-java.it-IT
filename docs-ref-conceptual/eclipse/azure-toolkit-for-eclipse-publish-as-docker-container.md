@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: aec3682cc14204ca2b395d4b851db7bb68cb8728
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: be76733bffa36160d6e366c383672a15374a9996
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954772"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090844"
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a>Pubblicare un'app Web come contenitore Docker usando il Toolkit di Azure per Eclipse
 
@@ -35,7 +35,7 @@ I contenitori Docker sono un metodo molto diffuso per la distribuzione di applic
 
 1. Aprire il progetto dell'applicazione Web in Eclipse.
 
-1. Per avviare la procedura guidata **Publish as Docker Container** (Pubblica come contenitore Docker), eseguire una delle operazioni seguenti:
+2. Per avviare la procedura guidata **Publish as Docker Container** (Pubblica come contenitore Docker), eseguire una delle operazioni seguenti:
 
    * Nella vista **Navigator** (Strumento di navigazione) fare clic con il pulsante destro del mouse sul progetto, fare clic su **Azure** e quindi fare clic su **Publish as Docker Container** (Pubblica come contenitore Docker).
 
@@ -49,7 +49,7 @@ I contenitori Docker sono un metodo molto diffuso per la distribuzione di applic
 
    ![Procedura guidata Deploy Docker Container on Azure (Distribuisci contenitore Docker in Azure)][PUB03]
 
-1. Nella finestra **Type an image name, select the artifact's path and check a Docker host to be used** (Digitare un nome immagine, scegliere il percorso dell'elemento e selezionare un host Docker da usare) seguire questa procedura:
+3. Nella finestra **Type an image name, select the artifact's path and check a Docker host to be used** (Digitare un nome immagine, scegliere il percorso dell'elemento e selezionare un host Docker da usare) seguire questa procedura:
 
    a. Nella casella **Docker image name** (Nome immagine Docker) immettere un nome univoco per l'host Docker. La procedura guidata crea automaticamente un nome, ma è possibile modificarlo.
 
@@ -62,7 +62,7 @@ I contenitori Docker sono un metodo molto diffuso per la distribuzione di applic
 
    ![Procedura guidata Deploy Docker Container on Azure (Distribuisci contenitore Docker in Azure)][PUB04a]
 
-1. Nella finestra **Configure the new virtual machine** (Configura la nuova macchina virtuale) specificare le opzioni seguenti per l'host Docker. La procedura guidata genera automaticamente la maggior parte delle opzioni, ma è possibile modificarle.
+4. Nella finestra **Configure the new virtual machine** (Configura la nuova macchina virtuale) specificare le opzioni seguenti per l'host Docker. La procedura guidata genera automaticamente la maggior parte delle opzioni, ma è possibile modificarle.
 
    a. **Name** (Nome): immettere un nome univoco per l'host Docker. Questo non è lo stesso nome immagine Docker specificato in precedenza.
 
@@ -86,9 +86,9 @@ I contenitori Docker sono un metodo molto diffuso per la distribuzione di applic
    * **New storage account** (Nuovo account di archiviazione): creare un nuovo account di archiviazione per l'host.
    * **Existing storage account** (Account di archiviazione esistente): immettere un account di archiviazione esistente dal proprio account Azure.
 
-1. Fare clic su **Avanti**.
+5. Fare clic su **Avanti**.
 
-1. Nella finestra **Configure log in credentials and port settings** (Configurare le credenziali di accesso e le impostazioni delle porte) selezionare una delle opzioni seguenti:
+6. Nella finestra **Configure log in credentials and port settings** (Configurare le credenziali di accesso e le impostazioni delle porte) selezionare una delle opzioni seguenti:
 
    * **Import credentials from Azure Key Vault** (Importa credenziali da Azure Key Vault): specifica un set di credenziali salvato in precedenza e archiviato nella sottoscrizione di Azure. 
 
@@ -98,61 +98,61 @@ I contenitori Docker sono un metodo molto diffuso per la distribuzione di applic
 
    * **New log in credentials** (Nuove credenziali di accesso): crea un nuovo set di credenziali di accesso. Se si seleziona questa opzione, seguire questa procedura: 
     
-      * Nella scheda **VM Credentials** (Credenziali VM) scegliere una delle opzioni seguenti per l'accesso a macchine virtuali dell'host di Docker: 
+     * Nella scheda **VM Credentials** (Credenziali VM) scegliere una delle opzioni seguenti per l'accesso a macchine virtuali dell'host di Docker: 
 
-         * **Username** (Nome utente): immettere il nome utente per le credenziali di accesso alla macchina virtuale. 
-         * **Password** e **Confirm** (Conferma): immettere la password per le credenziali di accesso alla macchina virtuale. 
-         * **SSH**: immettere le impostazioni Secure Shell (SSH) per l'host Docker. È possibile scegliere tra le opzioni seguenti: 
-            * **None** (Nessuna): specifica che la macchina virtuale non consentirà connessioni SSH. 
-            * **Auto-generate** (Genera automaticamente): crea automaticamente le impostazioni necessarie per la connessione tramite SSH. 
-            * **Import from directory** (Importa da directory): specifica una directory che contiene un set di impostazioni SSH salvate in precedenza. La directory deve contenere i due file seguenti: 
-               * *id_rsa*: contiene l'identificazione RSA per un utente. 
-               * *id_rsa.pub*: contiene la chiave pubblica RSA usata per l'autenticazione. 
+       * **Username** (Nome utente): immettere il nome utente per le credenziali di accesso alla macchina virtuale. 
+       * **Password** e **Confirm** (Conferma): immettere la password per le credenziali di accesso alla macchina virtuale. 
+       * **SSH**: immettere le impostazioni Secure Shell (SSH) per l'host Docker. È possibile scegliere tra le opzioni seguenti: 
+          * **None** (Nessuna): specifica che la macchina virtuale non consentirà connessioni SSH. 
+          * **Auto-generate** (Genera automaticamente): crea automaticamente le impostazioni necessarie per la connessione tramite SSH. 
+          * **Import from directory** (Importa da directory): specifica una directory che contiene un set di impostazioni SSH salvate in precedenza. La directory deve contenere i due file seguenti: 
+             * *id_rsa*: contiene l'identificazione RSA per un utente. 
+             * *id_rsa.pub*: contiene la chiave pubblica RSA usata per l'autenticazione. 
         
          ![Creare un host Docker][PUB05]
 
-      * Nella scheda **Docker Daemon Credentials** (Credenziali daemon Docker) specificare le opzioni seguenti: 
+     * Nella scheda **Docker Daemon Credentials** (Credenziali daemon Docker) specificare le opzioni seguenti: 
 
-         * **Docker Daemon port** (Porta Daemon Docker): immettere la porta TCP univoca per l'host Docker. 
-         * **Sicurezza TLS**: immettere le impostazioni Transport Layer Security per l'host Docker. È possibile scegliere tra le opzioni seguenti: 
-            * **None** (Nessuna): specifica che la macchina virtuale non consentirà connessioni TLS. 
-            * **Auto-generate** (Genera automaticamente): crea automaticamente le impostazioni necessarie per la connessione tramite TLS. 
-            * **Import from directory** (Importa da directory): specifica una directory che contiene un set di impostazioni TLS salvate in precedenza. In particolare, la directory deve contenere i sei file seguenti: 
-               * *ca.pem* e *ca-key.pem*: contengono il certificato e la chiave pubblica per l'Autorità di certificazione TLS. 
-               * *cert.pem* e *key.pem*: contengono il certificato client e la chiave pubblica usati per l'autenticazione TLS. 
-               * *server.pem* e *server-key.pem*: contengono il certificato server e la chiave pubblica per l'host. 
+       * **Docker Daemon port** (Porta Daemon Docker): immettere la porta TCP univoca per l'host Docker. 
+       * **Sicurezza TLS**: immettere le impostazioni Transport Layer Security per l'host Docker. È possibile scegliere tra le opzioni seguenti: 
+          * **None** (Nessuna): specifica che la macchina virtuale non consentirà connessioni TLS. 
+          * **Auto-generate** (Genera automaticamente): crea automaticamente le impostazioni necessarie per la connessione tramite TLS. 
+          * **Import from directory** (Importa da directory): specifica una directory che contiene un set di impostazioni TLS salvate in precedenza. In particolare, la directory deve contenere i sei file seguenti: 
+             * *ca.pem* e *ca-key.pem*: contengono il certificato e la chiave pubblica per l'Autorità di certificazione TLS. 
+             * *cert.pem* e *key.pem*: contengono il certificato client e la chiave pubblica usati per l'autenticazione TLS. 
+             * *server.pem* e *server-key.pem*: contengono il certificato server e la chiave pubblica per l'host. 
 
          ![Creare un host Docker][PUB06]
 
-1. Dopo aver immesso tutte le informazioni indicate in precedenza, fare clic su **Finish** (Fine).
+7. Dopo aver immesso tutte le informazioni indicate in precedenza, fare clic su **Finish** (Fine).
 
-1. Nella procedura guidata **Deploy Docker Container on Azure** (Distribuisci contenitore Docker in Azure) fare clic su **Next** (Avanti).
+8. Nella procedura guidata **Deploy Docker Container on Azure** (Distribuisci contenitore Docker in Azure) fare clic su **Next** (Avanti).
 
    ![Procedura guidata Deploy Docker Container on Azure (Distribuisci contenitore Docker in Azure)][PUB07]
 
-1. Nella finestra **Configure the Docker container to be created** (Configurare il contenitore Docker da creare) eseguire le operazioni seguenti:
+9. Nella finestra **Configure the Docker container to be created** (Configurare il contenitore Docker da creare) eseguire le operazioni seguenti:
 
    a. Nella casella **Docker container name** (Nome contenitore Docker) immettere un nome univoco per il contenitore Docker.
 
    b. Scegliere una delle immagini Docker seguenti: 
 
-      * **Predefined Docker image** (Immagine Docker predefinita): specifica un'immagine preesistente in Azure. 
+   * **Predefined Docker image** (Immagine Docker predefinita): specifica un'immagine preesistente in Azure. 
 
-      >[!NOTE]
-      >L'elenco di immagini Docker in questa casella è costituito da diverse immagini per cui il Toolkit di Azure è stato configurato per l'applicazione automatica delle patch, in modo che l'elemento venga distribuito automaticamente.
-      >
+     >[!NOTE]
+     >L'elenco di immagini Docker in questa casella è costituito da diverse immagini per cui il Toolkit di Azure è stato configurato per l'applicazione automatica delle patch, in modo che l'elemento venga distribuito automaticamente.
+     >
 
-      * **Custom Dockerfile** (Dockerfile personalizzato): specifica un Dockerfile salvato in precedenza nel computer locale.
+   * **Custom Dockerfile** (Dockerfile personalizzato): specifica un Dockerfile salvato in precedenza nel computer locale.
 
-      >[!NOTE]
-      >Questa è una funzionalità più avanzata per gli sviluppatori che intendono distribuire i propri Dockerfile. È tuttavia compito degli sviluppatori che usano questa opzione garantire che i propri Dockerfile vengano compilati correttamente. Il Toolkit di Azure non esegue la convalida del contenuto in un Dockerfile personalizzato e di conseguenza la distribuzione potrebbe non riuscire se nel Dockerfile si verificano problemi. Inoltre, il Toolkit di Azure prevede che il Dockerfile personalizzato contenga un elemento app Web e prova quindi ad aprire una connessione HTTP. Pubblicando un diverso tipo di elemento, gli sviluppatori potrebbero ricevere errori non gravi dopo la distribuzione.
-      >
+     >[!NOTE]
+     >Questa è una funzionalità più avanzata per gli sviluppatori che intendono distribuire i propri Dockerfile. È tuttavia compito degli sviluppatori che usano questa opzione garantire che i propri Dockerfile vengano compilati correttamente. Il Toolkit di Azure non esegue la convalida del contenuto in un Dockerfile personalizzato e di conseguenza la distribuzione potrebbe non riuscire se nel Dockerfile si verificano problemi. Inoltre, il Toolkit di Azure prevede che il Dockerfile personalizzato contenga un elemento app Web e prova quindi ad aprire una connessione HTTP. Pubblicando un diverso tipo di elemento, gli sviluppatori potrebbero ricevere errori non gravi dopo la distribuzione.
+     >
 
    c. **Port settings** (Impostazioni porta): immettere il binding univoco della porta TCP per il contenitore Docker.
 
       ![Finestra Configure the Docker container to be created (Configurare il contenitore Docker da creare)][PUB08]
 
-1. Al termine della procedura, fare clic su **Finish** (Fine).
+10. Al termine della procedura, fare clic su **Finish** (Fine).
 
 Il Toolkit di Azure inizia a distribuire l'app Web in Azure in un contenitore Docker. 
 
@@ -164,7 +164,7 @@ Per altre risorse per Docker, vedere il [sito Web Docker] ufficiale.
 
 <!-- URL List -->
 
-[sito Web Docker]: https://www.docker.com/
+[Sito Web Docker]: https://www.docker.com/
 
 <!-- IMG List -->
 

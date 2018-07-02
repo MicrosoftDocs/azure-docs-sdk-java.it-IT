@@ -14,20 +14,20 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: ebe98a604b52dc9a4b5a47cbf65a4c68a5c86fe3
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: efc1dffa248987772827bbe7bc0caa9f10a0b4ef
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954782"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090784"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-intellij"></a>Creare un'app Web Hello World per Azure con il toolkit legacy per IntelliJ
 
-Questa esercitazione descrive come creare e distribuire un'applicazione Hello World di base in Azure come app Web usando [Azure Toolkit for IntelliJ] 3.0.6 (o versioni precedenti).
+Questa esercitazione descrive come creare e distribuire un'applicazione Hello World di base in Azure come app Web usando [Azure Toolkit per IntelliJ] 3.0.6 (o versioni precedenti).
 
 > [!NOTE]
 >
-> Per una versione di questo articolo che fa uso di [Azure Toolkit for Eclipse], vedere [Creare un'app Web Hello World per Azure con Eclipse][eclipse-hello-world].
+> Per una versione di questo articolo che fa uso di [Toolkit di Azure per Eclipse], vedere [Creare un'app Web Hello World per Azure con Eclipse][eclipse-hello-world].
 >
 
 > [!IMPORTANT]
@@ -161,14 +161,14 @@ Dopo aver configurato le impostazioni del modulo è possibile pubblicare l'appli
 
    h. (Facoltativo) Per impostazione predefinita, una distribuzione recente di Java 8 verrà distribuita automaticamente da Azure nel contenitore di app Web come JVM. È tuttavia possibile selezionare una versione e una distribuzione di JVM diversa. A tale scopo, seguire questa procedura:
       
-      * Fare clic sulla scheda **JDK** nella finestra di dialogo **New Web App Container** (Nuovo contenitore app Web).
-      * È possibile scegliere una delle opzioni seguenti:
+   * Fare clic sulla scheda **JDK** nella finestra di dialogo **New Web App Container** (Nuovo contenitore app Web).
+   * È possibile scegliere una delle opzioni seguenti:
         
-         * Distribuire il JDK predefinito offerto da Azure
-         * Distribuire un JDK di terze parti da un elenco a discesa di altri JDK disponibili in Azure
-         * Distribuire un JDK personalizzato, che deve essere compresso come file ZIP e disponibile pubblicamente o nell'account di archiviazione di Azure
+      * Distribuire il JDK predefinito offerto da Azure
+      * Distribuire un JDK di terze parti da un elenco a discesa di altri JDK disponibili in Azure
+      * Distribuire un JDK personalizzato, che deve essere compresso come file ZIP e disponibile pubblicamente o nell'account di archiviazione di Azure
         
-      ![Scheda JDK della finestra di dialogo New Web App Container (Nuovo contenitore app Web)][11b]
+     ![Scheda JDK della finestra di dialogo New Web App Container (Nuovo contenitore app Web)][11b]
 
    i. Dopo aver completato tutti i passaggi precedenti, la finestra di dialogo New Web App Container dovrebbe essere simile alla seguente:
       
@@ -241,8 +241,8 @@ Per altre informazioni sulla creazione di App Web di Azure, vedere la [Panoramic
 
 <!-- URL List -->
 
-[Azure Toolkit for IntelliJ]: azure-toolkit-for-intellij.md
-[Azure Toolkit for Eclipse]: ../eclipse/azure-toolkit-for-eclipse.md
+[Azure Toolkit per IntelliJ]: azure-toolkit-for-intellij.md
+[Toolkit di Azure per Eclipse]: ../eclipse/azure-toolkit-for-eclipse.md
 [eclipse-hello-world]: ../eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md
 [Panoramica delle App Web]: /azure/app-service/app-service-web-overview
 [Apache Tomcat]: http://tomcat.apache.org/

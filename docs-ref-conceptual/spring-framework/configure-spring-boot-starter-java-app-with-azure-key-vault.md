@@ -14,12 +14,12 @@ ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 1dda697cac80a6cad3ebbbbf8a5a4f18b515dfd8
-ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
+ms.openlocfilehash: a2734fc08f2f59f64ba6c6c20ff18d75070b68d5
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883684"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090714"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Come usare l'utilità di avvio Spring Boot per Azure Key Vault
 
@@ -101,6 +101,7 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
    az group create --name wingtiptoysresources --location westus
    ```
    Dove:
+
    | Parametro | DESCRIZIONE |
    |---|---|
    | `name` | Specifica un nome univoco per il gruppo di risorse. |
@@ -121,11 +122,12 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
    }
    ```
 
-1. Creare un'entità servizio di Azure dalla registrazione per l'applicazione, ad esempio:
+2. Creare un'entità servizio di Azure dalla registrazione per l'applicazione, ad esempio:
    ```shell
    az ad sp create-for-rbac --name "wingtiptoysuser"
    ```
    Dove:
+
    | Parametro | DESCRIZIONE |
    |---|---|
    | `name` | Specifica il nome dell'entità servizio di Azure. |
@@ -142,11 +144,12 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
    }
    ```
 
-1. Creare un nuovo insieme di credenziali delle chiavi nel gruppo di risorse, ad esempio:
+3. Creare un nuovo insieme di credenziali delle chiavi nel gruppo di risorse, ad esempio:
    ```azurecli
    az keyvault create --name wingtiptoyskeyvault --resource-group wingtiptoysresources --location westus --enabled-for-deployment true --enabled-for-disk-encryption true --enabled-for-template-deployment true --sku standard --query properties.vaultUri
    ```
    Dove:
+
    | Parametro | DESCRIZIONE |
    |---|---|
    | `name` | Specifica un nome univoco per l'insieme di credenziali delle chiavi. |
@@ -163,11 +166,12 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
    "https://wingtiptoyskeyvault.vault.azure.net"
    ```
 
-1. Impostare il criterio di accesso per l'entità servizio di Azure creata prima, ad esempio:
+4. Impostare il criterio di accesso per l'entità servizio di Azure creata prima, ad esempio:
    ```azurecli
    az keyvault set-policy --name wingtiptoyskeyvault --secret-permission set get list delete --spn "iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii"
    ```
    Dove:
+
    | Parametro | DESCRIZIONE |
    |---|---|
    | `name` | Specifica il nome dell'insieme di credenziali delle chiavi precedente. |
@@ -192,11 +196,12 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
    }
    ```
 
-1. Archiviare un segreto nel nuovo insieme di credenziali delle chiavi, ad esempio:
+5. Archiviare un segreto nel nuovo insieme di credenziali delle chiavi, ad esempio:
    ```azurecli
    az keyvault secret set --vault-name "wingtiptoyskeyvault" --name "connectionString" --value "jdbc:sqlserver://SERVER.database.windows.net:1433;database=DATABASE;"
    ```
    Dove:
+
    | Parametro | DESCRIZIONE |
    |---|---|
    | `vault-name` | Specifica il nome dell'insieme di credenziali delle chiavi precedente. |
@@ -230,24 +235,26 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
 
 1. Estrarre i file dai file di archivio del progetto Spring Boot scaricati prima in una directory.
 
-1. Passare alla cartella *src/main/resources* nel progetto e aprire il file *application.properties* in un editor di testo.
+2. Passare alla cartella *src/main/resources* nel progetto e aprire il file *application.properties* in un editor di testo.
 
-1. Aggiungere i valori per l'insieme di credenziali delle chiavi usando i valori dei passaggi completati prima in questa esercitazione, ad esempio:
+3. Aggiungere i valori per l'insieme di credenziali delle chiavi usando i valori dei passaggi completati prima in questa esercitazione, ad esempio:
    ```yaml
    azure.keyvault.uri=https://wingtiptoyskeyvault.vault.azure.net/
    azure.keyvault.client-id=iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii
    azure.keyvault.client-key=pppppppp-pppp-pppp-pppp-pppppppppppp
    ```
    Dove:
-   | Parametro | DESCRIZIONE |
-   |---|---|
-   | `azure.keyvault.uri` | Specifica l'URI di quando è stato creato l'insieme di credenziali delle chiavi. |
-   | `azure.keyvault.client-id` | Specifica il GUID *appId* di quando è stata creata l'entità servizio. |
+
+   |          Parametro          |                                 DESCRIZIONE                                 |
+   |-----------------------------|-----------------------------------------------------------------------------|
+   |    `azure.keyvault.uri`     |           Specifica l'URI di quando è stato creato l'insieme di credenziali delle chiavi.           |
+   | `azure.keyvault.client-id`  |  Specifica il GUID *appId* di quando è stata creata l'entità servizio.   |
    | `azure.keyvault.client-key` | Specifica il GUID *password* di quando è stata creata l'entità servizio. |
 
-1. Passare al file di codice sorgente principale del progetto, ad esempio: */src/main/java/com/wingtiptoys/secrets*.
 
-1. Aprire il file Java principale dell'applicazione in un file in un editor di testo, ad esempio: *SecretsApplication.java* e aggiungere le righe seguenti al file:
+4. Passare al file di codice sorgente principale del progetto, ad esempio: */src/main/java/com/wingtiptoys/secrets*.
+
+5. Aprire il file Java principale dell'applicazione in un file in un editor di testo, ad esempio: *SecretsApplication.java* e aggiungere le righe seguenti al file:
 
    ```java
    package com.wingtiptoys.secrets;
@@ -274,7 +281,7 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
    ```
    Questo esempio di codice recupera la stringa di connessione dall'insieme di credenziali delle chiavi e lo visualizza nella riga di comando.
 
-1. Salvare e chiudere il file Java.
+6. Salvare e chiudere il file Java.
 
 ## <a name="build-and-test-your-app"></a>Compilare e testare l'app
 
@@ -312,15 +319,15 @@ Per altre informazioni sull'uso delle applicazioni Spring Boot in Azure, vedere 
 
 * [Eseguire un'applicazione Spring Boot in un cluster Kubernetes nel servizio contenitore di Azure](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Per altre informazioni su come usare Azure con Java, vedere [Azure per sviluppatori Java] e [Java Tools for Visual Studio Team Services (Strumenti Java per Visual Studio Team Services)].
+Per altre informazioni su come usare Azure con Java, vedere [Azure per sviluppatori Java] e [Strumenti Java per Visual Studio Team Services].
 
 <!-- URL List -->
 
 [Documentazione su Key Vault]: /azure/key-vault/
 [Introduzione all'insieme di credenziali delle chiavi di Azure]: /azure/key-vault/key-vault-get-started
 [Azure per sviluppatori Java]: https://docs.microsoft.com/java/azure/
-[account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
-[Java Tools for Visual Studio Team Services (Strumenti Java per Visual Studio Team Services)]: https://java.visualstudio.com/
+[Account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
+[Strumenti Java per Visual Studio Team Services]: https://java.visualstudio.com/
 [vantaggi per i sottoscrittori di MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/

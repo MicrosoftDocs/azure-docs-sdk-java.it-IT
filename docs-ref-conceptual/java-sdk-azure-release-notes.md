@@ -10,12 +10,12 @@ ms.devlang: java
 ms.topic: reference
 ms.technology: Azure
 ms.date: 3/06/2016
-ms.openlocfilehash: 924ccf9bdaad4bc635f133adbcfcc8f797d06644
-ms.sourcegitcommit: acc83bb537d77568b2a5427479d6354d6ae30885
+ms.openlocfilehash: 0aaa83ceb42192441decb5972baae56fed337fb2
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2017
-ms.locfileid: "23982163"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090684"
 ---
 # <a name="release-notes"></a>Note sulla versione 
 
@@ -35,7 +35,7 @@ Alcune API disponibili come Beta nelle versioni precedenti sono ora disponibili 
 - Tutti i metodi della rete CDN disponibili in precedenza come versione Beta
 - Tutti i metodi e tutte le interfacce nei gateway applicazione disponibili in precedenza come versione Beta
 
- Alcune parti della libreria sono ancora disponibili in anteprima. Per informazioni sullo stato attuale delle librerie, vedere la tabella seguente:
+  Alcune parti della libreria sono ancora disponibili in anteprima. Per informazioni sullo stato attuale delle librerie, vedere la tabella seguente:
 
 Servizio o funzionalità | Disponibile a livello generale | Disponibile come anteprima 
 ---------|---------|---------|-
