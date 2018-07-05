@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 396d0ecfb051109924f09ae8b5d9b8074e49c404
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: f05dca50f84b27f157892d63cda02286c6755795
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954892"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090814"
 ---
 # <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a>Distribuire un'app Spring Boot con il plug-in Maven Fabric8
 
@@ -77,7 +77,7 @@ La procedura seguente illustra come creare un'applicazione Web di Spring Boot e 
    mvn clean package spring-boot:run
    ```
 
-1. Testare l'app Web passando a http://localhost:8080 oppure eseguendo il comando `curl` seguente:
+1. Testare l'app Web passando a http://localhost:8080 oppure con il comando `curl` seguente:
    ```shell
    curl http://localhost:8080
    ```
@@ -96,7 +96,7 @@ La procedura seguente illustra come creare un'applicazione Web di Spring Boot e 
    az login
    ```
    Seguire le istruzioni per completare il processo di accesso
-   
+
    Nell'interfaccia della riga di comando di Azure verrà visualizzato un elenco degli account, ad esempio:
 
    ```json
@@ -255,6 +255,7 @@ La procedura seguente illustra come creare un'applicazione Web di Spring Boot e 
    az acr create --admin-enabled --resource-group wingtiptoys-kubernetes --location westeurope --name wingtiptoysregistry --sku Basic
    ```
    Dove:
+
    | Parametro | DESCRIZIONE |
    |---|---|
    | `wingtiptoys-kubernetes` | Specifica il nome del gruppo di risorse creato in precedenza in questo articolo. |
@@ -285,7 +286,7 @@ La procedura seguente illustra come creare un'applicazione Web di Spring Boot e 
    }
    ```
 
-1. Recuperare la password per il registro contenitori dall'interfaccia della riga di comando di Azure.
+2. Recuperare la password per il registro contenitori dall'interfaccia della riga di comando di Azure.
    ```azurecli
    az acr credential show --name wingtiptoysregistry --query passwords[0]
    ```
@@ -299,10 +300,10 @@ La procedura seguente illustra come creare un'applicazione Web di Spring Boot e 
    }
    ```
 
-1. Passare alla directory di configurazione dell'installazione di Maven (impostazione predefinita: ~/.m2/ or C:\Users\nomeutente\.m2) e aprire il file *settings.xml* con un editor di testo.
+3. Passare alla directory di configurazione dell'installazione di Maven (impostazione predefinita: ~/.m2/ or C:\Users\nomeutente\.m2) e aprire il file *settings.xml* con un editor di testo.
 
-1. Aggiungere l'URL, il nome utente e la password di Registro contenitori di Azure a una nuova raccolta `<server>` nel file *settings.xml*.
-I valori `id` e `username` corrispondono al nome del registro. Usare il valore `password` del comando precedente, senza virgolette.
+4. Aggiungere l'URL, il nome utente e la password di Registro contenitori di Azure a una nuova raccolta `<server>` nel file *settings.xml*.
+   I valori `id` e `username` corrispondono al nome del registro. Usare il valore `password` del comando precedente, senza virgolette.
 
    ```xml
    <servers>
@@ -314,9 +315,9 @@ I valori `id` e `username` corrispondono al nome del registro. Usare il valore `
    </servers>
    ```
 
-1. Passare alla directory del progetto completato per l'applicazione Spring Boot (ad esempio, "*C:\SpringBoot\gs-spring-boot-docker\complete*" o "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*") e aprire il file *pom.xml* con un editor di testo.
+5. Passare alla directory del progetto completato per l'applicazione Spring Boot (ad esempio, "*C:\SpringBoot\gs-spring-boot-docker\complete*" o "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*") e aprire il file *pom.xml* con un editor di testo.
 
-1. Aggiornare la raccolta `<properties>` nel file *pom.xml* con il valore del server di accesso per il registro contenitori di Azure.
+6. Aggiornare la raccolta `<properties>` nel file *pom.xml* con il valore del server di accesso per il registro contenitori di Azure.
 
    ```xml
    <properties>
@@ -325,7 +326,7 @@ I valori `id` e `username` corrispondono al nome del registro. Usare il valore `
    </properties>
    ```
 
-1. Aggiornare la raccolta `<plugins>` nel file *pom.xml* in modo che `<plugin>` contenga l'indirizzo del server di accesso e il nome del registro per il registro contenitori di Azure.
+7. Aggiornare la raccolta `<plugins>` nel file *pom.xml* in modo che `<plugin>` contenga l'indirizzo del server di accesso e il nome del registro per il registro contenitori di Azure.
 
    ```xml
    <plugin>
@@ -340,7 +341,7 @@ I valori `id` e `username` corrispondono al nome del registro. Usare il valore `
    </plugin>
    ```
 
-1. Passare alla directory del progetto completato per l'applicazione Spring Boot ed eseguire il comando Maven seguente per creare il contenitore Docker ed effettuare il push dell'immagine nel registro:
+8. Passare alla directory del progetto completato per l'applicazione Spring Boot ed eseguire il comando Maven seguente per creare il contenitore Docker ed effettuare il push dell'immagine nel registro:
 
    ```shell
    mvn package dockerfile:build -DpushImage
@@ -485,13 +486,13 @@ I valori `id` e `username` corrispondono al nome del registro. Usare il valore `
    ```
 
    In `kubectl` verranno visualizzati gli indirizzi IP interni ed esterni, ad esempio:
-   
+
    ```shell
    NAME                    CLUSTER-IP   EXTERNAL-IP   PORT(S)        AGE
    kubernetes              10.0.0.1     <none>        443/TCP        19h
    gs-spring-boot-docker   10.0.242.8   13.65.196.3   80:31215/TCP   3m
    ```
-   
+
    Per aprire l'applicazione in un Web browser, è possibile usare l'indirizzo IP esterno.
 
    ![Esplorare l'applicazione di esempio esternamente][SB02]
@@ -512,11 +513,11 @@ Per altre informazioni sull'uso delle applicazioni Spring Boot in Azure, vedere 
 * [Distribuire un'applicazione Spring Boot in Linux nel servizio contenitore di Azure](deploy-spring-boot-java-app-on-linux.md)
 * [Distribuire un'applicazione Spring Boot in un cluster Kubernetes nel servizio contenitore di Azure](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Per altre informazioni su come usare Azure con Java, vedere [Azure per sviluppatori Java] e [Java Tools for Visual Studio Team Services (Strumenti Java per Visual Studio Team Services)].
+Per altre informazioni su come usare Azure con Java, vedere [Azure per sviluppatori Java] e [Strumenti Java per Visual Studio Team Services].
 
 Per maggiori dettagli sul progetto di esempio di Spring Boot in Docker, vedere [Spring Boot on Docker Getting Started] (Introduzione a Spring Boot in Docker).
 
-Per informazioni su come iniziare a creare applicazioni Spring Boot proprie, vedere **Spring Initializr** all'indirizzo <https://start.spring.io/>.
+Per iniziare a usare proprie applicazioni Spring Boot, vedere **Spring Initializr** all'indirizzo <https://start.spring.io/>.
 
 Per altre informazioni su come iniziare a creare una semplice applicazione Spring Boot, vedere Spring Initializr all'indirizzo <https://start.spring.io/>.
 
@@ -525,17 +526,17 @@ Per altri esempi sull'uso delle immagini personalizzate di Docker con Azure, ved
 <!-- URL List -->
 
 [Interfaccia della riga di comando di Azure]: /cli/azure/overview
-[servizio contenitore di Azure]: https://azure.microsoft.com/services/container-service/
+[Servizio contenitore di Azure]: https://azure.microsoft.com/services/container-service/
 [Azure per sviluppatori Java]: https://docs.microsoft.com/java/azure/
 [Azure portal]: https://portal.azure.com/
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
 [Uso di un'immagine Docker personalizzata per App Web di Azure in Linux]: /azure/app-service-web/app-service-linux-using-custom-docker-image
 [Docker]: https://www.docker.com/
 [Fabric8]: https://fabric8.io/
-[account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
+[Account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
-[Java Tools for Visual Studio Team Services (Strumenti Java per Visual Studio Team Services)]: https://java.visualstudio.com/
+[Strumenti Java per Visual Studio Team Services]: https://java.visualstudio.com/
 [Kubernetes]: https://kubernetes.io/
 [Maven]: http://maven.apache.org/
 [vantaggi per i sottoscrittori di MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
