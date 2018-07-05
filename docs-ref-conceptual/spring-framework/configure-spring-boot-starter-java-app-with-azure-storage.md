@@ -14,11 +14,12 @@ ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: e10ecfb7f6d705aa3ccffc49d354d1019f7f1a0b
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.openlocfilehash: 2f9381fce2fee207360287c57443b56eb5128e42
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090694"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Come usare l'utilità di avvio Spring Boot per Archiviazione di Azure
 
@@ -39,13 +40,13 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
 
 1. Passare a <https://start.spring.io/>.
 
-1. Specificare che si vuole generare un progetto **Maven** con **Java**, immettere i nomi di **Group** (Gruppo) e **Artifact** (Elemento) per l'applicazione e quindi fare clic sul collegamento relativo a **Switch to the full version** (Passa alla versione completa) di Spring Initializr.
+1. Specificare che si vuole generare un progetto **Maven** con **Java**, immettere i nomi per l'applicazione in **Group** (Gruppo) e **Artifact** (Elemento) e quindi fare clic sul collegamento **Switch to the full version** (Passa alla versione completa) di Spring Initializr.
 
    ![Opzioni di base di Spring Initializr](media/configure-spring-boot-starter-java-app-with-azure-storage/spring-initializr-basic.png)
 
    > [!NOTE]
    >
-   > Spring Initializr userà i valori di **Group** (Gruppo) e **Artifact** (Elemento) per creare il nome del pacchetto, ad esempio *com.contoso.wingtiptoysdemo*.
+   > Spring Initializr userà i nomi in **Group** (Gruppo) e **Artifact** (Elemento) per creare il nome del pacchetto, ad esempio *com.contoso.wingtiptoysdemo*.
    >
 
 1. Scorrere verso il basso fino alla sezione **Azure** e selezionare la casella **Azure Storage** (Archiviazione di Azure).
@@ -108,6 +109,7 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
    az group create --name wingtiptoysresources --location westus
    ```
    Dove:
+
    | Parametro | DESCRIZIONE |
    |---|---|
    | `name` | Specifica un nome univoco per il gruppo di risorse. |
@@ -128,11 +130,12 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
    }
    ```
 
-1. Creare un account di archiviazione di Azure nel gruppo di risorse per l'app Spring Boot, ad esempio:
+2. Creare un account di archiviazione di Azure nel gruppo di risorse per l'app Spring Boot, ad esempio:
    ```azurecli
    az storage account create --name wingtiptoysstorage --resource-group wingtiptoysresources --location westus --sku Standard_LRS
    ```
    Dove:
+
    | Parametro | DESCRIZIONE |
    |---|---|
    | `name` | Specifica un nome univoco per l'account di archiviazione. |
@@ -141,7 +144,7 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
    | `sku` | Specifica uno dei valori seguenti: `Premium_LRS`, `Standard_GRS`, `Standard_LRS`, `Standard_RAGRS`, `Standard_ZRS`. |
 
    Azure restituirà una stringa JSON lunga contenente lo stato del provisioning, ad esempio:
-   
+
    ```json
    {
      "id": "/subscriptions/ssssssss-ssss-ssss-ssss-ssssssssssss/...",
@@ -157,11 +160,12 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
    }
    ```
 
-1. Recuperare la stringa di connessione per l'account di archiviazione, ad esempio:
+3. Recuperare la stringa di connessione per l'account di archiviazione, ad esempio:
    ```azurecli
    az storage account show-connection-string --name wingtiptoysstorage --resource-group wingtiptoysresources
    ```
    Dove:
+
    | Parametro | DESCRIZIONE |
    | ---|---|
    | `name` | Specifica un nome univoco dell'account di archiviazione che è stato creato nei passaggi precedenti. |
@@ -270,7 +274,7 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
    ```shell
    mvn clean package spring-boot:run
    ```
-   
+
    L'applicazione creerà un contenitore e caricherà nel contenitore un file di testo come BLOB, che verrà elencato sotto l'account di archiviazione nel [portale di Azure](https://portal.azure.com).
 
    ![Elencare i BLOB nel portale di Azure](media/configure-spring-boot-starter-java-app-with-azure-storage/list-blobs-in-portal.png)
