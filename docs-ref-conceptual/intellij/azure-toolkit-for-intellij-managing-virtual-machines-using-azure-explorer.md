@@ -15,142 +15,142 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 213efa7fc31705b0ffcba6f2fe40e7186a365fae
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954872"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38074531"
 ---
-# <a name="manage-virtual-machines-by-using-the-azure-explorer-for-intellij"></a><span data-ttu-id="ed361-103">Gestire macchine virtuali con Azure Explorer per IntelliJ</span><span class="sxs-lookup"><span data-stu-id="ed361-103">Manage virtual machines by using the Azure Explorer for IntelliJ</span></span>
+# <a name="manage-virtual-machines-by-using-the-azure-explorer-for-intellij"></a><span data-ttu-id="8abec-103">Gestire macchine virtuali con Azure Explorer per IntelliJ</span><span class="sxs-lookup"><span data-stu-id="8abec-103">Manage virtual machines by using the Azure Explorer for IntelliJ</span></span>
 
-<span data-ttu-id="ed361-104">Azure Explorer, che fa parte di Azure Toolkit for IntelliJ, offre agli sviluppatori Java una soluzione di facile uso per la gestione delle macchine virtuali con il proprio account Azure nell'ambiente di sviluppo integrato (IDE) di IntelliJ.</span><span class="sxs-lookup"><span data-stu-id="ed361-104">The Azure Explorer, which is part of the Azure Toolkit for IntelliJ, provides Java developers with an easy-to-use solution for managing virtual machines in their Azure account from inside the IntelliJ integrated development environment (IDE).</span></span>
+<span data-ttu-id="8abec-104">Azure Explorer, che fa parte di Azure Toolkit for IntelliJ, offre agli sviluppatori Java una soluzione di facile uso per la gestione delle macchine virtuali con il proprio account Azure nell'ambiente di sviluppo integrato (IDE) di IntelliJ.</span><span class="sxs-lookup"><span data-stu-id="8abec-104">The Azure Explorer, which is part of the Azure Toolkit for IntelliJ, provides Java developers with an easy-to-use solution for managing virtual machines in their Azure account from inside the IntelliJ integrated development environment (IDE).</span></span>
 
 [!INCLUDE [azure-toolkit-for-intellij-prerequisites](../includes/azure-toolkit-for-intellij-prerequisites.md)]
 
 [!INCLUDE [azure-toolkit-for-intellij-show-azure-explorer](../includes/azure-toolkit-for-intellij-show-azure-explorer.md)]
 
-## <a name="create-a-virtual-machine-in-intellij"></a><span data-ttu-id="ed361-105">Creare una macchina virtuale in IntelliJ</span><span class="sxs-lookup"><span data-stu-id="ed361-105">Create a virtual machine in IntelliJ</span></span>
+## <a name="create-a-virtual-machine-in-intellij"></a><span data-ttu-id="8abec-105">Creare una macchina virtuale in IntelliJ</span><span class="sxs-lookup"><span data-stu-id="8abec-105">Create a virtual machine in IntelliJ</span></span>
 
-<span data-ttu-id="ed361-106">Per creare una macchina virtuale con Azure Explorer, eseguire queste operazioni:</span><span class="sxs-lookup"><span data-stu-id="ed361-106">To create a virtual machine by using the Azure Explorer, do the following:</span></span> 
+<span data-ttu-id="8abec-106">Per creare una macchina virtuale con Azure Explorer, eseguire queste operazioni:</span><span class="sxs-lookup"><span data-stu-id="8abec-106">To create a virtual machine by using the Azure Explorer, do the following:</span></span> 
 
-1. <span data-ttu-id="ed361-107">Accedere al proprio account Azure tramite la procedura descritta nell'articolo [Istruzioni di accesso per Azure Toolkit for IntelliJ].</span><span class="sxs-lookup"><span data-stu-id="ed361-107">Sign in to your Azure account by using the steps in the [Sign-in instructions for the Azure Toolkit for IntelliJ] article.</span></span>
+1. <span data-ttu-id="8abec-107">Accedere al proprio account Azure tramite la procedura descritta nell'articolo [Istruzioni di accesso per Azure Toolkit for IntelliJ].</span><span class="sxs-lookup"><span data-stu-id="8abec-107">Sign in to your Azure account by using the steps in the [Sign-in instructions for the Azure Toolkit for IntelliJ] article.</span></span>
 
-2. <span data-ttu-id="ed361-108">Nella visualizzazione **Azure Explorer** espandere il nodo **Azure**, fare clic con il pulsante destro del mouse su **Macchine virtuali** e quindi fare clic su **Crea macchina virtuale**.</span><span class="sxs-lookup"><span data-stu-id="ed361-108">In the **Azure Explorer** view, expand the **Azure** node, right-click **Virtual Machines**, and then click **Create VM**.</span></span> 
+2. <span data-ttu-id="8abec-108">Nella visualizzazione **Azure Explorer** espandere il nodo **Azure**, fare clic con il pulsante destro del mouse su **Macchine virtuali** e quindi fare clic su **Crea macchina virtuale**.</span><span class="sxs-lookup"><span data-stu-id="8abec-108">In the **Azure Explorer** view, expand the **Azure** node, right-click **Virtual Machines**, and then click **Create VM**.</span></span> 
 
-   <span data-ttu-id="ed361-109">![Comando Crea macchina virtuale][CR01]</span><span class="sxs-lookup"><span data-stu-id="ed361-109">![The Create VM command][CR01]</span></span>  
-    <span data-ttu-id="ed361-110">Viene visualizzata la procedura guidata **Creare una nuova macchina virtuale**.</span><span class="sxs-lookup"><span data-stu-id="ed361-110">The **Create new Virtual Machine** wizard opens.</span></span>
+   <span data-ttu-id="8abec-109">![Comando Crea macchina virtuale][CR01]</span><span class="sxs-lookup"><span data-stu-id="8abec-109">![The Create VM command][CR01]</span></span>  
+    <span data-ttu-id="8abec-110">Viene visualizzata la procedura guidata **Creare una nuova macchina virtuale**.</span><span class="sxs-lookup"><span data-stu-id="8abec-110">The **Create new Virtual Machine** wizard opens.</span></span>
 
-3. <span data-ttu-id="ed361-111">Nella finestra **Scegliere una sottoscrizione** selezionare la sottoscrizione e fare clic su **Avanti**.</span><span class="sxs-lookup"><span data-stu-id="ed361-111">In the **Choose a Subscription** window, select your subscription, and then click **Next**.</span></span> 
+3. <span data-ttu-id="8abec-111">Nella finestra **Scegliere una sottoscrizione** selezionare la sottoscrizione e fare clic su **Avanti**.</span><span class="sxs-lookup"><span data-stu-id="8abec-111">In the **Choose a Subscription** window, select your subscription, and then click **Next**.</span></span> 
 
    ![Finestra di dialogo Scegliere una sottoscrizione][CR02]
 
-4. <span data-ttu-id="ed361-113">Nella finestra **Selezionare un'immagine di macchina virtuale** immettere le informazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="ed361-113">In the **Select a Virtual Machine Image** window, enter the following information:</span></span>
+4. <span data-ttu-id="8abec-113">Nella finestra **Selezionare un'immagine di macchina virtuale** immettere le informazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="8abec-113">In the **Select a Virtual Machine Image** window, enter the following information:</span></span>
 
-   * <span data-ttu-id="ed361-114">**Località**: specifica dove verrà creata la macchina virtuale, ad esempio *Stati Uniti occidentali*.</span><span class="sxs-lookup"><span data-stu-id="ed361-114">**Location**: Specifies where your virtual machine will be created (for example, *West US*).</span></span> 
+   * <span data-ttu-id="8abec-114">**Località**: specifica dove verrà creata la macchina virtuale, ad esempio *Stati Uniti occidentali*.</span><span class="sxs-lookup"><span data-stu-id="8abec-114">**Location**: Specifies where your virtual machine will be created (for example, *West US*).</span></span> 
 
-   * <span data-ttu-id="ed361-115">**Recommended Image** (Immagine consigliata): specifica che si sceglie un'immagine da un elenco abbreviato di immagini di uso comune.</span><span class="sxs-lookup"><span data-stu-id="ed361-115">**Recommended image**: Specifies that you will choose an image from an abbreviated list of commonly used images.</span></span>
+   * <span data-ttu-id="8abec-115">**Recommended Image** (Immagine consigliata): specifica che si sceglie un'immagine da un elenco abbreviato di immagini di uso comune.</span><span class="sxs-lookup"><span data-stu-id="8abec-115">**Recommended image**: Specifies that you will choose an image from an abbreviated list of commonly used images.</span></span>
 
-   * <span data-ttu-id="ed361-116">**Immagine personalizzata**: specifica che si sceglie un'immagine personalizzata, fornendo le informazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="ed361-116">**Custom image**: Specifies that you will choose a custom image by providing the following information:</span></span>
+   * <span data-ttu-id="8abec-116">**Immagine personalizzata**: specifica che si sceglie un'immagine personalizzata, fornendo le informazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="8abec-116">**Custom image**: Specifies that you will choose a custom image by providing the following information:</span></span>
 
-      * <span data-ttu-id="ed361-117">**Autore**: specifica l'autore che ha creato l'immagine che verrà usata per creare la macchina virtuale, ad esempio *Microsoft*.</span><span class="sxs-lookup"><span data-stu-id="ed361-117">**Publisher**: Specifies the publisher that created the image that you will use for your virtual machine (for example, *Microsoft*).</span></span>
+      * <span data-ttu-id="8abec-117">**Autore**: specifica l'autore che ha creato l'immagine che verrà usata per creare la macchina virtuale, ad esempio *Microsoft*.</span><span class="sxs-lookup"><span data-stu-id="8abec-117">**Publisher**: Specifies the publisher that created the image that you will use for your virtual machine (for example, *Microsoft*).</span></span>
 
-      * <span data-ttu-id="ed361-118">**Offerta**: specifica la macchina virtuale offerta da usare dall'autore selezionato, ad esempio *JDK*.</span><span class="sxs-lookup"><span data-stu-id="ed361-118">**Offer**: Specifies the virtual machine offering to use from the selected publisher (for example, *JDK*).</span></span>
+      * <span data-ttu-id="8abec-118">**Offerta**: specifica la macchina virtuale offerta da usare dall'autore selezionato, ad esempio *JDK*.</span><span class="sxs-lookup"><span data-stu-id="8abec-118">**Offer**: Specifies the virtual machine offering to use from the selected publisher (for example, *JDK*).</span></span>
 
-      * <span data-ttu-id="ed361-119">**SKU**: specifica la SKU da usare nell'offerta selezionata, ad esempio *JDK_8*.</span><span class="sxs-lookup"><span data-stu-id="ed361-119">**Sku**: Specifies the stockkeeping unit (SKU) to use from the selected offering (for example, *JDK_8*).</span></span>
+      * <span data-ttu-id="8abec-119">**SKU**: specifica la SKU da usare nell'offerta selezionata, ad esempio *JDK_8*.</span><span class="sxs-lookup"><span data-stu-id="8abec-119">**Sku**: Specifies the stockkeeping unit (SKU) to use from the selected offering (for example, *JDK_8*).</span></span>
 
-      * <span data-ttu-id="ed361-120">**Versione #**(N. versione): specifica la versione della SKU selezionata.</span><span class="sxs-lookup"><span data-stu-id="ed361-120">**Version #**: Specifies which version of the selected SKU to use.</span></span>
+      * <span data-ttu-id="8abec-120">**Versione #**(N. versione): specifica la versione della SKU selezionata.</span><span class="sxs-lookup"><span data-stu-id="8abec-120">**Version #**: Specifies which version of the selected SKU to use.</span></span>
 
    ![Finestra Selezionare un'immagine di macchina virtuale][CR03]
 
-5. <span data-ttu-id="ed361-122">Fare clic su **Avanti**.</span><span class="sxs-lookup"><span data-stu-id="ed361-122">Click **Next**.</span></span> 
+5. <span data-ttu-id="8abec-122">Fare clic su **Avanti**.</span><span class="sxs-lookup"><span data-stu-id="8abec-122">Click **Next**.</span></span> 
 
-6. <span data-ttu-id="ed361-123">Nella finestra **Impostazioni di base della macchina virtuale** immettere le informazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="ed361-123">In the **Virtual Machine Basic Settings** window, enter the following information:</span></span>
+6. <span data-ttu-id="8abec-123">Nella finestra **Impostazioni di base della macchina virtuale** immettere le informazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="8abec-123">In the **Virtual Machine Basic Settings** window, enter the following information:</span></span>
 
-   * <span data-ttu-id="ed361-124">**Nome macchina virtuale**: specifica il nome della nuova macchina virtuale, che deve iniziare con una lettera e contenere solo lettere, numeri e trattini.</span><span class="sxs-lookup"><span data-stu-id="ed361-124">**Virtual machine name**: Specifies the name for your new virtual machine, which must start with a letter and contain only letters, numbers, and hyphens.</span></span>
+   * <span data-ttu-id="8abec-124">**Nome macchina virtuale**: specifica il nome della nuova macchina virtuale, che deve iniziare con una lettera e contenere solo lettere, numeri e trattini.</span><span class="sxs-lookup"><span data-stu-id="8abec-124">**Virtual machine name**: Specifies the name for your new virtual machine, which must start with a letter and contain only letters, numbers, and hyphens.</span></span>
 
-   * <span data-ttu-id="ed361-125">**Dimensioni**: specifica il numero di core e la quantità di memoria da allocare per la macchina virtuale.</span><span class="sxs-lookup"><span data-stu-id="ed361-125">**Size**: Specifies the number of cores and memory to allocate for your virtual machine.</span></span>
+   * <span data-ttu-id="8abec-125">**Dimensioni**: specifica il numero di core e la quantità di memoria da allocare per la macchina virtuale.</span><span class="sxs-lookup"><span data-stu-id="8abec-125">**Size**: Specifies the number of cores and memory to allocate for your virtual machine.</span></span>
 
-   * <span data-ttu-id="ed361-126">**Nome utente**: specifica l'account amministratore da creare per la gestione della macchina virtuale.</span><span class="sxs-lookup"><span data-stu-id="ed361-126">**User name**: Specifies the administrator account to create for managing your virtual machine.</span></span>
+   * <span data-ttu-id="8abec-126">**Nome utente**: specifica l'account amministratore da creare per la gestione della macchina virtuale.</span><span class="sxs-lookup"><span data-stu-id="8abec-126">**User name**: Specifies the administrator account to create for managing your virtual machine.</span></span>
 
-   * <span data-ttu-id="ed361-127">**Password** e **Conferma**: specifica la password per l'account di amministratore.</span><span class="sxs-lookup"><span data-stu-id="ed361-127">**Password** and **Confirm**: Specifies the password for your administrator account.</span></span>
+   * <span data-ttu-id="8abec-127">**Password** e **Conferma**: specifica la password per l'account di amministratore.</span><span class="sxs-lookup"><span data-stu-id="8abec-127">**Password** and **Confirm**: Specifies the password for your administrator account.</span></span>
 
    ![Finestra Impostazioni di base della macchina virtuale][CR04]
 
-7. <span data-ttu-id="ed361-129">Fare clic su **Avanti**.</span><span class="sxs-lookup"><span data-stu-id="ed361-129">Click **Next**.</span></span> 
+7. <span data-ttu-id="8abec-129">Fare clic su **Avanti**.</span><span class="sxs-lookup"><span data-stu-id="8abec-129">Click **Next**.</span></span> 
 
-8. <span data-ttu-id="ed361-130">Nella finestra **Risorse associate** immettere le informazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="ed361-130">In the **Associated Resources** window, enter the following information:</span></span>
+8. <span data-ttu-id="8abec-130">Nella finestra **Risorse associate** immettere le informazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="8abec-130">In the **Associated Resources** window, enter the following information:</span></span>
 
-   * <span data-ttu-id="ed361-131">**Gruppo di risorse**: specifica il gruppo di risorse per la macchina virtuale.</span><span class="sxs-lookup"><span data-stu-id="ed361-131">**Resource group**: Specifies the resource group for your virtual machine.</span></span> <span data-ttu-id="ed361-132">Selezionare una delle opzioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="ed361-132">Select one of the following options:</span></span>
-      * <span data-ttu-id="ed361-133">**Crea nuovo**: specifica che si intende creare un nuovo gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="ed361-133">**Create new**: Specifies that you want to create a new resource group.</span></span>
-      * <span data-ttu-id="ed361-134">**Usa esistente**: specifica che si vuole scegliere in un elenco i gruppi di risorse associati all'account di Azure.</span><span class="sxs-lookup"><span data-stu-id="ed361-134">**Use existing**: Specifies that you want to select from a list of resource groups that are associated with your Azure account.</span></span>
+   * <span data-ttu-id="8abec-131">**Gruppo di risorse**: specifica il gruppo di risorse per la macchina virtuale.</span><span class="sxs-lookup"><span data-stu-id="8abec-131">**Resource group**: Specifies the resource group for your virtual machine.</span></span> <span data-ttu-id="8abec-132">Selezionare una delle opzioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="8abec-132">Select one of the following options:</span></span>
+      * <span data-ttu-id="8abec-133">**Crea nuovo**: specifica che si intende creare un nuovo gruppo di risorse.</span><span class="sxs-lookup"><span data-stu-id="8abec-133">**Create new**: Specifies that you want to create a new resource group.</span></span>
+      * <span data-ttu-id="8abec-134">**Usa esistente**: specifica che si vuole scegliere in un elenco i gruppi di risorse associati all'account di Azure.</span><span class="sxs-lookup"><span data-stu-id="8abec-134">**Use existing**: Specifies that you want to select from a list of resource groups that are associated with your Azure account.</span></span>
 
        ![Finestra Risorse associate][CR07]
 
-   * <span data-ttu-id="ed361-136">**Account di archiviazione**: specifica l'account di archiviazione da usare per archiviare la macchina virtuale.</span><span class="sxs-lookup"><span data-stu-id="ed361-136">**Storage account**: Specifies the storage account to use for storing your virtual machine.</span></span> <span data-ttu-id="ed361-137">È possibile usare un account di archiviazione esistente o crearne uno nuovo.</span><span class="sxs-lookup"><span data-stu-id="ed361-137">You can choose an existing storage account or create a new account.</span></span> <span data-ttu-id="ed361-138">Se si sceglie **Crea nuovo**, verrà visualizzata la finestra di dialogo seguente:</span><span class="sxs-lookup"><span data-stu-id="ed361-138">If you choose **Create New**, the following dialog box appears:</span></span>
+   * <span data-ttu-id="8abec-136">**Account di archiviazione**: specifica l'account di archiviazione da usare per archiviare la macchina virtuale.</span><span class="sxs-lookup"><span data-stu-id="8abec-136">**Storage account**: Specifies the storage account to use for storing your virtual machine.</span></span> <span data-ttu-id="8abec-137">È possibile usare un account di archiviazione esistente o crearne uno nuovo.</span><span class="sxs-lookup"><span data-stu-id="8abec-137">You can choose an existing storage account or create a new account.</span></span> <span data-ttu-id="8abec-138">Se si sceglie **Crea nuovo**, verrà visualizzata la finestra di dialogo seguente:</span><span class="sxs-lookup"><span data-stu-id="8abec-138">If you choose **Create New**, the following dialog box appears:</span></span>
 
       ![Finestra di dialogo Crea account di archiviazione][CR05]
 
-   * <span data-ttu-id="ed361-140">**Rete virtuale** e **Subnet**: specifica la rete virtuale e la subnet a cui si connetterà la macchina virtuale.</span><span class="sxs-lookup"><span data-stu-id="ed361-140">**Virtual Network** and **Subnet**: Specifies the virtual network and subnet that your virtual machine will connect to.</span></span> <span data-ttu-id="ed361-141">È possibile usare una subnet e una rete esistente oppure creare una rete e una subnet nuove.</span><span class="sxs-lookup"><span data-stu-id="ed361-141">You can use an existing network and subnet, or you can create a new network and subnet.</span></span> <span data-ttu-id="ed361-142">Se si seleziona **Crea nuovo**, verrà visualizzata la finestra di dialogo seguente:</span><span class="sxs-lookup"><span data-stu-id="ed361-142">If you select **Create new**, the following dialog box appears:</span></span>
+   * <span data-ttu-id="8abec-140">**Rete virtuale** e **Subnet**: specifica la rete virtuale e la subnet a cui si connetterà la macchina virtuale.</span><span class="sxs-lookup"><span data-stu-id="8abec-140">**Virtual Network** and **Subnet**: Specifies the virtual network and subnet that your virtual machine will connect to.</span></span> <span data-ttu-id="8abec-141">È possibile usare una subnet e una rete esistente oppure creare una rete e una subnet nuove.</span><span class="sxs-lookup"><span data-stu-id="8abec-141">You can use an existing network and subnet, or you can create a new network and subnet.</span></span> <span data-ttu-id="8abec-142">Se si seleziona **Crea nuovo**, verrà visualizzata la finestra di dialogo seguente:</span><span class="sxs-lookup"><span data-stu-id="8abec-142">If you select **Create new**, the following dialog box appears:</span></span>
 
       ![Finestra di dialogo Crea rete virtuale][CR06]
 
-   * <span data-ttu-id="ed361-144">**Indirizzo IP pubblico**: specifica un indirizzo IP con connessione esterna per la macchina virtuale.</span><span class="sxs-lookup"><span data-stu-id="ed361-144">**Public IP address**: Specifies an external-facing IP address for your virtual machine.</span></span> <span data-ttu-id="ed361-145">È possibile scegliere di creare un nuovo indirizzo IP o, se la macchina virtuale non avrà un indirizzo IP pubblico, è possibile selezionare **(Nessuno)**.</span><span class="sxs-lookup"><span data-stu-id="ed361-145">You can choose to create a new IP address or, if your virtual machine will not have a public IP address, you can select **(None)**.</span></span> 
+   * <span data-ttu-id="8abec-144">**Indirizzo IP pubblico**: specifica un indirizzo IP con connessione esterna per la macchina virtuale.</span><span class="sxs-lookup"><span data-stu-id="8abec-144">**Public IP address**: Specifies an external-facing IP address for your virtual machine.</span></span> <span data-ttu-id="8abec-145">È possibile scegliere di creare un nuovo indirizzo IP o, se la macchina virtuale non avrà un indirizzo IP pubblico, è possibile selezionare **(Nessuno)**.</span><span class="sxs-lookup"><span data-stu-id="8abec-145">You can choose to create a new IP address or, if your virtual machine will not have a public IP address, you can select **(None)**.</span></span> 
 
-   * <span data-ttu-id="ed361-146">**Gruppo di sicurezza di rete**: specifica un firewall di rete facoltativo per la macchina virtuale.</span><span class="sxs-lookup"><span data-stu-id="ed361-146">**Network security group**: Specifies an optional networking firewall for your virtual machine.</span></span> <span data-ttu-id="ed361-147">È possibile selezionare un firewall esistente oppure, se la macchina virtuale non usa un firewall di rete, è possibile selezionare **(Nessuno)**.</span><span class="sxs-lookup"><span data-stu-id="ed361-147">You can select an existing firewall or, if your virtual machine will not use a network firewall, you can select **(None)**.</span></span> 
+   * <span data-ttu-id="8abec-146">**Gruppo di sicurezza di rete**: specifica un firewall di rete facoltativo per la macchina virtuale.</span><span class="sxs-lookup"><span data-stu-id="8abec-146">**Network security group**: Specifies an optional networking firewall for your virtual machine.</span></span> <span data-ttu-id="8abec-147">È possibile selezionare un firewall esistente oppure, se la macchina virtuale non usa un firewall di rete, è possibile selezionare **(Nessuno)**.</span><span class="sxs-lookup"><span data-stu-id="8abec-147">You can select an existing firewall or, if your virtual machine will not use a network firewall, you can select **(None)**.</span></span> 
 
-   * <span data-ttu-id="ed361-148">**Set di disponibilità**: specifica un set di disponibilità facoltativo a cui può appartenere la macchina virtuale.</span><span class="sxs-lookup"><span data-stu-id="ed361-148">**Availability set**: Specifies an optional availability set that your virtual machine can belong to.</span></span> <span data-ttu-id="ed361-149">È possibile selezionare un set di disponibilità esistente, creare un nuovo set di disponibilità o, se la macchina virtuale non apparterrà a un set di disponibilità, selezionare **(Nessuno)**.</span><span class="sxs-lookup"><span data-stu-id="ed361-149">You can select an existing availability set, create a new availability set or, if your virtual machine will not belong to an availability set, select **(None)**.</span></span>
+   * <span data-ttu-id="8abec-148">**Set di disponibilità**: specifica un set di disponibilità facoltativo a cui può appartenere la macchina virtuale.</span><span class="sxs-lookup"><span data-stu-id="8abec-148">**Availability set**: Specifies an optional availability set that your virtual machine can belong to.</span></span> <span data-ttu-id="8abec-149">È possibile selezionare un set di disponibilità esistente, creare un nuovo set di disponibilità o, se la macchina virtuale non apparterrà a un set di disponibilità, selezionare **(Nessuno)**.</span><span class="sxs-lookup"><span data-stu-id="8abec-149">You can select an existing availability set, create a new availability set or, if your virtual machine will not belong to an availability set, select **(None)**.</span></span>
 
-9. <span data-ttu-id="ed361-150">Fare clic su **Fine**.</span><span class="sxs-lookup"><span data-stu-id="ed361-150">Click **Finish**.</span></span>  
-    <span data-ttu-id="ed361-151">La nuova macchina virtuale viene visualizzata nella finestra dello strumento Azure Explorer.</span><span class="sxs-lookup"><span data-stu-id="ed361-151">Your new virtual machine appears in the Azure Explorer tool window.</span></span> 
+9. <span data-ttu-id="8abec-150">Fare clic su **Fine**.</span><span class="sxs-lookup"><span data-stu-id="8abec-150">Click **Finish**.</span></span>  
+    <span data-ttu-id="8abec-151">La nuova macchina virtuale viene visualizzata nella finestra dello strumento Azure Explorer.</span><span class="sxs-lookup"><span data-stu-id="8abec-151">Your new virtual machine appears in the Azure Explorer tool window.</span></span> 
 
    ![Nuova macchina virtuale nella visualizzazione Azure Explorer][CR08]
 
-## <a name="restart-a-virtual-machine-in-intellij"></a><span data-ttu-id="ed361-153">Riavviare una macchina virtuale in IntelliJ</span><span class="sxs-lookup"><span data-stu-id="ed361-153">Restart a virtual machine in IntelliJ</span></span>
+## <a name="restart-a-virtual-machine-in-intellij"></a><span data-ttu-id="8abec-153">Riavviare una macchina virtuale in IntelliJ</span><span class="sxs-lookup"><span data-stu-id="8abec-153">Restart a virtual machine in IntelliJ</span></span>
 
-<span data-ttu-id="ed361-154">Per riavviare una macchina virtuale con Azure Explorer in IntelliJ, eseguire queste operazioni:</span><span class="sxs-lookup"><span data-stu-id="ed361-154">To restart a virtual machine by using the Azure Explorer in IntelliJ, do the following:</span></span>
+<span data-ttu-id="8abec-154">Per riavviare una macchina virtuale con Azure Explorer in IntelliJ, eseguire queste operazioni:</span><span class="sxs-lookup"><span data-stu-id="8abec-154">To restart a virtual machine by using the Azure Explorer in IntelliJ, do the following:</span></span>
 
-1. <span data-ttu-id="ed361-155">Nella visualizzazione **Azure Explorer** fare clic con il pulsante destro del mouse sulla macchina virtuale e quindi selezionare **Riavvia**.</span><span class="sxs-lookup"><span data-stu-id="ed361-155">In the **Azure Explorer** view, right-click the virtual machine, and then select **Restart**.</span></span>
+1. <span data-ttu-id="8abec-155">Nella visualizzazione **Azure Explorer** fare clic con il pulsante destro del mouse sulla macchina virtuale e quindi selezionare **Riavvia**.</span><span class="sxs-lookup"><span data-stu-id="8abec-155">In the **Azure Explorer** view, right-click the virtual machine, and then select **Restart**.</span></span>
 
    ![Comando di riavvio della macchina virtuale][RE01]
 
-2. <span data-ttu-id="ed361-157">Nella finestra di conferma fare clic su **Sì**.</span><span class="sxs-lookup"><span data-stu-id="ed361-157">In the confirmation window, click **Yes**.</span></span> 
+2. <span data-ttu-id="8abec-157">Nella finestra di conferma fare clic su **Sì**.</span><span class="sxs-lookup"><span data-stu-id="8abec-157">In the confirmation window, click **Yes**.</span></span> 
 
    ![Finestra di conferma del riavvio della macchina virtuale][RE02]
 
-## <a name="shut-down-a-virtual-machine-in-intellij"></a><span data-ttu-id="ed361-159">Arrestare una macchina virtuale in IntelliJ</span><span class="sxs-lookup"><span data-stu-id="ed361-159">Shut down a virtual machine in IntelliJ</span></span>
+## <a name="shut-down-a-virtual-machine-in-intellij"></a><span data-ttu-id="8abec-159">Arrestare una macchina virtuale in IntelliJ</span><span class="sxs-lookup"><span data-stu-id="8abec-159">Shut down a virtual machine in IntelliJ</span></span>
 
-<span data-ttu-id="ed361-160">Per arrestare una macchina virtuale in esecuzione con Azure Explorer in IntelliJ, eseguire queste operazioni:</span><span class="sxs-lookup"><span data-stu-id="ed361-160">To shut down a running virtual machine by using the Azure Explorer in IntelliJ, do the following:</span></span>
+<span data-ttu-id="8abec-160">Per arrestare una macchina virtuale in esecuzione con Azure Explorer in IntelliJ, eseguire queste operazioni:</span><span class="sxs-lookup"><span data-stu-id="8abec-160">To shut down a running virtual machine by using the Azure Explorer in IntelliJ, do the following:</span></span>
 
-1. <span data-ttu-id="ed361-161">Nella visualizzazione **Azure Explorer** fare clic con il pulsante destro del mouse sulla macchina virtuale e quindi selezionare **Chiudi**.</span><span class="sxs-lookup"><span data-stu-id="ed361-161">In the **Azure Explorer** view, right-click the virtual machine, and then select **Shutdown**.</span></span>
+1. <span data-ttu-id="8abec-161">Nella visualizzazione **Azure Explorer** fare clic con il pulsante destro del mouse sulla macchina virtuale e quindi selezionare **Chiudi**.</span><span class="sxs-lookup"><span data-stu-id="8abec-161">In the **Azure Explorer** view, right-click the virtual machine, and then select **Shutdown**.</span></span>
 
    ![Comando di arresto della macchina virtuale][SH01]
 
-2. <span data-ttu-id="ed361-163">Nella finestra di conferma fare clic su **Sì**.</span><span class="sxs-lookup"><span data-stu-id="ed361-163">In the confirmation window, click **Yes**.</span></span> 
+2. <span data-ttu-id="8abec-163">Nella finestra di conferma fare clic su **Sì**.</span><span class="sxs-lookup"><span data-stu-id="8abec-163">In the confirmation window, click **Yes**.</span></span> 
 
    ![Finestra di conferma dell'arresto della macchina virtuale][SH02]
 
-## <a name="delete-a-virtual-machine-in-intellij"></a><span data-ttu-id="ed361-165">Eliminare una macchina virtuale in IntelliJ</span><span class="sxs-lookup"><span data-stu-id="ed361-165">Delete a virtual machine in IntelliJ</span></span>
+## <a name="delete-a-virtual-machine-in-intellij"></a><span data-ttu-id="8abec-165">Eliminare una macchina virtuale in IntelliJ</span><span class="sxs-lookup"><span data-stu-id="8abec-165">Delete a virtual machine in IntelliJ</span></span>
 
-<span data-ttu-id="ed361-166">Per eliminare una macchina virtuale con Azure Explorer in IntelliJ, eseguire queste operazioni:</span><span class="sxs-lookup"><span data-stu-id="ed361-166">To delete a virtual machine by using the Azure Explorer in IntelliJ, do the following:</span></span>
+<span data-ttu-id="8abec-166">Per eliminare una macchina virtuale con Azure Explorer in IntelliJ, eseguire queste operazioni:</span><span class="sxs-lookup"><span data-stu-id="8abec-166">To delete a virtual machine by using the Azure Explorer in IntelliJ, do the following:</span></span>
 
-1. <span data-ttu-id="ed361-167">Nella visualizzazione **Azure Explorer** fare clic con il pulsante destro del mouse sulla macchina virtuale e quindi selezionare **Elimina**.</span><span class="sxs-lookup"><span data-stu-id="ed361-167">In the **Azure Explorer** view, right-click the virtual machine, and then select **Delete**.</span></span>
+1. <span data-ttu-id="8abec-167">Nella visualizzazione **Azure Explorer** fare clic con il pulsante destro del mouse sulla macchina virtuale e quindi selezionare **Elimina**.</span><span class="sxs-lookup"><span data-stu-id="8abec-167">In the **Azure Explorer** view, right-click the virtual machine, and then select **Delete**.</span></span>
 
    ![Comando di eliminazione della macchina virtuale][DE01]
 
-2. <span data-ttu-id="ed361-169">Nella finestra di conferma fare clic su **Sì**.</span><span class="sxs-lookup"><span data-stu-id="ed361-169">In the confirmation window, click **Yes**.</span></span> 
+2. <span data-ttu-id="8abec-169">Nella finestra di conferma fare clic su **Sì**.</span><span class="sxs-lookup"><span data-stu-id="8abec-169">In the confirmation window, click **Yes**.</span></span> 
 
    ![Finestra di conferma dell'eliminazione della macchina virtuale][DE02]
 
-## <a name="next-steps"></a><span data-ttu-id="ed361-171">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="ed361-171">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="8abec-171">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="8abec-171">Next steps</span></span>
 
-<span data-ttu-id="ed361-172">Per altre informazioni sulle dimensioni e sui prezzi delle macchine virtuali in Azure, vedere i collegamenti seguenti:</span><span class="sxs-lookup"><span data-stu-id="ed361-172">For more information about Azure virtual-machine sizes and pricing, see the following resources:</span></span>
+<span data-ttu-id="8abec-172">Per altre informazioni sulle dimensioni e sui prezzi delle macchine virtuali in Azure, vedere i collegamenti seguenti:</span><span class="sxs-lookup"><span data-stu-id="8abec-172">For more information about Azure virtual-machine sizes and pricing, see the following resources:</span></span>
 
-* <span data-ttu-id="ed361-173">Dimensioni delle macchine virtuali in Azure</span><span class="sxs-lookup"><span data-stu-id="ed361-173">Azure virtual-machine sizes</span></span>
-  * <span data-ttu-id="ed361-174">[Dimensioni per le macchine virtuali Windows in Azure]</span><span class="sxs-lookup"><span data-stu-id="ed361-174">[Sizes for Windows virtual machines in Azure]</span></span>
-  * <span data-ttu-id="ed361-175">[Dimensioni delle macchine virtuali Linux in Azure]</span><span class="sxs-lookup"><span data-stu-id="ed361-175">[Sizes for Linux virtual machines in Azure]</span></span>
-* <span data-ttu-id="ed361-176">Prezzi delle macchine virtuali in Azure</span><span class="sxs-lookup"><span data-stu-id="ed361-176">Azure virtual-machine pricing</span></span>
-  * <span data-ttu-id="ed361-177">[Prezzi delle macchine virtuali in Windows]</span><span class="sxs-lookup"><span data-stu-id="ed361-177">[Windows virtual-machine pricing]</span></span>
-  * <span data-ttu-id="ed361-178">[Prezzi delle macchine virtuali in Linux]</span><span class="sxs-lookup"><span data-stu-id="ed361-178">[Linux virtual-machine pricing]</span></span>
+* <span data-ttu-id="8abec-173">Dimensioni delle macchine virtuali in Azure</span><span class="sxs-lookup"><span data-stu-id="8abec-173">Azure virtual-machine sizes</span></span>
+  * <span data-ttu-id="8abec-174">[Dimensioni per le macchine virtuali Windows in Azure]</span><span class="sxs-lookup"><span data-stu-id="8abec-174">[Sizes for Windows virtual machines in Azure]</span></span>
+  * <span data-ttu-id="8abec-175">[Dimensioni delle macchine virtuali Linux in Azure]</span><span class="sxs-lookup"><span data-stu-id="8abec-175">[Sizes for Linux virtual machines in Azure]</span></span>
+* <span data-ttu-id="8abec-176">Prezzi delle macchine virtuali in Azure</span><span class="sxs-lookup"><span data-stu-id="8abec-176">Azure virtual-machine pricing</span></span>
+  * <span data-ttu-id="8abec-177">[Prezzi delle macchine virtuali in Windows]</span><span class="sxs-lookup"><span data-stu-id="8abec-177">[Windows virtual-machine pricing]</span></span>
+  * <span data-ttu-id="8abec-178">[Prezzi delle macchine virtuali in Linux]</span><span class="sxs-lookup"><span data-stu-id="8abec-178">[Linux virtual-machine pricing]</span></span>
 
 [!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)]
 
