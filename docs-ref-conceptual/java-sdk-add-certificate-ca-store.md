@@ -11,14 +11,14 @@ ms.workload: na
 ms.tgt_pltfrm: na
 ms.devlang: Java
 ms.topic: article
-ms.date: 05/23/2018
+ms.date: 07/02/2018
 ms.author: robmcm
-ms.openlocfilehash: 29b2b598968c9a3a896fffee3ce56f9b0cb4b1ee
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.openlocfilehash: 3f2de63f7eb1422ff1dd6db45d68e02f4af188b8
+ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090734"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37864041"
 ---
 # <a name="adding-a-root-certificate-to-the-java-ca-certificates-store"></a>Aggiunta di un certificato radice all'archivio certificati CA Java
 
@@ -70,10 +70,10 @@ Il certificato Baltimore potrebbe essere già installato nell'archivio cacerts. 
 
    |  Parametro   |                              DESCRIZIONE                               |
    |--------------|------------------------------------------------------------------------|
-   |  `keystore`  |                    Specifica l'archivio certificati.                    |
-   | `importcert` |            Specifica che si sta importando un certificato.             |
-   |   `alias`    |                Specifica un alias per il certificato.                 |
-   |    `file`    | Specifica il nome file del certificato radice che viene importato. |
+   | `keystore`   | Specifica l'archivio certificati.                                       |
+   | `importcert` | Specifica che si sta importando un certificato.                        |
+   | `alias`      | Specifica un alias per il certificato.                                |
+   | `file`       | Specifica il nome file del certificato radice che viene importato. |
 
 
 3. Se viene richiesto di considerare attendibile il certificato, verificare che l'identificazione personale sia `d4:de:20:d0:5e:66:fc:53:fe:1a:50:88:2c:78:db:28:52:ca:e4:74` e digitare **y** se è corretta.
@@ -90,6 +90,6 @@ Dopo aver aggiunto il certificato radice a JDK, è possibile comprimere il conte
 
 Per altre informazioni sull'utilità keytool, vedere <http://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html>.
 
-Per altre informazioni sui certificati radice usati da Azure, vedere l'articolo relativo alla [migrazione dei certificati radice di Azure](http://blogs.msdn.com/b/windowsazure/archive/2013/03/15/windows-azure-root-certificate-migration.aspx).
-
 Per altre informazioni su Java, vedere [Azure for Java developers](/java/azure) (Azure per sviluppatori Java).
+
+<!-- For more information about the root certificates used by Azure, see [Azure Root Certificate Migration](http://blogs.msdn.com/b/windowsazure/archive/2013/03/15/windows-azure-root-certificate-migration.aspx). -->
