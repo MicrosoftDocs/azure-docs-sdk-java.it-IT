@@ -12,18 +12,18 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.openlocfilehash: f069183c96cdc42d590d2e58a5a6a500be5ab69a
-ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
+ms.openlocfilehash: dee41f08dc303fc95fcfa6a585a5d1a06726f2ef
+ms.sourcegitcommit: dad28b332346dfa9af249b5a64e042cbb1eb90d7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
-ms.locfileid: "29065528"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39625037"
 ---
 # <a name="get-started-with-cloud-development-using-the-azure-libraries-for-java"></a>Introduzione allo sviluppo per il cloud con le librerie di Azure per Java
 
 Questa guida illustra la configurazione di un ambiente di sviluppo per lo sviluppo di Azure in Java. Verranno quindi create alcune risorse di Azure che verranno connesse per eseguire alcune attività di base, come caricare un file o distribuire un'applicazione Web. Al termine sarà possibile iniziare a usare i servizi di Azure nelle proprie applicazioni Java.
 
-## <a name="prerequisites"></a>prerequisiti
+## <a name="prerequisites"></a>Prerequisiti
 
 - Un account Azure. Se non è disponibile, [ottenere una versione di valutazione gratuita](https://azure.microsoft.com/free/)
 - [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) o [interfaccia della riga di comando di Azure 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).
@@ -93,7 +93,9 @@ Se si lavora in ambiente Windows, aggiungere la variabile alle proprietà del si
 setx AZURE_AUTH_LOCATION "C:\<fullpath>\azureauth.properties" /m
 ```
 
-## <a name="create-a-new-maven-project"></a>Creare un nuovo progetto Maven
+## <a name="tooling"></a>Strumenti
+
+### <a name="create-a-new-maven-project"></a>Creare un nuovo progetto Maven
 
 > [!NOTE]
 > Questa guida usa lo strumento di compilazione Maven per compilare ed eseguire il codice di esempio, ma con le librerie di Azure per Java si possono usare anche altri strumenti di compilazione, ad esempio Gradle. 
@@ -142,7 +144,27 @@ Aggiungere una voce `build` sotto l'elemento `project` di primo livello per usar
     </plugins>
 </build>
  ```
-   
+
+### <a name="install-the-azure-toolkit-for-intellij"></a>Installare Azure Toolkit for IntelliJ
+
+[Azure Toolkit](intellij/azure-toolkit-for-intellij-installation.md) è necessario se si prevede di distribuire app Web o API a livello di codice, ma non viene attualmente usato per altri tipi di sviluppo. Di seguito è riportato un riepilogo della procedura di installazione. Per i passaggi dettagliati, vedere [Installazione di Azure Toolkit for IntelliJ](intellij/azure-toolkit-for-intellij-installation.md).
+
+Selezionare il menu **File** e quindi selezionare **Settings** (Impostazioni). 
+
+Selezionare **Browse repositories** (Sfoglia repository), quindi cercare "Azure" e installare **Azure toolkit for Intellij**.
+
+Riavviare IntelliJ.
+
+### <a name="install-the-azure-toolkit-for-eclipse"></a>Installare Azure Toolkit for Eclipse
+
+[Azure Toolkit](eclipse/azure-toolkit-for-eclipse.md) è necessario se si prevede di distribuire app Web o API a livello di codice, ma non viene attualmente usato per altri tipi di sviluppo. Di seguito è riportato un riepilogo della procedura di installazione. Per i passaggi dettagliati, vedere [Installazione di Azure Toolkit for Eclipse](eclipse/azure-toolkit-for-eclipse.md).
+
+Dal menu **Help** (?) scegliere **Install New Software** (Installa nuovo software).
+
+Nel campo **Usa:** immettere `http://dl.microsoft.com/eclipse` e premere INVIO.
+
+Selezionare quindi la casella di controllo accanto ad **Azure toolkit for Java** e deselezionare la casella di controllo **Contact all update sites during install to find required software** (Contatta tutti i siti di aggiornamento durante l'installazione per trovare il software richiesto). Selezionare Next (Avanti).
+
 ## <a name="create-a-linux-virtual-machine"></a>Creare una macchina virtuale Linux
 
 Creare un nuovo file denominato `AzureApp.java` nella directory `src/main/java/com/fabirkam` del progetto e incollare il blocco di codice seguente. Aggiornare le variabili `userName` e `sshKey` con i valori reali del computer in uso. Questo codice crea una nuova VM Linux denominata `testLinuxVM` in un gruppo di risorse `sampleResourceGroup` in esecuzione nell'area di Azure Stati Uniti orientali.
