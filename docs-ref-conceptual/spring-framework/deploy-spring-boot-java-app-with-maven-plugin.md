@@ -14,12 +14,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 3610312ed17301131967bd2c047c86656de070e7
-ms.sourcegitcommit: f313c14e92f38c54a3a583270ee85cc928cd39d7
+ms.openlocfilehash: d58cafe3456150069ec8572c101c62d1b2c29c5d
+ms.sourcegitcommit: e1a5d9687e006e8bf12d11747d45cf130a2c82af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689424"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "42703352"
 ---
 # <a name="deploy-a-spring-boot-app-to-the-cloud-using-the-maven-plugin-for-azure-app-service"></a>Distribuire un'app Spring Boot nel cloud con il plug-in Maven per il servizio app di Azure
 
@@ -163,9 +163,11 @@ Con queste impostazioni, il progetto Maven è ora pronto per la distribuzione li
 Il modo più semplice e facile per distribuire l'applicazione Spring Boot tramite il plug-in Maven consiste nell'usare l'[interfaccia della riga di comando di Azure](https://docs.microsoft.com/cli/azure/). Verificare che sia installata.
 
 1. Accedere all'account Azure con l'interfaccia della riga di comando di Azure:
+   
    ```shell
    az login
    ```
+   
    Seguire le istruzioni per completare il processo di accesso.
 
 ## <a name="optionally-customize-pomxml-before-deploying"></a>Personalizzare pom.xml prima della distribuzione (facoltativo)
