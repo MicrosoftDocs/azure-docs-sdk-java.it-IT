@@ -7,19 +7,19 @@ author: rmcmurray
 manager: routlaw
 editor: ''
 ms.assetid: ''
-ms.author: robmcm;yungez;kevinzha
-ms.date: 07/05/2018
+ms.author: robmcm
+ms.date: 08/10/2018
 ms.devlang: java
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 3306f3ef66ec1b53ab004765b8fb7aef04de9077
-ms.sourcegitcommit: 1ff4654193404415841252a130b87a8b53b7c6d8
+ms.openlocfilehash: dcb5ef5f12cc1682175da147268eb4a6a89f820b
+ms.sourcegitcommit: 0f38ef9ad64cffdb7b2e9e966224dfd0af251b0f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39235975"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703524"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a>Come usare Spring Boot Starter con l'API SQL di Azure Cosmos DB
 
@@ -75,7 +75,7 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
 
    > [!IMPORTANT]
    >
-   > In Spring Boot versione 2.0.n sono state apportate diverse modifiche di rilievo alle API, di conseguenza per completare i passaggi di questa esercitazione sarà necessario usare una delle versioni 1.5.n di Spring Boot.
+   > In Spring Boot versione 2.0.n sono state apportate diverse modifiche di rilievo alle API, che verranno usate per completare i passaggi illustrati in questo articolo. È comunque possibile usare una delle versioni 1.5.n di Spring Boot per completare le procedure di questa esercitazione. Quando necessario, le differenze verranno evidenziate.
    >
 
    ![Opzioni di base di Spring Initializr][SI01]
@@ -111,22 +111,39 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
    <dependency>
       <groupId>com.microsoft.azure</groupId>
       <artifactId>azure-documentdb-spring-boot-starter</artifactId>
-      <version>0.1.4</version>
+      <version>2.0.4</version>
    </dependency>
    ```
 
    ![Modifica del file pom.xml][PM02]
 
-1. Verificare che la versione di Spring Boot sia una delle versioni 1.5.n, ad esempio:
+   > [!IMPORTANT]
+   >
+   > Se per completare questa esercitazione si usa una delle versioni 1.5.n di Spring Boot, sarà necessario specificare la versione precedente di Starter per Azure Cosmos DB, ad esempio:
+   >
+   > ```xml
+   > <dependency>
+   >   <groupId>com.microsoft.azure</groupId>
+   >   <artifactId>azure-documentdb-spring-boot-starter</artifactId>
+   >   <version>0.1.4</version>
+   > </dependency>
+   > ```
+
+1. Verificare che la versione di Spring Boot sia la versione scelta al momento della creazione dell'applicazione con Spring Initializr, ad esempio:
 
    ```xml
    <parent>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-parent</artifactId>
-      <version>1.5.14.RELEASE</version>
+      <version>2.0.1.RELEASE</version>
       <relativePath/>
    </parent>
    ```
+
+   > [!NOTE]
+   >
+   > Se per completare questa esercitazione si usa una delle versioni 1.5.n di Spring Boot, sarà necessario verificare la versione corretta, ad esempio `<version>1.5.14.RELEASE</version>`.
+   >
 
 1. Salvare e chiudere il file *pom.xml*.
 
@@ -177,6 +194,9 @@ In questa sezione si creano due classi Java per l'archiviazione dei dati utente 
       private String id;
       private String firstName;
       private String lastName;
+   
+      public User() {
+      }
    
       public User(String id, String firstName, String lastName) {
          this.id = id;
@@ -251,50 +271,57 @@ In questa sezione si creano due classi Java per l'archiviazione dei dati utente 
 
    ```java
    package com.example.wingtiptoysdata;
-   
+
    // These imports are required for the application.
    import org.springframework.boot.SpringApplication;
    import org.springframework.boot.autoconfigure.SpringBootApplication;
    import org.springframework.beans.factory.annotation.Autowired;
    import org.springframework.boot.CommandLineRunner;
-   
+
    // These imports are only used to create an ID for this example.
    import java.util.Date;
    import java.text.SimpleDateFormat;
-   
+
    @SpringBootApplication
    public class wingtiptoysdataApplication implements CommandLineRunner {
-   
+
       @Autowired
       private UserRepository repository;
-   
+
       public static void main(String[] args) {
          // Execute the command line runner.
          SpringApplication.run(wingtiptoysdataApplication.class, args);
+         System.exit(0);
       }
-   
+
       public void run(String... args) throws Exception {
          // Create a simple date/time ID.
          SimpleDateFormat userId = new SimpleDateFormat("yyyyMMddHHmmssSSS");
          Date currentDate = new Date();
-   
+
          // Create a new User class.
          final User testUser = new User(userId.format(currentDate), "Gena", "Soto");
-   
+
          // For this example, remove all of the existing records.
          repository.deleteAll();
-   
+
          // Save the User class to the Azure database.
          repository.save(testUser);
-         
+      
          // Retrieve the database record for the User class you just saved by ID.
-         final User result = repository.findOne(testUser.getId());
-   
+         // final User result = repository.findOne(testUser.getId());
+         final User result = repository.findById(testUser.getId()).get();
+
          // Display the results of the database record retrieval.
          System.out.printf("\n\n%s\n\n",result.toString());
       }
    }
    ```
+
+   > [!IMPORTANT]
+   >
+   > Se per completare questa esercitazione si usa una delle versioni 1.5.n di Spring Boot, sarà necessario sostituire la sintassi `final User result = repository.findById(testUser.getId()).get();` con `final User result = repository.findOne(testUser.getId());`.
+   >
 
 1. Salvare e chiudere il file Java dell'applicazione main.
 
@@ -315,7 +342,11 @@ In questa sezione si creano due classi Java per l'archiviazione dei dati utente 
    mvn spring-boot:run
    ```
 
-1. Verranno visualizzati diversi messaggi di runtime e verrà mostrato il messaggio `User: testFirstName testLastName` per indicare che i valori archiviati e recuperati correttamente dal database.
+1. L'applicazione visualizzerà diversi messaggi di runtime e un messaggio simile agli esempi seguenti per indicare che i valori sono stati archiviati e recuperati dal database correttamente.
+
+   ```
+   User: 20170724025215132 Gena Soto
+   ```
 
    ![Output positivo dall'applicazione][JV02]
 

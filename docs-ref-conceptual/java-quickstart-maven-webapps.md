@@ -13,12 +13,12 @@ ms.devlang: na
 ms.topic: hero-article
 ms.date: 03/17/2017
 ms.author: routlaw
-ms.openlocfilehash: 1adc0a104ba22bcd353664e68323165890e46c64
-ms.sourcegitcommit: 30d502b3150fa14bcc1251f5f88c7c0dd83e531e
+ms.openlocfilehash: 70b508118c50b75693e2d746dc1e2919c827cb29
+ms.sourcegitcommit: 0f38ef9ad64cffdb7b2e9e966224dfd0af251b0f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2017
-ms.locfileid: "22033633"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703544"
 ---
 # <a name="create-and-deploy-a-java-app-to-azure-with-maven"></a>Creare e distribuire un'app Java in Azure con Maven
 
@@ -53,7 +53,7 @@ mvn package
 mvn tomcat7:run-war
 ```
 
-Aprire un Web browser e passare a http://localhost:8080 per visualizzare l'anteprima dell'app:
+Aprire un Web browser e passare a http://localhost:8080 per visualizzare in anteprima l'app:
 
   ![Output di Hello World dall'app Java di esempio](media/maven-quickstart/java-app-hello-world-output.png)
 
