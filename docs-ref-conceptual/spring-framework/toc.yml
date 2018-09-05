@@ -1,53 +1,60 @@
+items:
 - name: Documentazione su Spring in Azure
   href: ./index.yml
   items:
-    - name: Guide introduttive
-      items:
-        - name: Spring Initializr
-          href: spring-boot-starters-for-azure.md
-        - name: Archiviazione di Azure
-          href: configure-spring-boot-starter-java-app-with-azure-storage.md
-        - name: Azure Active Directory
-          href: configure-spring-boot-starter-java-app-with-azure-active-directory.md
-        - name: Azure Key Vault
-          href: configure-spring-boot-starter-java-app-with-azure-key-vault.md
-        - name: Azure Application Insights
-          href: configure-spring-boot-java-applicationinsights.md
-    - name: Esercitazioni
-      items:
-        - name: Cache Redis di Azure
-          href: configure-spring-boot-initializer-java-app-with-redis-cache.md
-        - name: Azure Cosmos DB
-          href: configure-spring-boot-starter-java-app-with-cosmos-db.md
-        - name: Eseguire la distribuzione nel servizio app con Maven
-          href: deploy-spring-boot-java-app-with-maven-plugin.md
-        - name: Eseguire la distribuzione in Kubernetes
-          href: deploy-spring-boot-java-app-on-kubernetes.md
-        - name: Eseguire la distribuzione in App Web per contenitori
-          href: deploy-spring-boot-java-app-on-linux.md
-        - name: Eseguire la distribuzione in Kubernetes con Fabric8
-          href: deploy-spring-boot-java-app-using-fabric8-maven-plugin.md
-        - name: Distribuire un contenitore Docker con Maven
-          href: deploy-containerized-spring-boot-java-app-with-maven-plugin.md
-        - name: Eseguire la distribuzione dal Registro contenitori di Azure
-          href: deploy-spring-boot-java-app-from-container-registry-using-maven-plugin.md
-    - name: Esempi
-      items:
-        - name: Elenco attività con Cosmos DB
-          href: 'https://github.com/Microsoft/todo-app-java-on-azure/'
-        - name: Elenco attività con MySQL
-          href: 'https://github.com/Azure-Samples/mysql-spring-boot-todo'
-        - name: Spring Initializr
-          href: 'https://start.spring.io/'
-    - name: Riferimenti
-      items:
-        - name: Spring Framework
-          href: 'https://spring.io/'
-        - name: Informazioni su Spring
-          href: 'https://spring.io/docs'
-        - name: Spring Boot
-          href: 'https://projects.spring.io/spring-boot/'
-        - name: Informazioni di riferimento sul progetto Spring
-          href: 'https://spring.io/docs/reference'
-        - name: Utilità di avvio Spring Boot per Azure
-          href: 'https://github.com/Microsoft/azure-spring-boot/'
+  - name: Guide introduttive
+    items:
+    - name: Spring Boot Azure
+      href: spring-boot-starters-for-azure.md
+    - name: Archiviazione di Azure
+      href: configure-spring-boot-starter-java-app-with-azure-storage.md
+    - name: Azure Active Directory
+      href: configure-spring-boot-starter-java-app-with-azure-active-directory.md
+    - name: Azure Key Vault
+      href: configure-spring-boot-starter-java-app-with-azure-key-vault.md
+    - name: Azure Application Insights
+      href: configure-spring-boot-java-applicationinsights.md
+  - name: Esercitazioni
+    items:
+    - name: Cache Redis di Azure
+      href: configure-spring-boot-initializer-java-app-with-redis-cache.md
+    - name: Azure Cosmos DB
+      href: configure-spring-boot-starter-java-app-with-cosmos-db.md
+    - name: Eseguire la distribuzione nel servizio app con Maven
+      href: deploy-spring-boot-java-app-with-maven-plugin.md
+    - name: Eseguire la distribuzione in Kubernetes
+      href: deploy-spring-boot-java-app-on-kubernetes.md
+    - name: Eseguire la distribuzione in App Web per contenitori
+      href: deploy-spring-boot-java-app-on-linux.md
+    - name: Eseguire la distribuzione in Kubernetes con Fabric8
+      href: deploy-spring-boot-java-app-using-fabric8-maven-plugin.md
+    - name: Distribuire un contenitore Docker con Maven
+      href: deploy-containerized-spring-boot-java-app-with-maven-plugin.md
+    - name: Eseguire la distribuzione dal Registro contenitori di Azure
+      href: deploy-spring-boot-java-app-from-container-registry-using-maven-plugin.md
+  - name: Esempi
+    items:
+    - name: Elenco attività con Cosmos DB
+      href: https://github.com/Microsoft/todo-app-java-on-azure/
+    - name: Elenco attività con MySQL
+      href: https://github.com/Azure-Samples/mysql-spring-boot-todo
+    - name: Spring Initializr
+      href: https://start.spring.io/
+  - name: riferimento
+    items:
+    - name: Spring Framework
+      href: https://spring.io/
+    - name: Informazioni su Spring
+      href: https://spring.io/docs
+    - name: Spring Boot
+      href: https://projects.spring.io/spring-boot/
+    - name: Informazioni di riferimento sul progetto Spring
+      href: https://spring.io/docs/reference
+    - name: Utilità di avvio Spring Boot per Azure
+      href: https://github.com/Microsoft/azure-spring-boot/
+ms.openlocfilehash: 198dc545ab013890bbe4653d7525bc60923a4c1e
+ms.sourcegitcommit: 77dc6c03a2e6264df688d91a04fc6b40950779ef
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240667"
