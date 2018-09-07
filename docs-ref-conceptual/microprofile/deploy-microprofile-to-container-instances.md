@@ -3,9 +3,9 @@ title: Distribuire un'app MicroProfile nel cloud con Docker e Azure
 description: Informazioni su come distribuire un'app MicroProfile nel cloud usando Docker e Istanze di contenitore di Azure.
 services: container-instances;container-retistry
 documentationcenter: java
-author: brborges
+author: brunoborges
 manager: routlaw
-editor: brborges
+editor: brunoborges
 ms.assetid: ''
 ms.author: brborges
 ms.date: 07/30/2018
@@ -14,12 +14,12 @@ ms.service: container-instances
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: c6254d11ee1596a23076931c9a2a2370b5f52409
-ms.sourcegitcommit: 3d0896f821907278547c283c54b53fbd7f4f30f0
+ms.openlocfilehash: 336af51bbdf5d2f843c3868ebc2358e128daaeaa
+ms.sourcegitcommit: 280d13b43cef94177d95e03879a5919da234a23c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43153859"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43324327"
 ---
 # <a name="deploy-a-microprofile-application-to-the-cloud-with-docker-and-azure"></a>Distribuire un'applicazione MicroProfile nel cloud con Docker e Azure
 
@@ -35,7 +35,7 @@ Per completare la procedura di questa esercitazione, saranno necessari i prerequ
 
 * Sottoscrizione di Azure. Se non se ne ha già una, è possibile iscriversi per ottenere un [account Azure gratuito].
 * [Interfaccia della riga di comando di Azure].
-* Java Development Kit (JDK) aggiornato, versione 1.8 o successiva.
+* [Java Development Kit (JDK)] aggiornato, versione 1.8 o successiva.
 * Strumento di compilazione [Maven] di Apache (versione 3 o successiva).
 * Un client [Git].
 
@@ -157,7 +157,7 @@ Per altre informazioni sulle varie tecnologie illustrate in questo articolo, ved
 
 <!-- URL List -->
 
-[Compilazione del Registro contenitori di Azure]: https://docs.microsoft.com/en-us/azure/container-registry/container-registry-build-overview
+[Compilazione del Registro contenitori di Azure]: https://docs.microsoft.com/azure/container-registry/container-registry-build-overview
 [MicroProfile.io]: https://microprofile.io
 [Interfaccia della riga di comando di Azure]: /cli/azure/overview
 [Azure for Java Developers]: https://docs.microsoft.com/java/azure/
@@ -165,3 +165,6 @@ Per altre informazioni sulle varie tecnologie illustrate in questo articolo, ved
 [Account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Maven]: http://maven.apache.org/
+[Java Development Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+[Istanze di contenitore di Azure]: https://docs.microsoft.com/azure/container-instances/
+[Registro contenitori di Azure]:  https://docs.microsoft.com/azure/container-registry

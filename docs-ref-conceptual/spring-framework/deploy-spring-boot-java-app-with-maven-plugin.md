@@ -14,12 +14,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: d58cafe3456150069ec8572c101c62d1b2c29c5d
-ms.sourcegitcommit: e1a5d9687e006e8bf12d11747d45cf130a2c82af
+ms.openlocfilehash: ca788354d26964bd9f1e21a0d3a8005ff65ce4bc
+ms.sourcegitcommit: 280d13b43cef94177d95e03879a5919da234a23c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "42703352"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43324347"
 ---
 # <a name="deploy-a-spring-boot-app-to-the-cloud-using-the-maven-plugin-for-azure-app-service"></a>Distribuire un'app Spring Boot nel cloud con il plug-in Maven per il servizio app di Azure
 
@@ -129,6 +129,7 @@ Aprire quindi la classe `Application`, possibilmente dopo che l'ambiente di svil
            return application.sources(Application.class);
        }
    ```
+1. Organizzare le importazioni per assicurarsi che `SpringApplicationBuilder` e `SpringBootServletInitializer` vengano importati correttamente.
 
 L'applicazione è ora pronta per essere distribuita in Tomcat e qualsiasi altro runtime servlet (ad esempio, Jetty).
 
