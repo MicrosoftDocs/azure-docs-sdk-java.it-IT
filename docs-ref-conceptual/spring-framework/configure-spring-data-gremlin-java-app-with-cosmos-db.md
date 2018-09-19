@@ -7,19 +7,18 @@ author: rmcmurray
 manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: robmcm
 ms.date: 08/20/2018
 ms.devlang: java
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 0976f4b0c13ce5c577458f2974f5dce123bf7e59
-ms.sourcegitcommit: 77dc6c03a2e6264df688d91a04fc6b40950779ef
+ms.openlocfilehash: 4e0138e3cc474b4c47d3bf492e696ec49ea3ef37
+ms.sourcegitcommit: c2019ba6da6c7c28b17b5a85f89e49bb5e570ba4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43241077"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44040269"
 ---
 # <a name="how-to-use-the-spring-data-gremlin-starter-with-the-azure-cosmos-db-sql-api"></a>Come usare Spring Data Gremlin Starter con l'API SQL di Azure Cosmos DB
 
@@ -33,7 +32,7 @@ Questo articolo descrive la creazione di un database di Azure Cosmos DB con il p
 
 I prerequisiti seguenti sono necessari per seguire le procedure disponibili in questo articolo:
 
-* Sottoscrizione di Azure; se non si ha una sottoscrizione di Azure, è possibile attivare i [Vantaggi per gli abbonati MSDN] oppure iscriversi per ottenere un [account Azure gratuito].
+* Sottoscrizione di Azure; se non si ha una sottoscrizione di Azure, è possibile attivare i [vantaggi per i sottoscrittori di MSDN] oppure iscriversi per ottenere un [account Azure gratuito].
 * [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) versione 1.7 o successiva.
 * [Apache Maven](http://maven.apache.org/), versione 3.0 o versione successiva.
 
@@ -549,7 +548,7 @@ Per altre informazioni su come usare Azure con Java, vedere [Azure per sviluppat
 [Spring Data Gremlin Starter]: https://github.com/Microsoft/spring-data-gremlin
 [Account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
 [Strumenti Java per Visual Studio Team Services]: https://java.visualstudio.com/
-[Vantaggi per gli abbonati MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
+[vantaggi per i sottoscrittori di MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/
 [Spring Framework]: https://spring.io/
