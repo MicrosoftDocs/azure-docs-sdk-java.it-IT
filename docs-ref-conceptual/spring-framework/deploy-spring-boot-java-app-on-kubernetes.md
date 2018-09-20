@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: cb83a7d6ec3a9a83fbfd3b2e34e5a4e498aa36d3
-ms.sourcegitcommit: 51dc05a96a8cbc8a6c9b45e094d8f3cfec16a607
+ms.openlocfilehash: 546aa2dc18143ca173d72198ea8e6c30bda3c97f
+ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2018
-ms.locfileid: "39189671"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45639724"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Distribuire un'applicazione Spring Boot in un cluster Kubernetes nel servizio Kubernetes di Azure
 
@@ -321,7 +321,7 @@ I collegamenti seguenti forniscono informazioni aggiuntive sulla creazione di ap
 
 I collegamenti seguenti forniscono informazioni aggiuntive sull'uso di Kubernetes con Azure:
 
-* [Introduzione ai cluster Kubernetes nel servizio Kubernetes di Azure](https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes)
+* [Introduzione ai cluster Kubernetes nel servizio Kubernetes di Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)
 
 Per altre informazioni sull'uso dell'interfaccia della riga di comando di Kubernetes, vedere la guida dell'utente di **kubectl** all'indirizzo <https://kubernetes.io/docs/user-guide/kubectl/>.
 
@@ -358,7 +358,7 @@ Per altri esempi sull'uso delle immagini personalizzate di Docker con Azure, ved
 [Pulling an Image from a Private Registry]: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/ (Effettuare il pull di un'immagine da un registro privato)
 
 <!-- Newly added -->
-[Eseguire l'autenticazione con Registro contenitori di Azure dal servizio Kubernetes di Azure]: https://docs.microsoft.com/en-us/azure/container-registry/container-registry-auth-aks/
+[Eseguire l'autenticazione con Registro contenitori di Azure dal servizio Kubernetes di Azure]: https://docs.microsoft.com/azure/container-registry/container-registry-auth-aks/
 [Esercitazioni su Java in Visual Studio Code]: https://code.visualstudio.com/docs/java/java-kubernetes/
 
 <!-- IMG List -->

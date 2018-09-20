@@ -14,12 +14,12 @@ ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: a2734fc08f2f59f64ba6c6c20ff18d75070b68d5
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.openlocfilehash: 78b7a9a2e26168b19dc8a1d12e47456752b57ffc
+ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090714"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45639774"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Come usare l'utilità di avvio Spring Boot per Azure Key Vault
 
@@ -27,7 +27,7 @@ ms.locfileid: "37090714"
 
 Questo articolo illustra la creazione di un'app con **[Spring Initializr]**, che usa l'utilità di avvio Spring Boot per Azure Key Vault per recuperare una stringa di connessione archiviata come segreto in un insieme di credenziali delle chiavi.
 
-## <a name="prerequisites"></a>prerequisiti
+## <a name="prerequisites"></a>Prerequisiti
 
 I prerequisiti seguenti sono necessari per completare le procedure disponibili in questo articolo:
 
@@ -154,10 +154,10 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
    |---|---|
    | `name` | Specifica un nome univoco per l'insieme di credenziali delle chiavi. |
    | `location` | Specifica l'[area di Azure](https://azure.microsoft.com/regions/) in cui verrà ospitato il gruppo di risorse. |
-   | `enabled-for-deployment` | Specifica l'[opzione di distribuzione dell'insieme di credenziali delle chiavi](https://docs.microsoft.com/en-us/cli/azure/keyvault). |
-   | `enabled-for-disk-encryption` | Specifica l'[opzione di crittografia dell'insieme di credenziali delle chiavi](https://docs.microsoft.com/en-us/cli/azure/keyvault). |
-   | `enabled-for-template-deployment` | Specifica l'[opzione di crittografia dell'insieme di credenziali delle chiavi](https://docs.microsoft.com/en-us/cli/azure/keyvault). |
-   | `sku` | Specifica l'[opzione SKU dell'insieme di credenziali delle chiavi](https://docs.microsoft.com/en-us/cli/azure/keyvault). |
+   | `enabled-for-deployment` | Specifica l'[opzione di distribuzione dell'insieme di credenziali delle chiavi](https://docs.microsoft.com/cli/azure/keyvault). |
+   | `enabled-for-disk-encryption` | Specifica l'[opzione di crittografia dell'insieme di credenziali delle chiavi](https://docs.microsoft.com/cli/azure/keyvault). |
+   | `enabled-for-template-deployment` | Specifica l'[opzione di crittografia dell'insieme di credenziali delle chiavi](https://docs.microsoft.com/cli/azure/keyvault). |
+   | `sku` | Specifica l'[opzione SKU dell'insieme di credenziali delle chiavi](https://docs.microsoft.com/cli/azure/keyvault). |
    | `query` | Specifica un valore da recuperare dalla risposta, corrispondente all'URI dell'insieme di credenziali delle chiavi che sarà necessario per completare questa esercitazione. |
 
    L'interfaccia della riga di comando di Azure visualizzerà l'URI per l'insieme di credenziali delle chiavi, che verrà usato in un secondo momento, ad esempio:  
@@ -175,7 +175,7 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
    | Parametro | DESCRIZIONE |
    |---|---|
    | `name` | Specifica il nome dell'insieme di credenziali delle chiavi precedente. |
-   | `secret-permission` | Specifica i [criteri di sicurezza](https://docs.microsoft.com/en-us/cli/azure/keyvault) per l'insieme di credenziali delle chiavi. |
+   | `secret-permission` | Specifica i [criteri di sicurezza](https://docs.microsoft.com/cli/azure/keyvault) per l'insieme di credenziali delle chiavi. |
    | `spn` | Specifica il GUID della registrazione per l'applicazione precedente. |
 
    Nell'interfaccia della riga di comando di Azure verranno visualizzati i risultati della creazione dei criteri di sicurezza, ad esempio:  
