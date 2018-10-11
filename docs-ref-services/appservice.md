@@ -12,25 +12,25 @@ ms.technology: azure
 ms.devlang: java
 ms.service: appservice
 ms.openlocfilehash: adbb527666553ecc3039ce35c035d017f502c801
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823794"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893302"
 ---
-# <a name="azure-app-service-libraries-for-java"></a><span data-ttu-id="da781-104">Librerie del servizio app di Azure per Java</span><span class="sxs-lookup"><span data-stu-id="da781-104">Azure App Service libraries for Java</span></span>
+# <a name="azure-app-service-libraries-for-java"></a><span data-ttu-id="8f842-104">Librerie del servizio app di Azure per Java</span><span class="sxs-lookup"><span data-stu-id="8f842-104">Azure App Service libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="da781-105">Panoramica</span><span class="sxs-lookup"><span data-stu-id="da781-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="8f842-105">Panoramica</span><span class="sxs-lookup"><span data-stu-id="8f842-105">Overview</span></span>
 
-<span data-ttu-id="da781-106">Distribuire e gestire siti Web, app web e API REST con il [servizio app di Azure](/azure/app-service).</span><span class="sxs-lookup"><span data-stu-id="da781-106">Deploy and manage websites, web applications, and REST APIs with [Azure App Service](/azure/app-service).</span></span>
+<span data-ttu-id="8f842-106">Distribuire e gestire siti Web, app web e API REST con il [servizio app di Azure](/azure/app-service).</span><span class="sxs-lookup"><span data-stu-id="8f842-106">Deploy and manage websites, web applications, and REST APIs with [Azure App Service](/azure/app-service).</span></span>
 
-<span data-ttu-id="da781-107">Per iniziare a usare il servizio app di Azure, vedere [Creare la prima app Web Java in Azure](/azure/app-service-web/app-service-web-get-started-java).</span><span class="sxs-lookup"><span data-stu-id="da781-107">To get started with Azure App Service, see [Create your first Java web app in Azure](/azure/app-service-web/app-service-web-get-started-java).</span></span>
+<span data-ttu-id="8f842-107">Per iniziare a usare il servizio app di Azure, vedere [Creare la prima app Web Java in Azure](/azure/app-service-web/app-service-web-get-started-java).</span><span class="sxs-lookup"><span data-stu-id="8f842-107">To get started with Azure App Service, see [Create your first Java web app in Azure](/azure/app-service-web/app-service-web-get-started-java).</span></span>
 
-## <a name="management-api"></a><span data-ttu-id="da781-108">API di gestione</span><span class="sxs-lookup"><span data-stu-id="da781-108">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="8f842-108">API di gestione</span><span class="sxs-lookup"><span data-stu-id="8f842-108">Management API</span></span>
 
-<span data-ttu-id="da781-109">Distribuire, ridimensionare e configurare applicazioni nel servizio app di Azure con l'API di gestione.</span><span class="sxs-lookup"><span data-stu-id="da781-109">Deploy, scale, and configure applications in Azure App Service with the management API.</span></span>
+<span data-ttu-id="8f842-109">Distribuire, ridimensionare e configurare applicazioni nel servizio app di Azure con l'API di gestione.</span><span class="sxs-lookup"><span data-stu-id="8f842-109">Deploy, scale, and configure applications in Azure App Service with the management API.</span></span>
 
-<span data-ttu-id="da781-110">[Aggiungere una dipendenza](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) al file `pom.xml` di Maven per usare l'API di gestione nel progetto.</span><span class="sxs-lookup"><span data-stu-id="da781-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
+<span data-ttu-id="8f842-110">[Aggiungere una dipendenza](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) al file `pom.xml` di Maven per usare l'API di gestione nel progetto.</span><span class="sxs-lookup"><span data-stu-id="8f842-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
 
 ```XML
 <dependency>
@@ -41,11 +41,11 @@ ms.locfileid: "31823794"
 ```   
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="da781-111">Esplorare le API di gestione</span><span class="sxs-lookup"><span data-stu-id="da781-111">Explore the Management APIs</span></span>](/java/api/overview/azure/appservice/management)
+> [<span data-ttu-id="8f842-111">Esplorare le API di gestione</span><span class="sxs-lookup"><span data-stu-id="8f842-111">Explore the Management APIs</span></span>](/java/api/overview/azure/appservice/management)
 
-### <a name="example"></a><span data-ttu-id="da781-112">Esempio</span><span class="sxs-lookup"><span data-stu-id="da781-112">Example</span></span>
+### <a name="example"></a><span data-ttu-id="8f842-112">Esempio</span><span class="sxs-lookup"><span data-stu-id="8f842-112">Example</span></span>
 
-<span data-ttu-id="da781-113">Distribuire un'app Web da un'immagine Docker in un'app Web di Azure in esecuzione in Linux.</span><span class="sxs-lookup"><span data-stu-id="da781-113">Deploy a webapp from a Docker image into an Azure Web App running on Linux.</span></span>
+<span data-ttu-id="8f842-113">Distribuire un'app Web da un'immagine Docker in un'app Web di Azure in esecuzione in Linux.</span><span class="sxs-lookup"><span data-stu-id="8f842-113">Deploy a webapp from a Docker image into an Azure Web App running on Linux.</span></span>
 
 ```java
 WebApp app = azure.webApps().define("newLinuxWebApp")
@@ -57,14 +57,14 @@ WebApp app = azure.webApps().define("newLinuxWebApp")
     .create();
 ```
 
-## <a name="samples"></a><span data-ttu-id="da781-114">Esempi</span><span class="sxs-lookup"><span data-stu-id="da781-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="8f842-114">Esempi</span><span class="sxs-lookup"><span data-stu-id="8f842-114">Samples</span></span>
 
-<span data-ttu-id="da781-115">[Distribuire un'app Web da FTP o GitHub][1]</span><span class="sxs-lookup"><span data-stu-id="da781-115">[Deploy a web app from FTP or GitHub][1]</span></span>  
-<span data-ttu-id="da781-116">[Eseguire uno scambio tra le versioni dell'app e gli slot di distribuzione][2]</span><span class="sxs-lookup"><span data-stu-id="da781-116">[Swap between app versions with deployment slots][2]</span></span>  
-<span data-ttu-id="da781-117">[Configurare un dominio personalizzato][3] </span><span class="sxs-lookup"><span data-stu-id="da781-117">[Configure a custom domain][3] </span></span>  
-<span data-ttu-id="da781-118">[Ridimensionare un'app Web in più aree][4]</span><span class="sxs-lookup"><span data-stu-id="da781-118">[Scale a web app across multiple regions][4]</span></span>   
+<span data-ttu-id="8f842-115">[Distribuire un'app Web da FTP o GitHub][1]</span><span class="sxs-lookup"><span data-stu-id="8f842-115">[Deploy a web app from FTP or GitHub][1]</span></span>  
+<span data-ttu-id="8f842-116">[Eseguire uno scambio tra le versioni dell'app e gli slot di distribuzione][2]</span><span class="sxs-lookup"><span data-stu-id="8f842-116">[Swap between app versions with deployment slots][2]</span></span>  
+<span data-ttu-id="8f842-117">[Configurare un dominio personalizzato][3] </span><span class="sxs-lookup"><span data-stu-id="8f842-117">[Configure a custom domain][3] </span></span>  
+<span data-ttu-id="8f842-118">[Ridimensionare un'app Web in più aree][4]</span><span class="sxs-lookup"><span data-stu-id="8f842-118">[Scale a web app across multiple regions][4]</span></span>   
 
-<span data-ttu-id="da781-119">Esplorare altri [esempi di codice Java per il servizio app di Azure](https://azure.microsoft.com/resources/samples/?platform=java&term=appservice) disponibili per l'uso nelle app.</span><span class="sxs-lookup"><span data-stu-id="da781-119">Explore more [sample Java code for Azure App Service](https://azure.microsoft.com/resources/samples/?platform=java&term=appservice) you can use in your apps.</span></span>
+<span data-ttu-id="8f842-119">Esplorare altri [esempi di codice Java per il servizio app di Azure](https://azure.microsoft.com/resources/samples/?platform=java&term=appservice) disponibili per l'uso nelle app.</span><span class="sxs-lookup"><span data-stu-id="8f842-119">Explore more [sample Java code for Azure App Service](https://azure.microsoft.com/resources/samples/?platform=java&term=appservice) you can use in your apps.</span></span>
 
 [1]: ../docs-ref-conceptual/java-sdk-configure-webapp-sources.md
 [2]: https://azure.microsoft.com/resources/samples/app-service-java-manage-staging-and-production-slots-for-web-apps/

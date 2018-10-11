@@ -1,14 +1,14 @@
-<span data-ttu-id="4c7e0-101">Per altre informazioni su Azure Toolkit for Eclipse, vedere i collegamenti seguenti:</span><span class="sxs-lookup"><span data-stu-id="4c7e0-101">For more information about the Azure Toolkit for Eclipse, see the following links:</span></span> 
+<span data-ttu-id="9ecd9-101">Per altre informazioni su Azure Toolkit for Eclipse, vedere i collegamenti seguenti:</span><span class="sxs-lookup"><span data-stu-id="9ecd9-101">For more information about the Azure Toolkit for Eclipse, see the following links:</span></span> 
 
-* [<span data-ttu-id="4c7e0-102">Toolkit di Azure per Eclipse</span><span class="sxs-lookup"><span data-stu-id="4c7e0-102">Azure Toolkit for Eclipse</span></span>](../eclipse/azure-toolkit-for-eclipse.md) 
-* [<span data-ttu-id="4c7e0-103">Note sulla versione</span><span class="sxs-lookup"><span data-stu-id="4c7e0-103">Release Notes</span></span>](https://github.com/Microsoft/azure-tools-for-java/releases) 
-* [<span data-ttu-id="4c7e0-104">Installare il Toolkit di Azure per Eclipse</span><span class="sxs-lookup"><span data-stu-id="4c7e0-104">Installing the Azure Toolkit for Eclipse</span></span>](../eclipse/azure-toolkit-for-eclipse-installation.md) 
-* [<span data-ttu-id="4c7e0-105">Creare un'app Web Hello World per Azure in Eclipse</span><span class="sxs-lookup"><span data-stu-id="4c7e0-105">Create a Hello World web app for Azure in Eclipse</span></span>](../eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md) 
-* [<span data-ttu-id="4c7e0-106">Istruzioni di accesso per Azure Toolkit for Eclipse</span><span class="sxs-lookup"><span data-stu-id="4c7e0-106">Sign-in instructions for the Azure Toolkit for Eclipse</span></span>](../eclipse/azure-toolkit-for-eclipse-sign-in-instructions.md) 
+* [<span data-ttu-id="9ecd9-102">Toolkit di Azure per Eclipse</span><span class="sxs-lookup"><span data-stu-id="9ecd9-102">Azure Toolkit for Eclipse</span></span>](../eclipse/azure-toolkit-for-eclipse.md) 
+* [<span data-ttu-id="9ecd9-103">Note sulla versione</span><span class="sxs-lookup"><span data-stu-id="9ecd9-103">Release Notes</span></span>](https://github.com/Microsoft/azure-tools-for-java/releases) 
+* [<span data-ttu-id="9ecd9-104">Installare il Toolkit di Azure per Eclipse</span><span class="sxs-lookup"><span data-stu-id="9ecd9-104">Installing the Azure Toolkit for Eclipse</span></span>](../eclipse/azure-toolkit-for-eclipse-installation.md) 
+* [<span data-ttu-id="9ecd9-105">Creare un'app Web Hello World per Azure in Eclipse</span><span class="sxs-lookup"><span data-stu-id="9ecd9-105">Create a Hello World web app for Azure in Eclipse</span></span>](../eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md) 
+* [<span data-ttu-id="9ecd9-106">Istruzioni di accesso per Azure Toolkit for Eclipse</span><span class="sxs-lookup"><span data-stu-id="9ecd9-106">Sign-in instructions for the Azure Toolkit for Eclipse</span></span>](../eclipse/azure-toolkit-for-eclipse-sign-in-instructions.md) 
 
-<span data-ttu-id="4c7e0-107">Per altre informazioni sull'uso di Java con Azure, vedere i collegamenti seguenti:</span><span class="sxs-lookup"><span data-stu-id="4c7e0-107">For more information about using Java with Azure, see the following links:</span></span> 
+<span data-ttu-id="9ecd9-107">Per altre informazioni sull'uso di Java con Azure, vedere i collegamenti seguenti:</span><span class="sxs-lookup"><span data-stu-id="9ecd9-107">For more information about using Java with Azure, see the following links:</span></span> 
 
-* [<span data-ttu-id="4c7e0-108">Azure per sviluppatori Java</span><span class="sxs-lookup"><span data-stu-id="4c7e0-108">Azure for Java Developers</span></span>](https://docs.microsoft.com/java/azure/) 
-* <span data-ttu-id="4c7e0-109">[Strumenti Java per Visual Studio Team Services](https://java.visualstudio.com/) 
-<!-- TODO: Add URLs for Java in VSCode here --></span><span class="sxs-lookup"><span data-stu-id="4c7e0-109">[Java Tools for Visual Studio Team Services](https://java.visualstudio.com/) 
+* [<span data-ttu-id="9ecd9-108">Azure per sviluppatori Java</span><span class="sxs-lookup"><span data-stu-id="9ecd9-108">Azure for Java Developers</span></span>](https://docs.microsoft.com/java/azure/) 
+* <span data-ttu-id="9ecd9-109">[Strumenti Java per Visual Studio Team Services](https://java.visualstudio.com/) 
+<!-- TODO: Add URLs for Java in VSCode here --></span><span class="sxs-lookup"><span data-stu-id="9ecd9-109">[Java Tools for Visual Studio Team Services](https://java.visualstudio.com/) 
 <!-- TODO: Add URLs for Java in VSCode here --></span></span> 
