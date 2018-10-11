@@ -15,17 +15,17 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: adf779e2ba6ca73ea3a2406613f9622cc9ecbf99
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954524"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893162"
 ---
 # <a name="deploy-a-spring-boot-application-to-the-cloud-with-azure-app-service"></a>Distribuire un'applicazione Spring Boot sul cloud con il servizio app di Azure
 
 Questa esercitazione illustra la creazione di un esempio di app Web introduttiva di [Spring Boot] e la sua distribuzione nel [servizio app di Azure].
 
-### <a name="prerequisites"></a>prerequisiti
+### <a name="prerequisites"></a>Prerequisiti
 
 Per completare i passaggi di questa esercitazione, sono necessari gli elementi seguenti:
 
@@ -71,7 +71,7 @@ I passaggi seguenti illustrano i passaggi necessari per creare una semplice appl
    java -jar gs-spring-boot-0.1.0.jar
    ```
 
-1. Testare l'app Web passando a http://localhost:8080 tramite un Web browser o usare una sintassi simile all'esempio seguente, se si hanno curl disponibili:
+1. Testare l'app Web passando a http://localhost:8080 con un Web browser oppure usare una sintassi simile all'esempio seguente, se è disponibile curl:
    ```
    curl http://localhost:8080
    ```
@@ -197,28 +197,28 @@ Per altre informazioni sull'uso delle applicazioni Spring Boot in Azure, vedere 
 
 * [Distribuire un'applicazione Spring Boot in un cluster Kubernetes nel servizio contenitore di Azure](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Per altre informazioni su come usare Azure con Java, vedere [Azure per sviluppatori Java] e [Java Tools for Visual Studio Team Services (Strumenti Java per Visual Studio Team Services)].
+Per altre informazioni su come usare Azure con Java, vedere [Azure per sviluppatori Java] e [Strumenti Java per Visual Studio Team Services].
 
 Per altre informazioni sulla distribuzione di app Web in Azure tramite FTP, vedere [Distribuire l'app nel servizio app di Azure usando FTP/S].
 
 Per altre informazioni sul progetto di esempio Spring Boot, vedere [Introduzione a Spring Boot].
 
-Per informazioni sulla Guida introduttiva con le proprie applicazioni Spring Boot, vedere **Spring Initializr** (Inizializzazione di SpringBoot) all'indirizzo https://start.spring.io/.
+Per iniziare a usare proprie applicazioni Spring Boot, vedere **Spring Initializr** all'indirizzo https://start.spring.io/.
 
-Per altre informazioni sulla configurazione delle impostazioni aggiuntive per l'app Web, vedere [Configurare app Web in Servizio app di Azure].
+Per altre informazioni sulla configurazione delle impostazioni aggiuntive per l'app Web, vedere [Configurare app Web nel servizio app di Azure].
 
 <!-- URL List -->
 
-[servizio app di Azure]: https://azure.microsoft.com/services/app-service/
+[Servizio app di Azure]: https://azure.microsoft.com/services/app-service/
 [Azure Container Service]: https://azure.microsoft.com/services/container-service/
 [Azure per sviluppatori Java]: https://docs.microsoft.com/java/azure/
-[portale di Azure]: https://portal.azure.com/
-[Configurare app Web in Servizio app di Azure]: /azure/app-service/web-sites-configure
+[Portale di Azure]: https://portal.azure.com/
+[Configurare app Web nel servizio app di Azure]: /azure/app-service/web-sites-configure
 [Distribuire l'app nel servizio app di Azure usando FTP/S]: https://docs.microsoft.com/azure/app-service/app-service-deploy-ftp
-[account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
+[Account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
-[Java Tools for Visual Studio Team Services (Strumenti Java per Visual Studio Team Services)]: https://java.visualstudio.com/
+[Strumenti Java per Visual Studio Team Services]: https://java.visualstudio.com/
 [Maven]: http://maven.apache.org/
 [vantaggi per i sottoscrittori di MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/

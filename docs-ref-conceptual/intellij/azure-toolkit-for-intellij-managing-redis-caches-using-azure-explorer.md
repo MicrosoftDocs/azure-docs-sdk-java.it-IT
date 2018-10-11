@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 046ae0428d50a7f173f5ad15be53ffd8e66c11c5
-ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38075370"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892522"
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-intellij"></a>Gestione delle Cache Redis con Azure Explorer per IntelliJ
 

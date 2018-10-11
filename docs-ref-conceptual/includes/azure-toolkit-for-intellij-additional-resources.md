@@ -1,8 +1,8 @@
 Per altre informazioni su Azure Toolkit for IntelliJ IDEA, vedere i collegamenti seguenti: 
 
-* [Azure Toolkit per IntelliJ](../intellij/azure-toolkit-for-intellij.md) 
+* [Toolkit di Azure per IntelliJ](../intellij/azure-toolkit-for-intellij.md) 
 * [Note sulla versione](https://github.com/Microsoft/azure-tools-for-java/releases) 
-* [Installazione del Toolkit di Azure per IntelliJ](../intellij/azure-toolkit-for-intellij-installation.md) 
+* [Installazione di Azure Toolkit per IntelliJ](../intellij/azure-toolkit-for-intellij-installation.md) 
 * [Creare un'app Web Hello World per Azure in IntelliJ](../intellij/azure-toolkit-for-intellij-create-hello-world-web-app.md) 
 * [Istruzioni di accesso per Azure Toolkit for IntelliJ](../intellij/azure-toolkit-for-intellij-sign-in-instructions.md) 
 

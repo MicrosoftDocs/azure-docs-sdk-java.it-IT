@@ -12,11 +12,11 @@ ms.technology: azure
 ms.devlang: java
 ms.service: data-lake-store
 ms.openlocfilehash: bcd1fd17759f7d171006d7b2126019d00d06d1db
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823724"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892582"
 ---
 # <a name="azure-data-lake-store-libraries-for-java"></a>Librerie di Azure Data Lake Store per Java
 

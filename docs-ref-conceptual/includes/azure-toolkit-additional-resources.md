@@ -2,12 +2,12 @@ Per altre informazioni sui toolkit di Azure per gli IDE di Eclipse e IntelliJ, v
 
 * [Toolkit di Azure per Eclipse](../eclipse/azure-toolkit-for-eclipse.md) 
   * [Note sulla versione](https://github.com/Microsoft/azure-tools-for-java/releases) 
-  * [Installare il Toolkit di Azure per Eclipse.](../eclipse/azure-toolkit-for-eclipse-installation.md) 
+  * [Installare il Toolkit di Azure per Eclipse](../eclipse/azure-toolkit-for-eclipse-installation.md) 
   * [Creare un'app Web Hello World per Azure in Eclipse](../eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md) 
   * [Istruzioni di accesso per Azure Toolkit for Eclipse](../eclipse/azure-toolkit-for-eclipse-sign-in-instructions.md) 
 * [Toolkit di Azure per IntelliJ](../intellij/azure-toolkit-for-intellij.md) 
   * [Note sulla versione](https://github.com/Microsoft/azure-tools-for-java/releases) 
-  * [Installazione del Toolkit di Azure per IntelliJ](../intellij/azure-toolkit-for-intellij-installation.md) 
+  * [Installazione di Azure Toolkit per IntelliJ](../intellij/azure-toolkit-for-intellij-installation.md) 
   * [Creare un'app Web Hello World per Azure in IntelliJ](../intellij/azure-toolkit-for-intellij-create-hello-world-web-app.md) 
   * [Istruzioni di accesso per Azure Toolkit for IntelliJ](../intellij/azure-toolkit-for-intellij-sign-in-instructions.md) 
 

@@ -13,11 +13,11 @@ ms.devlang: java
 ms.service: multiple
 ms.assetid: f452468b-7aae-4944-abad-0b1aaf19170d
 ms.openlocfilehash: 8b52981ddfaadb7227cea4c7df014011196339cb
-ms.sourcegitcommit: 1f6a80e067a8bdbbb4b2da2e2145fda73d5fe65a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
-ms.locfileid: "26184645"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893632"
 ---
 # <a name="patterns-and-best-practices-for-development-with-the-azure-libraries-for-java"></a>Modelli e procedure consigliate per lo sviluppo con le librerie di Azure per Java 
 

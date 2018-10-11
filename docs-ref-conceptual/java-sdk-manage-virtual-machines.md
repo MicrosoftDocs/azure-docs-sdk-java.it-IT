@@ -11,11 +11,11 @@ ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: e3048b3317477f4b1fb8edf93e4bebad6b7fafce
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931167"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893612"
 ---
 # <a name="manage-azure-virtual-machines-from-your-java-applications"></a>Gestire le macchine virtuali di Azure dalle applicazioni Java
 

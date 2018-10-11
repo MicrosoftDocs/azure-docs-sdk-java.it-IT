@@ -12,11 +12,11 @@ ms.technology: azure
 ms.devlang: java
 ms.service: cdn
 ms.openlocfilehash: 199e9b4b2b2431e23954d24e4adeb4326eb4741c
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823734"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893072"
 ---
 # <a name="azure-cdn-libraries-for-java"></a>Librerie della rete CDN di Azure per Java
 

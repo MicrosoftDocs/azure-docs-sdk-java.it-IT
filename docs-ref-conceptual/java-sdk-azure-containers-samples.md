@@ -12,11 +12,11 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.openlocfilehash: 534a31dd6e81605de03d17643d06a75f8621e50c
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21930827"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893642"
 ---
 # <a name="java-samples-for-azure-container-service"></a>Esempi Java per il servizio contenitore di Azure
 

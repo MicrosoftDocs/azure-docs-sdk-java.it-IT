@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: dd76cb3a0355e4e8471b7a32b6b33cb71bd3f16b
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954792"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892792"
 ---
 # <a name="azure-toolkit-for-intellij"></a>Toolkit di Azure per IntelliJ
 Il Toolkit di Azure per IntelliJ offre modelli e funzionalità per creare, sviluppare, testare e distribuire con facilità applicazioni di Azure tramite l'ambiente di sviluppo integrato (IDE) di IntelliJ.
@@ -32,11 +32,11 @@ Il Toolkit di Azure per IntelliJ offre modelli e funzionalità per creare, svilu
 ## <a name="get-started-with-the-azure-toolkit-for-intellij"></a>Introduzione al Toolkit di Azure per IntelliJ
 Gli articoli seguenti consentiranno di iniziare a usare il Toolkit di Azure per IntelliJ:
 
-* [Installazione del Toolkit di Azure per IntelliJ](azure-toolkit-for-intellij-installation.md)
+* [Installazione di Azure Toolkit per IntelliJ](azure-toolkit-for-intellij-installation.md)
 
 * [Istruzioni di accesso per Azure Toolkit for IntelliJ](azure-toolkit-for-intellij-sign-in-instructions.md)
 
-* [Creare un'app Web Hello World per Azure in IntelliJ](azure-toolkit-for-intellij-create-hello-world-web-app.md)
+* [Creare un'App Web Hello World per Azure in IntelliJ](azure-toolkit-for-intellij-create-hello-world-web-app.md)
 
 ## <a name="use-the-azure-toolkit-for-intellij-with-your-java-projects"></a>Usare Azure Toolkit for IntelliJ con i progetti Java
 Gli articoli seguenti illustrano l'uso di Azure Toolkit for IntelliJ per aggiungere funzionalità di Azure ai progetti Java:
