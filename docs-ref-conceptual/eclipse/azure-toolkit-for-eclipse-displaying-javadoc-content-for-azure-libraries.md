@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 6f1edcc1411e8ec716dbfe41271d21d2397515c5
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954502"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893193"
 ---
 # <a name="displaying-javadoc-content-in-eclipse-for-the-azure-libraries-package-for-java"></a>Visualizzare il contenuto Javadoc in Eclipse per il pacchetto di librerie di Azure per Java
 
@@ -37,7 +37,7 @@ Questa procedura presuppone che la libreria di Azure per Java sia già stata agg
 
 1. È possibile specificare un **URL Javadoc** o un **Javadoc nell'archivio**.
 
-   * Se si sceglie di specificare un **URL Javadoc**, usare URL simili a **http://dl.windowsazure.com/javadoc** o **http://dl.windowsazure.com/storage/javadoc**.
+   * Se si sceglie di specificare un **URL Javadoc**, usare URL come **http://dl.windowsazure.com/javadoc** o **http://dl.windowsazure.com/storage/javadoc**.
 
    * Se si sceglie di utilizzare **Javadoc nell'archivio**, è possibile specificare un file esterno o un file dell’area di lavoro.
 
