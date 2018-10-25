@@ -8,28 +8,28 @@ ms.service: hdinsight
 ms.topic: reference
 ms.devlang: java
 ms.date: 9/20/2018
-ms.openlocfilehash: 1271f70fff876f4d24c8afa81123c54735f2d522
-ms.sourcegitcommit: 788b49d0b37909c575c9e5176e484cba627e7921
+ms.openlocfilehash: 9fd35d12e0aa864b5d23cf03547f7b76dc74c677
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120539"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799897"
 ---
-# <a name="hdinsight-java-management-sdk-preview"></a><span data-ttu-id="40755-104">HDInsight Management SDK per Java (anteprima)</span><span class="sxs-lookup"><span data-stu-id="40755-104">HDInsight Java Management SDK (Preview)</span></span>
+# <a name="hdinsight-java-management-sdk-preview"></a><span data-ttu-id="b2de9-104">HDInsight Management SDK per Java (anteprima)</span><span class="sxs-lookup"><span data-stu-id="b2de9-104">HDInsight Java Management SDK (Preview)</span></span>
 
-## <a name="overview"></a><span data-ttu-id="40755-105">Panoramica</span><span class="sxs-lookup"><span data-stu-id="40755-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="b2de9-105">Panoramica</span><span class="sxs-lookup"><span data-stu-id="b2de9-105">Overview</span></span>
 
-<span data-ttu-id="40755-106">HDInsight SDK per Java offre classi e metodi che consentono di gestire i cluster HDInsight.</span><span class="sxs-lookup"><span data-stu-id="40755-106">The HDInsight Java SDK provides classes and methods that allow you to manage your HDInsight clusters.</span></span> <span data-ttu-id="40755-107">Include operazioni per creare, eliminare, aggiornare, elencare, ridimensionare, eseguire azioni di script, monitorare, ottenere le proprietà dei cluster di HDInsight e altro ancora.</span><span class="sxs-lookup"><span data-stu-id="40755-107">It includes operations to create, delete, update, list, resize, execute script actions, monitor, get properties of HDInsight clusters, and more.</span></span>
+<span data-ttu-id="b2de9-106">HDInsight SDK per Java offre classi e metodi che consentono di gestire i cluster HDInsight.</span><span class="sxs-lookup"><span data-stu-id="b2de9-106">The HDInsight Java SDK provides classes and methods that allow you to manage your HDInsight clusters.</span></span> <span data-ttu-id="b2de9-107">Include operazioni per creare, eliminare, aggiornare, elencare, ridimensionare, eseguire azioni di script, monitorare, ottenere le proprietà dei cluster di HDInsight e altro ancora.</span><span class="sxs-lookup"><span data-stu-id="b2de9-107">It includes operations to create, delete, update, list, resize, execute script actions, monitor, get properties of HDInsight clusters, and more.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="40755-108">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="40755-108">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="b2de9-108">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="b2de9-108">Prerequisites</span></span>
 
-* <span data-ttu-id="40755-109">Un account Azure.</span><span class="sxs-lookup"><span data-stu-id="40755-109">An Azure account.</span></span> <span data-ttu-id="40755-110">Se non è disponibile, [ottenere una versione di valutazione gratuita](https://azure.microsoft.com/free/).</span><span class="sxs-lookup"><span data-stu-id="40755-110">If you don't have one, [get a free trial](https://azure.microsoft.com/free/).</span></span>
-* [<span data-ttu-id="40755-111">Java JDK</span><span class="sxs-lookup"><span data-stu-id="40755-111">Java JDK</span></span>](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
-* [<span data-ttu-id="40755-112">Maven</span><span class="sxs-lookup"><span data-stu-id="40755-112">Maven</span></span>](https://maven.apache.org/install.html)
+* <span data-ttu-id="b2de9-109">Un account Azure.</span><span class="sxs-lookup"><span data-stu-id="b2de9-109">An Azure account.</span></span> <span data-ttu-id="b2de9-110">Se non è disponibile, [ottenere una versione di valutazione gratuita](https://azure.microsoft.com/free/).</span><span class="sxs-lookup"><span data-stu-id="b2de9-110">If you don't have one, [get a free trial](https://azure.microsoft.com/free/).</span></span>
+* [<span data-ttu-id="b2de9-111">Java JDK</span><span class="sxs-lookup"><span data-stu-id="b2de9-111">Java JDK</span></span>](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* [<span data-ttu-id="b2de9-112">Maven</span><span class="sxs-lookup"><span data-stu-id="b2de9-112">Maven</span></span>](https://maven.apache.org/install.html)
 
-## <a name="sdk-installation"></a><span data-ttu-id="40755-113">Installazione dell'SDK</span><span class="sxs-lookup"><span data-stu-id="40755-113">SDK Installation</span></span>
+## <a name="sdk-installation"></a><span data-ttu-id="b2de9-113">Installazione dell'SDK</span><span class="sxs-lookup"><span data-stu-id="b2de9-113">SDK Installation</span></span>
 
-<span data-ttu-id="40755-114">HDInsight SDK per Java è disponibile tramite Maven [qui](https://mvnrepository.com/artifact/com.microsoft.azure.hdinsight.v2018_06_01_preview/azure-mgmt-hdinsight).</span><span class="sxs-lookup"><span data-stu-id="40755-114">The HDInsight Java SDK is available through Maven [here](https://mvnrepository.com/artifact/com.microsoft.azure.hdinsight.v2018_06_01_preview/azure-mgmt-hdinsight).</span></span> <span data-ttu-id="40755-115">Aggiungere la dipendenza seguente a pom.xml:</span><span class="sxs-lookup"><span data-stu-id="40755-115">Add the following dependency to your pom.xml:</span></span>
+<span data-ttu-id="b2de9-114">HDInsight SDK per Java è disponibile tramite Maven [qui](https://mvnrepository.com/artifact/com.microsoft.azure.hdinsight.v2018_06_01_preview/azure-mgmt-hdinsight).</span><span class="sxs-lookup"><span data-stu-id="b2de9-114">The HDInsight Java SDK is available through Maven [here](https://mvnrepository.com/artifact/com.microsoft.azure.hdinsight.v2018_06_01_preview/azure-mgmt-hdinsight).</span></span> <span data-ttu-id="b2de9-115">Aggiungere la dipendenza seguente a pom.xml:</span><span class="sxs-lookup"><span data-stu-id="b2de9-115">Add the following dependency to your pom.xml:</span></span>
 
 ```
 <dependency>
@@ -39,43 +39,43 @@ ms.locfileid: "49120539"
 </dependency>
 ```
 
-<span data-ttu-id="40755-116">A pom.xml sarà anche necessario aggiungere le dipendenze seguenti:</span><span class="sxs-lookup"><span data-stu-id="40755-116">You will also need to add the following dependencies to your pom.xml:</span></span>
+<span data-ttu-id="b2de9-116">A pom.xml sarà anche necessario aggiungere le dipendenze seguenti:</span><span class="sxs-lookup"><span data-stu-id="b2de9-116">You will also need to add the following dependencies to your pom.xml:</span></span>
 
-* [<span data-ttu-id="40755-117">Libreria per l'autenticazione client di Azure</span><span class="sxs-lookup"><span data-stu-id="40755-117">Azure Client Authentication Library:</span></span>](https://mvnrepository.com/artifact/com.microsoft.azure/azure-client-authentication/1.6.2)
-```
-<dependency>
+* [<span data-ttu-id="b2de9-117">Libreria per l'autenticazione client di Azure</span><span class="sxs-lookup"><span data-stu-id="b2de9-117">Azure Client Authentication Library:</span></span>](https://mvnrepository.com/artifact/com.microsoft.azure/azure-client-authentication/1.6.2)
+  ```
+  <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-client-authentication</artifactId>
     <version>1.6.2</version>
     <scope>test</scope>
-</dependency>
-```
+  </dependency>
+  ```
 
-* [<span data-ttu-id="40755-118">Runtime client Java di Azure per ARM</span><span class="sxs-lookup"><span data-stu-id="40755-118">Azure Java Client Runtime For ARM:</span></span>](https://mvnrepository.com/artifact/com.microsoft.azure/azure-arm-client-runtime/1.6.2)
-```
-<dependency>
+* [<span data-ttu-id="b2de9-118">Runtime client Java di Azure per ARM</span><span class="sxs-lookup"><span data-stu-id="b2de9-118">Azure Java Client Runtime For ARM:</span></span>](https://mvnrepository.com/artifact/com.microsoft.azure/azure-arm-client-runtime/1.6.2)
+  ```
+  <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-arm-client-runtime</artifactId>
     <version>1.6.2</version>
-</dependency>
-```
+  </dependency>
+  ```
 
-## <a name="authentication"></a><span data-ttu-id="40755-119">Authentication</span><span class="sxs-lookup"><span data-stu-id="40755-119">Authentication</span></span>
+## <a name="authentication"></a><span data-ttu-id="b2de9-119">Authentication</span><span class="sxs-lookup"><span data-stu-id="b2de9-119">Authentication</span></span>
 
-<span data-ttu-id="40755-120">L'SDK deve essere prima autenticato con la sottoscrizione di Azure.</span><span class="sxs-lookup"><span data-stu-id="40755-120">The SDK first needs to be authenticated with your Azure subscription.</span></span>  <span data-ttu-id="40755-121">Seguire questo esempio per creare un'entità servizio e usarla per l'autenticazione.</span><span class="sxs-lookup"><span data-stu-id="40755-121">Follow the example below to create a service principal and use it to authenticate.</span></span> <span data-ttu-id="40755-122">Al termine si avrà un'istanza di un `HDInsightManagementClientImpl` che contiene molti metodi, descritti nelle sezioni seguenti, che possono essere usati per operazioni di gestione.</span><span class="sxs-lookup"><span data-stu-id="40755-122">After this is done, you will have an instance of an `HDInsightManagementClientImpl`, which contains many methods (outlined in below sections) that can be used to perform management operations.</span></span>
+<span data-ttu-id="b2de9-120">L'SDK deve essere prima autenticato con la sottoscrizione di Azure.</span><span class="sxs-lookup"><span data-stu-id="b2de9-120">The SDK first needs to be authenticated with your Azure subscription.</span></span>  <span data-ttu-id="b2de9-121">Seguire questo esempio per creare un'entità servizio e usarla per l'autenticazione.</span><span class="sxs-lookup"><span data-stu-id="b2de9-121">Follow the example below to create a service principal and use it to authenticate.</span></span> <span data-ttu-id="b2de9-122">Al termine si avrà un'istanza di un `HDInsightManagementClientImpl` che contiene molti metodi, descritti nelle sezioni seguenti, che possono essere usati per operazioni di gestione.</span><span class="sxs-lookup"><span data-stu-id="b2de9-122">After this is done, you will have an instance of an `HDInsightManagementClientImpl`, which contains many methods (outlined in below sections) that can be used to perform management operations.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="40755-123">Oltre all'esempio seguente esistono altre modalità di autenticazione che possono essere più adatte alle proprie esigenze.</span><span class="sxs-lookup"><span data-stu-id="40755-123">There are other ways to authenticate besides the below example that could potentially be better suited for your needs.</span></span> <span data-ttu-id="40755-124">Tutti i metodi sono descritti nell'articolo su come [eseguire l'autenticazione con le librerie di gestione di Azure per Java](https://docs.microsoft.com/en-us/java/azure/java-sdk-azure-authenticate?view=azure-java-stable).</span><span class="sxs-lookup"><span data-stu-id="40755-124">All methods are outlined here: [Authenticate with the Azure management libraries for Java](https://docs.microsoft.com/en-us/java/azure/java-sdk-azure-authenticate?view=azure-java-stable)</span></span>
+> <span data-ttu-id="b2de9-123">Oltre all'esempio seguente esistono altre modalità di autenticazione che possono essere più adatte alle proprie esigenze.</span><span class="sxs-lookup"><span data-stu-id="b2de9-123">There are other ways to authenticate besides the below example that could potentially be better suited for your needs.</span></span> <span data-ttu-id="b2de9-124">Tutti i metodi sono descritti nell'articolo su come [eseguire l'autenticazione con le librerie di gestione di Azure per Java](https://docs.microsoft.com/en-us/java/azure/java-sdk-azure-authenticate?view=azure-java-stable).</span><span class="sxs-lookup"><span data-stu-id="b2de9-124">All methods are outlined here: [Authenticate with the Azure management libraries for Java](https://docs.microsoft.com/en-us/java/azure/java-sdk-azure-authenticate?view=azure-java-stable)</span></span>
 
-### <a name="authentication-example-using-a-service-principal"></a><span data-ttu-id="40755-125">Esempio di autenticazione con un'entità servizio</span><span class="sxs-lookup"><span data-stu-id="40755-125">Authentication Example Using a Service Principal</span></span>
+### <a name="authentication-example-using-a-service-principal"></a><span data-ttu-id="b2de9-125">Esempio di autenticazione con un'entità servizio</span><span class="sxs-lookup"><span data-stu-id="b2de9-125">Authentication Example Using a Service Principal</span></span>
 
-<span data-ttu-id="40755-126">Per prima cosa, accedere ad [Azure Cloud Shell](https://shell.azure.com/bash).</span><span class="sxs-lookup"><span data-stu-id="40755-126">First, login to [Azure Cloud Shell](https://shell.azure.com/bash).</span></span> <span data-ttu-id="40755-127">Verificare che si stia attualmente usando la sottoscrizione in cui si vuole creare l'entità servizio.</span><span class="sxs-lookup"><span data-stu-id="40755-127">Verify you are currently using the subscription in which you want the service principal created.</span></span> 
+<span data-ttu-id="b2de9-126">Per prima cosa, accedere ad [Azure Cloud Shell](https://shell.azure.com/bash).</span><span class="sxs-lookup"><span data-stu-id="b2de9-126">First, login to [Azure Cloud Shell](https://shell.azure.com/bash).</span></span> <span data-ttu-id="b2de9-127">Verificare che si stia attualmente usando la sottoscrizione in cui si vuole creare l'entità servizio.</span><span class="sxs-lookup"><span data-stu-id="b2de9-127">Verify you are currently using the subscription in which you want the service principal created.</span></span> 
 
 ```azurecli-interactive
 az account show
 ```
 
-<span data-ttu-id="40755-128">Le informazioni sulla sottoscrizione vengono visualizzate in formato JSON.</span><span class="sxs-lookup"><span data-stu-id="40755-128">Your subscription information is displayed as JSON.</span></span>
+<span data-ttu-id="b2de9-128">Le informazioni sulla sottoscrizione vengono visualizzate in formato JSON.</span><span class="sxs-lookup"><span data-stu-id="b2de9-128">Your subscription information is displayed as JSON.</span></span>
 
 ```json
 {
@@ -93,24 +93,24 @@ az account show
 }
 ```
 
-<span data-ttu-id="40755-129">Se non si è eseguito l'accesso alla sottoscrizione corretta, selezionare quella corretta eseguendo:</span><span class="sxs-lookup"><span data-stu-id="40755-129">If you're not logged into the correct subscription, select the correct one by running:</span></span> 
+<span data-ttu-id="b2de9-129">Se non si è eseguito l'accesso alla sottoscrizione corretta, selezionare quella corretta eseguendo:</span><span class="sxs-lookup"><span data-stu-id="b2de9-129">If you're not logged into the correct subscription, select the correct one by running:</span></span> 
 ```azurecli-interactive
 az account set -s <name or ID of subscription>
 ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="40755-130">Se il provider di risorse HDInsight non è già stato registrato con un altro metodo, ad esempio creando un cluster HDInsight tramite il portale di Azure, è necessario eseguire questa operazione una volta prima di poter eseguire l'autenticazione.</span><span class="sxs-lookup"><span data-stu-id="40755-130">If you have not already registered the HDInsight Resource Provider by another method (such as by creating an HDInsight Cluster through the Azure Portal), you need to do this once before you can authenticate.</span></span> <span data-ttu-id="40755-131">La registrazione può essere eseguita da [Azure Cloud Shell](https://shell.azure.com/bash) eseguendo questo comando:</span><span class="sxs-lookup"><span data-stu-id="40755-131">This can be done from the [Azure Cloud Shell](https://shell.azure.com/bash) by running the following command:</span></span>
+> <span data-ttu-id="b2de9-130">Se il provider di risorse HDInsight non è già stato registrato con un altro metodo, ad esempio creando un cluster HDInsight tramite il portale di Azure, è necessario eseguire questa operazione una volta prima di poter eseguire l'autenticazione.</span><span class="sxs-lookup"><span data-stu-id="b2de9-130">If you have not already registered the HDInsight Resource Provider by another method (such as by creating an HDInsight Cluster through the Azure Portal), you need to do this once before you can authenticate.</span></span> <span data-ttu-id="b2de9-131">La registrazione può essere eseguita da [Azure Cloud Shell](https://shell.azure.com/bash) eseguendo questo comando:</span><span class="sxs-lookup"><span data-stu-id="b2de9-131">This can be done from the [Azure Cloud Shell](https://shell.azure.com/bash) by running the following command:</span></span>
 >```azurecli-interactive
 >az provider register --namespace Microsoft.HDInsight
 >```
 
-<span data-ttu-id="40755-132">Scegliere quindi un nome per l'entità servizio e crearla con il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="40755-132">Next, choose a name for your service principal and create it with the following command:</span></span>
+<span data-ttu-id="b2de9-132">Scegliere quindi un nome per l'entità servizio e crearla con il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="b2de9-132">Next, choose a name for your service principal and create it with the following command:</span></span>
 
 ```azurecli-interactive
 az ad sp create-for-rbac --name <Service Principal Name> --sdk-auth
 ```
 
-<span data-ttu-id="40755-133">Verranno visualizzate le informazioni relative all'entità servizio in formato JSON.</span><span class="sxs-lookup"><span data-stu-id="40755-133">The service principal information is displayed as JSON.</span></span>
+<span data-ttu-id="b2de9-133">Verranno visualizzate le informazioni relative all'entità servizio in formato JSON.</span><span class="sxs-lookup"><span data-stu-id="b2de9-133">The service principal information is displayed as JSON.</span></span>
 
 ```json
 {
@@ -126,7 +126,7 @@ az ad sp create-for-rbac --name <Service Principal Name> --sdk-auth
   "managementEndpointUrl": "https://management.core.windows.net/"
 }
 ```
-<span data-ttu-id="40755-134">Copiare il frammento di codice seguente e compilare `TENANT_ID`, `CLIENT_ID`, `CLIENT_SECRET` e `SUBSCRIPTION_ID` con le stringhe JSON restituite dopo aver eseguito il comando per creare l'entità servizio.</span><span class="sxs-lookup"><span data-stu-id="40755-134">Copy the below snippet and fill in `TENANT_ID`, `CLIENT_ID`, `CLIENT_SECRET`, and `SUBSCRIPTION_ID` with the strings from the JSON that was returned after running the command to create the service principal.</span></span>
+<span data-ttu-id="b2de9-134">Copiare il frammento di codice seguente e compilare `TENANT_ID`, `CLIENT_ID`, `CLIENT_SECRET` e `SUBSCRIPTION_ID` con le stringhe JSON restituite dopo aver eseguito il comando per creare l'entità servizio.</span><span class="sxs-lookup"><span data-stu-id="b2de9-134">Copy the below snippet and fill in `TENANT_ID`, `CLIENT_ID`, `CLIENT_SECRET`, and `SUBSCRIPTION_ID` with the strings from the JSON that was returned after running the command to create the service principal.</span></span>
 
 ```java
 import com.microsoft.azure.management.hdinsight.v2018_06_01_preview.*;
@@ -154,40 +154,40 @@ public class Main {
 ```
 
 
-## <a name="cluster-management"></a><span data-ttu-id="40755-135">Gestione dei cluster</span><span class="sxs-lookup"><span data-stu-id="40755-135">Cluster Management</span></span>
+## <a name="cluster-management"></a><span data-ttu-id="b2de9-135">Gestione dei cluster</span><span class="sxs-lookup"><span data-stu-id="b2de9-135">Cluster Management</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="40755-136">Questa sezione presuppone che l'utente abbia già eseguito l'autenticazione e abbia creato un'istanza `HDInsightManagementClientImpl` che ha poi archiviato in una variabile chiamata `client`.</span><span class="sxs-lookup"><span data-stu-id="40755-136">This section assumes you have already authenticated and constructed an `HDInsightManagementClientImpl` instance and store it in a variable called `client`.</span></span> <span data-ttu-id="40755-137">Le istruzioni per l'autenticazione e l'ottenimento di un `HDInsightManagementClientImpl` sono disponibili nella sezione Autenticazione precedente.</span><span class="sxs-lookup"><span data-stu-id="40755-137">Instructions for authenticating and obtaining an `HDInsightManagementClientImpl` can be found in the Authentication section above.</span></span>
+> <span data-ttu-id="b2de9-136">Questa sezione presuppone che l'utente abbia già eseguito l'autenticazione e abbia creato un'istanza `HDInsightManagementClientImpl` che ha poi archiviato in una variabile chiamata `client`.</span><span class="sxs-lookup"><span data-stu-id="b2de9-136">This section assumes you have already authenticated and constructed an `HDInsightManagementClientImpl` instance and store it in a variable called `client`.</span></span> <span data-ttu-id="b2de9-137">Le istruzioni per l'autenticazione e l'ottenimento di un `HDInsightManagementClientImpl` sono disponibili nella sezione Autenticazione precedente.</span><span class="sxs-lookup"><span data-stu-id="b2de9-137">Instructions for authenticating and obtaining an `HDInsightManagementClientImpl` can be found in the Authentication section above.</span></span>
 
-### <a name="create-a-cluster"></a><span data-ttu-id="40755-138">Creare un cluster</span><span class="sxs-lookup"><span data-stu-id="40755-138">Create a Cluster</span></span>
+### <a name="create-a-cluster"></a><span data-ttu-id="b2de9-138">Creare un cluster</span><span class="sxs-lookup"><span data-stu-id="b2de9-138">Create a Cluster</span></span>
 
-<span data-ttu-id="40755-139">Un nuovo cluster può essere creato chiamando `client.clusters().create()`.</span><span class="sxs-lookup"><span data-stu-id="40755-139">A new cluster can be created by calling `client.clusters().create()`.</span></span>
+<span data-ttu-id="b2de9-139">Un nuovo cluster può essere creato chiamando `client.clusters().create()`.</span><span class="sxs-lookup"><span data-stu-id="b2de9-139">A new cluster can be created by calling `client.clusters().create()`.</span></span>
 
-#### <a name="example"></a><span data-ttu-id="40755-140">Esempio</span><span class="sxs-lookup"><span data-stu-id="40755-140">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="b2de9-140">Esempio</span><span class="sxs-lookup"><span data-stu-id="b2de9-140">Example</span></span>
 
-<span data-ttu-id="40755-141">Questo esempio illustra come creare un cluster Spark con 2 nodi head e 1 nodo del ruolo di lavoro.</span><span class="sxs-lookup"><span data-stu-id="40755-141">This example demonstrates how to create a Spark cluster with 2 head nodes and 1 worker node.</span></span>
+<span data-ttu-id="b2de9-141">Questo esempio illustra come creare un cluster Spark con 2 nodi head e 1 nodo del ruolo di lavoro.</span><span class="sxs-lookup"><span data-stu-id="b2de9-141">This example demonstrates how to create a Spark cluster with 2 head nodes and 1 worker node.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="40755-142">È prima necessario creare un gruppo di risorse e un account di archiviazione, come spiegato di seguito.</span><span class="sxs-lookup"><span data-stu-id="40755-142">You first need to create a Resource Group and Storage Account, as explained below.</span></span> <span data-ttu-id="40755-143">Se sono già stati creati, è possibile ignorare questi passaggi.</span><span class="sxs-lookup"><span data-stu-id="40755-143">If you have already created these, you can skip these steps.</span></span>
+> <span data-ttu-id="b2de9-142">È prima necessario creare un gruppo di risorse e un account di archiviazione, come spiegato di seguito.</span><span class="sxs-lookup"><span data-stu-id="b2de9-142">You first need to create a Resource Group and Storage Account, as explained below.</span></span> <span data-ttu-id="b2de9-143">Se sono già stati creati, è possibile ignorare questi passaggi.</span><span class="sxs-lookup"><span data-stu-id="b2de9-143">If you have already created these, you can skip these steps.</span></span>
 
-##### <a name="creating-a-resource-group"></a><span data-ttu-id="40755-144">Creazione di un gruppo di risorse</span><span class="sxs-lookup"><span data-stu-id="40755-144">Creating a Resource Group</span></span>
+##### <a name="creating-a-resource-group"></a><span data-ttu-id="b2de9-144">Creazione di un gruppo di risorse</span><span class="sxs-lookup"><span data-stu-id="b2de9-144">Creating a Resource Group</span></span>
 
-<span data-ttu-id="40755-145">È possibile creare un gruppo di risorse con [Azure Cloud Shell](https://shell.azure.com/bash) eseguendo</span><span class="sxs-lookup"><span data-stu-id="40755-145">You can create a resource group using the [Azure Cloud Shell](https://shell.azure.com/bash) by running</span></span>
+<span data-ttu-id="b2de9-145">È possibile creare un gruppo di risorse con [Azure Cloud Shell](https://shell.azure.com/bash) eseguendo</span><span class="sxs-lookup"><span data-stu-id="b2de9-145">You can create a resource group using the [Azure Cloud Shell](https://shell.azure.com/bash) by running</span></span>
 ```azurecli-interactive
 az group create -l <Region Name (i.e. eastus)> --n <Resource Group Name>
 ```
-##### <a name="creating-a-storage-account"></a><span data-ttu-id="40755-146">Creazione di un account di archiviazione</span><span class="sxs-lookup"><span data-stu-id="40755-146">Creating a Storage Account</span></span>
+##### <a name="creating-a-storage-account"></a><span data-ttu-id="b2de9-146">Creazione di un account di archiviazione</span><span class="sxs-lookup"><span data-stu-id="b2de9-146">Creating a Storage Account</span></span>
 
-<span data-ttu-id="40755-147">È possibile creare un account di archiviazione con [Azure Cloud Shell](https://shell.azure.com/bash) eseguendo:</span><span class="sxs-lookup"><span data-stu-id="40755-147">You can create a storage account using the [Azure Cloud Shell](https://shell.azure.com/bash) by running:</span></span>
+<span data-ttu-id="b2de9-147">È possibile creare un account di archiviazione con [Azure Cloud Shell](https://shell.azure.com/bash) eseguendo:</span><span class="sxs-lookup"><span data-stu-id="b2de9-147">You can create a storage account using the [Azure Cloud Shell](https://shell.azure.com/bash) by running:</span></span>
 ```azurecli-interactive
 az storage account create -n <Storage Account Name> -g <Existing Resource Group Name> -l <Region Name (i.e. eastus)> --sku <SKU i.e. Standard_LRS>
 ```
-<span data-ttu-id="40755-148">Eseguire ora questo comando per ottenere la chiave per l'account di archiviazione. Questa chiave sarà necessaria per creare un cluster:</span><span class="sxs-lookup"><span data-stu-id="40755-148">Now run the following command to get the key for your storage account (you will need this to create a cluster):</span></span>
+<span data-ttu-id="b2de9-148">Eseguire ora questo comando per ottenere la chiave per l'account di archiviazione. Questa chiave sarà necessaria per creare un cluster:</span><span class="sxs-lookup"><span data-stu-id="b2de9-148">Now run the following command to get the key for your storage account (you will need this to create a cluster):</span></span>
 ```azurecli-interactive
 az storage account keys list -n <Storage Account Name>
 ```
 ---
-<span data-ttu-id="40755-149">Il frammento Java seguente crea un cluster Spark con 2 nodi head e 1 nodo di lavoro.</span><span class="sxs-lookup"><span data-stu-id="40755-149">The below Java snippet creates a Spark cluster with 2 head nodes and 1 worker node.</span></span> <span data-ttu-id="40755-150">Inserire le variabili vuote come spiegato nei commenti. È possibile modificare altri parametri in base alle proprie esigenze.</span><span class="sxs-lookup"><span data-stu-id="40755-150">Fill in the blank variables as explained in the comments and feel free to change other parameters to suit your specific needs.</span></span>
+<span data-ttu-id="b2de9-149">Il frammento Java seguente crea un cluster Spark con 2 nodi head e 1 nodo di lavoro.</span><span class="sxs-lookup"><span data-stu-id="b2de9-149">The below Java snippet creates a Spark cluster with 2 head nodes and 1 worker node.</span></span> <span data-ttu-id="b2de9-150">Inserire le variabili vuote come spiegato nei commenti. È possibile modificare altri parametri in base alle proprie esigenze.</span><span class="sxs-lookup"><span data-stu-id="b2de9-150">Fill in the blank variables as explained in the comments and feel free to change other parameters to suit your specific needs.</span></span>
 
 ```java
 // The name for the cluster you are creating
@@ -266,17 +266,17 @@ HashMap<String, HashMap<String, String>> configurations = new HashMap<String, Ha
         client.clusters().create(resourceGroupName, clusterName, parameters);
 ```
 
-### <a name="get-cluster-details"></a><span data-ttu-id="40755-151">Ottenere i dettagli del cluster</span><span class="sxs-lookup"><span data-stu-id="40755-151">Get Cluster Details</span></span>
+### <a name="get-cluster-details"></a><span data-ttu-id="b2de9-151">Ottenere i dettagli del cluster</span><span class="sxs-lookup"><span data-stu-id="b2de9-151">Get Cluster Details</span></span>
 
-<span data-ttu-id="40755-152">Per ottenere le proprietà di un dato cluster:</span><span class="sxs-lookup"><span data-stu-id="40755-152">To get properties for a given cluster:</span></span>
+<span data-ttu-id="b2de9-152">Per ottenere le proprietà di un dato cluster:</span><span class="sxs-lookup"><span data-stu-id="b2de9-152">To get properties for a given cluster:</span></span>
 
 ```java
 client.clusters.getByResourceGroup("<Resource Group Name>", "<Cluster Name>");
 ```
 
-#### <a name="example"></a><span data-ttu-id="40755-153">Esempio</span><span class="sxs-lookup"><span data-stu-id="40755-153">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="b2de9-153">Esempio</span><span class="sxs-lookup"><span data-stu-id="b2de9-153">Example</span></span>
 
-<span data-ttu-id="40755-154">È possibile usare `get` per verificare che il cluster sia stato creato correttamente.</span><span class="sxs-lookup"><span data-stu-id="40755-154">You can use `get` to confirm that you have successfully created your cluster.</span></span>
+<span data-ttu-id="b2de9-154">È possibile usare `get` per verificare che il cluster sia stato creato correttamente.</span><span class="sxs-lookup"><span data-stu-id="b2de9-154">You can use `get` to confirm that you have successfully created your cluster.</span></span>
 
 ```java
 ClusterInner cluster = client.clusters().getByResourceGroup("<Resource Group Name>", "<Cluster Name>");
@@ -284,31 +284,31 @@ System.out.println(cluster.name()); //Prints the name of the cluster
 System.out.println(cluster.id()); //Prints the resource Id of the cluster
 ```
 
-<span data-ttu-id="40755-155">L'output sarà simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="40755-155">The output should look like:</span></span>
+<span data-ttu-id="b2de9-155">L'output sarà simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="b2de9-155">The output should look like:</span></span>
 
 ```
 <Cluster Name>
 /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/<Resource Group Name>/providers/Microsoft.HDInsight/clusters/<Cluster Name>
 ```
 
-### <a name="list-clusters"></a><span data-ttu-id="40755-156">Elencare cluster</span><span class="sxs-lookup"><span data-stu-id="40755-156">List Clusters</span></span>
+### <a name="list-clusters"></a><span data-ttu-id="b2de9-156">Elencare cluster</span><span class="sxs-lookup"><span data-stu-id="b2de9-156">List Clusters</span></span>
 
-#### <a name="list-clusters-under-the-subscription"></a><span data-ttu-id="40755-157">Elencare i cluster nella sottoscrizione</span><span class="sxs-lookup"><span data-stu-id="40755-157">List Clusters Under The Subscription</span></span>
+#### <a name="list-clusters-under-the-subscription"></a><span data-ttu-id="b2de9-157">Elencare i cluster nella sottoscrizione</span><span class="sxs-lookup"><span data-stu-id="b2de9-157">List Clusters Under The Subscription</span></span>
 
 ```java
 client.clusters.list();
 ```
-#### <a name="list-clusters-by-resource-group"></a><span data-ttu-id="40755-158">Elencare i cluster per gruppo di risorse</span><span class="sxs-lookup"><span data-stu-id="40755-158">List Clusters By Resource Group</span></span>
+#### <a name="list-clusters-by-resource-group"></a><span data-ttu-id="b2de9-158">Elencare i cluster per gruppo di risorse</span><span class="sxs-lookup"><span data-stu-id="b2de9-158">List Clusters By Resource Group</span></span>
 
 ```java
 client.clusters.listByResourceGroup("<Resource Group Name>");
 ```
 > [!NOTE]
-> <span data-ttu-id="40755-159">Sia `List()` che `ListByResourceGroup()` restituiscono un oggetto `PagedList<ClusterInner>`.</span><span class="sxs-lookup"><span data-stu-id="40755-159">Both `List()` and `ListByResourceGroup()` return a `PagedList<ClusterInner>` object.</span></span> <span data-ttu-id="40755-160">La chiamata di `loadNext()` restituisce un elenco di cluster nella pagina e determina l'avanzamento dell'oggetto `ClusterPaged` alla pagina successiva.</span><span class="sxs-lookup"><span data-stu-id="40755-160">Calling `loadNext()` returns a list of clusters on that page and advances the `ClusterPaged` object to the next page.</span></span> <span data-ttu-id="40755-161">Questa operazione può essere ripetuta finché `hasNextPage()` non restituisce `false`, che indica che non sono presenti altre pagine.</span><span class="sxs-lookup"><span data-stu-id="40755-161">This can be repeated until `hasNextPage()` return `false`, indicating that there are no more pages.</span></span>
+> <span data-ttu-id="b2de9-159">Sia `List()` che `ListByResourceGroup()` restituiscono un oggetto `PagedList<ClusterInner>`.</span><span class="sxs-lookup"><span data-stu-id="b2de9-159">Both `List()` and `ListByResourceGroup()` return a `PagedList<ClusterInner>` object.</span></span> <span data-ttu-id="b2de9-160">La chiamata di `loadNext()` restituisce un elenco di cluster nella pagina e determina l'avanzamento dell'oggetto `ClusterPaged` alla pagina successiva.</span><span class="sxs-lookup"><span data-stu-id="b2de9-160">Calling `loadNext()` returns a list of clusters on that page and advances the `ClusterPaged` object to the next page.</span></span> <span data-ttu-id="b2de9-161">Questa operazione può essere ripetuta finché `hasNextPage()` non restituisce `false`, che indica che non sono presenti altre pagine.</span><span class="sxs-lookup"><span data-stu-id="b2de9-161">This can be repeated until `hasNextPage()` return `false`, indicating that there are no more pages.</span></span>
 
-#### <a name="example"></a><span data-ttu-id="40755-162">Esempio</span><span class="sxs-lookup"><span data-stu-id="40755-162">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="b2de9-162">Esempio</span><span class="sxs-lookup"><span data-stu-id="b2de9-162">Example</span></span>
 
-<span data-ttu-id="40755-163">L'esempio seguente mostra le proprietà di tutti i cluster per la sottoscrizione corrente:</span><span class="sxs-lookup"><span data-stu-id="40755-163">The following example prints the properties of all clusters for the current subscription:</span></span>
+<span data-ttu-id="b2de9-163">L'esempio seguente mostra le proprietà di tutti i cluster per la sottoscrizione corrente:</span><span class="sxs-lookup"><span data-stu-id="b2de9-163">The following example prints the properties of all clusters for the current subscription:</span></span>
 
 ```java
 PagedList<ClusterInner> clusterPages = client.clusters().list();
@@ -324,70 +324,70 @@ while (true) {
 }
 ```
 
-### <a name="delete-a-cluster"></a><span data-ttu-id="40755-164">Eliminare un cluster</span><span class="sxs-lookup"><span data-stu-id="40755-164">Delete a Cluster</span></span>
+### <a name="delete-a-cluster"></a><span data-ttu-id="b2de9-164">Eliminare un cluster</span><span class="sxs-lookup"><span data-stu-id="b2de9-164">Delete a Cluster</span></span>
 
-<span data-ttu-id="40755-165">Per eliminare un cluster:</span><span class="sxs-lookup"><span data-stu-id="40755-165">To delete a cluster:</span></span>
+<span data-ttu-id="b2de9-165">Per eliminare un cluster:</span><span class="sxs-lookup"><span data-stu-id="b2de9-165">To delete a cluster:</span></span>
 
 ```java
 client.clusters.delete("<Resource Group Name>", "<Cluster Name>");
 ```
 
-### <a name="update-cluster-tags"></a><span data-ttu-id="40755-166">Aggiornare i tag del cluster</span><span class="sxs-lookup"><span data-stu-id="40755-166">Update Cluster Tags</span></span>
+### <a name="update-cluster-tags"></a><span data-ttu-id="b2de9-166">Aggiornare i tag del cluster</span><span class="sxs-lookup"><span data-stu-id="b2de9-166">Update Cluster Tags</span></span>
 
-<span data-ttu-id="40755-167">È possibile aggiornare i tag di un dato cluster nel modo seguente:</span><span class="sxs-lookup"><span data-stu-id="40755-167">You can update the tags of a given cluster like so:</span></span>
+<span data-ttu-id="b2de9-167">È possibile aggiornare i tag di un dato cluster nel modo seguente:</span><span class="sxs-lookup"><span data-stu-id="b2de9-167">You can update the tags of a given cluster like so:</span></span>
 
 ```java
 client.clusters.update("<Resource Group Name>", "<Cluster Name>", <Map<String,String> of Tags>);
 ```
 
-### <a name="resize-cluster"></a><span data-ttu-id="40755-168">Ridimensionare un cluster</span><span class="sxs-lookup"><span data-stu-id="40755-168">Resize Cluster</span></span>
+### <a name="resize-cluster"></a><span data-ttu-id="b2de9-168">Ridimensionare un cluster</span><span class="sxs-lookup"><span data-stu-id="b2de9-168">Resize Cluster</span></span>
 
-<span data-ttu-id="40755-169">È possibile ridimensionare il numero di nodi di ruolo di lavoro di un dato cluster specificando una nuova dimensione nel modo seguente:</span><span class="sxs-lookup"><span data-stu-id="40755-169">You can resize a given cluster's number of worker nodes by specifying a new size like so:</span></span>
+<span data-ttu-id="b2de9-169">È possibile ridimensionare il numero di nodi di ruolo di lavoro di un dato cluster specificando una nuova dimensione nel modo seguente:</span><span class="sxs-lookup"><span data-stu-id="b2de9-169">You can resize a given cluster's number of worker nodes by specifying a new size like so:</span></span>
 
 ```java
 client.clusters.resize("<Resource Group Name>", "<Cluster Name>", <Num of Worker Nodes (int)>)
 ```
 
-## <a name="cluster-monitoring"></a><span data-ttu-id="40755-170">Monitoraggio del cluster</span><span class="sxs-lookup"><span data-stu-id="40755-170">Cluster Monitoring</span></span>
+## <a name="cluster-monitoring"></a><span data-ttu-id="b2de9-170">Monitoraggio del cluster</span><span class="sxs-lookup"><span data-stu-id="b2de9-170">Cluster Monitoring</span></span>
 
-<span data-ttu-id="40755-171">HDInsight Management SDK può essere usato anche per gestire il monitoraggio dei cluster tramite Operations Management Suite (OMS).</span><span class="sxs-lookup"><span data-stu-id="40755-171">The HDInsight Management SDK can also be used to manage monitoring on your clusters via the Operations Management Suite (OMS).</span></span>
+<span data-ttu-id="b2de9-171">HDInsight Management SDK può essere usato anche per gestire il monitoraggio dei cluster tramite Operations Management Suite (OMS).</span><span class="sxs-lookup"><span data-stu-id="b2de9-171">The HDInsight Management SDK can also be used to manage monitoring on your clusters via the Operations Management Suite (OMS).</span></span>
 
-### <a name="enable-oms-monitoring"></a><span data-ttu-id="40755-172">Abilitare il monitoraggio di OMS</span><span class="sxs-lookup"><span data-stu-id="40755-172">Enable OMS Monitoring</span></span>
+### <a name="enable-oms-monitoring"></a><span data-ttu-id="b2de9-172">Abilitare il monitoraggio di OMS</span><span class="sxs-lookup"><span data-stu-id="b2de9-172">Enable OMS Monitoring</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="40755-173">Per abilitare il monitoraggio di OMS è necessaria un'area di lavoro di Log Analytics esistente.</span><span class="sxs-lookup"><span data-stu-id="40755-173">To enable OMS Monitoring, you must have an existing Log Analytics workspace.</span></span> <span data-ttu-id="40755-174">Se l'area non è stata ancora creata, vedere [Creare un'area di lavoro di Log Analytics nel portale di Azure](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-quick-create-workspace) per informazioni su come crearla.</span><span class="sxs-lookup"><span data-stu-id="40755-174">If you have not already created one, you can learn how to do that here: [Create a Log Analytics workspace in the Azure portal](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-quick-create-workspace).</span></span>
+> <span data-ttu-id="b2de9-173">Per abilitare il monitoraggio di OMS è necessaria un'area di lavoro di Log Analytics esistente.</span><span class="sxs-lookup"><span data-stu-id="b2de9-173">To enable OMS Monitoring, you must have an existing Log Analytics workspace.</span></span> <span data-ttu-id="b2de9-174">Se l'area non è stata ancora creata, vedere [Creare un'area di lavoro di Log Analytics nel portale di Azure](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-quick-create-workspace) per informazioni su come crearla.</span><span class="sxs-lookup"><span data-stu-id="b2de9-174">If you have not already created one, you can learn how to do that here: [Create a Log Analytics workspace in the Azure portal](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-quick-create-workspace).</span></span>
 
-<span data-ttu-id="40755-175">Per abilitare il monitoraggio di OMS nel cluster:</span><span class="sxs-lookup"><span data-stu-id="40755-175">To enable OMS Monitoring on your cluster:</span></span>
+<span data-ttu-id="b2de9-175">Per abilitare il monitoraggio di OMS nel cluster:</span><span class="sxs-lookup"><span data-stu-id="b2de9-175">To enable OMS Monitoring on your cluster:</span></span>
 
 ```java
 client.extensions().enableMonitoring("<Resource Group Name", "<Cluster Name>", new ClusterMonitoringRequest().withWorkspaceId("<Workspace Id>"));
 ```
 
-### <a name="view-status-of-oms-monitoring"></a><span data-ttu-id="40755-176">Visualizzare lo stato del monitoraggio di OMS</span><span class="sxs-lookup"><span data-stu-id="40755-176">View Status Of OMS Monitoring</span></span>
+### <a name="view-status-of-oms-monitoring"></a><span data-ttu-id="b2de9-176">Visualizzare lo stato del monitoraggio di OMS</span><span class="sxs-lookup"><span data-stu-id="b2de9-176">View Status Of OMS Monitoring</span></span>
 
-<span data-ttu-id="40755-177">Per ottenere lo stato di OMS nel cluster:</span><span class="sxs-lookup"><span data-stu-id="40755-177">To get the status of OMS on your cluster:</span></span>
+<span data-ttu-id="b2de9-177">Per ottenere lo stato di OMS nel cluster:</span><span class="sxs-lookup"><span data-stu-id="b2de9-177">To get the status of OMS on your cluster:</span></span>
 
 ```java
 client.extensions().getMonitoringStatus("<Resource Group Name", "Cluster Name");
 ```
 
-### <a name="disable-oms-monitoring"></a><span data-ttu-id="40755-178">Disabilitare il monitoraggio di OMS</span><span class="sxs-lookup"><span data-stu-id="40755-178">Disable OMS Monitoring</span></span>
+### <a name="disable-oms-monitoring"></a><span data-ttu-id="b2de9-178">Disabilitare il monitoraggio di OMS</span><span class="sxs-lookup"><span data-stu-id="b2de9-178">Disable OMS Monitoring</span></span>
 
-<span data-ttu-id="40755-179">Per disabilitare OMS nel cluster:</span><span class="sxs-lookup"><span data-stu-id="40755-179">To disable OMS on your cluster:</span></span>
+<span data-ttu-id="b2de9-179">Per disabilitare OMS nel cluster:</span><span class="sxs-lookup"><span data-stu-id="b2de9-179">To disable OMS on your cluster:</span></span>
 
 ```java
 client.extensions().disableMonitoring("<Resource Group Name>", "<Cluster Name>");
 ```
 
-## <a name="script-actions"></a><span data-ttu-id="40755-180">Azioni script</span><span class="sxs-lookup"><span data-stu-id="40755-180">Script Actions</span></span>
+## <a name="script-actions"></a><span data-ttu-id="b2de9-180">Azioni script</span><span class="sxs-lookup"><span data-stu-id="b2de9-180">Script Actions</span></span>
 
-<span data-ttu-id="40755-181">HDInsight offre un metodo di configurazione denominato "azioni script" che richiama script personalizzati per il cluster.</span><span class="sxs-lookup"><span data-stu-id="40755-181">HDInsight provides a configuration method called script actions that invokes custom scripts to customize the cluster.</span></span>
+<span data-ttu-id="b2de9-181">HDInsight offre un metodo di configurazione denominato "azioni script" che richiama script personalizzati per il cluster.</span><span class="sxs-lookup"><span data-stu-id="b2de9-181">HDInsight provides a configuration method called script actions that invokes custom scripts to customize the cluster.</span></span>
 > [!NOTE]
-> <span data-ttu-id="40755-182">Per altre informazioni sulle azioni script, vedere [Personalizzare i cluster HDInsight basati su Linux tramite azioni script](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)</span><span class="sxs-lookup"><span data-stu-id="40755-182">More information on how to use script actions can be found here: [Customize Linux-based HDInsight clusters using script actions](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)</span></span>
+> <span data-ttu-id="b2de9-182">Per altre informazioni sulle azioni script, vedere [Personalizzare i cluster HDInsight basati su Linux tramite azioni script](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)</span><span class="sxs-lookup"><span data-stu-id="b2de9-182">More information on how to use script actions can be found here: [Customize Linux-based HDInsight clusters using script actions](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)</span></span>
 
-### <a name="execute-script-actions"></a><span data-ttu-id="40755-183">Eseguire azioni script</span><span class="sxs-lookup"><span data-stu-id="40755-183">Execute Script Actions</span></span>
+### <a name="execute-script-actions"></a><span data-ttu-id="b2de9-183">Eseguire azioni script</span><span class="sxs-lookup"><span data-stu-id="b2de9-183">Execute Script Actions</span></span>
 
-<span data-ttu-id="40755-184">È possibile eseguire azioni script in un dato cluster nel modo seguente:</span><span class="sxs-lookup"><span data-stu-id="40755-184">You can execute script actions on a given cluster like so:</span></span>
+<span data-ttu-id="b2de9-184">È possibile eseguire azioni script in un dato cluster nel modo seguente:</span><span class="sxs-lookup"><span data-stu-id="b2de9-184">You can execute script actions on a given cluster like so:</span></span>
 
 ```java
 RuntimeScriptAction scriptAction1 = new RuntimeScriptAction()
@@ -400,25 +400,25 @@ client.clusters().executeScriptActions(
     new ExecuteScriptActionParameters().withPersistOnSuccess(false).withScriptActions(new LinkedList<>(Arrays.asList(scriptAction1)))); //add more RuntimeScriptActions to the list to execute multiple scripts
 ```
 
-### <a name="delete-script-action"></a><span data-ttu-id="40755-185">Eliminare un'azione script</span><span class="sxs-lookup"><span data-stu-id="40755-185">Delete Script Action</span></span>
+### <a name="delete-script-action"></a><span data-ttu-id="b2de9-185">Eliminare un'azione script</span><span class="sxs-lookup"><span data-stu-id="b2de9-185">Delete Script Action</span></span>
 
-<span data-ttu-id="40755-186">Per eliminare una determinata azione script persistente in un dato cluster:</span><span class="sxs-lookup"><span data-stu-id="40755-186">To delete a specified persisted script action on a given cluster:</span></span>
+<span data-ttu-id="b2de9-186">Per eliminare una determinata azione script persistente in un dato cluster:</span><span class="sxs-lookup"><span data-stu-id="b2de9-186">To delete a specified persisted script action on a given cluster:</span></span>
 
 ```java
 client.scriptActions().delete("<Resource Group Name>", "<Cluster Name>", "<Script Name>");
 ```
 
-### <a name="list-persisted-script-actions"></a><span data-ttu-id="40755-187">Elencare le azioni script persistenti</span><span class="sxs-lookup"><span data-stu-id="40755-187">List Persisted Script Actions</span></span>
+### <a name="list-persisted-script-actions"></a><span data-ttu-id="b2de9-187">Elencare le azioni script persistenti</span><span class="sxs-lookup"><span data-stu-id="b2de9-187">List Persisted Script Actions</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="40755-188">`listByCluster()` restituisce un oggetto `PagedList<RuntimeScriptActionDetailInner>`.</span><span class="sxs-lookup"><span data-stu-id="40755-188">Both `listByCluster()` returns a `PagedList<RuntimeScriptActionDetailInner>` object.</span></span> <span data-ttu-id="40755-189">La chiamata di `currentPage().items()` restituisce un elenco di `RuntimeScriptActionDetailInner`, con avanzamento di `loadNextPage()` alla pagina successiva.</span><span class="sxs-lookup"><span data-stu-id="40755-189">Calling `currentPage().items()` returns a list of `RuntimeScriptActionDetailInner`, and `loadNextPage()` advances to the next page.</span></span> <span data-ttu-id="40755-190">Questa operazione può essere ripetuta finché `hasNextPage()` non restituisce `false`, che indica che non sono presenti altre pagine.</span><span class="sxs-lookup"><span data-stu-id="40755-190">This can be repeated until `hasNextPage()` returns `false`, indicating that there are no more pages.</span></span>
+> <span data-ttu-id="b2de9-188">`listByCluster()` restituisce un oggetto `PagedList<RuntimeScriptActionDetailInner>`.</span><span class="sxs-lookup"><span data-stu-id="b2de9-188">Both `listByCluster()` returns a `PagedList<RuntimeScriptActionDetailInner>` object.</span></span> <span data-ttu-id="b2de9-189">La chiamata di `currentPage().items()` restituisce un elenco di `RuntimeScriptActionDetailInner`, con avanzamento di `loadNextPage()` alla pagina successiva.</span><span class="sxs-lookup"><span data-stu-id="b2de9-189">Calling `currentPage().items()` returns a list of `RuntimeScriptActionDetailInner`, and `loadNextPage()` advances to the next page.</span></span> <span data-ttu-id="b2de9-190">Questa operazione può essere ripetuta finché `hasNextPage()` non restituisce `false`, che indica che non sono presenti altre pagine.</span><span class="sxs-lookup"><span data-stu-id="b2de9-190">This can be repeated until `hasNextPage()` returns `false`, indicating that there are no more pages.</span></span>
 
-<span data-ttu-id="40755-191">Per elencare tutte le azioni script persistenti per il cluster specificato:</span><span class="sxs-lookup"><span data-stu-id="40755-191">To list all persisted script actions for the specified cluster:</span></span>
+<span data-ttu-id="b2de9-191">Per elencare tutte le azioni script persistenti per il cluster specificato:</span><span class="sxs-lookup"><span data-stu-id="b2de9-191">To list all persisted script actions for the specified cluster:</span></span>
 ```java
 client.scriptActions().listByCluster("<Resource Group Name>", "<Cluster Name>");
 ```
 
-#### <a name="example"></a><span data-ttu-id="40755-192">Esempio</span><span class="sxs-lookup"><span data-stu-id="40755-192">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="b2de9-192">Esempio</span><span class="sxs-lookup"><span data-stu-id="b2de9-192">Example</span></span>
 
 ```java
 PagedList<RuntimeScriptActionDetailInner> scriptsPaged = client.scriptActions().listByCluster(resourceGroupName, clusterName);
@@ -434,17 +434,17 @@ while (true) {
 }
 ```
 
-### <a name="list-all-scripts-execution-history"></a><span data-ttu-id="40755-193">Elencare la cronologia di esecuzione di tutti gli script</span><span class="sxs-lookup"><span data-stu-id="40755-193">List All Scripts' Execution History</span></span>
+### <a name="list-all-scripts-execution-history"></a><span data-ttu-id="b2de9-193">Elencare la cronologia di esecuzione di tutti gli script</span><span class="sxs-lookup"><span data-stu-id="b2de9-193">List All Scripts' Execution History</span></span>
 
-<span data-ttu-id="40755-194">Per elencare la cronologia di esecuzione di tutti gli script per il cluster specificato:</span><span class="sxs-lookup"><span data-stu-id="40755-194">To list all scripts' execution history for the specified cluster:</span></span>
+<span data-ttu-id="b2de9-194">Per elencare la cronologia di esecuzione di tutti gli script per il cluster specificato:</span><span class="sxs-lookup"><span data-stu-id="b2de9-194">To list all scripts' execution history for the specified cluster:</span></span>
 
 ```java
 client.scriptExecutionHistorys().listByCluster("<Resource Group Name>", "<Cluster Name>");
 ```
 
-#### <a name="example"></a><span data-ttu-id="40755-195">Esempio</span><span class="sxs-lookup"><span data-stu-id="40755-195">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="b2de9-195">Esempio</span><span class="sxs-lookup"><span data-stu-id="b2de9-195">Example</span></span>
 
-<span data-ttu-id="40755-196">Questo esempio visualizza tutti i dettagli di tutte le precedenti esecuzioni di script.</span><span class="sxs-lookup"><span data-stu-id="40755-196">This example prints all the details for all past script executions.</span></span>
+<span data-ttu-id="b2de9-196">Questo esempio visualizza tutti i dettagli di tutte le precedenti esecuzioni di script.</span><span class="sxs-lookup"><span data-stu-id="b2de9-196">This example prints all the details for all past script executions.</span></span>
 
 ```java
 PagedList<RuntimeScriptActionDetailInner> scriptExecutionsPaged = client.scriptExecutionHistorys().listByCluster(resourceGroupName, clusterName);
