@@ -14,12 +14,12 @@ ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: 1a219a066f0f89adbf3f541856b36b842520bfbb
-ms.sourcegitcommit: fd67d4088be2cad01c642b9ecf3f9475d9cb4f3c
+ms.openlocfilehash: 4838b6dbd354ad941df12933dddfa7f3e7eef905
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46505919"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799967"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Come usare l'utilità di avvio Spring Boot per Archiviazione di Azure
 
@@ -56,7 +56,7 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
    * Specificare la **località** per l'account di archiviazione.
    * Scegliere la **sottoscrizione** da usare per l'account di archiviazione.
    * Specificare se creare un nuovo **gruppo di risorse** per l'account di archiviazione o sceglierne uno esistente.
-   
+
    ![Specificare le opzioni per l'account di archiviazione di Azure][IMG02]
 
 1. Dopo aver specificato le opzioni elencate sopra, fare clic su **Crea** per creare l'account di archiviazione.
@@ -207,7 +207,7 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
 
    `/users/example/home/storage/src/main/resources/application.properties`
 
-1.  Aprire il file *application.properties* in un editor di testo, aggiungere le righe seguenti e quindi sostituire i valori di esempio con le proprietà appropriate per l'account di archiviazione:
+2. Aprire il file *application.properties* in un editor di testo, aggiungere le righe seguenti e quindi sostituire i valori di esempio con le proprietà appropriate per l'account di archiviazione:
 
    ```yaml
    spring.cloud.azure.credential-file-path=my.azureauth
@@ -216,14 +216,16 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
    spring.cloud.azure.storage.account=wingtiptoysstorage
    ```
    Dove:
-   | Campo | DESCRIZIONE |
-   | ---|---|
-   | `spring.cloud.azure.credential-file-path` | Specifica il file di credenziali di Azure creato in precedenza in questa esercitazione. |
-   | `spring.cloud.azure.resource-group` | Specifica il gruppo di risorse di Azure contenente l'account di archiviazione di Azure. |
-   | `spring.cloud.azure.region` | Specifica l'area geografica indicata al momento della creazione dell'account di archiviazione di Azure. |
-   | `spring.cloud.azure.storage.account` | Specifica l'account di archiviazione di Azure creato in precedenza in questa esercitazione.
 
-1. Salvare e chiudere il file *application.properties*.
+   |                   Campo                   |                                            DESCRIZIONE                                            |
+   |-------------------------------------------|---------------------------------------------------------------------------------------------------|
+   | `spring.cloud.azure.credential-file-path` |            Specifica il file di credenziali di Azure creato in precedenza in questa esercitazione.             |
+   |    `spring.cloud.azure.resource-group`    |           Specifica il gruppo di risorse di Azure contenente l'account di archiviazione di Azure.            |
+   |        `spring.cloud.azure.region`        | Specifica l'area geografica indicata al momento della creazione dell'account di archiviazione di Azure. |
+   |   `spring.cloud.azure.storage.account`    |            Specifica l'account di archiviazione di Azure creato in precedenza in questa esercitazione.             |
+
+
+3. Salvare e chiudere il file *application.properties*.
 
 ## <a name="add-sample-code-to-implement-basic-azure-storage-functionality"></a>Aggiungere codice di esempio per implementare le funzionalità di archiviazione di Azure di base
 
@@ -243,10 +245,10 @@ In questa sezione si creano le classi Java necessarie per archiviare un BLOB nel
 
    ```java
    package com.wingtiptoys.storage;
-   
+
    import org.springframework.boot.SpringApplication;
    import org.springframework.boot.autoconfigure.SpringBootApplication;
-   
+
    @SpringBootApplication
    public class StorageApplication {
       public static void main(String[] args) {
@@ -271,7 +273,7 @@ In questa sezione si creano le classi Java necessarie per archiviare un BLOB nel
 
    ```java
    package com.wingtiptoys.storage;
-   
+
    import org.springframework.beans.factory.annotation.Value;
    import org.springframework.core.io.Resource;
    import org.springframework.core.io.WritableResource;
@@ -280,14 +282,14 @@ In questa sezione si creano le classi Java necessarie per archiviare un BLOB nel
    import org.springframework.web.bind.annotation.PostMapping;
    import org.springframework.web.bind.annotation.RequestBody;
    import org.springframework.web.bind.annotation.RestController;
-   
+
    import java.io.IOException;
    import java.io.OutputStream;
    import java.nio.charset.Charset;
-   
+
    @RestController
    public class WebController {
-   
+
       @Value("blob://test/myfile.txt")
       private Resource blobFile;
 
@@ -297,7 +299,7 @@ In questa sezione si creano le classi Java necessarie per archiviare un BLOB nel
             this.blobFile.getInputStream(),
             Charset.defaultCharset()) + "\n";
       }
-   
+
       @PostMapping(value = "/")
       public String writeBlobFile(@RequestBody String data) throws IOException {
          try (OutputStream os = ((WritableResource) this.blobFile).getOutputStream()) {
@@ -307,7 +309,7 @@ In questa sezione si creano le classi Java necessarie per archiviare un BLOB nel
       }
    }
    ```
-   
+
    La sintassi `@Value("blob://[container]/[blob]")` definisce rispettivamente i nomi del contenitore e del BLOB in cui si vogliono archiviare i dati.
 
 1. Salvare e chiudere il file Java del controller Web.

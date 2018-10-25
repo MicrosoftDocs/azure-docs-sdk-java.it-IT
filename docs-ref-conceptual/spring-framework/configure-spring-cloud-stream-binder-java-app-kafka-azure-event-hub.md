@@ -14,12 +14,12 @@ ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 00062f5442e072af30036388f2f1f066221d7316
-ms.sourcegitcommit: fd67d4088be2cad01c642b9ecf3f9475d9cb4f3c
+ms.openlocfilehash: 85fe1d9c56530b716a1f1750713f4c87d43dfad3
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46506434"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799957"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-apache-kafka-with-azure-event-hubs"></a>Come usare Spring Boot Starter per Apache Kafka con Hub eventi di Azure
 
@@ -58,7 +58,7 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
    * Scegliere la **sottoscrizione** da usare per lo spazio dei nomi.
    * Specificare se creare un nuovo **gruppo di risorse** per lo spazio dei nomi o sceglierne uno esistente.
    * Specificare la **località** per lo spazio dei nomi dell'hub eventi.
-   
+
    ![Specificare le opzioni per lo spazio dei nomi dell'hub eventi di Azure][IMG02]
 
 1. Dopo aver specificato le opzioni elencate sopra, fare clic su **Crea** per creare lo spazio dei nomi.
@@ -222,7 +222,7 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
 
    `/users/example/home/eventhub/src/main/resources/application.properties`
 
-1.  Aprire il file *application.properties* in un editor di testo, aggiungere le righe seguenti e quindi sostituire i valori di esempio con le proprietà appropriate per l'hub eventi:
+2. Aprire il file *application.properties* in un editor di testo, aggiungere le righe seguenti e quindi sostituire i valori di esempio con le proprietà appropriate per l'hub eventi:
 
    ```yaml
    spring.cloud.azure.credential-file-path=my.azureauth
@@ -235,17 +235,19 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
    spring.cloud.stream.bindings.output.destination=wingtiptoyshub
    ```
    Dove:
-   | Campo | DESCRIZIONE |
-   | ---|---|
-   | `spring.cloud.azure.credential-file-path` | Specifica il file di credenziali di Azure creato in precedenza in questa esercitazione. |
-   | `spring.cloud.azure.resource-group` | Specifica il gruppo di risorse di Azure contenente l'hub eventi di Azure. |
-   | `spring.cloud.azure.region` | Specifica l'area geografica indicata al momento della creazione dell'hub eventi di Azure. |
-   | `spring.cloud.azure.eventhub.namespace` | Specifica il nome univoco fornito al momento della creazione dello spazio dei nomi dell'hub eventi di Azure. |
-   | `spring.cloud.stream.bindings.input.destination` | Specifica l'hub eventi di Azure destinazione di input, che in questo caso è l'hub creato in precedenza in questa esercitazione. |
-   | `spring.cloud.stream.bindings.input.group `| Specifica un gruppo di consumer dell'hub eventi di Azure, che è possibile impostare su "$Default" per usare il gruppo di consumer di base creato al momento della creazione dell'hub eventi di Azure. |
-   | `spring.cloud.stream.bindings.output.destination` | Specifica l'hub eventi di Azure destinazione di output, che per questa esercitazione è uguale alla destinazione di input. |
 
-1. Salvare e chiudere il file *application.properties*.
+   |                       Campo                       |                                                                                   DESCRIZIONE                                                                                    |
+   |---------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |     `spring.cloud.azure.credential-file-path`     |                                                    Specifica il file di credenziali di Azure creato in precedenza in questa esercitazione.                                                    |
+   |        `spring.cloud.azure.resource-group`        |                                                      Specifica il gruppo di risorse di Azure contenente l'hub eventi di Azure.                                                      |
+   |            `spring.cloud.azure.region`            |                                           Specifica l'area geografica indicata al momento della creazione dell'hub eventi di Azure.                                            |
+   |      `spring.cloud.azure.eventhub.namespace`      |                                          Specifica il nome univoco fornito al momento della creazione dello spazio dei nomi dell'hub eventi di Azure.                                           |
+   | `spring.cloud.stream.bindings.input.destination`  |                            Specifica l'hub eventi di Azure destinazione di input, che in questo caso è l'hub creato in precedenza in questa esercitazione.                            |
+   |    `spring.cloud.stream.bindings.input.group `    | Specifica un gruppo di consumer dell'hub eventi di Azure, che è possibile impostare su "$Default" per usare il gruppo di consumer di base creato al momento della creazione dell'hub eventi di Azure. |
+   | `spring.cloud.stream.bindings.output.destination` |                               Specifica l'hub eventi di Azure destinazione di output, che per questa esercitazione è uguale alla destinazione di input.                               |
+
+
+3. Salvare e chiudere il file *application.properties*.
 
 ## <a name="add-sample-code-to-implement-basic-event-hub-functionality"></a>Aggiungere codice di esempio per implementare le funzionalità di base dell'hub eventi
 
@@ -265,10 +267,10 @@ In questa sezione si creano le classi Java necessarie per inviare eventi all'hub
 
    ```java
    package com.wingtiptoys.kafka;
-   
+
    import org.springframework.boot.SpringApplication;
    import org.springframework.boot.autoconfigure.SpringBootApplication;
-   
+
    @SpringBootApplication
    public class KafkaApplication {
       public static void main(String[] args) {
@@ -286,7 +288,7 @@ In questa sezione si creano le classi Java necessarie per inviare eventi all'hub
 
    ```java
    package com.wingtiptoys.kafka;
-   
+
    import org.springframework.beans.factory.annotation.Autowired;
    import org.springframework.cloud.stream.annotation.EnableBinding;
    import org.springframework.cloud.stream.messaging.Source;
@@ -295,7 +297,7 @@ In questa sezione si creano le classi Java necessarie per inviare eventi all'hub
    import org.springframework.web.bind.annotation.RequestBody;
    import org.springframework.web.bind.annotation.RequestParam;
    import org.springframework.web.bind.annotation.RestController;
-   
+
    @EnableBinding(Source.class)
    @RestController
    public class KafkaSource {
@@ -318,13 +320,13 @@ In questa sezione si creano le classi Java necessarie per inviare eventi all'hub
 
    ```java
    package com.wingtiptoys.kafka;
-   
+
    import org.slf4j.Logger;
    import org.slf4j.LoggerFactory;
    import org.springframework.cloud.stream.annotation.EnableBinding;
    import org.springframework.cloud.stream.annotation.StreamListener;
    import org.springframework.cloud.stream.messaging.Sink;
-   
+
    @EnableBinding(Sink.class)
    public class KafkaSink {
       private static final Logger LOGGER = LoggerFactory.getLogger(KafkaSink.class);
