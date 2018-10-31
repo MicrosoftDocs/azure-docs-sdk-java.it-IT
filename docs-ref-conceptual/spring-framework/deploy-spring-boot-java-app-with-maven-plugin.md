@@ -6,17 +6,17 @@ documentationcenter: java
 author: rmcmurray
 manager: routlaw
 editor: brborges
-ms.author: robmcm;kevinzha;brborges
-ms.date: 10/04/2018
+ms.author: robmcm
+ms.date: 10/18/2018
 ms.devlang: java
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: 36afcc764c1cb984779518ddec004ecbfa1b7c57
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: dc3038fed6859203f36e0c4dc9a9b01e81a7c4c5
+ms.sourcegitcommit: dae7511a9d93ca7f388d5b0e05dc098e22c2f2f6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48876395"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49962495"
 ---
 # <a name="deploy-a-spring-boot-jar-file-web-app-to-azure-app-service-on-linux"></a>Distribuire un'app Web Spring Boot basata su file JAR nel servizio app di Azure in Linux
 
@@ -33,6 +33,18 @@ Per completare i passaggi di questa esercitazione, devono essere installati e co
 * [Java Development Kit (JDK)](https://www.azul.com/downloads/azure-only/zulu/), versione 1.7 o successiva.
 * Apache [Maven](https://maven.apache.org/), versione 3.
 * Un client [Git](https://git-scm.com/downloads).
+
+## <a name="install-and-sign-in-to-azure-cli"></a>Installare l'interfaccia della riga di comando di Azure ed eseguire l'accesso
+
+Il modo più semplice e facile per distribuire l'applicazione Spring Boot tramite il plug-in Maven consiste nell'usare l'[interfaccia della riga di comando di Azure](https://docs.microsoft.com/cli/azure/).
+
+Accedere all'account Azure con l'interfaccia della riga di comando di Azure:
+   
+   ```shell
+   az login
+   ```
+   
+Seguire le istruzioni per completare il processo di accesso.
 
 ## <a name="clone-the-sample-app"></a>Clonare l'app di esempio
 
@@ -82,10 +94,10 @@ In questa sezione si configurerà il progetto Spring Boot `pom.xml` in modo che 
 
 1. Aprire `pom.xml` in un editor di codice.
 
-1. Nella sezione `<build>` di pom.xml aggiungere la voce `<plugin>` seguente all'interno del tag `<plugins>`.
+2. Nella sezione `<build>` di pom.xml aggiungere la voce `<plugin>` seguente all'interno del tag `<plugins>`.
 
    ```xml
-  <plugin>
+   <plugin>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-webapp-maven-plugin</artifactId>
     <version>1.4.0</version>
@@ -108,10 +120,10 @@ In questa sezione si configurerà il progetto Spring Boot `pom.xml` in modo che 
       <!-- Java Runtime Stack for Web App on Linux-->
       <linuxRuntime>jre8</linuxRuntime>
     </configuration>
-  </plugin>
-  ```
+   </plugin>
+   ```
 
-1. Aggiornare i segnaposto seguenti nella configurazione del plug-in:
+3. Aggiornare i segnaposto seguenti nella configurazione del plug-in:
 
 | Placeholder | DESCRIZIONE |
 | ----------- | ----------- |
@@ -120,18 +132,6 @@ In questa sezione si configurerà il progetto Spring Boot `pom.xml` in modo che 
 | `REGION` | Un'area di Azure in cui l'app web è ospitata, ad esempio `westus2`. È possibile ottenere un elenco di aree da Cloud Shell o dall’interfaccia della riga di comando utilizzando il comando `az account list-locations`. |
 
 Un elenco completo delle opzioni di configurazione è disponibile nelle [informazioni di riferimento sul plug-in Maven in GitHub](https://github.com/Microsoft/azure-maven-plugins/tree/develop/azure-webapp-maven-plugin).
-
-## <a name="install-and-log-in-to-azure-cli"></a>Installare l'interfaccia della riga di comando di Azure ed eseguire l'accesso
-
-Il modo più semplice e facile per distribuire l'applicazione Spring Boot tramite il plug-in Maven consiste nell'usare l'[interfaccia della riga di comando di Azure](https://docs.microsoft.com/cli/azure/).
-
-1. Accedere all'account Azure con l'interfaccia della riga di comando di Azure:
-   
-   ```shell
-   az login
-   ```
-   
-   Seguire le istruzioni per completare il processo di accesso.
 
 ## <a name="deploy-the-app-to-azure"></a>Distribuire l'app in Azure
 

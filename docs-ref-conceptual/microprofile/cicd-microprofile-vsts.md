@@ -14,12 +14,12 @@ ms.service: Azure DevOps
 ms.tgt_pltfrm: multiple
 ms.topic: tutorial
 ms.workload: web
-ms.openlocfilehash: c2b6bf3370982d26d8d23fede370e0105a70b734
-ms.sourcegitcommit: fd67d4088be2cad01c642b9ecf3f9475d9cb4f3c
+ms.openlocfilehash: 818e37291fa47f99cb161c63a86062bddbf6248c
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46506435"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799937"
 ---
 # <a name="cicd-for-microprofile-applications-using-azure-devops"></a>CI/CD per applicazioni MicroProfile con Azure DevOps
 
@@ -38,9 +38,9 @@ Il processo di inserimento in un contenitore di Azure DevOps verrà avviato comp
 - Creare un nuovo [progetto DevOps di Azure](https://docs.microsoft.com/en-us/vsts/organizations/projects/create-project?view=vsts&tabs=new-nav) e usare l'URL GIT precedente per **importare un repository**
 - Creare un [registro contenitori di Azure](https://azure.microsoft.com/en-us/services/container-registry)
 - Creare un'app web per contenitori di Azure
-> [!NOTE]
->
-> Selezionare "Avvio rapido" in Impostazioni contenitore durante il provisioning dell'istanza di app Web
+  > [!NOTE]
+  >
+  > Selezionare "Avvio rapido" in Impostazioni contenitore durante il provisioning dell'istanza di app Web
 
 
 ## <a name="create-a-build-definition"></a>Creare una definizione di compilazione
@@ -54,17 +54,17 @@ La definizione di compilazione in Azure DevOps esegue automaticamente tutte le a
 2. Fare clic sul pulsante **Nuova pipeline** e quindi su **Continua** per iniziare a definire le attività di compilazione.
 3. Selezionare "Maven" nell'elenco di modelli e quindi fare clic sul pulsante **Applica** per compilare il progetto Java.
 4. Usare il menu a discesa per il campo Pool di agenti per selezionare l'opzione **Hosted Linux Preview** (Anteprima Linux ospitata).
-> [!NOTE]
->
-> In questo modo si indica ad Azure DevOps il server di compilazione da usare.  È possibile usare un server di compilazione personalizzato privato.
+   > [!NOTE]
+   >
+   > In questo modo si indica ad Azure DevOps il server di compilazione da usare.  È possibile usare un server di compilazione personalizzato privato.
 
 5. Per configurare la compilazione per l'integrazione continua, selezionare la scheda **Trigger** e quindi la casella di controllo **Abilita l'integrazione continua**.  
 
 <img src="media/VSTS/Build-Triggers2.png"> 
- 
-6. Selezionare la scheda **Attività** per tornare alla pagina principale della pipeline di compilazione.
-7. Usare il menu a discesa **Salva e accoda** per selezionare l'opzione **Salva**.
- 
+
+6. Selezionare la scheda <strong>Attività</strong> per tornare alla pagina principale della pipeline di compilazione.
+7. Usare il menu a discesa <strong>Salva e accoda</strong> per selezionare l'opzione <strong>Salva</strong>.
+
 
 ## <a name="create-a-docker-build-image"></a>Creare un'immagine di compilazione Docker
 
@@ -72,15 +72,14 @@ In questa attività, Azure DevOps usa un Dockerfile con un'immagine di base di P
 
 1. Selezionare la scheda **Attività** per tornare alla pagina principale della pipeline di compilazione.
 2. Fare clic sull'icona **+** per aggiungere una nuova attività alla definizione di compilazione.
- 
+
 <img src="media/VSTS/Tasks-add4.png">
- 
-3. Selezionare "Docker" nell'elenco di modelli e quindi fare clic sul pulsante **Aggiungi**.
-4. Immettere un nome descrittivo nel campo **Nome visualizzato**.
-5. Verificare che nel menu a discesa per **Tipo di registro contenitori** sia selezionata l'opzione **Registro contenitori di Azure**.
-> [!NOTE]
->
->  Se si usa l'hub Docker o un altro registro, selezionare invece "Registro contenitori".  Fare quindi clic sul pulsante "+ Nuovo" per specificare le relative credenziali e informazioni di connessione. Ignorare quindi la sezione Comandi e continuare.
+
+3. Selezionare &quot;Docker&quot; nell'elenco di modelli e quindi fare clic sul pulsante <strong>Aggiungi</strong>.
+4. Immettere un nome descrittivo nel campo <strong>Nome visualizzato</strong>.
+5. Verificare che nel menu a discesa per <strong>Tipo di registro contenitori</strong> sia selezionata l'opzione <strong>Registro contenitori di Azure</strong>.
+&gt; [!NOTE]
+&gt; &gt;Se si usa l'hub Docker o un altro registro, selezionare invece &quot;Registro contenitori&quot;.  Fare quindi clic sul pulsante &quot;+ Nuovo&quot; per specificare le relative credenziali e informazioni di connessione. Ignorare quindi la sezione Comandi e continuare.
 
 6. Usare il menu a discesa **Sottoscrizione di Azure** per selezionare l'ID sottoscrizione di Azure.  Fare quindi clic sul pulsante **Autorizza**.
 7. Nel menu a discesa **Registro contenitori di Azure** selezionare il nome del registro creato in Azure.
@@ -103,7 +102,7 @@ In questa attività, Azure DevOps eseguirà il push dell'immagine Docker nel reg
 5. Fare clic sul numero di build per verificare che la pipeline di compilazione per il progetto Java sia stata completata correttamente.
 
 <img src="media/VSTS/Build-Number6.png">
- 
+
 
 ## <a name="create-a-release-definition-for-a-java-app"></a>Creare una definizione di versione per un'app Java
 
@@ -112,20 +111,19 @@ La pipeline di versione in Azure DevOps attiva automaticamente la distribuzione 
 1. Fare clic sulla scheda "Compilazione e versione" nella parte superiore della pagina del progetto DevOps di Azure.  Selezionare quindi il collegamento **Versioni**.
 
 <img src="media/VSTS/Release-new-pipeline7.png">
- 
-2. Fare clic sul pulsante "Nuova pipeline".
-3. Selezionare **Distribuisci un'app Java in Servizio app di Azure** nell'elenco di modelli e quindi fare clic sul pulsante **Applica**.
+
+2. Fare clic sul pulsante &quot;Nuova pipeline**
+3. Selezionare <strong>Distribuisci un'app Java in Servizio app di Azure</strong> nell'elenco di modelli e quindi fare clic sul pulsante <strong>Applica</strong>.
 
 <img src="media/VSTS/deploy-java-template8.png">
- 
-4. Impostare un **nome di fase**, ad esempio Sviluppo, Test, Staging o Produzione.  Fare quindi clic sul pulsante **X** per chiudere la finestra popup.
-5. Fare clic sul pulsante **+ Aggiungi** nella sezione Artefatti.  Gli artefatti della definizione di compilazione verranno così collegati a questa definizione di versione.  
-6. Usare il menu a discesa per **Origine (pipeline di compilazione)** per selezionare la definizione di compilazione. Fare quindi clic sul pulsante **Aggiungi** per continuare.
+
+4. Impostare un <strong>nome di fase</strong>, ad esempio Sviluppo, Test, Staging o Produzione.  Fare quindi clic sul pulsante <strong>X</strong> per chiudere la finestra popup.
+5. Fare clic sul pulsante <strong>+ Aggiungi</strong> nella sezione Artefatti.  Gli artefatti della definizione di compilazione verranno così collegati a questa definizione di versione.<br/>6. Usare il menu a discesa per <strong>Origine (pipeline di compilazione)</strong> per selezionare la definizione di compilazione. Fare quindi clic sul pulsante <strong>Aggiungi</strong> per continuare.
 
 <img src="media/VSTS/add-artifact9.png">
- 
-7. Fare clic sulla scheda **Attività** della pipeline.  Selezionare quindi il nome della fase.
- 
+
+7. Fare clic sulla scheda <strong>Attività</strong> della pipeline.  Selezionare quindi il nome della fase.
+
 <img src="media/VSTS/release-stage10.png">
 
 8. Usare il menu a discesa **Sottoscrizione di Azure** per selezionare l'ID sottoscrizione di Azure.
@@ -152,13 +150,13 @@ Ad esempio:
 4. Fare clic su **Deploy Azure App Service** (Distribuisci servizio app di Azure). 
 5. Espandere la sezione **Impostazioni applicazione e configurazione** e quindi fare clic sull'icona del percorso di spostamento per il campo **Impostazioni app** per aggiungere le variabili di ambiente per la connessione al registro contenitori durante la distribuzione.
 6. Fare clic sul pulsante "+ Aggiungi" per definire le impostazioni seguenti dell'app e assegnare le variabili di ambiente.
-- DOCKER_REGISTRY_SERVER_PASSWORD = $(registry.password)
-- DOCKER_REGISTRY_SERVER_URL = $(registry.url)
-- DOCKER_REGISTRY_SERVER_USERNAME = $(registry.username)
+7. DOCKER_REGISTRY_SERVER_PASSWORD = $(registry.password)
+8. DOCKER_REGISTRY_SERVER_URL = $(registry.url)
+9. DOCKER_REGISTRY_SERVER_USERNAME = $(registry.username)
 
 <img src="media/VSTS/environment-variables14.png">
- 
-7. Fare clic sul pulsante **OK** per continuare.
+
+7. Fare clic sul pulsante <strong>OK</strong> per continuare.
 
 ## <a name="setup-continious-deployment--deploy-java-application"></a>Configurare la distribuzione continua e distribuire l'applicazione Java
 
@@ -166,22 +164,22 @@ Ad esempio:
 2. Nella sezione Artefatti fare clic sull'icona a forma di fulmine.  Impostare quindi **Trigger di distribuzione continua** su Abilitato.
 
 <img src="media/VSTS/release-enable-CD.png">
- 
-3. Fare clic sul pulsante **Salva** e quindi sul pulsante **OK**. 
-4. Fare clic sul menu a discesa **+ Versione** e quindi selezionare il collegamento **Crea una versione**.
-5. Usare il menu a discesa **Fasi per la modifica di un trigger da automatizzato a manuale** per selezionare la casella di controllo per il nome della fase.
-6. Fare clic sul pulsante **Crea** per continuare.
-7. Fare clic sul numero di versione.  Passare quindi il puntatore del mouse sul nome della fase e fare clic su **Distribuisci**.
-8. Fare quindi clic sul pulsante **Distribuisci** nella finestra popup per avviare il processo di distribuzione in Azure.
+
+3. Fare clic sul pulsante <strong>Salva</strong> e quindi sul pulsante <strong>OK</strong>. 
+4. Fare clic sul menu a discesa <strong>+ Versione</strong> e quindi selezionare il collegamento <strong>Crea una versione</strong>.
+5. Usare il menu a discesa <strong>Fasi per la modifica di un trigger da automatizzato a manuale</strong> per selezionare la casella di controllo per il nome della fase.
+6. Fare clic sul pulsante <strong>Crea</strong> per continuare.
+7. Fare clic sul numero di versione.  Passare quindi il puntatore del mouse sul nome della fase e fare clic su <strong>Distribuisci</strong>.
+8. Fare quindi clic sul pulsante <strong>Distribuisci</strong> nella finestra popup per avviare il processo di distribuzione in Azure.
 
 
 ## <a name="test-the-java-web-application"></a>Testare l'applicazione Web Java
 1. Eseguire l'URL dell'app Web in un Web browser:  
-https://{nome-servizio-app}.azurewebsites.net/api/hello
+   https://{nome-servizio-app}.azurewebsites.net/api/hello
 
- 
+
 <img src="media/VSTS/web-app16.png">
 
 2. Nella pagina Web verrà visualizzato **Hello Azure!**
- 
+
 <img src="media/VSTS/web-api17.png">
