@@ -1,0 +1,53 @@
+---
+title: Java JDK e supporto a lungo termine per lo sviluppo di Azure
+description: Download e indicazione del supporto di Azure per lo sviluppo e l'esecuzione di applicazioni Java.
+author: rloutlaw
+manager: angerobe
+ms.devlang: java
+ms.topic: article
+ms.date: 10/15/2017
+ms.author: routlaw
+ms.openlocfilehash: 2865219f350990e8b07f7d2cd99f536168a6b8d4
+ms.sourcegitcommit: 7df2d442ad7cbdb235e5dd35302a9b73379c23d5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50026997"
+---
+# <a name="get-java-jdk-downloads-and-support-when-developing-for-azure"></a><span data-ttu-id="ec2f5-103">Ottenere download e supporto di Java JDK nelle attività di sviluppo per Azure</span><span class="sxs-lookup"><span data-stu-id="ec2f5-103">Get Java JDK downloads and support when developing for Azure</span></span>
+
+<span data-ttu-id="ec2f5-104">Gli sviluppatori Java in Azure e Azure Stack possono compilare ed eseguire applicazioni Java di produzione usando le [build Zulu Enterprise di OpenJDK di Azul Systems](https://www.azul.com/downloads/azure-only/zulu/) senza incorrere in costi di supporto aggiuntivi.</span><span class="sxs-lookup"><span data-stu-id="ec2f5-104">Java developers on Azure and Azure Stack can build and run production Java applications using [Azul Systems Zulu Enterprise builds of OpenJDK](https://www.azul.com/downloads/azure-only/zulu/) without incurring additional support costs.</span></span> <span data-ttu-id="ec2f5-105">È possibile usare qualsiasi runtime Java in Azure, ma usando Zulu si ottengono aggiornamenti di manutenzione gratuiti ed è possibile richiedere assistenza a Microsoft con un [piano di supporto di Azure qualificato](https://azure.microsoft.com/support/plans/).</span><span class="sxs-lookup"><span data-stu-id="ec2f5-105">You can use any Java runtime you want on Azure, but when you use Zulu you get free maintenance updates and can create support issues with Microsoft with a  [qualified Azure support plan](https://azure.microsoft.com/support/plans/).</span></span>
+
+## <a name="supported-java-versions-and-update-schedule"></a><span data-ttu-id="ec2f5-106">Versioni Java supportate e piano degli aggiornamenti</span><span class="sxs-lookup"><span data-stu-id="ec2f5-106">Supported Java versions and update schedule</span></span>
+
+<span data-ttu-id="ec2f5-107">Azul Systems fornirà [build Zulu Enterprise di OpenJDK per Microsoft Azure](https://www.azul.com/downloads/azure-only/zulu/) completamente supportate per tutte le versioni di Java con supporto a lungo termine (LTS), a partire da Java SE 7, 8 e 11.</span><span class="sxs-lookup"><span data-stu-id="ec2f5-107">Azul Systems will provide fully-supported [Zulu Enterprise builds of OpenJDK for Microsoft Azure](https://www.azul.com/downloads/azure-only/zulu/) for all long-term support (LTS) versions of Java, starting with Java SE 7, 8, and 11.</span></span> <span data-ttu-id="ec2f5-108">Per altre informazioni, vedere il [comunicato stampa di Azul](https://www.azul.com/press_release/free-java-production-support-for-microsoft-azure-azure-stack).</span><span class="sxs-lookup"><span data-stu-id="ec2f5-108">More information can be found in the [Azul press release](https://www.azul.com/press_release/free-java-production-support-for-microsoft-azure-azure-stack).</span></span>
+
+
+<span data-ttu-id="ec2f5-109">Queste versioni di JDK avranno aggiornamenti trimestrali di sicurezza e correzioni di bug, nonché patch e aggiornamenti critici straordinari, se necessario.</span><span class="sxs-lookup"><span data-stu-id="ec2f5-109">These JDK releases will have quarterly security updates and bug fixes as well as critical out-of-band updates and patches as needed.</span></span>  <span data-ttu-id="ec2f5-110">Questo supporto include il backporting a Java 7 e 8 degli aggiornamenti di sicurezza e delle correzioni di bug applicate alle versioni più recenti di Java come Java 11, garantendo la stabilità e la sicurezza delle versioni precedenti di Java.</span><span class="sxs-lookup"><span data-stu-id="ec2f5-110">This support includes back porting of security updates and bug fixes to Java 7 and 8 reported in newer versions of Java such as Java 11, and ensures the continued stability and security of older versions of Java.</span></span>  <span data-ttu-id="ec2f5-111">I clienti di Azure hanno diritto a questi aggiornamenti di sicurezza e correzioni di bug per la piattaforma senza incorrere in costi di sottoscrizione non pianificati per Java SE.</span><span class="sxs-lookup"><span data-stu-id="ec2f5-111">Azure customers are entitled to these security updates and platform bug fixes without incurring any unplanned Java SE subscription fees.</span></span> <span data-ttu-id="ec2f5-112">Le date di supporto per ogni versione di Java SE sono evidenziate nell'immagine seguente.</span><span class="sxs-lookup"><span data-stu-id="ec2f5-112">The dates of support for each version of Java SE are highlighted in the image below.</span></span>
+
+![Sequenza temporale del supporto JDK per Azure](media/azure-jdk-support.png)
+
+<span data-ttu-id="ec2f5-114">Azul Systems mantiene una [roadmap Java SE](https://www.azul.com/products/azul_support_roadmap/) per queste versioni.</span><span class="sxs-lookup"><span data-stu-id="ec2f5-114">Azul Systems maintains a [Java SE roadmap](https://www.azul.com/products/azul_support_roadmap/) for these releases.</span></span>
+
+## <a name="use-for-local-development"></a><span data-ttu-id="ec2f5-115">Usare per lo sviluppo locale</span><span class="sxs-lookup"><span data-stu-id="ec2f5-115">Use for Local development</span></span> 
+
+<span data-ttu-id="ec2f5-116">Gli sviluppatori possono scaricare Java JDK per Azure e Azure Stack dal sito Web di [Azul Systems](https://www.azul.com/downloads/azure-only/zulu/).</span><span class="sxs-lookup"><span data-stu-id="ec2f5-116">Developers can download Java JDKs for Azure and Azure Stack from [Azul Systems' website](https://www.azul.com/downloads/azure-only/zulu/).</span></span> <span data-ttu-id="ec2f5-117">I download sono disponibili per Windows, Linux e macOS.</span><span class="sxs-lookup"><span data-stu-id="ec2f5-117">Downloads are available for Windows, Linux, and macOS.</span></span> <span data-ttu-id="ec2f5-118">Gli sviluppatori che usano Linux possono ottenere i pacchetti anche tramite i gestori di pacchetti [yum](https://www.azul.com/downloads/azure-only/zulu/#yum-repo) e [apt](https://www.azul.com/downloads/azure-only/zulu/#apt-repo).</span><span class="sxs-lookup"><span data-stu-id="ec2f5-118">Developers working on Linux can also get packages through the  [yum](https://www.azul.com/downloads/azure-only/zulu/#yum-repo) and [apt](https://www.azul.com/downloads/azure-only/zulu/#apt-repo) package managers.</span></span>
+
+<span data-ttu-id="ec2f5-119">Il supporto per Azul Zulu JDK supportato da Azure è disponibile quando si sviluppa per Azure o Azure Stack con un [piano di supporto per Azure qualificato](https://azure.microsoft.com/support/plans/).</span><span class="sxs-lookup"><span data-stu-id="ec2f5-119">Product support for the Azure-supported Azul Zulu JDK is available through when developing for Azure or Azure Stack with a [qualified Azure support plan](https://azure.microsoft.com/support/plans/).</span></span>
+
+## <a name="use-in-docker-containers"></a><span data-ttu-id="ec2f5-120">Usare nei contenitori Docker</span><span class="sxs-lookup"><span data-stu-id="ec2f5-120">Use in Docker containers</span></span>
+
+<span data-ttu-id="ec2f5-121">È possibile creare immagini Docker illimitate usando le build Zulu Enterprise di OpenJDK su qualsiasi distribuzione.</span><span class="sxs-lookup"><span data-stu-id="ec2f5-121">You can build unlimited Docker images using Zulu Enterprise builds of OpenJDK on any distros of your choice.</span></span> <span data-ttu-id="ec2f5-122">Le immagini di Zulu Docker basate su Azul Zulu Enterprise per Azure JDK sono disponibili nel [repository Docker pubblico di Microsoft](https://hub.docker.com/r/microsoft/java-jdk/).</span><span class="sxs-lookup"><span data-stu-id="ec2f5-122">Zulu Docker images based off the Azul Zulu Enterprise for Azure JDKs are available on [Microsoft's public Docker repository](https://hub.docker.com/r/microsoft/java-jdk/).</span></span> <span data-ttu-id="ec2f5-123">I documenti Dockerfile usati per creare queste immagini sono disponibili nel [repository GitHub Java di Microsoft](https://github.com/Microsoft/java/tree/master/docker).</span><span class="sxs-lookup"><span data-stu-id="ec2f5-123">The  Dockerfiles that used to build these images are available on [Microsoft's Java GitHub repo](https://github.com/Microsoft/java/tree/master/docker).</span></span>
+
+<span data-ttu-id="ec2f5-124">Per inserire le app in un contenitore usando queste immagini, sarà necessario impostare un'istruzione `FROM` nel proprio documento Dockerfile e configurare il contenitore con le dipendenze dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="ec2f5-124">To containerize your apps using these images, you will need to set a `FROM` statement in your Dockerfile and then configure the container with your application's dependencies.</span></span> <span data-ttu-id="ec2f5-125">Ad esempio, per eseguire un'applicazione Java SE contenuta in un pacchetto JAR con binding alla porta 8080:</span><span class="sxs-lookup"><span data-stu-id="ec2f5-125">For example, to run a JAR file packaged Java SE application that binds to port 8080:</span></span>
+
+```Dockerfile
+FROM  microsoft/java-jdk:<tag>
+EXPOSE 8080
+ADD target/hello.jar hello.jar
+ENTRYPOINT ["java", "-jar","/hello.jar"]
+```
+
+## <a name="azure-service-runtime-support"></a><span data-ttu-id="ec2f5-126">Supporto di runtime del servizio di Azure</span><span class="sxs-lookup"><span data-stu-id="ec2f5-126">Azure service runtime support</span></span>
+
+<span data-ttu-id="ec2f5-127">I servizi della piattaforma di Azure come [servizio app](/azure/app-service/containers/), [Funzioni](/azure/azure-functions/functions-create-first-java-maven), [Service Fabric](/azure/service-fabric/) e [HDInsight](/azure/hdinsight/) usano le build Zulu Enterprise di OpenJDK con l'applicazione automatica di patch di sicurezza e correzioni di bug per le versioni minori di Java.</span><span class="sxs-lookup"><span data-stu-id="ec2f5-127">Azure platform services such as [App Service](/azure/app-service/containers/), [Functions](/azure/azure-functions/functions-create-first-java-maven), [Service Fabric](/azure/service-fabric/) and [HDInsight](/azure/hdinsight/)  use Zulu Enterprise builds of OpenJDK with built-in auto-patching of minor releases of Java with security patches and bug fixes.</span></span>
