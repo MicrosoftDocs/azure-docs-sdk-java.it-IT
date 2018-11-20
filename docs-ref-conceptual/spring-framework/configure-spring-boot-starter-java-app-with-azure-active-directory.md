@@ -14,28 +14,37 @@ ms.service: active-directory
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 665768ffe7bec977d553ffa62e1dbd6b968eb9de
-ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
+ms.openlocfilehash: da44a40b7b52e75bb0a946b46ddfc033bfef54e9
+ms.sourcegitcommit: 473c3aec55f3e9b131dc87c62e2eac218ce9564e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49799907"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51571718"
 ---
-# <a name="how-to-use-the-spring-boot-starter-for-azure-active-directory"></a>Come usare l'utilità di avvio Spring Boot per Azure Active Directory
+# <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory"></a>Esercitazione: Proteggere un'app Web Java con l'utilità di avvio Spring Boot per Azure Active Directory
 
 ## <a name="overview"></a>Panoramica
 
 Questo articolo illustra la creazione di un'app con **[Spring Initializr]**, che usa l'utilità di avvio Spring Boot per Azure Active Directory (Azure AD).
 
+In questa esercitazione si apprenderà come:
+
+> [!div class="checklist"]
+> * Creare un'applicazione Java con Spring Initializr
+> * Configurare Azure Active Directory
+> * Proteggere l'applicazione con le classi e le annotazioni Spring Boot
+> * Compilare e testare l'applicazione Java
+
+Se non si ha una sottoscrizione di Azure, creare un [account gratuito](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) prima di iniziare.
+
 ## <a name="prerequisites"></a>Prerequisiti
 
 I prerequisiti seguenti sono necessari per completare le procedure disponibili in questo articolo:
 
-* Sottoscrizione di Azure; se non si ha una sottoscrizione di Azure, è possibile attivare i [vantaggi per i sottoscrittori di MSDN] oppure iscriversi per ottenere un [account Azure gratuito].
-* [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) versione 1.7 o successiva.
+* [Java Development Kit (JDK)](https://aka.ms/azure-jdks) versione 1.7 o successiva.
 * [Apache Maven](http://maven.apache.org/), versione 3.0 o versione successiva.
 
-## <a name="create-a-custom-application-using-the-spring-initializr"></a>Creare un'applicazione personalizzata tramite Spring Initializr
+## <a name="create-an-application-using-the-spring-initializr"></a>Creare un'applicazione con Spring Initializr
 
 1. Passare a <https://start.spring.io/>.
 
@@ -171,9 +180,9 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
 
 1. Estrarre i file da dall'archivio di progetti creato e scaricato in precedenza in questa esercitazione in una directory.
 
-1. Passare alla cartella padre per il progetto e aprire il file *pom.xml* in un editor di testo.
+1. Passare alla cartella padre per il progetto e aprire il file di progetto Maven `pom.xml` in un editor di testo.
 
-1. Aggiungere le dipendenze per la sicurezza OAuth2 di Spring, ad esempio:
+1. Aggiungere le dipendenze per la sicurezza OAuth2 di Spring a `pom.xml`:
 
    ```xml
    <dependency>
@@ -351,31 +360,20 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sull'uso di Azure Active Directory, vedere gli articoli seguenti:
+In questa esercitazione si è creata una nuova applicazione Web Java con l'utilità di avvio per Azure Active Directory, si è configurato un nuovo tenant di Azure AD registrandovi quindi una nuova applicazione e infine si è configurata l'applicazione in modo da usare le annotazioni e le classi Spring per proteggere l'app Web. Per altre informazioni su Spring e Azure, passare al centro di documentazione di Spring in Azure.
 
-* [Documentazione di Azure Active Directory].
-
-Per altre informazioni sull'uso delle applicazioni Spring Boot in Azure, vedere gli articoli seguenti:
-
-* [Distribuire un'applicazione Spring Boot nel servizio app di Azure](deploy-spring-boot-java-web-app-on-azure.md)
-
-* [Eseguire un'applicazione Spring Boot in un cluster Kubernetes nel servizio contenitore di Azure](deploy-spring-boot-java-app-on-kubernetes.md)
-
-Per altre informazioni su come usare Azure con Java, vedere [Azure per sviluppatori Java] e [Strumenti Java per Visual Studio Team Services].
-
-**[Spring Framework]** è una soluzione open source che consente agli sviluppatori Java di creare applicazioni di livello enterprise. Uno dei progetti più comuni che si basa su questa piattaforma è [Spring Boot], che fornisce un approccio semplificato per la creazione di applicazioni Java autonome. Per semplificare le operazioni iniziali con Spring Boot per gli sviluppatori, alcuni pacchetti Spring Boot di esempio sono disponibili all'indirizzo <https://github.com/spring-guides/>. Oltre a consentire di scegliere dall'elenco di progetti Spring Boot di base, **[Spring Initializr]** semplifica le operazioni iniziali degli sviluppatori per la creazione di applicazioni Spring Boot personalizzate.
-
-Per un esempio più dettagliato, vedere l'[esempio Spring Boot per Azure Active Directory][AAD Spring Boot Sample] in GitHub.
+> [!div class="nextstepaction"]
+> [Spring in Azure](/java/azure/spring-framework)
 
 <!-- URL List -->
 
-[Documentazione di Azure Active Directory]: /azure/active-directory/
+[Azure Active Directory Documentation]: /azure/active-directory/
 [AAD app manifest]: /azure/active-directory/develop/active-directory-application-manifest
 [Get started with Azure AD]: /azure/active-directory/get-started-azure-ad
-[Azure per sviluppatori Java]: /java/azure/
-[Account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
-[Strumenti Java per Visual Studio Team Services]: https://java.visualstudio.com/
-[vantaggi per i sottoscrittori di MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
+[Azure for Java Developers]: /java/azure/
+[free Azure account]: https://azure.microsoft.com/pricing/free-trial/
+[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/
 [Spring Framework]: https://spring.io/
