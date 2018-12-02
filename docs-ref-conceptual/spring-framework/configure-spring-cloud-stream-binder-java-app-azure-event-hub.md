@@ -8,137 +8,137 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 09/10/2018
+ms.date: 11/21/2018
 ms.devlang: java
 ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: dfc3b6121bddcb637735047e2e7bc7485da9a4fe
-ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
+ms.openlocfilehash: 49fd85690d21fa2eb4a2830e3958ef21cbd2e8c1
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49799947"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338895"
 ---
-# <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a><span data-ttu-id="118e2-103">Come creare un'applicazione Spring Cloud Stream Binder con Hub eventi di Azure</span><span class="sxs-lookup"><span data-stu-id="118e2-103">How to create a Spring Cloud Stream Binder application with Azure Event Hubs</span></span>
+# <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a><span data-ttu-id="7f311-103">Come creare un'applicazione Spring Cloud Stream Binder con Hub eventi di Azure</span><span class="sxs-lookup"><span data-stu-id="7f311-103">How to create a Spring Cloud Stream Binder application with Azure Event Hubs</span></span>
 
-## <a name="overview"></a><span data-ttu-id="118e2-104">Panoramica</span><span class="sxs-lookup"><span data-stu-id="118e2-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="7f311-104">Panoramica</span><span class="sxs-lookup"><span data-stu-id="7f311-104">Overview</span></span>
 
-<span data-ttu-id="118e2-105">Questo articolo illustra come configurare un'applicazione Spring Cloud Stream Binder basata su Java creata con Spring Boot Initializer con Hub eventi di Azure.</span><span class="sxs-lookup"><span data-stu-id="118e2-105">This article demonstrates how to configure a Java-based Spring Cloud Stream Binder application created with the Spring Boot Initializer with Azure Event Hubs.</span></span>
+<span data-ttu-id="7f311-105">Questo articolo illustra come configurare un'applicazione Spring Cloud Stream Binder basata su Java creata con Spring Boot Initializer con Hub eventi di Azure.</span><span class="sxs-lookup"><span data-stu-id="7f311-105">This article demonstrates how to configure a Java-based Spring Cloud Stream Binder application created with the Spring Boot Initializer with Azure Event Hubs.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="118e2-106">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="118e2-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="7f311-106">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="7f311-106">Prerequisites</span></span>
 
-<span data-ttu-id="118e2-107">I prerequisiti seguenti sono necessari per seguire le procedure disponibili in questo articolo:</span><span class="sxs-lookup"><span data-stu-id="118e2-107">The following prerequisites are required in order to follow the steps in this article:</span></span>
+<span data-ttu-id="7f311-107">I prerequisiti seguenti sono necessari per seguire le procedure disponibili in questo articolo:</span><span class="sxs-lookup"><span data-stu-id="7f311-107">The following prerequisites are required in order to follow the steps in this article:</span></span>
 
-* <span data-ttu-id="118e2-108">Sottoscrizione di Azure; se non si ha una sottoscrizione di Azure, è possibile attivare i [vantaggi per i sottoscrittori di MSDN] oppure iscriversi per ottenere un [account Azure gratuito].</span><span class="sxs-lookup"><span data-stu-id="118e2-108">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
-* <span data-ttu-id="118e2-109">[Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) versione 1.7 o successiva.</span><span class="sxs-lookup"><span data-stu-id="118e2-109">A [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/), version 1.7 or later.</span></span>
-* <span data-ttu-id="118e2-110">[Apache Maven](http://maven.apache.org/), versione 3.0 o versione successiva.</span><span class="sxs-lookup"><span data-stu-id="118e2-110">[Apache Maven](http://maven.apache.org/), version 3.0 or later.</span></span>
+* <span data-ttu-id="7f311-108">Sottoscrizione di Azure; se non si ha una sottoscrizione di Azure, è possibile attivare i [vantaggi per i sottoscrittori di MSDN] oppure iscriversi per ottenere un [account Azure gratuito].</span><span class="sxs-lookup"><span data-stu-id="7f311-108">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
+* <span data-ttu-id="7f311-109">Java Development Kit (JDK) supportato.</span><span class="sxs-lookup"><span data-stu-id="7f311-109">A supported Java Development Kit (JDK).</span></span> <span data-ttu-id="7f311-110">Per altre informazioni sulle versioni di JDK utilizzabili per lo sviluppo in Azure, vedere <https://aka.ms/azure-jdks>.</span><span class="sxs-lookup"><span data-stu-id="7f311-110">For more information about the JDKs available for use when developing on Azure, see <https://aka.ms/azure-jdks>.</span></span>
+* <span data-ttu-id="7f311-111">[Apache Maven](http://maven.apache.org/), versione 3.0 o versione successiva.</span><span class="sxs-lookup"><span data-stu-id="7f311-111">[Apache Maven](http://maven.apache.org/), version 3.0 or later.</span></span>
 
 > [!IMPORTANT]
 >
-> <span data-ttu-id="118e2-111">Per completare i passaggi descritti in questo articolo è necessario Spring Boot versione 2.0 o successiva.</span><span class="sxs-lookup"><span data-stu-id="118e2-111">Spring Boot version 2.0 or greater is required to complete the steps in this article.</span></span>
+> <span data-ttu-id="7f311-112">Per completare i passaggi descritti in questo articolo è necessario Spring Boot versione 2.0 o successiva.</span><span class="sxs-lookup"><span data-stu-id="7f311-112">Spring Boot version 2.0 or greater is required to complete the steps in this article.</span></span>
 >
 
-## <a name="create-an-azure-event-hub-using-the-azure-portal"></a><span data-ttu-id="118e2-112">Creare un hub eventi di Azure con il portale di Azure</span><span class="sxs-lookup"><span data-stu-id="118e2-112">Create an Azure Event Hub using the Azure portal</span></span>
+## <a name="create-an-azure-event-hub-using-the-azure-portal"></a><span data-ttu-id="7f311-113">Creare un hub eventi di Azure con il portale di Azure</span><span class="sxs-lookup"><span data-stu-id="7f311-113">Create an Azure Event Hub using the Azure portal</span></span>
 
-### <a name="create-an-azure-event-hub-namespace"></a><span data-ttu-id="118e2-113">Creare uno spazio dei nomi dell'hub eventi di Azure</span><span class="sxs-lookup"><span data-stu-id="118e2-113">Create an Azure Event Hub Namespace</span></span>
+### <a name="create-an-azure-event-hub-namespace"></a><span data-ttu-id="7f311-114">Creare uno spazio dei nomi dell'hub eventi di Azure</span><span class="sxs-lookup"><span data-stu-id="7f311-114">Create an Azure Event Hub Namespace</span></span>
 
-1. <span data-ttu-id="118e2-114">Passare al portale di Azure all'indirizzo <https://portal.azure.com/> ed eseguire l'accesso.</span><span class="sxs-lookup"><span data-stu-id="118e2-114">Browse to the Azure portal at <https://portal.azure.com/> and sign in.</span></span>
+1. <span data-ttu-id="7f311-115">Passare al portale di Azure all'indirizzo <https://portal.azure.com/> ed eseguire l'accesso.</span><span class="sxs-lookup"><span data-stu-id="7f311-115">Browse to the Azure portal at <https://portal.azure.com/> and sign in.</span></span>
 
-1. <span data-ttu-id="118e2-115">Fare clic su **+Crea una risorsa**, quindi su **Internet delle cose** e infine su **Hub eventi**.</span><span class="sxs-lookup"><span data-stu-id="118e2-115">Click **+Create a resource**, then **Internet of Things**, and then click **Event Hubs**.</span></span>
+1. <span data-ttu-id="7f311-116">Fare clic su **+Crea una risorsa**, quindi su **Internet delle cose** e infine su **Hub eventi**.</span><span class="sxs-lookup"><span data-stu-id="7f311-116">Click **+Create a resource**, then **Internet of Things**, and then click **Event Hubs**.</span></span>
 
    ![Creare uno spazio dei nomi dell'hub eventi di Azure][IMG01]
 
-1. <span data-ttu-id="118e2-117">Nella pagina **Crea spazio dei nomi** immettere le informazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="118e2-117">On the **Create Namespace** page, enter the following information:</span></span>
+1. <span data-ttu-id="7f311-118">Nella pagina **Crea spazio dei nomi** immettere le informazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="7f311-118">On the **Create Namespace** page, enter the following information:</span></span>
 
-   * <span data-ttu-id="118e2-118">Immettere un **nome** univoco, che diventerà parte dell'URI dello spazio dei nomi dell'hub eventi.</span><span class="sxs-lookup"><span data-stu-id="118e2-118">Enter a unique **Name**, which will become part of the URI for your event hub namespace.</span></span> <span data-ttu-id="118e2-119">Se si immette **wingtiptoys** in **Nome**, ad esempio, l'URI sarà *wingtiptoys.servicebus.windows.net*.</span><span class="sxs-lookup"><span data-stu-id="118e2-119">For example: if you entered **wingtiptoys** for the **Name**, the URI would be *wingtiptoys.servicebus.windows.net*.</span></span>
-   * <span data-ttu-id="118e2-120">Scegliere un **piano tariffario** per lo spazio dei nomi dell'hub eventi.</span><span class="sxs-lookup"><span data-stu-id="118e2-120">Choose a **Pricing tier** for your event hub namespace.</span></span>
-   * <span data-ttu-id="118e2-121">Scegliere la **sottoscrizione** da usare per lo spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="118e2-121">Choose the **Subscription** you want to use for your namespace.</span></span>
-   * <span data-ttu-id="118e2-122">Specificare se creare un nuovo **gruppo di risorse** per lo spazio dei nomi o sceglierne uno esistente.</span><span class="sxs-lookup"><span data-stu-id="118e2-122">Specify whether to create a new **Resource group** for your namespace, or choose an existing resource group.</span></span>
-   * <span data-ttu-id="118e2-123">Specificare la **località** per lo spazio dei nomi dell'hub eventi.</span><span class="sxs-lookup"><span data-stu-id="118e2-123">Specify the **Location** for your event hub namespace.</span></span>
+   * <span data-ttu-id="7f311-119">Immettere un **nome** univoco, che diventerà parte dell'URI dello spazio dei nomi dell'hub eventi.</span><span class="sxs-lookup"><span data-stu-id="7f311-119">Enter a unique **Name**, which will become part of the URI for your event hub namespace.</span></span> <span data-ttu-id="7f311-120">Se si immette **wingtiptoys** in **Nome**, ad esempio, l'URI sarà *wingtiptoys.servicebus.windows.net*.</span><span class="sxs-lookup"><span data-stu-id="7f311-120">For example: if you entered **wingtiptoys** for the **Name**, the URI would be *wingtiptoys.servicebus.windows.net*.</span></span>
+   * <span data-ttu-id="7f311-121">Scegliere un **piano tariffario** per lo spazio dei nomi dell'hub eventi.</span><span class="sxs-lookup"><span data-stu-id="7f311-121">Choose a **Pricing tier** for your event hub namespace.</span></span>
+   * <span data-ttu-id="7f311-122">Scegliere la **sottoscrizione** da usare per lo spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="7f311-122">Choose the **Subscription** you want to use for your namespace.</span></span>
+   * <span data-ttu-id="7f311-123">Specificare se creare un nuovo **gruppo di risorse** per lo spazio dei nomi o sceglierne uno esistente.</span><span class="sxs-lookup"><span data-stu-id="7f311-123">Specify whether to create a new **Resource group** for your namespace, or choose an existing resource group.</span></span>
+   * <span data-ttu-id="7f311-124">Specificare la **località** per lo spazio dei nomi dell'hub eventi.</span><span class="sxs-lookup"><span data-stu-id="7f311-124">Specify the **Location** for your event hub namespace.</span></span>
 
    ![Specificare le opzioni per lo spazio dei nomi dell'hub eventi di Azure][IMG02]
 
-1. <span data-ttu-id="118e2-125">Dopo aver specificato le opzioni elencate sopra, fare clic su **Crea** per creare lo spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="118e2-125">When you have specified the options listed above, click **Create** to create your namespace.</span></span>
+1. <span data-ttu-id="7f311-126">Dopo aver specificato le opzioni elencate sopra, fare clic su **Crea** per creare lo spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="7f311-126">When you have specified the options listed above, click **Create** to create your namespace.</span></span>
 
-### <a name="create-an-azure-event-hub-in-your-namespace"></a><span data-ttu-id="118e2-126">Creare un hub eventi di Azure nello spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="118e2-126">Create an Azure Event Hub in your namespace</span></span>
+### <a name="create-an-azure-event-hub-in-your-namespace"></a><span data-ttu-id="7f311-127">Creare un hub eventi di Azure nello spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="7f311-127">Create an Azure Event Hub in your namespace</span></span>
 
-1. <span data-ttu-id="118e2-127">Passare al portale di Azure all'indirizzo <https://portal.azure.com/>.</span><span class="sxs-lookup"><span data-stu-id="118e2-127">Browse to the Azure portal at <https://portal.azure.com/>.</span></span>
+1. <span data-ttu-id="7f311-128">Passare al portale di Azure all'indirizzo <https://portal.azure.com/>.</span><span class="sxs-lookup"><span data-stu-id="7f311-128">Browse to the Azure portal at <https://portal.azure.com/>.</span></span>
 
-1. <span data-ttu-id="118e2-128">Fare clic su **Tutte le risorse** e quindi sullo spazio dei nomi creato.</span><span class="sxs-lookup"><span data-stu-id="118e2-128">Click **All resources**, and then click the namespace that you created.</span></span>
+1. <span data-ttu-id="7f311-129">Fare clic su **Tutte le risorse** e quindi sullo spazio dei nomi creato.</span><span class="sxs-lookup"><span data-stu-id="7f311-129">Click **All resources**, and then click the namespace that you created.</span></span>
 
    ![Selezionare lo spazio dei nomi dell'hub eventi di Azure][IMG03]
 
-1. <span data-ttu-id="118e2-130">Fare clic su **Hub eventi** e quindi su **+Hub eventi**.</span><span class="sxs-lookup"><span data-stu-id="118e2-130">Click **Event Hubs**, and then click **+Event Hub**.</span></span>
+1. <span data-ttu-id="7f311-131">Fare clic su **Hub eventi** e quindi su **+Hub eventi**.</span><span class="sxs-lookup"><span data-stu-id="7f311-131">Click **Event Hubs**, and then click **+Event Hub**.</span></span>
 
    ![Aggiungere un nuovo hub eventi di Azure][IMG04]
 
-1. <span data-ttu-id="118e2-132">Nella pagina **Crea hub eventi** immettere un **nome** univoco per l'hub eventi e quindi fare clic su **Crea**.</span><span class="sxs-lookup"><span data-stu-id="118e2-132">On the **Create Event Hub** page, enter a unique **Name** for your Event Hub, and then click **Create**.</span></span>
+1. <span data-ttu-id="7f311-133">Nella pagina **Crea hub eventi** immettere un **nome** univoco per l'hub eventi e quindi fare clic su **Crea**.</span><span class="sxs-lookup"><span data-stu-id="7f311-133">On the **Create Event Hub** page, enter a unique **Name** for your Event Hub, and then click **Create**.</span></span>
 
    ![Creare Hub eventi di Azure][IMG05]
 
-1. <span data-ttu-id="118e2-134">Al termine della creazione, l'hub eventi sarà incluso nell'elenco nella pagina **Hub eventi**.</span><span class="sxs-lookup"><span data-stu-id="118e2-134">When your Event Hub has been created, it will be listed on the **Event Hubs** page.</span></span>
+1. <span data-ttu-id="7f311-135">Al termine della creazione, l'hub eventi sarà incluso nell'elenco nella pagina **Hub eventi**.</span><span class="sxs-lookup"><span data-stu-id="7f311-135">When your Event Hub has been created, it will be listed on the **Event Hubs** page.</span></span>
 
    ![Creare Hub eventi di Azure][IMG06]
 
-### <a name="create-an-azure-storage-account-for-your-event-hub-checkpoints"></a><span data-ttu-id="118e2-136">Creare un account di archiviazione di Azure per i checkpoint dell'hub eventi</span><span class="sxs-lookup"><span data-stu-id="118e2-136">Create an Azure Storage Account for your Event Hub checkpoints</span></span>
+### <a name="create-an-azure-storage-account-for-your-event-hub-checkpoints"></a><span data-ttu-id="7f311-137">Creare un account di archiviazione di Azure per i checkpoint dell'hub eventi</span><span class="sxs-lookup"><span data-stu-id="7f311-137">Create an Azure Storage Account for your Event Hub checkpoints</span></span>
 
-1. <span data-ttu-id="118e2-137">Passare al portale di Azure all'indirizzo <https://portal.azure.com/>.</span><span class="sxs-lookup"><span data-stu-id="118e2-137">Browse to the Azure portal at <https://portal.azure.com/>.</span></span>
+1. <span data-ttu-id="7f311-138">Passare al portale di Azure all'indirizzo <https://portal.azure.com/>.</span><span class="sxs-lookup"><span data-stu-id="7f311-138">Browse to the Azure portal at <https://portal.azure.com/>.</span></span>
 
-1. <span data-ttu-id="118e2-138">Fare clic su **+Crea una risorsa**, quindi su **Archiviazione** e infine su **Account di archiviazione**.</span><span class="sxs-lookup"><span data-stu-id="118e2-138">Click **+Create a resource**, then **Storage**, and then click **Storage Account**.</span></span>
+1. <span data-ttu-id="7f311-139">Fare clic su **+Crea una risorsa**, quindi su **Archiviazione** e infine su **Account di archiviazione**.</span><span class="sxs-lookup"><span data-stu-id="7f311-139">Click **+Create a resource**, then **Storage**, and then click **Storage Account**.</span></span>
 
    ![Creare un account di archiviazione di Azure][IMG07]
 
-1. <span data-ttu-id="118e2-140">Nella pagina **Crea spazio dei nomi** immettere le informazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="118e2-140">On the **Create Namespace** page, enter the following information:</span></span>
+1. <span data-ttu-id="7f311-141">Nella pagina **Crea spazio dei nomi** immettere le informazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="7f311-141">On the **Create Namespace** page, enter the following information:</span></span>
 
-   * <span data-ttu-id="118e2-141">Immettere un **nome** univoco, che diventerà parte dell'URI dell'account di archiviazione.</span><span class="sxs-lookup"><span data-stu-id="118e2-141">Enter a unique **Name**, which will become part of the URI for your storage account.</span></span> <span data-ttu-id="118e2-142">Se si immette **wingtiptoys** in **Nome**, ad esempio, l'URI sarà *wingtiptoys.core.windows.net*.</span><span class="sxs-lookup"><span data-stu-id="118e2-142">For example: if you entered **wingtiptoys** for the **Name**, the URI would be *wingtiptoys.core.windows.net*.</span></span>
-   * <span data-ttu-id="118e2-143">Scegliere **Archivio BLOB** in **Tipologia account**.</span><span class="sxs-lookup"><span data-stu-id="118e2-143">Choose **Blob storage** for the **Account kind**.</span></span>
-   * <span data-ttu-id="118e2-144">Specificare la **località** per l'account di archiviazione.</span><span class="sxs-lookup"><span data-stu-id="118e2-144">Specify the **Location** for your storage account.</span></span>
-   * <span data-ttu-id="118e2-145">Scegliere la **sottoscrizione** da usare per l'account di archiviazione.</span><span class="sxs-lookup"><span data-stu-id="118e2-145">Choose the **Subscription** you want to use for your storage account.</span></span>
-   * <span data-ttu-id="118e2-146">Specificare se creare un nuovo **gruppo di risorse** per l'account di archiviazione o sceglierne uno esistente.</span><span class="sxs-lookup"><span data-stu-id="118e2-146">Specify whether to create a new **Resource group** for your storage account, or choose an existing resource group.</span></span>
+   * <span data-ttu-id="7f311-142">Immettere un **nome** univoco, che diventerà parte dell'URI dell'account di archiviazione.</span><span class="sxs-lookup"><span data-stu-id="7f311-142">Enter a unique **Name**, which will become part of the URI for your storage account.</span></span> <span data-ttu-id="7f311-143">Se si immette **wingtiptoys** in **Nome**, ad esempio, l'URI sarà *wingtiptoys.core.windows.net*.</span><span class="sxs-lookup"><span data-stu-id="7f311-143">For example: if you entered **wingtiptoys** for the **Name**, the URI would be *wingtiptoys.core.windows.net*.</span></span>
+   * <span data-ttu-id="7f311-144">Scegliere **Archivio BLOB** in **Tipologia account**.</span><span class="sxs-lookup"><span data-stu-id="7f311-144">Choose **Blob storage** for the **Account kind**.</span></span>
+   * <span data-ttu-id="7f311-145">Specificare la **località** per l'account di archiviazione.</span><span class="sxs-lookup"><span data-stu-id="7f311-145">Specify the **Location** for your storage account.</span></span>
+   * <span data-ttu-id="7f311-146">Scegliere la **sottoscrizione** da usare per l'account di archiviazione.</span><span class="sxs-lookup"><span data-stu-id="7f311-146">Choose the **Subscription** you want to use for your storage account.</span></span>
+   * <span data-ttu-id="7f311-147">Specificare se creare un nuovo **gruppo di risorse** per l'account di archiviazione o sceglierne uno esistente.</span><span class="sxs-lookup"><span data-stu-id="7f311-147">Specify whether to create a new **Resource group** for your storage account, or choose an existing resource group.</span></span>
 
    ![Specificare le opzioni per l'account di archiviazione di Azure][IMG08]
 
-1. <span data-ttu-id="118e2-148">Dopo aver specificato le opzioni elencate sopra, fare clic su **Crea** per creare l'account di archiviazione.</span><span class="sxs-lookup"><span data-stu-id="118e2-148">When you have specified the options listed above, click **Create** to create your storage account.</span></span>
+1. <span data-ttu-id="7f311-149">Dopo aver specificato le opzioni elencate sopra, fare clic su **Crea** per creare l'account di archiviazione.</span><span class="sxs-lookup"><span data-stu-id="7f311-149">When you have specified the options listed above, click **Create** to create your storage account.</span></span>
 
-## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a><span data-ttu-id="118e2-149">Creare un'applicazione Spring Boot semplice con Spring Initializr</span><span class="sxs-lookup"><span data-stu-id="118e2-149">Create a simple Spring Boot application with the Spring Initializr</span></span>
+## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a><span data-ttu-id="7f311-150">Creare un'applicazione Spring Boot semplice con Spring Initializr</span><span class="sxs-lookup"><span data-stu-id="7f311-150">Create a simple Spring Boot application with the Spring Initializr</span></span>
 
-1. <span data-ttu-id="118e2-150">Passare a <https://start.spring.io/>.</span><span class="sxs-lookup"><span data-stu-id="118e2-150">Browse to <https://start.spring.io/>.</span></span>
+1. <span data-ttu-id="7f311-151">Passare a <https://start.spring.io/>.</span><span class="sxs-lookup"><span data-stu-id="7f311-151">Browse to <https://start.spring.io/>.</span></span>
 
-1. <span data-ttu-id="118e2-151">Specificare le opzioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="118e2-151">Specify the following options:</span></span>
+1. <span data-ttu-id="7f311-152">Specificare le opzioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="7f311-152">Specify the following options:</span></span>
 
-   * <span data-ttu-id="118e2-152">Generare un progetto **Maven** con **Java**.</span><span class="sxs-lookup"><span data-stu-id="118e2-152">Generate a **Maven** project with **Java**.</span></span>
-   * <span data-ttu-id="118e2-153">Specificare **Spring Boot** versione 2.0 o successiva.</span><span class="sxs-lookup"><span data-stu-id="118e2-153">Specify a **Spring Boot** version that is equal to or greater than 2.0.</span></span>
-   * <span data-ttu-id="118e2-154">Specificare i nomi di **Group** (Gruppo) e **Artifact** (Artefatto) per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="118e2-154">Specify the **Group** and **Artifact** names for your application.</span></span>
-   * <span data-ttu-id="118e2-155">Aggiungere la dipendenza **Web**.</span><span class="sxs-lookup"><span data-stu-id="118e2-155">Add the **Web** dependency.</span></span>
+   * <span data-ttu-id="7f311-153">Generare un progetto **Maven** con **Java**.</span><span class="sxs-lookup"><span data-stu-id="7f311-153">Generate a **Maven** project with **Java**.</span></span>
+   * <span data-ttu-id="7f311-154">Specificare **Spring Boot** versione 2.0 o successiva.</span><span class="sxs-lookup"><span data-stu-id="7f311-154">Specify a **Spring Boot** version that is equal to or greater than 2.0.</span></span>
+   * <span data-ttu-id="7f311-155">Specificare i nomi di **Group** (Gruppo) e **Artifact** (Artefatto) per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="7f311-155">Specify the **Group** and **Artifact** names for your application.</span></span>
+   * <span data-ttu-id="7f311-156">Aggiungere la dipendenza **Web**.</span><span class="sxs-lookup"><span data-stu-id="7f311-156">Add the **Web** dependency.</span></span>
 
       ![Opzioni di base di Spring Initializr][SI01]
 
    > [!NOTE]
    >
-   > <span data-ttu-id="118e2-157">Spring Initializr usa i nomi in **Group** (Gruppo) e **Artifact** (Artefatto) per creare il nome del pacchetto, ad esempio *com.wingtiptoys.eventhub*.</span><span class="sxs-lookup"><span data-stu-id="118e2-157">The Spring Initializr uses the **Group** and **Artifact** names to create the package name; for example: *com.wingtiptoys.eventhub*.</span></span>
+   > <span data-ttu-id="7f311-158">Spring Initializr usa i nomi in **Group** (Gruppo) e **Artifact** (Artefatto) per creare il nome del pacchetto, ad esempio *com.wingtiptoys.eventhub*.</span><span class="sxs-lookup"><span data-stu-id="7f311-158">The Spring Initializr uses the **Group** and **Artifact** names to create the package name; for example: *com.wingtiptoys.eventhub*.</span></span>
    >
 
-1. <span data-ttu-id="118e2-158">Dopo aver specificato le opzioni elencate sopra, fare clic su **Generate Project** (Genera progetto).</span><span class="sxs-lookup"><span data-stu-id="118e2-158">When you have specified the options listed above, click **Generate Project**.</span></span>
+1. <span data-ttu-id="7f311-159">Dopo aver specificato le opzioni elencate sopra, fare clic su **Generate Project** (Genera progetto).</span><span class="sxs-lookup"><span data-stu-id="7f311-159">When you have specified the options listed above, click **Generate Project**.</span></span>
 
-1. <span data-ttu-id="118e2-159">Quando richiesto, scaricare il progetto in un percorso nel computer locale.</span><span class="sxs-lookup"><span data-stu-id="118e2-159">When prompted, download the project to a path on your local computer.</span></span>
+1. <span data-ttu-id="7f311-160">Quando richiesto, scaricare il progetto in un percorso nel computer locale.</span><span class="sxs-lookup"><span data-stu-id="7f311-160">When prompted, download the project to a path on your local computer.</span></span>
 
    ![Scaricare il progetto Spring][SI02]
 
-1. <span data-ttu-id="118e2-161">Dopo l'estrazione dei file nel sistema locale, la semplice applicazione Spring Boot sarà pronta per la modifica.</span><span class="sxs-lookup"><span data-stu-id="118e2-161">After you have extracted the files on your local system, your simple Spring Boot application will be ready for editing.</span></span>
+1. <span data-ttu-id="7f311-162">Dopo l'estrazione dei file nel sistema locale, la semplice applicazione Spring Boot sarà pronta per la modifica.</span><span class="sxs-lookup"><span data-stu-id="7f311-162">After you have extracted the files on your local system, your simple Spring Boot application will be ready for editing.</span></span>
 
-## <a name="configure-your-spring-boot-app-to-use-the-azure-event-hub-starter"></a><span data-ttu-id="118e2-162">Configurare l'app Spring Boot per l'uso dell'utilità di avvio per Hub eventi di Azure</span><span class="sxs-lookup"><span data-stu-id="118e2-162">Configure your Spring Boot app to use the Azure Event Hub starter</span></span>
+## <a name="configure-your-spring-boot-app-to-use-the-azure-event-hub-starter"></a><span data-ttu-id="7f311-163">Configurare l'app Spring Boot per l'uso dell'utilità di avvio per Hub eventi di Azure</span><span class="sxs-lookup"><span data-stu-id="7f311-163">Configure your Spring Boot app to use the Azure Event Hub starter</span></span>
 
-1. <span data-ttu-id="118e2-163">Individuare il file *pom.xml* nella directory radice dell'app, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="118e2-163">Locate the *pom.xml* file in the root directory of your app; for example:</span></span>
+1. <span data-ttu-id="7f311-164">Individuare il file *pom.xml* nella directory radice dell'app, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="7f311-164">Locate the *pom.xml* file in the root directory of your app; for example:</span></span>
 
    `C:\SpringBoot\eventhub\pom.xml`
 
-   <span data-ttu-id="118e2-164">-oppure-</span><span class="sxs-lookup"><span data-stu-id="118e2-164">-or-</span></span>
+   <span data-ttu-id="7f311-165">-oppure-</span><span class="sxs-lookup"><span data-stu-id="7f311-165">-or-</span></span>
 
    `/users/example/home/eventhub/pom.xml`
 
-1. <span data-ttu-id="118e2-165">Aprire il file *pom.xml* in un editor di testo e aggiungere l'utilità di avvio Spring Cloud Stream Binder per Hub eventi di Azure all'elenco in `<dependencies>`:</span><span class="sxs-lookup"><span data-stu-id="118e2-165">Open the *pom.xml* file in a text editor, and add the Spring Cloud Azure Event Hub Stream Binder starter to the list of `<dependencies>`:</span></span>
+1. <span data-ttu-id="7f311-166">Aprire il file *pom.xml* in un editor di testo e aggiungere l'utilità di avvio Spring Cloud Stream Binder per Hub eventi di Azure all'elenco in `<dependencies>`:</span><span class="sxs-lookup"><span data-stu-id="7f311-166">Open the *pom.xml* file in a text editor, and add the Spring Cloud Azure Event Hub Stream Binder starter to the list of `<dependencies>`:</span></span>
 
    ```xml
    <dependency>
@@ -150,36 +150,36 @@ ms.locfileid: "49799947"
 
    ![Modificare il file pom.xml][SI03]
 
-1. <span data-ttu-id="118e2-167">Salvare e chiudere il file *pom.xml*.</span><span class="sxs-lookup"><span data-stu-id="118e2-167">Save and close the *pom.xml* file.</span></span>
+1. <span data-ttu-id="7f311-168">Salvare e chiudere il file *pom.xml*.</span><span class="sxs-lookup"><span data-stu-id="7f311-168">Save and close the *pom.xml* file.</span></span>
 
-## <a name="create-an-azure-credential-file"></a><span data-ttu-id="118e2-168">Creare un file di credenziali di Azure</span><span class="sxs-lookup"><span data-stu-id="118e2-168">Create an Azure Credential File</span></span>
+## <a name="create-an-azure-credential-file"></a><span data-ttu-id="7f311-169">Creare un file di credenziali di Azure</span><span class="sxs-lookup"><span data-stu-id="7f311-169">Create an Azure Credential File</span></span>
 
-1. <span data-ttu-id="118e2-169">Aprire un prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="118e2-169">Open a command prompt.</span></span>
+1. <span data-ttu-id="7f311-170">Aprire un prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="7f311-170">Open a command prompt.</span></span>
 
-1. <span data-ttu-id="118e2-170">Passare alla directory *resources* dell'app Spring Boot, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="118e2-170">Navigate to the *resources* directory of your Spring Boot app; for example:</span></span>
+1. <span data-ttu-id="7f311-171">Passare alla directory *resources* dell'app Spring Boot, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="7f311-171">Navigate to the *resources* directory of your Spring Boot app; for example:</span></span>
 
    ```shell
    cd C:\SpringBoot\eventhub\src\main\resources
    ```
 
-   <span data-ttu-id="118e2-171">-oppure-</span><span class="sxs-lookup"><span data-stu-id="118e2-171">-or-</span></span>
+   <span data-ttu-id="7f311-172">-oppure-</span><span class="sxs-lookup"><span data-stu-id="7f311-172">-or-</span></span>
 
    ```shell
    cd /users/example/home/eventhub/src/main/resources
    ```
 
-1. <span data-ttu-id="118e2-172">Accedere all'account Azure:</span><span class="sxs-lookup"><span data-stu-id="118e2-172">Sign in to your Azure account:</span></span>
+1. <span data-ttu-id="7f311-173">Accedere all'account Azure:</span><span class="sxs-lookup"><span data-stu-id="7f311-173">Sign in to your Azure account:</span></span>
 
    ```azurecli
    az login
    ```
 
-1. <span data-ttu-id="118e2-173">Elencare le sottoscrizioni:</span><span class="sxs-lookup"><span data-stu-id="118e2-173">List your subscriptions:</span></span>
+1. <span data-ttu-id="7f311-174">Elencare le sottoscrizioni:</span><span class="sxs-lookup"><span data-stu-id="7f311-174">List your subscriptions:</span></span>
 
    ```azurecli
    az account list
    ```
-   <span data-ttu-id="118e2-174">Azure restituirà un elenco delle sottoscrizioni e sarà necessario copiare il GUID per la sottoscrizione che si vuole usare, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="118e2-174">Azure will return a list of your subscriptions, and you will need to copy the GUID for the subscription that you want to use; for example:</span></span>
+   <span data-ttu-id="7f311-175">Azure restituirà un elenco delle sottoscrizioni e sarà necessario copiare il GUID per la sottoscrizione che si vuole usare, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="7f311-175">Azure will return a list of your subscriptions, and you will need to copy the GUID for the subscription that you want to use; for example:</span></span>
 
    ```json
    [
@@ -203,13 +203,13 @@ ms.locfileid: "49799947"
    az account set -s 11111111-1111-1111-1111-111111111111
    ```
 
-1. <span data-ttu-id="118e2-175">Creare il file di credenziali di Azure:</span><span class="sxs-lookup"><span data-stu-id="118e2-175">Create your Azure Credential file:</span></span>
+1. <span data-ttu-id="7f311-176">Creare il file di credenziali di Azure:</span><span class="sxs-lookup"><span data-stu-id="7f311-176">Create your Azure Credential file:</span></span>
 
    ```azurecli
    az ad sp create-for-rbac --sdk-auth > my.azureauth
    ```
 
-   <span data-ttu-id="118e2-176">Questo comando creerà un file *my.azureauth* nella directory *resources* con contenuto simile all'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="118e2-176">This command will create a *my.azureauth* file in your *resources* directory with contents that resemble the following example:</span></span>
+   <span data-ttu-id="7f311-177">Questo comando creerà un file *my.azureauth* nella directory *resources* con contenuto simile all'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="7f311-177">This command will create a *my.azureauth* file in your *resources* directory with contents that resemble the following example:</span></span>
 
    ```json
    {
@@ -226,17 +226,17 @@ ms.locfileid: "49799947"
    }
    ```
 
-## <a name="configure-your-spring-boot-app-to-use-your-azure-event-hub"></a><span data-ttu-id="118e2-177">Configurare l'app Spring Boot per l'uso dell'hub eventi di Azure</span><span class="sxs-lookup"><span data-stu-id="118e2-177">Configure your Spring Boot app to use your Azure Event Hub</span></span>
+## <a name="configure-your-spring-boot-app-to-use-your-azure-event-hub"></a><span data-ttu-id="7f311-178">Configurare l'app Spring Boot per l'uso dell'hub eventi di Azure</span><span class="sxs-lookup"><span data-stu-id="7f311-178">Configure your Spring Boot app to use your Azure Event Hub</span></span>
 
-1. <span data-ttu-id="118e2-178">Individuare *application.properties* nella directory *resources* dell'app, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="118e2-178">Locate the *application.properties* in the *resources* directory of your app; for example:</span></span>
+1. <span data-ttu-id="7f311-179">Individuare *application.properties* nella directory *resources* dell'app, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="7f311-179">Locate the *application.properties* in the *resources* directory of your app; for example:</span></span>
 
    `C:\SpringBoot\eventhub\src\main\resources\application.properties`
 
-   <span data-ttu-id="118e2-179">-oppure-</span><span class="sxs-lookup"><span data-stu-id="118e2-179">-or-</span></span>
+   <span data-ttu-id="7f311-180">-oppure-</span><span class="sxs-lookup"><span data-stu-id="7f311-180">-or-</span></span>
 
    `/users/example/home/eventhub/src/main/resources/application.properties`
 
-2. <span data-ttu-id="118e2-180">Aprire il file *application.properties* in un editor di testo, aggiungere le righe seguenti e quindi sostituire i valori di esempio con le proprietà appropriate per l'hub eventi:</span><span class="sxs-lookup"><span data-stu-id="118e2-180">Open the *application.properties* file in a text editor, add the following lines, and then replace the sample values with the appropriate properties for your event hub:</span></span>
+2. <span data-ttu-id="7f311-181">Aprire il file *application.properties* in un editor di testo, aggiungere le righe seguenti e quindi sostituire i valori di esempio con le proprietà appropriate per l'hub eventi:</span><span class="sxs-lookup"><span data-stu-id="7f311-181">Open the *application.properties* file in a text editor, add the following lines, and then replace the sample values with the appropriate properties for your event hub:</span></span>
 
    ```yaml
    spring.cloud.azure.credential-file-path=my.azureauth
@@ -249,37 +249,37 @@ ms.locfileid: "49799947"
    spring.cloud.stream.bindings.output.destination=wingtiptoyshub
    spring.cloud.stream.eventhub.bindings.input.consumer.checkpoint-mode=MANUAL
    ```
-   <span data-ttu-id="118e2-181">Dove:</span><span class="sxs-lookup"><span data-stu-id="118e2-181">Where:</span></span>
+   <span data-ttu-id="7f311-182">Dove:</span><span class="sxs-lookup"><span data-stu-id="7f311-182">Where:</span></span>
 
-   |                          <span data-ttu-id="118e2-182">Campo</span><span class="sxs-lookup"><span data-stu-id="118e2-182">Field</span></span>                           |                                                                                   <span data-ttu-id="118e2-183">DESCRIZIONE</span><span class="sxs-lookup"><span data-stu-id="118e2-183">Description</span></span>                                                                                    |
+   |                          <span data-ttu-id="7f311-183">Campo</span><span class="sxs-lookup"><span data-stu-id="7f311-183">Field</span></span>                           |                                                                                   <span data-ttu-id="7f311-184">DESCRIZIONE</span><span class="sxs-lookup"><span data-stu-id="7f311-184">Description</span></span>                                                                                    |
    |----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |        `spring.cloud.azure.credential-file-path`         |                                                    <span data-ttu-id="118e2-184">Specifica il file di credenziali di Azure creato in precedenza in questa esercitazione.</span><span class="sxs-lookup"><span data-stu-id="118e2-184">Specifies Azure credential file that you created earlier in this tutorial.</span></span>                                                    |
-   |           `spring.cloud.azure.resource-group`            |                                                      <span data-ttu-id="118e2-185">Specifica il gruppo di risorse di Azure contenente l'hub eventi di Azure.</span><span class="sxs-lookup"><span data-stu-id="118e2-185">Specifies the Azure Resource Group that contains your Azure Event Hub.</span></span>                                                      |
-   |               `spring.cloud.azure.region`                |                                           <span data-ttu-id="118e2-186">Specifica l'area geografica indicata al momento della creazione dell'hub eventi di Azure.</span><span class="sxs-lookup"><span data-stu-id="118e2-186">Specifies the geographical region that you specified when you created your Azure Event Hub.</span></span>                                            |
-   |         `spring.cloud.azure.eventhub.namespace`          |                                          <span data-ttu-id="118e2-187">Specifica il nome univoco fornito al momento della creazione dello spazio dei nomi dell'hub eventi di Azure.</span><span class="sxs-lookup"><span data-stu-id="118e2-187">Specifies the unique name that you specified when you created your Azure Event Hub Namespace.</span></span>                                           |
-   | `spring.cloud.azure.eventhub.checkpoint-storage-account` |                                                    <span data-ttu-id="118e2-188">Specifica l'account di archiviazione di Azure creato in precedenza in questa esercitazione.</span><span class="sxs-lookup"><span data-stu-id="118e2-188">Specifies Azure Storage Account that you created earlier in this tutorial.</span></span>                                                    |
-   |     `spring.cloud.stream.bindings.input.destination`     |                            <span data-ttu-id="118e2-189">Specifica l'hub eventi di Azure destinazione di input, che in questo caso è l'hub creato in precedenza in questa esercitazione.</span><span class="sxs-lookup"><span data-stu-id="118e2-189">Specifies the input destination Azure Event Hub, which for this tutorial is the  hub you created earlier in this tutorial.</span></span>                            |
-   |       `spring.cloud.stream.bindings.input.group `        | <span data-ttu-id="118e2-190">Specifica un gruppo di consumer dell'hub eventi di Azure, che è possibile impostare su "$Default" per usare il gruppo di consumer di base creato al momento della creazione dell'hub eventi di Azure.</span><span class="sxs-lookup"><span data-stu-id="118e2-190">Specifies a Consumer Group from Azure Event Hub, which can be set to '$Default' in order to use the basic consumer group that was created when you created your Azure Event Hub.</span></span> |
-   |    `spring.cloud.stream.bindings.output.destination`     |                               <span data-ttu-id="118e2-191">Specifica l'hub eventi di Azure destinazione di output, che per questa esercitazione è uguale alla destinazione di input.</span><span class="sxs-lookup"><span data-stu-id="118e2-191">Specifies the output destination Azure Event Hub, which for this tutorial will be the same as the input destination.</span></span>                               |
+   |        `spring.cloud.azure.credential-file-path`         |                                                    <span data-ttu-id="7f311-185">Specifica il file di credenziali di Azure creato in precedenza in questa esercitazione.</span><span class="sxs-lookup"><span data-stu-id="7f311-185">Specifies Azure credential file that you created earlier in this tutorial.</span></span>                                                    |
+   |           `spring.cloud.azure.resource-group`            |                                                      <span data-ttu-id="7f311-186">Specifica il gruppo di risorse di Azure contenente l'hub eventi di Azure.</span><span class="sxs-lookup"><span data-stu-id="7f311-186">Specifies the Azure Resource Group that contains your Azure Event Hub.</span></span>                                                      |
+   |               `spring.cloud.azure.region`                |                                           <span data-ttu-id="7f311-187">Specifica l'area geografica indicata al momento della creazione dell'hub eventi di Azure.</span><span class="sxs-lookup"><span data-stu-id="7f311-187">Specifies the geographical region that you specified when you created your Azure Event Hub.</span></span>                                            |
+   |         `spring.cloud.azure.eventhub.namespace`          |                                          <span data-ttu-id="7f311-188">Specifica il nome univoco fornito al momento della creazione dello spazio dei nomi dell'hub eventi di Azure.</span><span class="sxs-lookup"><span data-stu-id="7f311-188">Specifies the unique name that you specified when you created your Azure Event Hub Namespace.</span></span>                                           |
+   | `spring.cloud.azure.eventhub.checkpoint-storage-account` |                                                    <span data-ttu-id="7f311-189">Specifica l'account di archiviazione di Azure creato in precedenza in questa esercitazione.</span><span class="sxs-lookup"><span data-stu-id="7f311-189">Specifies Azure Storage Account that you created earlier in this tutorial.</span></span>                                                    |
+   |     `spring.cloud.stream.bindings.input.destination`     |                            <span data-ttu-id="7f311-190">Specifica l'hub eventi di Azure destinazione di input, che in questo caso è l'hub creato in precedenza in questa esercitazione.</span><span class="sxs-lookup"><span data-stu-id="7f311-190">Specifies the input destination Azure Event Hub, which for this tutorial is the  hub you created earlier in this tutorial.</span></span>                            |
+   |       `spring.cloud.stream.bindings.input.group `        | <span data-ttu-id="7f311-191">Specifica un gruppo di consumer dell'hub eventi di Azure, che è possibile impostare su "$Default" per usare il gruppo di consumer di base creato al momento della creazione dell'hub eventi di Azure.</span><span class="sxs-lookup"><span data-stu-id="7f311-191">Specifies a Consumer Group from Azure Event Hub, which can be set to '$Default' in order to use the basic consumer group that was created when you created your Azure Event Hub.</span></span> |
+   |    `spring.cloud.stream.bindings.output.destination`     |                               <span data-ttu-id="7f311-192">Specifica l'hub eventi di Azure destinazione di output, che per questa esercitazione è uguale alla destinazione di input.</span><span class="sxs-lookup"><span data-stu-id="7f311-192">Specifies the output destination Azure Event Hub, which for this tutorial will be the same as the input destination.</span></span>                               |
 
 
-3. <span data-ttu-id="118e2-192">Salvare e chiudere il file *application.properties*.</span><span class="sxs-lookup"><span data-stu-id="118e2-192">Save and close the *application.properties* file.</span></span>
+3. <span data-ttu-id="7f311-193">Salvare e chiudere il file *application.properties*.</span><span class="sxs-lookup"><span data-stu-id="7f311-193">Save and close the *application.properties* file.</span></span>
 
-## <a name="add-sample-code-to-implement-basic-event-hub-functionality"></a><span data-ttu-id="118e2-193">Aggiungere codice di esempio per implementare le funzionalità di base dell'hub eventi</span><span class="sxs-lookup"><span data-stu-id="118e2-193">Add sample code to implement basic event hub functionality</span></span>
+## <a name="add-sample-code-to-implement-basic-event-hub-functionality"></a><span data-ttu-id="7f311-194">Aggiungere codice di esempio per implementare le funzionalità di base dell'hub eventi</span><span class="sxs-lookup"><span data-stu-id="7f311-194">Add sample code to implement basic event hub functionality</span></span>
 
-<span data-ttu-id="118e2-194">In questa sezione si creano le classi Java necessarie per inviare eventi all'hub eventi.</span><span class="sxs-lookup"><span data-stu-id="118e2-194">In this section, you create the necessary Java classes for sending events to your event hub.</span></span>
+<span data-ttu-id="7f311-195">In questa sezione si creano le classi Java necessarie per inviare eventi all'hub eventi.</span><span class="sxs-lookup"><span data-stu-id="7f311-195">In this section, you create the necessary Java classes for sending events to your event hub.</span></span>
 
-### <a name="modify-the-main-application-class"></a><span data-ttu-id="118e2-195">Modificare la classe dell'applicazione main</span><span class="sxs-lookup"><span data-stu-id="118e2-195">Modify the main application class</span></span>
+### <a name="modify-the-main-application-class"></a><span data-ttu-id="7f311-196">Modificare la classe dell'applicazione main</span><span class="sxs-lookup"><span data-stu-id="7f311-196">Modify the main application class</span></span>
 
-1. <span data-ttu-id="118e2-196">Individuare il file Java dell'applicazione main nella directory del pacchetto dell'app, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="118e2-196">Locate the main application Java file in the package directory of your app; for example:</span></span>
+1. <span data-ttu-id="7f311-197">Individuare il file Java dell'applicazione main nella directory del pacchetto dell'app, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="7f311-197">Locate the main application Java file in the package directory of your app; for example:</span></span>
 
    `C:\SpringBoot\eventhub\src\main\java\com\wingtiptoys\eventhub\EventhubApplication.java`
 
-   <span data-ttu-id="118e2-197">-oppure-</span><span class="sxs-lookup"><span data-stu-id="118e2-197">-or-</span></span>
+   <span data-ttu-id="7f311-198">-oppure-</span><span class="sxs-lookup"><span data-stu-id="7f311-198">-or-</span></span>
 
    `/users/example/home/eventhub/src/main/java/com/wingtiptoys/eventhub/EventhubApplication.java`
 
-1. <span data-ttu-id="118e2-198">Aprire il file Java dell'applicazione main in un editor di testo e aggiungere le righe seguenti al file:</span><span class="sxs-lookup"><span data-stu-id="118e2-198">Open the main application Java file in a text editor, and add the following lines to the file:</span></span>
+1. <span data-ttu-id="7f311-199">Aprire il file Java dell'applicazione main in un editor di testo e aggiungere le righe seguenti al file:</span><span class="sxs-lookup"><span data-stu-id="7f311-199">Open the main application Java file in a text editor, and add the following lines to the file:</span></span>
 
    ```java
    package com.wingtiptoys.eventhub;
@@ -295,11 +295,11 @@ ms.locfileid: "49799947"
    }
    ```
 
-1. <span data-ttu-id="118e2-199">Salvare e chiudere il file Java dell'applicazione main.</span><span class="sxs-lookup"><span data-stu-id="118e2-199">Save and close the main application Java file.</span></span>
+1. <span data-ttu-id="7f311-200">Salvare e chiudere il file Java dell'applicazione main.</span><span class="sxs-lookup"><span data-stu-id="7f311-200">Save and close the main application Java file.</span></span>
 
-### <a name="create-a-new-class-for-the-source-connector"></a><span data-ttu-id="118e2-200">Creare una nuova classe per il connettore di origine</span><span class="sxs-lookup"><span data-stu-id="118e2-200">Create a new class for the source connector</span></span>
+### <a name="create-a-new-class-for-the-source-connector"></a><span data-ttu-id="7f311-201">Creare una nuova classe per il connettore di origine</span><span class="sxs-lookup"><span data-stu-id="7f311-201">Create a new class for the source connector</span></span>
 
-1. <span data-ttu-id="118e2-201">Creare un nuovo file Java denominato *EventhubSource.java* nella directory del pacchetto dell'app, quindi aprire il file in un editor di testo e aggiungere le righe seguenti:</span><span class="sxs-lookup"><span data-stu-id="118e2-201">Create a new Java file named *EventhubSource.java* in the package directory of your app, then open the file in a text editor and add the following lines:</span></span>
+1. <span data-ttu-id="7f311-202">Creare un nuovo file Java denominato *EventhubSource.java* nella directory del pacchetto dell'app, quindi aprire il file in un editor di testo e aggiungere le righe seguenti:</span><span class="sxs-lookup"><span data-stu-id="7f311-202">Create a new Java file named *EventhubSource.java* in the package directory of your app, then open the file in a text editor and add the following lines:</span></span>
 
    ```java
    package com.wingtiptoys.eventhub;
@@ -326,11 +326,11 @@ ms.locfileid: "49799947"
       }
    }
    ```
-1. <span data-ttu-id="118e2-202">Salvare e chiudere il file *EventhubSource.java*.</span><span class="sxs-lookup"><span data-stu-id="118e2-202">Save and close the *EventhubSource.java* file.</span></span>
+1. <span data-ttu-id="7f311-203">Salvare e chiudere il file *EventhubSource.java*.</span><span class="sxs-lookup"><span data-stu-id="7f311-203">Save and close the *EventhubSource.java* file.</span></span>
 
-### <a name="create-a-new-class-for-the-sink-connector"></a><span data-ttu-id="118e2-203">Creare una nuova classe per il connettore sink</span><span class="sxs-lookup"><span data-stu-id="118e2-203">Create a new class for the sink connector</span></span>
+### <a name="create-a-new-class-for-the-sink-connector"></a><span data-ttu-id="7f311-204">Creare una nuova classe per il connettore sink</span><span class="sxs-lookup"><span data-stu-id="7f311-204">Create a new class for the sink connector</span></span>
 
-1. <span data-ttu-id="118e2-204">Creare un nuovo file Java denominato *EventhubSink.java* nella directory del pacchetto dell'app, quindi aprire il file in un editor di testo e aggiungere le righe seguenti:</span><span class="sxs-lookup"><span data-stu-id="118e2-204">Create a new Java file named *EventhubSink.java* in the package directory of your app, then open the file in a text editor and add the following lines:</span></span>
+1. <span data-ttu-id="7f311-205">Creare un nuovo file Java denominato *EventhubSink.java* nella directory del pacchetto dell'app, quindi aprire il file in un editor di testo e aggiungere le righe seguenti:</span><span class="sxs-lookup"><span data-stu-id="7f311-205">Create a new Java file named *EventhubSink.java* in the package directory of your app, then open the file in a text editor and add the following lines:</span></span>
 
    ```java
    package com.wingtiptoys.eventhub;
@@ -362,50 +362,50 @@ ms.locfileid: "49799947"
    }
    ```
 
-1. <span data-ttu-id="118e2-205">Salvare e chiudere il file *EventhubSink.java*.</span><span class="sxs-lookup"><span data-stu-id="118e2-205">Save and close the *EventhubSink.java* file.</span></span>
+1. <span data-ttu-id="7f311-206">Salvare e chiudere il file *EventhubSink.java*.</span><span class="sxs-lookup"><span data-stu-id="7f311-206">Save and close the *EventhubSink.java* file.</span></span>
 
-## <a name="build-and-test-your-application"></a><span data-ttu-id="118e2-206">Compilare e testare l'applicazione</span><span class="sxs-lookup"><span data-stu-id="118e2-206">Build and test your application</span></span>
+## <a name="build-and-test-your-application"></a><span data-ttu-id="7f311-207">Compilare e testare l'applicazione</span><span class="sxs-lookup"><span data-stu-id="7f311-207">Build and test your application</span></span>
 
-1. <span data-ttu-id="118e2-207">Aprire un prompt dei comandi e cambiare la directory passando alla cartella in cui si trova il file *pom.xml*, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="118e2-207">Open a command prompt and change directory to the folder where your *pom.xml* file is located; for example:</span></span>
+1. <span data-ttu-id="7f311-208">Aprire un prompt dei comandi e cambiare la directory passando alla cartella in cui si trova il file *pom.xml*, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="7f311-208">Open a command prompt and change directory to the folder where your *pom.xml* file is located; for example:</span></span>
 
    `cd C:\SpringBoot\eventhub`
 
-   <span data-ttu-id="118e2-208">-oppure-</span><span class="sxs-lookup"><span data-stu-id="118e2-208">-or-</span></span>
+   <span data-ttu-id="7f311-209">-oppure-</span><span class="sxs-lookup"><span data-stu-id="7f311-209">-or-</span></span>
 
    `cd /users/example/home/eventhub`
 
-1. <span data-ttu-id="118e2-209">Compilare l'applicazione Spring Boot con Maven ed eseguirla, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="118e2-209">Build your Spring Boot application with Maven and run it; for example:</span></span>
+1. <span data-ttu-id="7f311-210">Compilare l'applicazione Spring Boot con Maven ed eseguirla, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="7f311-210">Build your Spring Boot application with Maven and run it; for example:</span></span>
 
    ```shell
    mvn clean package
    mvn spring-boot:run
    ```
 
-1. <span data-ttu-id="118e2-210">Quando l'applicazione è in esecuzione, è possibile testarla usando *curl*, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="118e2-210">Once your application is running, you can use *curl* to test your application; for example:</span></span>
+1. <span data-ttu-id="7f311-211">Quando l'applicazione è in esecuzione, è possibile testarla usando *curl*, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="7f311-211">Once your application is running, you can use *curl* to test your application; for example:</span></span>
 
    ```shell
    curl -X POST -H "Content-Type: text/plain" -d "hello" http://localhost:8080/messages
    ```
-   <span data-ttu-id="118e2-211">Verrà visualizzato l'inserimento di "hello" nei log dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="118e2-211">You should see "hello" posted to your application's logs.</span></span> <span data-ttu-id="118e2-212">Ad esempio: </span><span class="sxs-lookup"><span data-stu-id="118e2-212">For example:</span></span>
+   <span data-ttu-id="7f311-212">Verrà visualizzato l'inserimento di "hello" nei log dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="7f311-212">You should see "hello" posted to your application's logs.</span></span> <span data-ttu-id="7f311-213">Ad esempio: </span><span class="sxs-lookup"><span data-stu-id="7f311-213">For example:</span></span>
 
    ```shell
    [Thread-13] INFO com.wingtiptoys.eventhub.EventhubSink - New message received: 'hello'
    [pool-10-thread-7] INFO com.wingtiptoys.eventhub.EventhubSink - Message 'hello' successfully checkpointed
    ```
 
-## <a name="next-steps"></a><span data-ttu-id="118e2-213">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="118e2-213">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="7f311-214">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="7f311-214">Next steps</span></span>
 
-<span data-ttu-id="118e2-214">Per altre informazioni sul supporto di Azure per Stream Binder per Hub eventi, vedere gli articoli seguenti:</span><span class="sxs-lookup"><span data-stu-id="118e2-214">For more information about Azure support for Event Hub Stream Binder, see the following articles:</span></span>
+<span data-ttu-id="7f311-215">Per altre informazioni sul supporto di Azure per Stream Binder per Hub eventi, vedere gli articoli seguenti:</span><span class="sxs-lookup"><span data-stu-id="7f311-215">For more information about Azure support for Event Hub Stream Binder, see the following articles:</span></span>
 
-* [<span data-ttu-id="118e2-215">Che cos'è l'hub di eventi di Azure?</span><span class="sxs-lookup"><span data-stu-id="118e2-215">What is Azure Event Hubs?</span></span>](/azure/event-hubs/event-hubs-about)
+* [<span data-ttu-id="7f311-216">Che cos'è l'hub di eventi di Azure?</span><span class="sxs-lookup"><span data-stu-id="7f311-216">What is Azure Event Hubs?</span></span>](/azure/event-hubs/event-hubs-about)
 
-* [<span data-ttu-id="118e2-216">Creare uno spazio dei nomi di Hub eventi e un hub eventi usando il Portale di Azure</span><span class="sxs-lookup"><span data-stu-id="118e2-216">Create an Event Hubs namespace and an event hub using the Azure portal</span></span>](/azure/event-hubs/event-hubs-create)
+* [<span data-ttu-id="7f311-217">Creare uno spazio dei nomi di Hub eventi e un hub eventi usando il Portale di Azure</span><span class="sxs-lookup"><span data-stu-id="7f311-217">Create an Event Hubs namespace and an event hub using the Azure portal</span></span>](/azure/event-hubs/event-hubs-create)
 
-* [<span data-ttu-id="118e2-217">Come usare Spring Boot Starter per Apache Kafka con Hub eventi di Azure</span><span class="sxs-lookup"><span data-stu-id="118e2-217">How to use the Spring Boot Starter for Apache Kafka with Azure Event Hubs</span></span>](configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub.md)
+* [<span data-ttu-id="7f311-218">Come usare Spring Boot Starter per Apache Kafka con Hub eventi di Azure</span><span class="sxs-lookup"><span data-stu-id="7f311-218">How to use the Spring Boot Starter for Apache Kafka with Azure Event Hubs</span></span>](configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub.md)
 
-<span data-ttu-id="118e2-218">Per altre informazioni sull'uso di Azure con Java, vedere [Azure per sviluppatori Java] e gli [strumenti Java per Visual Studio Team Services].</span><span class="sxs-lookup"><span data-stu-id="118e2-218">For more information about using Azure with Java, see the [Azure for Java Developers] and the [Java Tools for Visual Studio Team Services].</span></span>
+<span data-ttu-id="7f311-219">Per altre informazioni sull'uso di Azure con Java, vedere [Azure per sviluppatori Java] e gli [strumenti Java per Visual Studio Team Services].</span><span class="sxs-lookup"><span data-stu-id="7f311-219">For more information about using Azure with Java, see the [Azure for Java Developers] and the [Java Tools for Visual Studio Team Services].</span></span>
 
-<span data-ttu-id="118e2-219">**[Spring Framework]** è una soluzione open source che consente agli sviluppatori Java di creare applicazioni di livello enterprise.</span><span class="sxs-lookup"><span data-stu-id="118e2-219">The **[Spring Framework]** is an open-source solution that helps Java developers create enterprise-level applications.</span></span> <span data-ttu-id="118e2-220">Uno dei progetti più comuni che si basa su questa piattaforma è [Spring Boot], che fornisce un approccio semplificato per la creazione di applicazioni Java autonome.</span><span class="sxs-lookup"><span data-stu-id="118e2-220">One of the more-popular projects that is built on top of that platform is [Spring Boot], which provides a simplified approach for creating stand-alone Java applications.</span></span> <span data-ttu-id="118e2-221">Per semplificare le operazioni iniziali con Spring Boot per gli sviluppatori, alcuni pacchetti Spring Boot di esempio sono disponibili all'indirizzo <https://github.com/spring-guides/>.</span><span class="sxs-lookup"><span data-stu-id="118e2-221">To help developers get started with Spring Boot, several sample Spring Boot packages are available at <https://github.com/spring-guides/>.</span></span> <span data-ttu-id="118e2-222">Oltre a consentire di scegliere dall'elenco di progetti Spring Boot di base, **[Spring Initializr]** semplifica le operazioni iniziali degli sviluppatori per la creazione di applicazioni Spring Boot personalizzate.</span><span class="sxs-lookup"><span data-stu-id="118e2-222">In addition to choosing from the list of basic Spring Boot projects, the **[Spring Initializr]** helps developers get started with creating custom Spring Boot applications.</span></span>
+<span data-ttu-id="7f311-220">**[Spring Framework]** è una soluzione open source che consente agli sviluppatori Java di creare applicazioni di livello enterprise.</span><span class="sxs-lookup"><span data-stu-id="7f311-220">The **[Spring Framework]** is an open-source solution that helps Java developers create enterprise-level applications.</span></span> <span data-ttu-id="7f311-221">Uno dei progetti più comuni che si basa su questa piattaforma è [Spring Boot], che fornisce un approccio semplificato per la creazione di applicazioni Java autonome.</span><span class="sxs-lookup"><span data-stu-id="7f311-221">One of the more-popular projects that is built on top of that platform is [Spring Boot], which provides a simplified approach for creating stand-alone Java applications.</span></span> <span data-ttu-id="7f311-222">Per semplificare le operazioni iniziali con Spring Boot per gli sviluppatori, alcuni pacchetti Spring Boot di esempio sono disponibili all'indirizzo <https://github.com/spring-guides/>.</span><span class="sxs-lookup"><span data-stu-id="7f311-222">To help developers get started with Spring Boot, several sample Spring Boot packages are available at <https://github.com/spring-guides/>.</span></span> <span data-ttu-id="7f311-223">Oltre a consentire di scegliere dall'elenco di progetti Spring Boot di base, **[Spring Initializr]** semplifica le operazioni iniziali degli sviluppatori per la creazione di applicazioni Spring Boot personalizzate.</span><span class="sxs-lookup"><span data-stu-id="7f311-223">In addition to choosing from the list of basic Spring Boot projects, the **[Spring Initializr]** helps developers get started with creating custom Spring Boot applications.</span></span>
 
 <!-- URL List -->
 
