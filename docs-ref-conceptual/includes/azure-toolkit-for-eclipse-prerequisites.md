@@ -2,7 +2,7 @@
 Per completare la procedura illustrata in questo articolo, sarà necessario installare Azure Toolkit for Eclipse, che richiede i componenti software seguenti:
 
 * IDE Eclipse per sviluppatori Java EE, Mars o versione successiva. È possibile scaricarlo dal [sito Web di Eclipse](http://www.eclipse.org/downloads/).
-* Java Developer Kit (JDK) versione 1.8 o successiva.
+* Java Development Kit (JDK) supportato. Per altre informazioni sulle versioni di JDK utilizzabili per lo sviluppo in Azure, vedere <https://aka.ms/azure-jdks>.
 * Un sistema operativo. Azure Toolkit for Eclipse è stato testato nei seguenti sistemi operativi:
   
   * Windows 10, Windows 8.1, Windows 8 e Windows 7
