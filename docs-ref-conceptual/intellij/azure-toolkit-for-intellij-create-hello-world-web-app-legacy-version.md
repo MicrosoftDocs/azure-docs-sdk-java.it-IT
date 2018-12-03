@@ -3,31 +3,31 @@ title: Creare un'app Web Hello World per Azure con il toolkit legacy per Intelli
 description: Questa esercitazione descrive come usare Azure Toolkit for IntelliJ 3.0.6 (o versioni precedenti) per creare un'app Web Hello World per Azure.
 services: app-service
 documentationcenter: java
-author: selvasingh
-manager: routlaw
+author: rmcmurray
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: robmcm;asirveda
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 11/13/2018
 ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: efc1dffa248987772827bbe7bc0caa9f10a0b4ef
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 4a1d9ee79fdc4284dff65f6b026ec103b3d623ce
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893393"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338975"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-intellij"></a>Creare un'app Web Hello World per Azure con il toolkit legacy per IntelliJ
 
-Questa esercitazione descrive come creare e distribuire un'applicazione Hello World di base in Azure come app Web usando [Toolkit di Azure per IntelliJ] 3.0.6 (o versioni precedenti).
+Questa esercitazione descrive come creare e distribuire un'applicazione Hello World di base in Azure come app Web usando [Azure Toolkit for IntelliJ] 3.0.6 (o versioni precedenti).
 
 > [!NOTE]
 >
-> Per una versione di questo articolo che fa uso di [Toolkit di Azure per Eclipse], vedere [Creare un'app Web Hello World per Azure con Eclipse][eclipse-hello-world].
+> Per una versione di questo articolo che fa uso di [Azure Toolkit for Eclipse], vedere [Creare un'app Web Hello World per Azure con Eclipse][eclipse-hello-world].
 >
 
 > [!IMPORTANT]
@@ -127,7 +127,7 @@ Dopo aver configurato le impostazioni del modulo è possibile pubblicare l'appli
 
    d. Nel menu a discesa **Contenitore Web** selezionare il software appropriato per l'applicazione.
       
-      Attualmente è possibile scegliere fra Tomcat 8, Tomcat 7 o Jetty 9. Una distribuzione recente del software selezionato verrà fornita da Azure e sarà eseguita in una distribuzione recente di JDK 8 creata da Oracle e fornita da Azure.
+      Attualmente è possibile scegliere fra Tomcat 8, Tomcat 7 o Jetty 9. Una distribuzione recente del software selezionato verrà offerta da Azure ed eseguita in una distribuzione recente di JDK fornita da Azure.
 
    e. Nel menu a discesa **Subscription** (Sottoscrizione) selezionare la sottoscrizione che si vuole usare per la distribuzione.
 
@@ -241,8 +241,8 @@ Per altre informazioni sulla creazione di App Web di Azure, vedere la [Panoramic
 
 <!-- URL List -->
 
-[Toolkit di Azure per IntelliJ]: azure-toolkit-for-intellij.md
-[Toolkit di Azure per Eclipse]: ../eclipse/azure-toolkit-for-eclipse.md
+[Azure Toolkit for IntelliJ]: azure-toolkit-for-intellij.md
+[Azure Toolkit for Eclipse]: ../eclipse/azure-toolkit-for-eclipse.md
 [eclipse-hello-world]: ../eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md
 [Panoramica delle app Web]: /azure/app-service/app-service-web-overview
 [Apache Tomcat]: http://tomcat.apache.org/

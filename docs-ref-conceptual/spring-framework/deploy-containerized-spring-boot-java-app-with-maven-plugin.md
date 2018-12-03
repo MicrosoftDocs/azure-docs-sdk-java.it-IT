@@ -4,26 +4,26 @@ description: Informazioni su come usare il plug-in Maven per App Web di Azure pe
 services: app-service
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: robmcm;kevinzha
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 11/21/2018
 ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: d9f2cf5c15bb8f990c8e82fddd6455ecbf8cc02c
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: cc14ac8dfd393d60924c39be0870c3caedc9741c
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892692"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52339085"
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-containerized-spring-boot-app-to-azure"></a>Come usare il plug-in Maven per App Web di Azure per distribuire un'app Spring Boot in contenitore in Azure
 
-Questo articolo illustra l'uso del [plug-in Maven per App Web di Azure](https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin) per distribuire in Servizi app di Azure un'applicazione Spring Boot di esempio in un contenitore Docker.
+Questo articolo illustra l'uso del [Maven Plugin for Azure Web Apps (Plug-in Maven per App Web di Azure)](https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin) per distribuire in Servizi app di Azure un'applicazione Spring Boot di esempio in un contenitore Docker.
 
 > [!NOTE]
 > 
@@ -38,7 +38,7 @@ Per completare la procedura di questa esercitazione, sono necessari i prerequisi
 
 * Sottoscrizione di Azure; se non si ha una sottoscrizione di Azure, è possibile attivare i [vantaggi per i sottoscrittori di MSDN] oppure iscriversi per ottenere un [account Azure gratuito].
 * [Interfaccia della riga di comando di Azure].
-* Java Development Kit (JDK) aggiornato, versione 1.7 o successiva.
+* Java Development Kit (JDK) supportato. Per altre informazioni sulle versioni di JDK utilizzabili per lo sviluppo in Azure, vedere <https://aka.ms/azure-jdks>.
 * Lo strumento di compilazione [Maven] di Apache (versione 3).
 * Un client [Git].
 * Un client [Docker].
@@ -333,7 +333,6 @@ Per altre informazioni sulle varie tecnologie illustrate in questo articolo, ved
 [Plug-in Docker per Maven]: https://github.com/spotify/docker-maven-plugin
 [Account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Maven]: http://maven.apache.org/
 [vantaggi per i sottoscrittori di MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
@@ -341,6 +340,9 @@ Per altre informazioni sulle varie tecnologie illustrate in questo articolo, ved
 [Spring Boot on Docker Getting Started]: https://github.com/spring-guides/gs-spring-boot-docker (Introduzione a Spring Boot in Docker)
 [Spring Framework]: https://spring.io/
 [Maven Plugin for Azure Web Apps (Plug-in Maven per App Web di Azure)]: https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin
+
+[Java Development Kit (JDK)]: https://aka.ms/azure-jdks
+<!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- IMG List -->
 

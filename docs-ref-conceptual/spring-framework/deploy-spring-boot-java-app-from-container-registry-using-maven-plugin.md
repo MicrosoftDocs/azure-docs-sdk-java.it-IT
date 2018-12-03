@@ -4,22 +4,22 @@ description: Questa esercitazione illustra in modo dettagliato la procedura per 
 services: container-registry
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: robmcm;kevinzha
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 11/21/2018
 ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: e84960ebf79b89b2430924016a429518a935d086
-ms.sourcegitcommit: 9d9e2fa97ebd95a699adcb58e82c3fc0882f0a24
+ms.openlocfilehash: cc345987085e442978b59a45d6fc3e1b52160515
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49315935"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338945"
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>Come usare il plug-in Maven per App Web di Azure per distribuire un'app Spring Boot del registro contenitori di Azure nel servizio app di Azure
 
@@ -38,7 +38,7 @@ Per completare la procedura di questa esercitazione, sono necessari i prerequisi
 
 * Sottoscrizione di Azure; se non si ha una sottoscrizione di Azure, è possibile attivare i [vantaggi per i sottoscrittori di MSDN] oppure iscriversi per ottenere un [account Azure gratuito].
 * [Interfaccia della riga di comando di Azure].
-* Java Development Kit (JDK) aggiornato, versione 1.7 o successiva.
+* Java Development Kit (JDK) supportato. Per altre informazioni sulle versioni di JDK utilizzabili per lo sviluppo in Azure, vedere <https://aka.ms/azure-jdks>.
 * Lo strumento di compilazione [Maven] di Apache (versione 3).
 * Un client [Git].
 * Un client [Docker].
@@ -406,13 +406,15 @@ Per altre informazioni sulle varie tecnologie illustrate in questo articolo, ved
 [Plug-in Docker per Maven]: https://github.com/spotify/docker-maven-plugin
 [Account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Maven]: http://maven.apache.org/
 [vantaggi per i sottoscrittori di MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Boot on Docker Getting Started]: https://github.com/spring-guides/gs-spring-boot-docker (Introduzione a Spring Boot in Docker)
 [Spring Framework]: https://spring.io/
+
+[Java Development Kit (JDK)]: https://aka.ms/azure-jdks
+<!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- IMG List -->
 

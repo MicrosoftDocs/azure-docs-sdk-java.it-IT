@@ -3,31 +3,31 @@ title: ''
 description: Questa esercitazione descrive come usare Azure Toolkit for Eclipse 3.0.6 (o versioni precedenti) per creare un'app Web Hello World per Azure.
 services: app-service
 documentationcenter: java
-author: selvasingh
-manager: routlaw
+author: rmcmurray
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: robmcm;asirveda
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 11/13/2018
 ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 896e7eff389bc7d3ac119d315c50aae505a381da
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: b05dcd52f36524ab17652f83c6ced4006f874365
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892562"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338715"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-eclipse"></a>Creare un'app Web Hello World per Azure con il toolkit legacy per Eclipse
 
-Questa esercitazione descrive come creare e distribuire un'applicazione Hello World di base in Azure come app Web usando [Toolkit di Azure per Eclipse] 3.0.6 (o versioni precedenti).
+Questa esercitazione descrive come creare e distribuire un'applicazione Hello World di base in Azure come app Web usando [Azure Toolkit for Eclipse] 3.0.6 (o versioni precedenti).
 
 > [!NOTE]
 >
-> Per una versione di questo articolo che fa uso di [Toolkit di Azure per IntelliJ], vedere [Creare un'app Web Hello World per Azure con IntelliJ][intellij-hello-world].
+> Per una versione di questo articolo che fa uso di [Azure Toolkit for IntelliJ], vedere [Creare un'app Web Hello World per Azure con IntelliJ][intellij-hello-world].
 >
 
 > [!IMPORTANT]
@@ -109,7 +109,7 @@ Esistono diversi modi con cui è possibile distribuire un'applicazione Web Java 
 
    d. Nel menu a discesa **Contenitore Web** selezionare il software appropriato per l'applicazione.
       
-      Attualmente è possibile scegliere fra Tomcat 8, Tomcat 7 o Jetty 9. Una distribuzione recente del software selezionato verrà fornita da Azure e sarà eseguita in una distribuzione recente di JDK 8 creata da Oracle e fornita da Azure.
+      Attualmente è possibile scegliere fra Tomcat 8, Tomcat 7 o Jetty 9. Una distribuzione recente del software selezionato verrà offerta da Azure ed eseguita in una distribuzione recente di JDK fornita da Azure.
 
    e. Nel menu a discesa **Subscription** (Sottoscrizione) selezionare la sottoscrizione che si vuole usare per la distribuzione.
 
@@ -124,7 +124,7 @@ Esistono diversi modi con cui è possibile distribuire un'applicazione Web Java 
    * Nella casella di testo **Nome** specificare un nome per il nuovo gruppo di risorse.
    * Nel menu a discesa **Region** (Area) selezionare il percorso del data center di Azure appropriato per il gruppo di risorse.
    * FACOLTATIVO: per impostazione predefinita, una distribuzione recente di Java 8 verrà distribuita da Azure automaticamente nel contenitore di app web come JVM. Tuttavia, è possibile specificare una versione e una distribuzione di JVM diversa, se richiesto dall'app Web. Per specificare la versione JDK per l'app Web specifica, fare clic sulla scheda **JDK** e selezionare una delle opzioni seguenti:
-     * **Deploy the default JDK offered by Azure Web Apps service**(Distribuisci JDK predefinito fornito dal servizio app Web di Azure): questa opzione usa una distribuzione recente di Java 8.
+     * **Deploy the default JDK offered by Azure Web Apps service** (Distribuisci JDK predefinito fornito dal servizio app Web di Azure): questa opzione distribuirà una distribuzione recente di Java.
      * **Deploy a 3rd party JDK available on Azure**(Distribuisci JDK di terze parti disponibile in Azure): questa opzione consente di scegliere dall'elenco di JDK forniti da Microsoft Azure.
      * **Deploy my own JDK from this download location**(Distribuisci JDK personalizzato da questo percorso di download): questa opzione consente di specificare una distribuzione JDK personalizzata, che deve essere compressa come file ZIP e caricata in un percorso di download disponibile pubblicamente o in un account di Archiviazione di Azure per cui si dispone dell'accesso.
           
@@ -210,8 +210,8 @@ Per altre informazioni sulla creazione di App Web di Azure, vedere la [Panoramic
 
 <!-- URL List -->
 
-[Toolkit di Azure per Eclipse]: azure-toolkit-for-eclipse.md
-[Toolkit di Azure per IntelliJ]: ../intellij/azure-toolkit-for-intellij.md
+[Azure Toolkit for Eclipse]: azure-toolkit-for-eclipse.md
+[Azure Toolkit for IntelliJ]: ../intellij/azure-toolkit-for-intellij.md
 [intellij-hello-world]: ../intellij/azure-toolkit-for-intellij-create-hello-world-web-app.md
 [Panoramica delle app Web]: /azure/app-service/app-service-web-overview
 [Apache Tomcat]: http://tomcat.apache.org/

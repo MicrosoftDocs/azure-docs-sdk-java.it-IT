@@ -4,35 +4,35 @@ description: Questa esercitazione illustra in modo dettagliato la procedura per 
 services: container-service
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: asirveda;robmcm
-ms.date: 07/05/2018
+ms.author: robmcm
+ms.date: 11/21/2018
 ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: 8e8f9088146af504ba2d9d45e2e82118c4081359
-ms.sourcegitcommit: dae7511a9d93ca7f388d5b0e05dc098e22c2f2f6
+ms.openlocfilehash: d5ebfb7fc7279c745f77848dae397509662f0c0d
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49962505"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338725"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Distribuire un'applicazione Spring Boot in un cluster Kubernetes nel servizio Kubernetes di Azure
 
 **[Kubernetes]** e **[Docker]** sono soluzioni open source che consentono agli sviluppatori di automatizzare la distribuzione, il ridimensionamento e la gestione delle applicazioni eseguite in contenitori.
 
-Questa esercitazione illustra come combinare queste due diffuse tecnologie open source per sviluppare e distribuire un'applicazione Spring Boot in Microsoft Azure. In particolare, si userà *[Spring Boot]* per lo sviluppo dell'applicazione, *[Kubernetes]* per la distribuzione del contenitore e il [Azure Kubernetes Service (AKS)] per l'hosting dell'applicazione.
+Questa esercitazione illustra come combinare queste due diffuse tecnologie open source per sviluppare e distribuire un'applicazione Spring Boot in Microsoft Azure. In particolare, si userà *[Spring Boot]* per lo sviluppo dell'applicazione, *[Kubernetes]* per la distribuzione del contenitore e il [servizio Kubernetes di Azure] per l'hosting dell'applicazione.
 
 ### <a name="prerequisites"></a>Prerequisiti
 
 * Sottoscrizione di Azure; se non si ha una sottoscrizione di Azure, è possibile attivare i [vantaggi per i sottoscrittori di MSDN] oppure iscriversi per ottenere un [account Azure gratuito].
 * [Interfaccia della riga di comando di Azure].
-* Un [Java Developer Kit (JDK)] aggiornato.
+* Java Development Kit (JDK) supportato. Per altre informazioni sulle versioni di JDK utilizzabili per lo sviluppo in Azure, vedere <https://aka.ms/azure-jdks>.
 * Lo strumento di compilazione [Maven] di Apache (versione 3).
 * Un client [Git].
 * Un client [Docker].
@@ -336,7 +336,7 @@ Per altri esempi sull'uso delle immagini personalizzate di Docker con Azure, ved
 <!-- URL List -->
 
 [Interfaccia della riga di comando di Azure]: /cli/azure/overview
-[Azure Kubernetes Service (AKS)]: https://azure.microsoft.com/services/kubernetes-service/
+[servizio Kubernetes di Azure]: https://azure.microsoft.com/services/kubernetes-service/
 [Azure per sviluppatori Java]: https://docs.microsoft.com/java/azure/
 [Azure portal]: https://portal.azure.com/
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
@@ -344,7 +344,6 @@ Per altri esempi sull'uso delle immagini personalizzate di Docker con Azure, ved
 [Docker]: https://www.docker.com/
 [Account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Strumenti Java per Visual Studio Team Services]: https://java.visualstudio.com/
 [Kubernetes]: https://kubernetes.io/
 [Kubernetes Command-Line Interface (kubectl)]: https://kubernetes.io/docs/user-guide/kubectl-overview/
@@ -356,6 +355,9 @@ Per altri esempi sull'uso delle immagini personalizzate di Docker con Azure, ved
 [Configuring Service Accounts for Pods]: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/ (Configurazione degli account del servizio per i pod)
 [Namespaces]: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/ (Spazi dei nomi)
 [Pulling an Image from a Private Registry]: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/ (Effettuare il pull di un'immagine da un registro privato)
+
+[Java Development Kit (JDK)]: https://aka.ms/azure-jdks
+<!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- Newly added -->
 [Eseguire l'autenticazione con Registro contenitori di Azure dal servizio Kubernetes di Azure]: https://docs.microsoft.com/azure/container-registry/container-registry-auth-aks/
