@@ -7,19 +7,19 @@ author: rmcmurray
 manager: routlaw
 editor: ''
 ms.assetid: 115a095d-1b70-41d6-adb4-78f24b2a4451
-ms.author: robmcm;asirveda
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 12/12/2018
 ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: dd76cb3a0355e4e8471b7a32b6b33cb71bd3f16b
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 0cbb515a62e540fdc9decb8055bb57e0cb35e7b2
+ms.sourcegitcommit: 8e530a2ce58ea0e2bf5c136e427a9be863231a1b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892792"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53638990"
 ---
 # <a name="azure-toolkit-for-intellij"></a>Toolkit di Azure per IntelliJ
 Il Toolkit di Azure per IntelliJ offre modelli e funzionalità per creare, sviluppare, testare e distribuire con facilità applicazioni di Azure tramite l'ambiente di sviluppo integrato (IDE) di IntelliJ.
@@ -66,7 +66,7 @@ Per altre informazioni su Azure Toolkit for IntelliJ, vedere le pagine seguenti:
 
 * [Azure Toolkit for IntelliJ in the JetBrains Plugins Repository](https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij) (Azure Toolkit for IntelliJ nel repository di plug-in JetBrains)
 
-Per altre informazioni su come usare Java con Azure, vedere [Azure per sviluppatori Java](https://docs.microsoft.com/java/azure/) e [Strumenti Java per Visual Studio Team Services](https://java.visualstudio.com/).
+Per altre informazioni su come usare Java con Azure, vedere [Azure per sviluppatori Java](https://docs.microsoft.com/java/azure/) e [Strumenti Java per Visual Studio Team Services](/azure/devops/java/).
 
 > [!NOTE]
 > 
@@ -78,7 +78,6 @@ Per altre informazioni su come usare Java con Azure, vedere [Azure per sviluppat
 <!-- URL List -->
 
 [Azure for Java Developers]: https://docs.microsoft.com/java/azure/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 
 <!-- Temporarily Deprecated URLs -->
 

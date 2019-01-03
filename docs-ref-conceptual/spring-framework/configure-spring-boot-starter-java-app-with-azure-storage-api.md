@@ -8,18 +8,18 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: 94f7b1148d9282d33bc67da0e0d97a284a81d4d4
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 984a3edb89608c806537f991b42e309f31130896
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52339055"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991445"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-storage-api"></a>Come usare Spring Boot Starter con l'API di archiviazione di Azure
 
@@ -316,6 +316,13 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
    > 
 
 ## <a name="next-steps"></a>Passaggi successivi
+
+Per altre informazioni su Spring e Azure, passare al centro di documentazione di Spring in Azure.
+
+> [!div class="nextstepaction"]
+> [Spring in Azure](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>Risorse aggiuntive
 
 Per altre informazioni sulle utilità di avvio Spring Boot aggiuntive disponibili per Microsoft Azure, vedere [Spring Boot Starters for Azure (Utilità di avvio Spring Boot per Azure)](spring-boot-starters-for-azure.md).
 

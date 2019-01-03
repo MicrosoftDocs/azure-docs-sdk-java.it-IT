@@ -7,19 +7,19 @@ author: rmcmurray
 manager: routlaw
 editor: ''
 ms.assetid: ef2f3839-2549-4471-9b53-0deb7f4c128b
-ms.author: robmcm;asirveda
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 12/12/2018
 ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: d8ab3de791d1a4893efb77a51418c437f81c86ff
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 88d92cfd82244d5df2ad34304155d41c5aab0ee9
+ms.sourcegitcommit: 8e530a2ce58ea0e2bf5c136e427a9be863231a1b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893462"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53638960"
 ---
 # <a name="azure-toolkit-for-eclipse"></a>Toolkit di Azure per Eclipse
 
@@ -67,7 +67,7 @@ Per altre informazioni su Azure Toolkit for Eclipse, vedere le pagine seguenti:
 
 * [Azure Toolkit for Eclipse in the Eclipse Marketplace](http://marketplace.eclipse.org/content/azure-toolkit-eclipse) (Azure Toolkit for Eclipse in Eclipse Marketplace)
 
-Per altre informazioni su come usare Java con Azure, vedere [Azure per sviluppatori Java](https://docs.microsoft.com/java/azure/) e [Strumenti Java per Visual Studio Team Services](https://java.visualstudio.com/).
+Per altre informazioni su come usare Java con Azure, vedere [Azure per sviluppatori Java](https://docs.microsoft.com/java/azure/) e [Strumenti Java per Visual Studio Team Services](/azure/devops/java/).
 
 <!-- [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)] -->
 
@@ -79,7 +79,6 @@ Per altre informazioni su come usare Java con Azure, vedere [Azure per sviluppat
 <!-- URL List -->
 
 [Azure for Java Developers]: https://docs.microsoft.com/java/azure
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 
 <!-- Temporarily Deprecated URLs -->
 
