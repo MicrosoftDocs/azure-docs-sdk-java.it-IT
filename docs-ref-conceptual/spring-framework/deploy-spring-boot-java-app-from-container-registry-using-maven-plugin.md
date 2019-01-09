@@ -8,18 +8,18 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: cc345987085e442978b59a45d6fc3e1b52160515
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: abe73f46e3b5a3b85a9f0272c12539d230c1a879
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338945"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991375"
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>Come usare il plug-in Maven per App Web di Azure per distribuire un'app Spring Boot del registro contenitori di Azure nel servizio app di Azure
 
@@ -88,7 +88,7 @@ In questa sezione si clona e si testa in locale un'applicazione Spring Boot in c
    curl http://localhost:8080
    ```
 
-1. Dovrebbe essere visualizzato il messaggio seguente: **Hello Docker World**
+1. Dovrebbe essere visualizzato il messaggio **Hello Docker World**
 
    ![Esplorare l'app di esempio in locale][SB01]
 
@@ -285,7 +285,7 @@ In questa sezione si crea un'entità servizio di Azure che verrà usata dal plug
    mvn package docker:build -DpushImage 
    ```
 
-5. FACOLTATIVO: passare al [portale di Azure] e verificare che nel registro contenitori sia presente l'immagine del contenitore Docker denominata **gs-spring-boot-docker**.
+5. FACOLTATIVO: passare al [portale di Azure] e verificare la presenza nel registro contenitori dell'immagine del contenitore Docker denominata **gs-spring-boot-docker**.
 
    ![Verificare il contenitore nel portale di Azure][CR01]
 
@@ -381,6 +381,13 @@ Dopo che è stata distribuita, l'app Web potrà essere gestita usando il [portal
 
 ## <a name="next-steps"></a>Passaggi successivi
 
+Per altre informazioni su Spring e Azure, passare al centro di documentazione di Spring in Azure.
+
+> [!div class="nextstepaction"]
+> [Spring in Azure](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>Risorse aggiuntive
+
 Per altre informazioni sulle varie tecnologie illustrate in questo articolo, vedere gli articoli seguenti:
 
 * [Maven Plugin for Azure Web Apps (Plug-in Maven per App Web di Azure)]
@@ -393,11 +400,13 @@ Per altre informazioni sulle varie tecnologie illustrate in questo articolo, ved
 
 * [Plug-in Docker per Maven]
 
+Per altre informazioni sull'uso di Azure con Java, vedere [Azure per sviluppatori Java] e la documentazione relativa all'[uso di Azure DevOps e Java].
+
 <!-- URL List -->
 
 [Interfaccia della riga di comando di Azure]: /cli/azure/overview
 [Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
-[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
+[Azure per sviluppatori Java]: /java/azure/
 [Portale di Azure]: https://portal.azure.com/
 [Maven Plugin for Azure Web Apps (Plug-in Maven per App Web di Azure)]: https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
@@ -406,7 +415,7 @@ Per altre informazioni sulle varie tecnologie illustrate in questo articolo, ved
 [Plug-in Docker per Maven]: https://github.com/spotify/docker-maven-plugin
 [Account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Uso di Azure DevOps e Java]: /azure/devops/
 [Maven]: http://maven.apache.org/
 [vantaggi per i sottoscrittori di MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/

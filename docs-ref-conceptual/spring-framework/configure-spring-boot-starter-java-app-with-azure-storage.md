@@ -8,18 +8,18 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: f94b2981f1e641a6e4b2d9d3028608a56a6590e7
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: cdd157abdb993517f7c880a7edaff10f0e3d1033
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338875"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991585"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Come usare l'utilità di avvio Spring Boot per Archiviazione di Azure
 
@@ -347,11 +347,20 @@ In questa sezione si creano le classi Java necessarie per archiviare un BLOB nel
 
      Verrà visualizzato il testo "Hello World" che è stato inserito.
 
+## <a name="summary"></a>Riepilogo
+
+In questa esercitazione si è creata una nuova applicazione Java con **[Spring Initializr]**, si è aggiunta l'utilità di avvio per Archiviazione di Azure all'applicazione e quindi si è configurata l'applicazione per il caricamento di un BLOB nell'account di archiviazione di Azure.
+
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sulle utilità di avvio Spring Boot aggiuntive disponibili per Microsoft Azure, vedere [Spring Boot Starters for Azure (Utilità di avvio Spring Boot per Azure)](spring-boot-starters-for-azure.md).
+Per altre informazioni su Spring e Azure, passare al centro di documentazione di Spring in Azure.
 
-Per altre informazioni sull'integrazione delle funzionalità di Azure nelle applicazioni basate su Spring, vedere [Spring Framework in Azure](/java/azure/spring-framework/).
+> [!div class="nextstepaction"]
+> [Spring in Azure](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>Risorse aggiuntive
+
+Per altre informazioni sulle utilità di avvio Spring Boot aggiuntive disponibili per Microsoft Azure, vedere [Spring Boot Starters for Azure (Utilità di avvio Spring Boot per Azure)](spring-boot-starters-for-azure.md).
 
 Per informazioni dettagliate sulle altre API di archiviazione di Azure che è possibile chiamare dalle applicazioni Spring Boot, vedere gli articoli seguenti:
 * [Come usare l'archivio BLOB di Azure da Java](/azure/storage/blobs/storage-java-how-to-use-blob-storage)

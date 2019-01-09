@@ -8,18 +8,18 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: cache
 ms.tgt_pltfrm: cache-redis
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 2c4dfe35ed2f4728e5704aac938410f847fe5b1f
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 4b720cf4639a12c6dd8cc5040107c1b52de6f642
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338675"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991405"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Configurare un'app Spring Boot Initializer per l'uso di Redis sul cloud con la cache Redis di Azure
 
@@ -198,13 +198,20 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
 
 ## <a name="next-steps"></a>Passaggi successivi
 
+Per altre informazioni su Spring e Azure, passare al centro di documentazione di Spring in Azure.
+
+> [!div class="nextstepaction"]
+> [Spring in Azure](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>Risorse aggiuntive
+
 Per altre informazioni sull'uso delle applicazioni Spring Boot in Azure, vedere gli articoli seguenti:
 
 * [Distribuire un'applicazione Spring Boot nel servizio app di Azure](deploy-spring-boot-java-web-app-on-azure.md)
 
 * [Eseguire un'applicazione Spring Boot in un cluster Kubernetes nel servizio contenitore di Azure](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Per altre informazioni su come usare Azure con Java, vedere [Azure per sviluppatori Java] e [Strumenti Java per Visual Studio Team Services].
+Per altre informazioni sull'uso di Azure con Java, vedere [Azure per sviluppatori Java] e la documentazione relativa all'[uso di Azure DevOps e Java].
 
 Per altre informazioni sulle operazioni iniziali nella cache Redis con Java in Azure, vedere [Come usare Cache Redis di Azure con Java][Redis Cache with Java].
 
@@ -212,9 +219,9 @@ Per altre informazioni sulle operazioni iniziali nella cache Redis con Java in A
 
 <!-- URL List -->
 
-[Azure per sviluppatori Java]: https://docs.microsoft.com/java/azure/
+[Azure per sviluppatori Java]: /java/azure/
 [Account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
-[Strumenti Java per Visual Studio Team Services]: https://java.visualstudio.com/
+[Uso di Azure DevOps e Java]: /azure/devops/java/
 [vantaggi per i sottoscrittori di MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/

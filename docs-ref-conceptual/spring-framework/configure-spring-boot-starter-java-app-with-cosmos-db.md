@@ -8,18 +8,18 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 6675b3f76f19ec0bfdb28351681258b8c4792104
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 1d3ae6c12f32a3443f2783d0c88112746197f5be
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52339105"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991545"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a>Come usare Spring Boot Starter con l'API SQL di Azure Cosmos DB
 
@@ -356,11 +356,18 @@ In questa sezione si creano due classi Java per l'archiviazione dei dati utente 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
+Per altre informazioni su Spring e Azure, passare al centro di documentazione di Spring in Azure.
+
+> [!div class="nextstepaction"]
+> [Spring in Azure](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>Risorse aggiuntive
+
 Per altre informazioni sull'utilizzo di Azure Cosmos DB e Java, vedere gli articoli seguenti:
 
 * [Documentazione di Azure Cosmos DB].
 
-* [Azure Cosmos DB: Creare un database di documenti con Java e il portale di Azure][Build a SQL API app with Java]
+* [Azure Cosmos DB: creare un database di documenti con Java e il portale di Azure][Build a SQL API app with Java]
 
 * [Spring Data per l'API SQL Azure Cosmos DB]
 
@@ -372,19 +379,19 @@ Per altre informazioni sull'uso delle applicazioni Spring Boot in Azure, vedere 
 
 * [Eseguire un'applicazione Spring Boot in un cluster Kubernetes nel servizio contenitore di Azure](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Per altre informazioni su come usare Azure con Java, vedere [Azure per sviluppatori Java] e [Strumenti Java per Visual Studio Team Services].
+Per altre informazioni sull'uso di Azure con Java, vedere [Azure per sviluppatori Java] e la documentazione relativa all'[uso di Azure DevOps e Java].
 
 **[Spring Framework]** è una soluzione open source che consente agli sviluppatori Java di creare applicazioni di livello enterprise. Uno dei progetti più comuni che si basa su questa piattaforma è [Spring Boot], che fornisce un approccio semplificato per la creazione di applicazioni Java autonome. Per semplificare le operazioni iniziali con Spring Boot per gli sviluppatori, alcuni pacchetti Spring Boot di esempio sono disponibili all'indirizzo <https://github.com/spring-guides/>. Oltre a consentire di scegliere dall'elenco di progetti Spring Boot di base, **[Spring Initializr]** semplifica le operazioni iniziali degli sviluppatori per la creazione di applicazioni Spring Boot personalizzate.
 
 <!-- URL List -->
 
 [Documentazione di Azure Cosmos DB]: /azure/cosmos-db/
-[Azure per sviluppatori Java]: https://docs.microsoft.com/java/azure/
-[Build a SQL API app with Java]: https://docs.microsoft.com/azure/cosmos-db/create-sql-api-java 
+[Azure per sviluppatori Java]: /java/azure/
+[Build a SQL API app with Java]: /azure/cosmos-db/create-sql-api-java 
 [Spring Data per l'API SQL Azure Cosmos DB]: https://azure.microsoft.com/blog/spring-data-azure-cosmos-db-nosql-data-access-on-azure/
 [Spring Boot Starter per Azure DocumentDB]:https://github.com/Microsoft/azure-spring-boot-starters/tree/master/azure-documentdb-spring-boot-starter-sample
 [Account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
-[Strumenti Java per Visual Studio Team Services]: https://azure.microsoft.com/services/devops/java/
+[Uso di Azure DevOps e Java]: https://azure.microsoft.com/services/devops/java/
 [vantaggi per i sottoscrittori di MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/

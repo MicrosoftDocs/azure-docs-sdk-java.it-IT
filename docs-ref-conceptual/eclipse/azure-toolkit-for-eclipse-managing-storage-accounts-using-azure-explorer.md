@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 310d95436189af09f794154f4c9f0e71c47d88c8
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: dc39298d88f2fb0b2f56d6fbc0071b68b8d27989
+ms.sourcegitcommit: 24f037d133875f86761ec893dfa74e723de040b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48899442"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53636657"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-eclipse"></a>Gestire gli account di archiviazione con Azure Explorer per Eclipse
 
@@ -43,21 +43,21 @@ Per creare un account di archiviazione con Azure Explorer, eseguire queste opera
 
    ![Finestra di dialogo Crea un nuovo account di archiviazione][CS02]
 
-   * **Nome**: specifica il nome per il nuovo account di archiviazione.
+   * **Nome**: specifica il nome del nuovo account di archiviazione.
 
    * **Sottoscrizione**: specifica la sottoscrizione di Azure da usare per il nuovo account di archiviazione.
 
    * **Gruppo di risorse**: specifica il gruppo di risorse per la macchina virtuale. Selezionare una delle opzioni seguenti:
-      * **Crea nuovo**: specifica che si intende creare un nuovo gruppo di risorse.
-      * **Usa esistente**: specifica che sarà possibile scegliere in un elenco i gruppi di risorse associate all'account di Azure.
+      * **Create New** (Crea nuovo): specifica che si vuole creare un nuovo gruppo di risorse.
+      * **Use Existing** (Usa esistente): specifica che verrà effettuata una selezione da un elenco di gruppi di risorse associati all'account Azure.
 
-   * **Area**: specifica il percorso in cui verrà creato l'account di archiviazione, ad esempio "Stati Uniti occidentali".
+   * **Area**: specifica la località in cui verrà creato l'account di archiviazione, ad esempio "West US" (Stati Uniti occidentali).
 
-   * **Tipologia account**: specifica il tipo di account di archiviazione da creare, ad esempio "archiviazione BLOB". Per altre informazioni, vedere [Informazioni sugli account di archiviazione di Azure].
+   * **Account kind** (Tipologia account): specifica il tipo di account di archiviazione da creare, ad esempio "Blob storage" (Archiviazione BLOB). Per altre informazioni, vedere [Informazioni sugli account di archiviazione di Azure].
 
-   * **Prestazioni**: specifica l'account di archiviazione offerto da usare dall'autore selezionato, ad esempio "Premium". Per altre informazioni, vedere [Obiettivi di scalabilità e prestazioni per Archiviazione di Azure].
+   * **Prestazioni**: specifica l'offerta di account di archiviazione dell'editore selezionato da usare, ad esempio "Premium". Per altre informazioni, vedere [Obiettivi di scalabilità e prestazioni per Archiviazione di Azure].
 
-   * **Replica**: specifica la replica per l'account di archiviazione di account, ad esempio "Con ridondanza della zona". Per altre informazioni, vedere [Replica di Archiviazione di Azure].
+   * **Replica**: specifica la replica per l'account di archiviazione, ad esempio "Zone-Redundant" (Con ridondanza della zona). Per altre informazioni, vedere [Replica di Archiviazione di Azure].
 
 1. Dopo avere specificato tutte le opzioni precedenti, fare clic su **Crea**.
 
@@ -122,8 +122,8 @@ Per altre informazioni sugli account di archiviazione, sulle dimensioni e sui pr
 
 [Sizes for Windows storage accounts in Azure]: /azure/virtual-machines/virtual-machines-windows-sizes (Dimensioni degli account di archiviazione Windows in Azure)
 [Sizes for Linux storage accounts in Azure]: /azure/virtual-machines/virtual-machines-linux-sizes (Dimensioni degli account di archiviazione Linux in Azure)
-[Prezzi per gli account di archiviazione Windows]: /pricing/details/virtual-machines/windows/
-[Prezzi per gli account di archiviazione Linux]: /pricing/details/virtual-machines/linux/
+[Prezzi per gli account di archiviazione Windows]: https://azure.microsoft.com/pricing/details/virtual-machines/windows/
+[Prezzi per gli account di archiviazione Linux]: https://azure.microsoft.com/pricing/details/virtual-machines/linux/
 
 <!-- IMG List -->
 

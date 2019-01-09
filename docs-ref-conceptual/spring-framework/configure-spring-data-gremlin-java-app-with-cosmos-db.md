@@ -7,18 +7,18 @@ author: rmcmurray
 manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 47251c6bca1186a400020ba38e4b6596c7c5f2f1
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 70bed5696048af1de857f1064bf98e83ab96ca53
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52339025"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991565"
 ---
 # <a name="how-to-use-the-spring-data-gremlin-starter-with-the-azure-cosmos-db-sql-api"></a>Come usare Spring Data Gremlin Starter con l'API SQL di Azure Cosmos DB
 
@@ -510,15 +510,22 @@ In questa sezione si creano le classi Java necessarie per l'archiviazione dei da
 
 ## <a name="next-steps"></a>Passaggi successivi
 
+Per altre informazioni su Spring e Azure, passare al centro di documentazione di Spring in Azure.
+
+> [!div class="nextstepaction"]
+> [Spring in Azure](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>Risorse aggiuntive
+
 Per altre informazioni sul supporto di Azure per Gremlin e l'API Graph, vedere gli articoli seguenti:
 
-* [Introduzione ad Azure Cosmos DB: API Graph](https://docs.microsoft.com/azure/cosmos-db/graph-introduction)
+* [Introduzione ad Azure Cosmos DB: API Graph](/azure/cosmos-db/graph-introduction)
 
-* [Supporto Gremlin Graph di Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/gremlin-support)
+* [Supporto Gremlin Graph di Azure Cosmos DB](/azure/cosmos-db/gremlin-support)
 
-* [Azure Cosmos DB: Creare un database a grafo con Java e il portale di Azure](https://docs.microsoft.com/azure/cosmos-db/create-graph-java)
+* [Azure Cosmos DB: creare un database di grafi con Java e il portale di Azure](/azure/cosmos-db/create-graph-java)
 
-* [Esercitazione: Eseguire query nell'API Graph di Azure Cosmos DB con Gremlin](https://docs.microsoft.com/azure/cosmos-db/tutorial-query-graph)
+* [Esercitazione: Eseguire query nell'API Graph di Azure Cosmos DB con Gremlin](/azure/cosmos-db/tutorial-query-graph)
 
 * [Spring Data Gremlin Starter]
 
@@ -526,7 +533,7 @@ Per altre informazioni sull'utilizzo di Azure Cosmos DB e Java, vedere gli artic
 
 * [Documentazione di Azure Cosmos DB].
 
-* [Azure Cosmos DB: Creare un database di documenti con Java e il portale di Azure][Build a SQL API app with Java]
+* [Azure Cosmos DB: creare un database di documenti con Java e il portale di Azure][Build a SQL API app with Java]
 
 * [Spring Data per l'API SQL Azure Cosmos DB]
 
@@ -536,20 +543,19 @@ Per altre informazioni sull'uso delle applicazioni Spring Boot in Azure, vedere 
 
 * [Eseguire un'applicazione Spring Boot in un cluster Kubernetes nel servizio contenitore di Azure](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Per altre informazioni su come usare Azure con Java, vedere [Azure per sviluppatori Java] e [Strumenti Java per Visual Studio Team Services].
+Per altre informazioni sull'uso di Azure con Java, vedere [Azure per sviluppatori Java] e la documentazione relativa all'[uso di Azure DevOps e Java].
 
 **[Spring Framework]** è una soluzione open source che consente agli sviluppatori Java di creare applicazioni di livello enterprise. Uno dei progetti più comuni che si basa su questa piattaforma è [Spring Boot], che fornisce un approccio semplificato per la creazione di applicazioni Java autonome. Per semplificare le operazioni iniziali con Spring Boot per gli sviluppatori, alcuni pacchetti Spring Boot di esempio sono disponibili all'indirizzo <https://github.com/spring-guides/>. Oltre a consentire di scegliere dall'elenco di progetti Spring Boot di base, **[Spring Initializr]** semplifica le operazioni iniziali degli sviluppatori per la creazione di applicazioni Spring Boot personalizzate.
-
 
 <!-- URL List -->
 
 [Documentazione di Azure Cosmos DB]: /azure/cosmos-db/
-[Azure per sviluppatori Java]: https://docs.microsoft.com/java/azure/
-[Build a SQL API app with Java]: https://docs.microsoft.com/azure/cosmos-db/create-sql-api-java 
+[Azure per sviluppatori Java]: /java/azure/
+[Build a SQL API app with Java]: /azure/cosmos-db/create-sql-api-java 
 [Spring Data per l'API SQL Azure Cosmos DB]: https://azure.microsoft.com/blog/spring-data-azure-cosmos-db-nosql-data-access-on-azure/
 [Spring Data Gremlin Starter]: https://github.com/Microsoft/spring-data-gremlin
 [Account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
-[Strumenti Java per Visual Studio Team Services]: https://java.visualstudio.com/
+[Uso di Azure DevOps e Java]: /azure/devops/
 [vantaggi per i sottoscrittori di MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/

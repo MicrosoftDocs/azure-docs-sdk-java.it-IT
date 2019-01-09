@@ -8,19 +8,19 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: container-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 30be16aebb18e3c9e18f9a023ea9b82e5d614e94
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: aa8fa6d15d868e55b252483993d001d19746244b
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52339145"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991505"
 ---
 # <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>Distribuire un'applicazione Spring Boot in Linux nel servizio contenitore di Azure
 
@@ -83,7 +83,7 @@ I passaggi seguenti illustrano i passaggi necessari per creare una semplice appl
    curl http://localhost
    ```
 
-1. Dovrebbe essere visualizzato il messaggio seguente: **Hello Docker World!**
+1. Dovrebbe essere visualizzato il messaggio **Hello Docker World**
 
    ![Esplorare l'app di esempio in locale][SB01]
 
@@ -132,7 +132,7 @@ La procedura seguente illustra come usare il portale di Azure per creare un Regi
    </servers>
    ```
 
-1. Passare alla directory del progetto completato per l'applicazione Spring Boot (ad esempio, "*C:\SpringBoot\gs-spring-boot-docker\complete*" o "*/users/robert/SpringBoot/gs-spring-boot-docker/complete*") e aprire il file *pom.xml* con un editor di testo.
+1. Passare alla directory del progetto completato per l'applicazione Spring Boot (ad esempio "*C:\SpringBoot\gs-spring-boot-docker\complete*" o "*/users/robert/SpringBoot/gs-spring-boot-docker/complete*") e aprire il file *pom.xml* con un editor di testo.
 
 1. Aggiornare la raccolta `<properties>` nel file *pom.xml* con il valore del server di accesso per il Registro contenitori di Azure dalla sezione precedente di questa esercitazione. Ad esempio:
 
@@ -209,11 +209,11 @@ La procedura seguente illustra come usare il portale di Azure per creare un Regi
 
    * Scegliere **Registro di sistema privato**.
 
-   * **Immagine e tag facoltativo**: specificare il nome del contenitore dai passaggi precedenti, ad esempio: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*"
+   * **Immagine e tag facoltativo**: specificare il nome del contenitore dei passaggi precedenti, ad esempio "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*".
 
-   * **URL server**: specificare l'URL del registro dai passaggi precedenti, ad esempio "*<https://wingtiptoysregistry.azurecr.io>*"
+   * **URL del server**: specificare l'URL del registro dei passaggi precedenti, ad esempio "*<https://wingtiptoysregistry.azurecr.io>*".
 
-   * **Nome utente di accesso** e **Password**: specificare le credenziali di accesso dalle **Chiavi di accesso** usate nei passaggi precedenti.
+   * **Nome utente di accesso** e **Password**: specificare le credenziali di accesso delle **chiavi di accesso** usate nei passaggi precedenti.
    
    e. Dopo aver immesso tutte le informazioni precedenti, fare clic su **OK**.
 
@@ -263,12 +263,19 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 
 ## <a name="next-steps"></a>Passaggi successivi
 
+Per altre informazioni su Spring e Azure, passare al centro di documentazione di Spring in Azure.
+
+> [!div class="nextstepaction"]
+> [Spring in Azure](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>Risorse aggiuntive
+
 Per altre informazioni sull'uso delle applicazioni Spring Boot in Azure, vedere gli articoli seguenti:
 
 * [Distribuire un'applicazione Spring Boot nel servizio app di Azure](deploy-spring-boot-java-web-app-on-azure.md)
 * [Distribuire un'applicazione Spring Boot in un cluster Kubernetes nel servizio contenitore di Azure](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Per altre informazioni su come usare Azure con Java, vedere [Azure per sviluppatori Java] e [Strumenti Java per Visual Studio Team Services].
+Per altre informazioni sull'uso di Azure con Java, vedere [Azure per sviluppatori Java] e la documentazione relativa all'[uso di Azure DevOps e Java].
 
 Per maggiori dettagli sul progetto di esempio di Spring Boot in Docker, vedere [Spring Boot on Docker Getting Started] (Introduzione a Spring Boot in Docker).
 
@@ -282,14 +289,14 @@ Per altri esempi sull'uso delle immagini personalizzate di Docker con Azure, ved
 
 [Interfaccia della riga di comando di Azure]: /cli/azure/overview
 [Servizio contenitore di Azure]: https://azure.microsoft.com/services/container-service/
-[Azure per sviluppatori Java]: https://docs.microsoft.com/java/azure/
+[Azure per sviluppatori Java]: /java/azure/
 [Portale di Azure]: https://portal.azure.com/
 [Creare un registro per contenitori Docker privati con il portale di Azure]: /azure/container-registry/container-registry-get-started-portal
 [Uso di un'immagine Docker personalizzata per App Web di Azure in Linux]: /azure/app-service-web/app-service-linux-using-custom-docker-image
 [Docker]: https://www.docker.com/
 [Account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Strumenti Java per Visual Studio Team Services]: https://java.visualstudio.com/
+[Uso di Azure DevOps e Java]: /azure/devops/java/
 [Maven]: http://maven.apache.org/
 [vantaggi per i sottoscrittori di MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/

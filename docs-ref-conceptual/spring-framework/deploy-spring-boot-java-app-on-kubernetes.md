@@ -8,19 +8,19 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: d5ebfb7fc7279c745f77848dae397509662f0c0d
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 89a7a6900e5e0a544b4dc3fde960f62aeab6ebef
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338725"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991475"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Distribuire un'applicazione Spring Boot in un cluster Kubernetes nel servizio Kubernetes di Azure
 
@@ -78,7 +78,7 @@ La procedura seguente illustra come creare un'applicazione Web di Spring Boot e 
    curl http://localhost:8080
    ```
 
-1. Dovrebbe essere visualizzato il messaggio seguente: **Hello Docker World**
+1. Dovrebbe essere visualizzato il messaggio **Hello Docker World**
 
    ![Esplorare l'app di esempio in locale][SB01]
 
@@ -304,14 +304,21 @@ Questa esercitazione distribuisce l'app usando `kubectl`, quindi consente di esp
 
 ## <a name="next-steps"></a>Passaggi successivi
 
+Per altre informazioni su Spring e Azure, passare al centro di documentazione di Spring in Azure.
+
+> [!div class="nextstepaction"]
+> [Spring in Azure](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>Risorse aggiuntive
+
 Per altre informazioni sull'uso di Spring Boot in Azure, vedere gli articoli seguenti:
 
 * [Distribuire un'applicazione Spring Boot nel servizio app di Azure](deploy-spring-boot-java-web-app-on-azure.md)
 * [Distribuire un'applicazione Spring Boot in Linux nel servizio contenitore di Azure](deploy-spring-boot-java-app-on-linux.md)
 
-Per altre informazioni su come usare Azure con Java, vedere [Azure per sviluppatori Java] e [Strumenti Java per Visual Studio Team Services].
+Per altre informazioni sull'uso di Azure con Java, vedere [Azure per sviluppatori Java] e la documentazione relativa all'[uso di Azure DevOps e Java].
 
-<!-- Newly added --> Per altre informazioni sulla distribuzione di un'applicazione Java in Kubernetes con Visual Studio Code, vedere le [esercitazioni su Java in Visual Studio Code].
+Per altre informazioni sulla distribuzione di un'applicazione Java in Kubernetes con Visual Studio Code, vedere le [esercitazioni su Java in Visual Studio Code].
 
 Per altre informazioni sul progetto di esempio di Spring Boot in Docker, vedere [Spring Boot on Docker Getting Started] (Introduzione a Spring Boot in Docker).
 
@@ -321,7 +328,7 @@ I collegamenti seguenti forniscono informazioni aggiuntive sulla creazione di ap
 
 I collegamenti seguenti forniscono informazioni aggiuntive sull'uso di Kubernetes con Azure:
 
-* [Introduzione ai cluster Kubernetes nel servizio Kubernetes di Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)
+* [Introduzione ai cluster Kubernetes nel servizio Kubernetes di Azure](/azure/aks/intro-kubernetes)
 
 Per altre informazioni sull'uso dell'interfaccia della riga di comando di Kubernetes, vedere la guida dell'utente di **kubectl** all'indirizzo <https://kubernetes.io/docs/user-guide/kubectl/>.
 
@@ -337,14 +344,14 @@ Per altri esempi sull'uso delle immagini personalizzate di Docker con Azure, ved
 
 [Interfaccia della riga di comando di Azure]: /cli/azure/overview
 [servizio Kubernetes di Azure]: https://azure.microsoft.com/services/kubernetes-service/
-[Azure per sviluppatori Java]: https://docs.microsoft.com/java/azure/
+[Azure per sviluppatori Java]: /java/azure/
 [Azure portal]: https://portal.azure.com/
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
 [Uso di un'immagine Docker personalizzata per App Web di Azure in Linux]: /azure/app-service-web/app-service-linux-using-custom-docker-image
 [Docker]: https://www.docker.com/
 [Account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Strumenti Java per Visual Studio Team Services]: https://java.visualstudio.com/
+[Uso di Azure DevOps e Java]: /azure/devops/java/
 [Kubernetes]: https://kubernetes.io/
 [Kubernetes Command-Line Interface (kubectl)]: https://kubernetes.io/docs/user-guide/kubectl-overview/
 [Maven]: http://maven.apache.org/
@@ -360,7 +367,7 @@ Per altri esempi sull'uso delle immagini personalizzate di Docker con Azure, ved
 <!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- Newly added -->
-[Eseguire l'autenticazione con Registro contenitori di Azure dal servizio Kubernetes di Azure]: https://docs.microsoft.com/azure/container-registry/container-registry-auth-aks/
+[Eseguire l'autenticazione con Registro contenitori di Azure dal servizio Kubernetes di Azure]: /azure/container-registry/container-registry-auth-aks/
 [Esercitazioni su Java in Visual Studio Code]: https://code.visualstudio.com/docs/java/java-kubernetes/
 
 <!-- IMG List -->

@@ -8,26 +8,22 @@ manager: alexklim
 editor: ''
 ms.assetid: ''
 ms.author: dhdoshi
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: Azure Monitor
 ms.tgt_pltfrm: application-insights
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: eef5afa1bcd8ceb92eca1584df8816b73ac78948
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: f69cdcc5b479e83b230f23a8a76f96284a1b785b
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338735"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991435"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>Configurare un'app Spring Boot Initializer per l'uso di Application Insights
 
 Questo articolo illustra come creare un'applicazione Spring Boot con **[Spring Initializr]**, che usa Azure Application Insights Spring Boot Starter per il monitoraggio end-to-end delle applicazioni Java nel cloud.
-
-> [!NOTE]
-> 
-> Questa utilità di avvio è attualmente in versione *BETA (anteprima pubblica)*<em>.</em>
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -91,7 +87,7 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
  <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>applicationinsights-spring-boot-starter</artifactId>
-    <version>1.0.1-BETA</version>
+    <version>1.1.1</version>
 </dependency>
 ```
 
@@ -222,7 +218,7 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
     <dependency>
         <groupId>com.microsoft.azure</groupId>
         <artifactId>applicationinsights-spring-boot-starter</artifactId>
-        <version>1.0.1-BETA</version>
+        <version>1.1.1</version>
     </dependency>
 
     <dependency>
@@ -272,13 +268,20 @@ In pochi secondi, nel portale di Azure verranno visualizzati tutti i log Spring 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
+Per altre informazioni su Spring e Azure, passare al centro di documentazione di Spring in Azure.
+
+> [!div class="nextstepaction"]
+> [Spring in Azure](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>Risorse aggiuntive
+
 Per altre informazioni sull'uso delle applicazioni Spring Boot in Azure, vedere gli articoli seguenti:
 
 * [Distribuire un'applicazione Spring Boot nel servizio app di Azure](deploy-spring-boot-java-web-app-on-azure.md)
 
 * [Eseguire un'applicazione Spring Boot in un cluster Kubernetes nel servizio contenitore di Azure](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Application Insights supporta la raccolta automatica delle dipendenze esterne e la correlazione con le richieste in ingresso. La raccolta automatica è attualmente supportata per Oracle, MsSQL, MySQL e Redis. Per altri dettagli sull'abilitazione della raccolta automatica, vedere l'articolo su [come usare l'agente Java di Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-java-agent).
+Application Insights supporta la raccolta automatica delle dipendenze esterne e la correlazione con le richieste in ingresso. La raccolta automatica è attualmente supportata per Oracle, MsSQL, MySQL e Redis. Per altri dettagli sull'abilitazione della raccolta automatica, vedere l'articolo su [come usare l'agente Java di Application Insights](/azure/application-insights/app-insights-java-agent).
 
 Per altre informazioni su Azure Application Insights e sulle relative funzionalità di monitoraggio, vedere la home page di **[Application Insights]**.
 
@@ -286,21 +289,21 @@ Per altre informazioni su dettagli aggiuntivi della configurazione di Applicatio
 
 Per richieste di funzionalità e potenziali bug, aprire problemi nel repository [GitHub](https://github.com/Microsoft/ApplicationInsights-Java/issues).
 
-Per altre informazioni su come usare Azure con Java, vedere [Azure per sviluppatori Java] e [Strumenti Java per Visual Studio Team Services].
+Per altre informazioni sull'uso di Azure con Java, vedere [Azure per sviluppatori Java] e la documentazione relativa all'[uso di Azure DevOps e Java].
 
 **[Spring Framework]** è una soluzione open source che consente agli sviluppatori Java di creare applicazioni di livello enterprise. Uno dei progetti più comuni che si basa su questa piattaforma è [Spring Boot], che fornisce un approccio semplificato per la creazione di applicazioni Java autonome. Per semplificare le operazioni iniziali con Spring Boot per gli sviluppatori, diversi pacchetti Spring Boot di esempio sono disponibili all'indirizzo [https://github.com/spring-guides/](https://github.com/spring-guides/). Oltre a consentire di scegliere dall'elenco di progetti Spring Boot di base, **[Spring Initializr]** semplifica le operazioni iniziali degli sviluppatori per la creazione di applicazioni Spring Boot personalizzate.
 
 <!-- URL List -->
 
-[Azure per sviluppatori Java]: https://docs.microsoft.com/java/azure/
+[Azure per sviluppatori Java]: /java/azure/
 [Account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
-[Strumenti Java per Visual Studio Team Services]: https://java.visualstudio.com/
+[Uso di Azure DevOps e Java]: /azure/devops/
 [vantaggi per i sottoscrittori di MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Proprietà specifiche dei profili di Spring Boot]: https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html#boot-features-external-config-profile-specific-properties
 [Spring Initializr]: https://start.spring.io/
 [Spring Framework]: https://spring.io/ (Framework di Spring)
-[Application Insights]: https://docs.microsoft.com/azure/application-insights/
+[Application Insights]: /azure/application-insights/
 
 <!-- IMG List -->
 

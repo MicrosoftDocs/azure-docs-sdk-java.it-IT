@@ -8,18 +8,18 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: active-directory
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 89e294fa739b59f87667f901e914fd5f050b5b8c
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: b3d97917deffa75bfab5f0d9ded64affd90139e1
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52338775"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991395"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory"></a>Esercitazione: Proteggere un'app Web Java con l'utilità di avvio Spring Boot per Azure Active Directory
 
@@ -343,7 +343,7 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
    > Agli account utente non autorizzati verrà visualizzato il messaggio **HTTP 403** di accesso non autorizzato.
    >
 
-## <a name="summary"></a>Summary
+## <a name="summary"></a>Riepilogo
 
 In questa esercitazione si è creata una nuova applicazione Web Java con l'utilità di avvio per Azure Active Directory, si è configurato un nuovo tenant di Azure AD registrandovi quindi una nuova applicazione e infine si è configurata l'applicazione in modo da usare le annotazioni e le classi Spring per proteggere l'app Web.
 
@@ -361,7 +361,7 @@ Per altre informazioni su Spring e Azure, passare al centro di documentazione di
 [Get started with Azure AD]: /azure/active-directory/get-started-azure-ad
 [Azure for Java Developers]: /java/azure/
 [free Azure account]: https://azure.microsoft.com/pricing/free-trial/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Working with Azure DevOps and Java]: /azure/devops/
 [MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/

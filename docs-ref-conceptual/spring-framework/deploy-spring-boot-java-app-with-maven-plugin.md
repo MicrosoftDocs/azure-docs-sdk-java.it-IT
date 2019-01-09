@@ -7,20 +7,20 @@ author: rmcmurray
 manager: mbaldwin
 editor: brborges
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: 066ac30697c6adccc0c6a7b9d57205de488bdc53
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 950b360eb525b0c6b97daad0798c27ded0582b8b
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52339005"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991345"
 ---
 # <a name="deploy-a-spring-boot-jar-file-web-app-to-azure-app-service-on-linux"></a>Distribuire un'app Web Spring Boot basata su file JAR nel servizio app di Azure in Linux
 
-Questo articolo illustra l'uso del [plug-in Maven per app Web del servizio app di Azure](https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme) per distribuire un'applicazione Spring Boot inserita in un pacchetto JAR Java SE nel [servizio app di Azure in Linux](https://docs.microsoft.com/en-us/azure/app-service/containers/). Preferire la distribuzione con Java SE a [Tomcat e file WAR](/azure/app-service/containers/quickstart-java) quando si vogliono consolidare le dipendenze, il runtime e la configurazione dell'app in un singolo artefatto distribuibile.
+Questo articolo illustra l'uso del [plug-in Maven per app Web del servizio app di Azure](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme) per distribuire un'applicazione Spring Boot inserita in un pacchetto JAR Java SE nel [servizio app di Azure in Linux](/azure/app-service/containers/). Preferire la distribuzione con Java SE a [Tomcat e file WAR](/azure/app-service/containers/quickstart-java) quando si vogliono consolidare le dipendenze, il runtime e la configurazione dell'app in un singolo artefatto distribuibile.
 
 
 Se non si ha una sottoscrizione di Azure, creare un [account gratuito](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) prima di iniziare.
@@ -36,7 +36,7 @@ Per completare i passaggi di questa esercitazione, devono essere installati e co
 
 ## <a name="install-and-sign-in-to-azure-cli"></a>Installare l'interfaccia della riga di comando di Azure ed eseguire l'accesso
 
-Il modo più semplice e facile per distribuire l'applicazione Spring Boot tramite il plug-in Maven consiste nell'usare l'[interfaccia della riga di comando di Azure](https://docs.microsoft.com/cli/azure/).
+Il modo più semplice e facile per distribuire l'applicazione Spring Boot tramite il plug-in Maven consiste nell'usare l'[interfaccia della riga di comando di Azure](/cli/azure/).
 
 Accedere all'account Azure con l'interfaccia della riga di comando di Azure:
    
@@ -86,7 +86,7 @@ In questa sezione sarà clonata e testata in locale un'applicazione Spring Boot 
    curl http://localhost:8080
    ```
 
-1. Si dovrebbe visualizzare il messaggio seguente: **Greetings from Spring Boot!** (Benvenuti in Spring Boot!)
+1. Dovrebbe essere visualizzato il messaggio **Greetings from Spring Boot!**
 
 ## <a name="configure-maven-plugin-for-azure-app-service"></a>Configurare il plug-in Maven per il servizio app di Azure
 
@@ -159,9 +159,16 @@ Dopo che è stata distribuita, l'app Web potrà essere gestita tramite il [porta
 
    ![Individuazione dell'URL dell'app Web][AP02]
 
-Verificare il completamento della distribuzione con lo stesso comando curl eseguito in precedenza, usando l'URL dell'app Web riportato nel portale invece di `localhost`. Si dovrebbe visualizzare il messaggio seguente: **Greetings from Spring Boot!** (Benvenuti in Spring Boot!) 
+Verificare il completamento della distribuzione con lo stesso comando curl eseguito in precedenza, usando l'URL dell'app Web riportato nel portale invece di `localhost`. Dovrebbe essere visualizzato il messaggio **Greetings from Spring Boot!** 
 
 ## <a name="next-steps"></a>Passaggi successivi
+
+Per altre informazioni su Spring e Azure, passare al centro di documentazione di Spring in Azure.
+
+> [!div class="nextstepaction"]
+> [Spring in Azure](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>Risorse aggiuntive
 
 Per altre informazioni sulle varie tecnologie illustrate in questo articolo, vedere gli articoli seguenti:
 
@@ -176,17 +183,17 @@ Per altre informazioni sulle varie tecnologie illustrate in questo articolo, ved
 <!-- URL List -->
 
 [Azure Command-Line Interface (CLI)]: /cli/azure/overview
-[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
+[Azure for Java Developers]: /java/azure/
 [Portale di Azure]: https://portal.azure.com/
 [free Azure account]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Working with Azure DevOps and Java]: /azure/devops/
 [Maven]: http://maven.apache.org/
 [MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Introduzione a Spring Boot]: https://github.com/spring-guides/gs-spring-boot
 [Spring Framework]: https://spring.io/
-[Maven Plugin for Azure Web Apps (Plug-in Maven per App Web di Azure)]: https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme
+[Maven Plugin for Azure Web Apps (Plug-in Maven per App Web di Azure)]: /java/api/overview/azure/maven/azure-webapp-maven-plugin/readme
 
 [Java Development Kit (JDK)]: https://aka.ms/azure-jdks
 <!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->

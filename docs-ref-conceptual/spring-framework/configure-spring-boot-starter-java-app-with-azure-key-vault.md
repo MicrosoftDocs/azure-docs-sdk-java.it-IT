@@ -8,18 +8,18 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: fcb18de809f4465239f1f360a755624a5095e03a
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 78dadcf93bfc57ab669271495393fa9ba164c89d
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52339155"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991365"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Come usare l'utilità di avvio Spring Boot per Azure Key Vault
 
@@ -154,10 +154,10 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
    |---|---|
    | `name` | Specifica un nome univoco per l'insieme di credenziali delle chiavi. |
    | `location` | Specifica l'[area di Azure](https://azure.microsoft.com/regions/) in cui verrà ospitato il gruppo di risorse. |
-   | `enabled-for-deployment` | Specifica l'[opzione di distribuzione dell'insieme di credenziali delle chiavi](https://docs.microsoft.com/cli/azure/keyvault). |
-   | `enabled-for-disk-encryption` | Specifica l'[opzione di crittografia dell'insieme di credenziali delle chiavi](https://docs.microsoft.com/cli/azure/keyvault). |
-   | `enabled-for-template-deployment` | Specifica l'[opzione di crittografia dell'insieme di credenziali delle chiavi](https://docs.microsoft.com/cli/azure/keyvault). |
-   | `sku` | Specifica l'[opzione SKU dell'insieme di credenziali delle chiavi](https://docs.microsoft.com/cli/azure/keyvault). |
+   | `enabled-for-deployment` | Specifica l'[opzione di distribuzione dell'insieme di credenziali delle chiavi](/cli/azure/keyvault). |
+   | `enabled-for-disk-encryption` | Specifica l'[opzione di crittografia dell'insieme di credenziali delle chiavi](/cli/azure/keyvault). |
+   | `enabled-for-template-deployment` | Specifica l'[opzione di crittografia dell'insieme di credenziali delle chiavi](/cli/azure/keyvault). |
+   | `sku` | Specifica l'[opzione SKU dell'insieme di credenziali delle chiavi](/cli/azure/keyvault). |
    | `query` | Specifica un valore da recuperare dalla risposta, corrispondente all'URI dell'insieme di credenziali delle chiavi che sarà necessario per completare questa esercitazione. |
 
    L'interfaccia della riga di comando di Azure visualizzerà l'URI per l'insieme di credenziali delle chiavi, che verrà usato in un secondo momento, ad esempio:  
@@ -175,7 +175,7 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
    | Parametro | DESCRIZIONE |
    |---|---|
    | `name` | Specifica il nome dell'insieme di credenziali delle chiavi precedente. |
-   | `secret-permission` | Specifica i [criteri di sicurezza](https://docs.microsoft.com/cli/azure/keyvault) per l'insieme di credenziali delle chiavi. |
+   | `secret-permission` | Specifica i [criteri di sicurezza](/cli/azure/keyvault) per l'insieme di credenziali delle chiavi. |
    | `spn` | Specifica il GUID della registrazione per l'applicazione precedente. |
 
    Nell'interfaccia della riga di comando di Azure verranno visualizzati i risultati della creazione dei criteri di sicurezza, ad esempio:  
@@ -254,7 +254,7 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
 
 4. Passare al file di codice sorgente principale del progetto, ad esempio: */src/main/java/com/wingtiptoys/secrets*.
 
-5. Aprire il file Java principale dell'applicazione in un file in un editor di testo, ad esempio: *SecretsApplication.java* e aggiungere le righe seguenti al file:
+5. Aprire il file Java principale dell'applicazione in un file in un editor di testo, ad esempio *SecretsApplication.java*, e aggiungere le righe seguenti al file:
 
    ```java
    package com.wingtiptoys.secrets;
@@ -305,9 +305,18 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
 
    ![Messaggio in fase di esecuzione di Spring Boot][build-application-02]
 
-## <a name="summary"></a>Summary
+## <a name="summary"></a>Riepilogo
 
 In questa esercitazione si sono create una nuova applicazione Web Java con **[Spring Initializr]** e un'istanza di Azure Key Vault per l'archiviazione delle informazioni riservate e quindi si è configurata l'applicazione per il recupero delle informazioni dall'insieme di credenziali delle chiavi.
+
+## <a name="next-steps"></a>Passaggi successivi
+
+Per altre informazioni su Spring e Azure, passare al centro di documentazione di Spring in Azure.
+
+> [!div class="nextstepaction"]
+> [Spring in Azure](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>Risorse aggiuntive
 
 Per altre informazioni sull'uso di Azure Key Vault, vedere gli articoli seguenti:
 
@@ -321,22 +330,15 @@ Per altre informazioni sull'uso delle applicazioni Spring Boot in Azure, vedere 
 
 * [Eseguire un'applicazione Spring Boot in un cluster Kubernetes nel servizio contenitore di Azure](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Per altre informazioni su come usare Azure con Java, vedere [Azure per sviluppatori Java] e [Strumenti Java per Visual Studio Team Services].
-
-## <a name="next-steps"></a>Passaggi successivi
-
-Per altre informazioni su Spring e Azure, passare al centro di documentazione di Spring in Azure.
-
-> [!div class="nextstepaction"]
-> [Spring in Azure](/java/azure/spring-framework)
+Per altre informazioni sull'uso di Azure con Java, vedere [Azure per sviluppatori Java] e la documentazione relativa all'[uso di Azure DevOps e Java].
 
 <!-- URL List -->
 
 [Documentazione su Key Vault]: /azure/key-vault/
 [Introduzione all'insieme di credenziali delle chiavi di Azure]: /azure/key-vault/key-vault-get-started
-[Azure per sviluppatori Java]: https://docs.microsoft.com/java/azure/
+[Azure per sviluppatori Java]: /java/azure/
 [Account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
-[Strumenti Java per Visual Studio Team Services]: https://java.visualstudio.com/
+[Uso di Azure DevOps e Java]: /azure/devops/
 [vantaggi per i sottoscrittori di MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/
