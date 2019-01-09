@@ -7,127 +7,127 @@ author: rmcmurray
 manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.date: 11/21/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 47251c6bca1186a400020ba38e4b6596c7c5f2f1
-ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
+ms.openlocfilehash: 70bed5696048af1de857f1064bf98e83ab96ca53
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52339025"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991565"
 ---
-# <a name="how-to-use-the-spring-data-gremlin-starter-with-the-azure-cosmos-db-sql-api"></a><span data-ttu-id="db878-103">Come usare Spring Data Gremlin Starter con l'API SQL di Azure Cosmos DB</span><span class="sxs-lookup"><span data-stu-id="db878-103">How to use the Spring Data Gremlin Starter with the Azure Cosmos DB SQL API</span></span>
+# <a name="how-to-use-the-spring-data-gremlin-starter-with-the-azure-cosmos-db-sql-api"></a><span data-ttu-id="f507f-103">Come usare Spring Data Gremlin Starter con l'API SQL di Azure Cosmos DB</span><span class="sxs-lookup"><span data-stu-id="f507f-103">How to use the Spring Data Gremlin Starter with the Azure Cosmos DB SQL API</span></span>
 
-## <a name="overview"></a><span data-ttu-id="db878-104">Panoramica</span><span class="sxs-lookup"><span data-stu-id="db878-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="f507f-104">Panoramica</span><span class="sxs-lookup"><span data-stu-id="f507f-104">Overview</span></span>
 
-<span data-ttu-id="db878-105">Spring Data Gremlin Starter fornisce il supporto Spring Data per il linguaggio di query Gremlin di Apache, che gli sviluppatori possono usare con qualsiasi archivio dati compatibile con Gremlin.</span><span class="sxs-lookup"><span data-stu-id="db878-105">The Spring Data Gremlin Starter provides Spring Data support for the Gremlin query language from Apache, which developers can use with any Gremlin-compatible data store.</span></span>
+<span data-ttu-id="f507f-105">Spring Data Gremlin Starter fornisce il supporto Spring Data per il linguaggio di query Gremlin di Apache, che gli sviluppatori possono usare con qualsiasi archivio dati compatibile con Gremlin.</span><span class="sxs-lookup"><span data-stu-id="f507f-105">The Spring Data Gremlin Starter provides Spring Data support for the Gremlin query language from Apache, which developers can use with any Gremlin-compatible data store.</span></span>
 
-<span data-ttu-id="db878-106">Questo articolo descrive la creazione di un database di Azure Cosmos DB con il portale di Azure per l'uso con l'API Gremlin, l'uso di **[Spring Initializr]** per creare un'applicazione Java personalizzata e quindi aggiungere la funzionalità di Spring Data Gremlin Starter all'applicazione personalizzata per l'archiviazione e il recupero di dati da Azure Cosmos DB con Gremlin.</span><span class="sxs-lookup"><span data-stu-id="db878-106">This article demonstrates creating an Azure Cosmos DB by using the Azure portal for use with Gremlin API, then using the **[Spring Initializr]** to create a custom java application, and then add the Spring Data Gremlin Starter functionality to your custom application to store data in and retrieve data from your Azure Cosmos DB by using Gremlin.</span></span>
+<span data-ttu-id="f507f-106">Questo articolo descrive la creazione di un database di Azure Cosmos DB con il portale di Azure per l'uso con l'API Gremlin, l'uso di **[Spring Initializr]** per creare un'applicazione Java personalizzata e quindi aggiungere la funzionalità di Spring Data Gremlin Starter all'applicazione personalizzata per l'archiviazione e il recupero di dati da Azure Cosmos DB con Gremlin.</span><span class="sxs-lookup"><span data-stu-id="f507f-106">This article demonstrates creating an Azure Cosmos DB by using the Azure portal for use with Gremlin API, then using the **[Spring Initializr]** to create a custom java application, and then add the Spring Data Gremlin Starter functionality to your custom application to store data in and retrieve data from your Azure Cosmos DB by using Gremlin.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="db878-107">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="db878-107">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="f507f-107">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="f507f-107">Prerequisites</span></span>
 
-<span data-ttu-id="db878-108">I prerequisiti seguenti sono necessari per seguire le procedure disponibili in questo articolo:</span><span class="sxs-lookup"><span data-stu-id="db878-108">The following prerequisites are required in order to follow the steps in this article:</span></span>
+<span data-ttu-id="f507f-108">I prerequisiti seguenti sono necessari per seguire le procedure disponibili in questo articolo:</span><span class="sxs-lookup"><span data-stu-id="f507f-108">The following prerequisites are required in order to follow the steps in this article:</span></span>
 
-* <span data-ttu-id="db878-109">Sottoscrizione di Azure; se non si ha una sottoscrizione di Azure, è possibile attivare i [vantaggi per i sottoscrittori di MSDN] oppure iscriversi per ottenere un [account Azure gratuito].</span><span class="sxs-lookup"><span data-stu-id="db878-109">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
-* <span data-ttu-id="db878-110">Java Development Kit (JDK) supportato.</span><span class="sxs-lookup"><span data-stu-id="db878-110">A supported Java Development Kit (JDK).</span></span> <span data-ttu-id="db878-111">Per altre informazioni sulle versioni di JDK utilizzabili per lo sviluppo in Azure, vedere <https://aka.ms/azure-jdks>.</span><span class="sxs-lookup"><span data-stu-id="db878-111">For more information about the JDKs available for use when developing on Azure, see <https://aka.ms/azure-jdks>.</span></span>
-* <span data-ttu-id="db878-112">[Apache Maven](http://maven.apache.org/), versione 3.0 o versione successiva.</span><span class="sxs-lookup"><span data-stu-id="db878-112">[Apache Maven](http://maven.apache.org/), version 3.0 or later.</span></span>
+* <span data-ttu-id="f507f-109">Sottoscrizione di Azure; se non si ha una sottoscrizione di Azure, è possibile attivare i [vantaggi per i sottoscrittori di MSDN] oppure iscriversi per ottenere un [account Azure gratuito].</span><span class="sxs-lookup"><span data-stu-id="f507f-109">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
+* <span data-ttu-id="f507f-110">Java Development Kit (JDK) supportato.</span><span class="sxs-lookup"><span data-stu-id="f507f-110">A supported Java Development Kit (JDK).</span></span> <span data-ttu-id="f507f-111">Per altre informazioni sulle versioni di JDK utilizzabili per lo sviluppo in Azure, vedere <https://aka.ms/azure-jdks>.</span><span class="sxs-lookup"><span data-stu-id="f507f-111">For more information about the JDKs available for use when developing on Azure, see <https://aka.ms/azure-jdks>.</span></span>
+* <span data-ttu-id="f507f-112">[Apache Maven](http://maven.apache.org/), versione 3.0 o versione successiva.</span><span class="sxs-lookup"><span data-stu-id="f507f-112">[Apache Maven](http://maven.apache.org/), version 3.0 or later.</span></span>
 
 > [!IMPORTANT]
 >
-> <span data-ttu-id="db878-113">Per completare i passaggi descritti in questo articolo è necessario Spring Boot versione 2.0 o successiva.</span><span class="sxs-lookup"><span data-stu-id="db878-113">Spring Boot version 2.0 or greater is required to complete the steps in this article.</span></span>
+> <span data-ttu-id="f507f-113">Per completare i passaggi descritti in questo articolo è necessario Spring Boot versione 2.0 o successiva.</span><span class="sxs-lookup"><span data-stu-id="f507f-113">Spring Boot version 2.0 or greater is required to complete the steps in this article.</span></span>
 >
 
-## <a name="create-an-azure-cosmos-db-using-the-azure-portal"></a><span data-ttu-id="db878-114">Creare un'istanza di Azure Cosmos DB usando il portale di Azure</span><span class="sxs-lookup"><span data-stu-id="db878-114">Create an Azure Cosmos DB using the Azure portal</span></span>
+## <a name="create-an-azure-cosmos-db-using-the-azure-portal"></a><span data-ttu-id="f507f-114">Creare un'istanza di Azure Cosmos DB usando il portale di Azure</span><span class="sxs-lookup"><span data-stu-id="f507f-114">Create an Azure Cosmos DB using the Azure portal</span></span>
 
-### <a name="create-your-azure-cosmos-database-for-use-with-gremlin-api"></a><span data-ttu-id="db878-115">Creare il database Azure Cosmos da usare con l'API Gremlin</span><span class="sxs-lookup"><span data-stu-id="db878-115">Create your Azure Cosmos Database for use with Gremlin API</span></span>
+### <a name="create-your-azure-cosmos-database-for-use-with-gremlin-api"></a><span data-ttu-id="f507f-115">Creare il database Azure Cosmos da usare con l'API Gremlin</span><span class="sxs-lookup"><span data-stu-id="f507f-115">Create your Azure Cosmos Database for use with Gremlin API</span></span>
 
-1. <span data-ttu-id="db878-116">Passare al portale di Azure all'indirizzo <https://portal.azure.com/> e fare clic su **+Crea una risorsa**.</span><span class="sxs-lookup"><span data-stu-id="db878-116">Browse to the Azure portal at <https://portal.azure.com/> and click **+Create a resource**.</span></span>
+1. <span data-ttu-id="f507f-116">Passare al portale di Azure all'indirizzo <https://portal.azure.com/> e fare clic su **+Crea una risorsa**.</span><span class="sxs-lookup"><span data-stu-id="f507f-116">Browse to the Azure portal at <https://portal.azure.com/> and click **+Create a resource**.</span></span>
 
    ![Creare una risorsa][AZ01]
 
-1. <span data-ttu-id="db878-118">Fare clic su **Database** e quindi su **Azure Cosmos DB**.</span><span class="sxs-lookup"><span data-stu-id="db878-118">Click **Databases**, and then click **Azure Cosmos DB**.</span></span>
+1. <span data-ttu-id="f507f-118">Fare clic su **Database** e quindi su **Azure Cosmos DB**.</span><span class="sxs-lookup"><span data-stu-id="f507f-118">Click **Databases**, and then click **Azure Cosmos DB**.</span></span>
 
    ![Creare l'istanza di Azure Cosmos DB][AZ02]
 
-1. <span data-ttu-id="db878-120">Nella pagina **Azure Cosmos DB** immettere le informazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="db878-120">On the **Azure Cosmos DB** page, enter the following information:</span></span>
+1. <span data-ttu-id="f507f-120">Nella pagina **Azure Cosmos DB** immettere le informazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="f507f-120">On the **Azure Cosmos DB** page, enter the following information:</span></span>
 
-   * <span data-ttu-id="db878-121">Immettere un **ID** univoco che verrà usato come parte dell'URI Gremlin del database.</span><span class="sxs-lookup"><span data-stu-id="db878-121">Enter a unique **ID**, which you will use as part of the Gremlin URI for your database.</span></span> <span data-ttu-id="db878-122">Se ad esempio è stato immesso **wingtiptoysdata** per l'**ID**, l'URI Gremlin sarà *wingtiptoysdata.gremlin.cosmosdb.azure.com*.</span><span class="sxs-lookup"><span data-stu-id="db878-122">For example: if you entered **wingtiptoysdata** for the **ID**, the Gremlin URI would be *wingtiptoysdata.gremlin.cosmosdb.azure.com*.</span></span>
-   * <span data-ttu-id="db878-123">Scegliere **Gremlin (grafo)** per l'API.</span><span class="sxs-lookup"><span data-stu-id="db878-123">Choose **Gremlin (Graph)** for the API.</span></span>
-   * <span data-ttu-id="db878-124">Selezionare la **sottoscrizione** da usare per il database.</span><span class="sxs-lookup"><span data-stu-id="db878-124">Choose the **Subscription** you want to use for your database.</span></span>
-   * <span data-ttu-id="db878-125">Specificare se creare un nuovo **gruppo di risorse** per il database o sceglierne uno esistente.</span><span class="sxs-lookup"><span data-stu-id="db878-125">Specify whether to create a new **Resource group** for your database, or choose an existing resource group.</span></span>
-   * <span data-ttu-id="db878-126">Specificare il **percorso** per il database.</span><span class="sxs-lookup"><span data-stu-id="db878-126">Specify the **Location** for your database.</span></span>
+   * <span data-ttu-id="f507f-121">Immettere un **ID** univoco che verrà usato come parte dell'URI Gremlin del database.</span><span class="sxs-lookup"><span data-stu-id="f507f-121">Enter a unique **ID**, which you will use as part of the Gremlin URI for your database.</span></span> <span data-ttu-id="f507f-122">Se ad esempio è stato immesso **wingtiptoysdata** per l'**ID**, l'URI Gremlin sarà *wingtiptoysdata.gremlin.cosmosdb.azure.com*.</span><span class="sxs-lookup"><span data-stu-id="f507f-122">For example: if you entered **wingtiptoysdata** for the **ID**, the Gremlin URI would be *wingtiptoysdata.gremlin.cosmosdb.azure.com*.</span></span>
+   * <span data-ttu-id="f507f-123">Scegliere **Gremlin (grafo)** per l'API.</span><span class="sxs-lookup"><span data-stu-id="f507f-123">Choose **Gremlin (Graph)** for the API.</span></span>
+   * <span data-ttu-id="f507f-124">Selezionare la **sottoscrizione** da usare per il database.</span><span class="sxs-lookup"><span data-stu-id="f507f-124">Choose the **Subscription** you want to use for your database.</span></span>
+   * <span data-ttu-id="f507f-125">Specificare se creare un nuovo **gruppo di risorse** per il database o sceglierne uno esistente.</span><span class="sxs-lookup"><span data-stu-id="f507f-125">Specify whether to create a new **Resource group** for your database, or choose an existing resource group.</span></span>
+   * <span data-ttu-id="f507f-126">Specificare il **percorso** per il database.</span><span class="sxs-lookup"><span data-stu-id="f507f-126">Specify the **Location** for your database.</span></span>
    
-   <span data-ttu-id="db878-127">Dopo avere specificato queste opzioni, fare clic su **Crea** per creare il database.</span><span class="sxs-lookup"><span data-stu-id="db878-127">When you have specified these options, click **Create** to create your database.</span></span>
+   <span data-ttu-id="f507f-127">Dopo avere specificato queste opzioni, fare clic su **Crea** per creare il database.</span><span class="sxs-lookup"><span data-stu-id="f507f-127">When you have specified these options, click **Create** to create your database.</span></span>
 
    ![Specificare le opzioni di Azure Cosmos DB][AZ03]
 
-1. <span data-ttu-id="db878-129">Al termine della creazione, il database viene elencato nel **Dashboard** di Azure e nelle pagine **Tutte le risorse** e **Azure Cosmos DB**.</span><span class="sxs-lookup"><span data-stu-id="db878-129">When your database has been created, it is listed on your Azure **Dashboard**, as well as under the **All Resources** and **Azure Cosmos DB** pages.</span></span> <span data-ttu-id="db878-130">È possibile fare clic sul database in una di queste posizioni per aprire la pagina delle proprietà per la cache.</span><span class="sxs-lookup"><span data-stu-id="db878-130">You can click on your database on any of those locations to open the properties page for your cache.</span></span>
+1. <span data-ttu-id="f507f-129">Al termine della creazione, il database viene elencato nel **Dashboard** di Azure e nelle pagine **Tutte le risorse** e **Azure Cosmos DB**.</span><span class="sxs-lookup"><span data-stu-id="f507f-129">When your database has been created, it is listed on your Azure **Dashboard**, as well as under the **All Resources** and **Azure Cosmos DB** pages.</span></span> <span data-ttu-id="f507f-130">È possibile fare clic sul database in una di queste posizioni per aprire la pagina delle proprietà per la cache.</span><span class="sxs-lookup"><span data-stu-id="f507f-130">You can click on your database on any of those locations to open the properties page for your cache.</span></span>
 
    ![Tutte le risorse][AZ04]
 
-1. <span data-ttu-id="db878-132">Quando viene visualizzata la pagina delle proprietà per il database, fare clic su **Chiavi di accesso** e copiare le chiavi di accesso e l'URI per il database. Questi valori verranno usati all'interno dell'applicazione Spring Boot.</span><span class="sxs-lookup"><span data-stu-id="db878-132">When the properties page for your database is displayed, click **Access keys** and copy your URI and access keys for your database; you will use these values in your Spring Boot application.</span></span>
+1. <span data-ttu-id="f507f-132">Quando viene visualizzata la pagina delle proprietà per il database, fare clic su **Chiavi di accesso** e copiare le chiavi di accesso e l'URI per il database. Questi valori verranno usati all'interno dell'applicazione Spring Boot.</span><span class="sxs-lookup"><span data-stu-id="f507f-132">When the properties page for your database is displayed, click **Access keys** and copy your URI and access keys for your database; you will use these values in your Spring Boot application.</span></span>
 
    ![Chiavi di accesso][AZ05]
 
-### <a name="add-a-graph-to-your-azure-cosmos-database"></a><span data-ttu-id="db878-134">Aggiungere un grafo al database di Azure Cosmos DB</span><span class="sxs-lookup"><span data-stu-id="db878-134">Add a graph to your Azure Cosmos Database</span></span>
+### <a name="add-a-graph-to-your-azure-cosmos-database"></a><span data-ttu-id="f507f-134">Aggiungere un grafo al database di Azure Cosmos DB</span><span class="sxs-lookup"><span data-stu-id="f507f-134">Add a graph to your Azure Cosmos Database</span></span>
 
-1. <span data-ttu-id="db878-135">Fare clic su **Esplora dati**, quindi su **New Graph** (Nuovo grafo).</span><span class="sxs-lookup"><span data-stu-id="db878-135">Click **Data Explorer**, and then click **New Graph**.</span></span>
+1. <span data-ttu-id="f507f-135">Fare clic su **Esplora dati**, quindi su **New Graph** (Nuovo grafo).</span><span class="sxs-lookup"><span data-stu-id="f507f-135">Click **Data Explorer**, and then click **New Graph**.</span></span>
 
    ![Nuovo grafo][AZ06]
 
-1. <span data-ttu-id="db878-137">Quando viene visualizzato **Aggiungi Graph**, immettere le informazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="db878-137">When the **Add Graph** is displayed, enter the following information:</span></span>
+1. <span data-ttu-id="f507f-137">Quando viene visualizzato **Aggiungi Graph**, immettere le informazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="f507f-137">When the **Add Graph** is displayed, enter the following information:</span></span>
 
-   * <span data-ttu-id="db878-138">Specificare un **ID database** univoco per il database.</span><span class="sxs-lookup"><span data-stu-id="db878-138">Specify a unique **Database id** for your database.</span></span>
-   * <span data-ttu-id="db878-139">Specificare un **ID grafo** univoco per il grafo.</span><span class="sxs-lookup"><span data-stu-id="db878-139">Specify a unique **Graph id** for your graph.</span></span>
-   * <span data-ttu-id="db878-140">È possibile specificare la propria **capacità di archiviazione** oppure accettare l'impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="db878-140">You can choose to specify your **Storage capacity**, or you can accept the default.</span></span>
-   * <span data-ttu-id="db878-141">Specificare la **velocità effettiva**. Per questo esempio è possibile scegliere 400 unità richiesta (UR).</span><span class="sxs-lookup"><span data-stu-id="db878-141">Specify your **Throughput**, and for this example you can choose 400 Request Units (RUs).</span></span>
+   * <span data-ttu-id="f507f-138">Specificare un **ID database** univoco per il database.</span><span class="sxs-lookup"><span data-stu-id="f507f-138">Specify a unique **Database id** for your database.</span></span>
+   * <span data-ttu-id="f507f-139">Specificare un **ID grafo** univoco per il grafo.</span><span class="sxs-lookup"><span data-stu-id="f507f-139">Specify a unique **Graph id** for your graph.</span></span>
+   * <span data-ttu-id="f507f-140">È possibile specificare la propria **capacità di archiviazione** oppure accettare l'impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="f507f-140">You can choose to specify your **Storage capacity**, or you can accept the default.</span></span>
+   * <span data-ttu-id="f507f-141">Specificare la **velocità effettiva**. Per questo esempio è possibile scegliere 400 unità richiesta (UR).</span><span class="sxs-lookup"><span data-stu-id="f507f-141">Specify your **Throughput**, and for this example you can choose 400 Request Units (RUs).</span></span>
    
-   <span data-ttu-id="db878-142">Dopo avere specificato queste opzioni, fare clic su **OK** per creare il grafo.</span><span class="sxs-lookup"><span data-stu-id="db878-142">When you have specified these options, click **OK** to create your graph.</span></span>
+   <span data-ttu-id="f507f-142">Dopo avere specificato queste opzioni, fare clic su **OK** per creare il grafo.</span><span class="sxs-lookup"><span data-stu-id="f507f-142">When you have specified these options, click **OK** to create your graph.</span></span>
 
    ![Aggiungere il grafo][AZ07]
 
-1. <span data-ttu-id="db878-144">Dopo aver creato il grafo, è possibile usare **Esplora dati** per visualizzarlo.</span><span class="sxs-lookup"><span data-stu-id="db878-144">After your graph has been created, you can use the **Data Explorer** to view it.</span></span>
+1. <span data-ttu-id="f507f-144">Dopo aver creato il grafo, è possibile usare **Esplora dati** per visualizzarlo.</span><span class="sxs-lookup"><span data-stu-id="f507f-144">After your graph has been created, you can use the **Data Explorer** to view it.</span></span>
 
    ![Visualizzazione delle proprietà del grafo][AZ08]
 
-## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a><span data-ttu-id="db878-146">Creare un'applicazione Spring Boot semplice con Spring Initializr</span><span class="sxs-lookup"><span data-stu-id="db878-146">Create a simple Spring Boot application with the Spring Initializr</span></span>
+## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a><span data-ttu-id="f507f-146">Creare un'applicazione Spring Boot semplice con Spring Initializr</span><span class="sxs-lookup"><span data-stu-id="f507f-146">Create a simple Spring Boot application with the Spring Initializr</span></span>
 
-1. <span data-ttu-id="db878-147">Passare a <https://start.spring.io/>.</span><span class="sxs-lookup"><span data-stu-id="db878-147">Browse to <https://start.spring.io/>.</span></span>
+1. <span data-ttu-id="f507f-147">Passare a <https://start.spring.io/>.</span><span class="sxs-lookup"><span data-stu-id="f507f-147">Browse to <https://start.spring.io/>.</span></span>
 
-1. <span data-ttu-id="db878-148">Specificare che si vuole generare un progetto **Maven** con **Java**, immettere i nomi per **Group** (Gruppo) e **Artifact** (Artefatto) dell'applicazione, specificare la versione **Spring Boot** (2.0 o successiva), quindi fare clic su **Generate Project** (Genera progetto).</span><span class="sxs-lookup"><span data-stu-id="db878-148">Specify that you want to generate a **Maven** project with **Java**, enter the **Group** and **Artifact** names for your application, specify your **Spring Boot** version with a version that is equal to or greater than 2.0, and then click **Generate Project**.</span></span>
+1. <span data-ttu-id="f507f-148">Specificare che si vuole generare un progetto **Maven** con **Java**, immettere i nomi per **Group** (Gruppo) e **Artifact** (Artefatto) dell'applicazione, specificare la versione **Spring Boot** (2.0 o successiva), quindi fare clic su **Generate Project** (Genera progetto).</span><span class="sxs-lookup"><span data-stu-id="f507f-148">Specify that you want to generate a **Maven** project with **Java**, enter the **Group** and **Artifact** names for your application, specify your **Spring Boot** version with a version that is equal to or greater than 2.0, and then click **Generate Project**.</span></span>
 
    ![Opzioni di base di Spring Initializr][SI01]
 
    > [!NOTE]
    >
-   > <span data-ttu-id="db878-150">Spring Initializr usa i nomi in **Group** (Gruppo) e **Artifact** (Elemento) per creare il nome del pacchetto, ad esempio \*com.example.wintiptoysdata.</span><span class="sxs-lookup"><span data-stu-id="db878-150">The Spring Initializr uses the **Group** and **Artifact** names to create the package name; for example: \*com.example.wintiptoysdata.</span></span>
+   > <span data-ttu-id="f507f-150">Spring Initializr usa i nomi in **Group** (Gruppo) e **Artifact** (Elemento) per creare il nome del pacchetto, ad esempio \*com.example.wintiptoysdata.</span><span class="sxs-lookup"><span data-stu-id="f507f-150">The Spring Initializr uses the **Group** and **Artifact** names to create the package name; for example: \*com.example.wintiptoysdata.</span></span>
    >
 
-1. <span data-ttu-id="db878-151">Quando richiesto, scaricare il progetto in un percorso nel computer locale.</span><span class="sxs-lookup"><span data-stu-id="db878-151">When prompted, download the project to a path on your local computer.</span></span>
+1. <span data-ttu-id="f507f-151">Quando richiesto, scaricare il progetto in un percorso nel computer locale.</span><span class="sxs-lookup"><span data-stu-id="f507f-151">When prompted, download the project to a path on your local computer.</span></span>
 
    ![Scaricare il progetto Spring Boot personalizzato][SI02]
 
-1. <span data-ttu-id="db878-153">Dopo l'estrazione dei file nel sistema locale, la semplice applicazione Spring Boot sarà pronta per la modifica.</span><span class="sxs-lookup"><span data-stu-id="db878-153">After you have extracted the files on your local system, your simple Spring Boot application will be ready for editing.</span></span>
+1. <span data-ttu-id="f507f-153">Dopo l'estrazione dei file nel sistema locale, la semplice applicazione Spring Boot sarà pronta per la modifica.</span><span class="sxs-lookup"><span data-stu-id="f507f-153">After you have extracted the files on your local system, your simple Spring Boot application will be ready for editing.</span></span>
 
    ![File del progetto Spring Boot personalizzato][SI03]
 
-## <a name="configure-your-spring-boot-app-to-use-the-spring-data-gremlin-starter"></a><span data-ttu-id="db878-155">Configurare l'app Spring Boot per l'uso di Spring Data Gremlin Starter</span><span class="sxs-lookup"><span data-stu-id="db878-155">Configure your Spring Boot app to use the Spring Data Gremlin Starter</span></span>
+## <a name="configure-your-spring-boot-app-to-use-the-spring-data-gremlin-starter"></a><span data-ttu-id="f507f-155">Configurare l'app Spring Boot per l'uso di Spring Data Gremlin Starter</span><span class="sxs-lookup"><span data-stu-id="f507f-155">Configure your Spring Boot app to use the Spring Data Gremlin Starter</span></span>
 
-1. <span data-ttu-id="db878-156">Individuare il file *pom.xml* nella directory dell'app, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="db878-156">Locate the *pom.xml* file in the directory of your app; for example:</span></span>
+1. <span data-ttu-id="f507f-156">Individuare il file *pom.xml* nella directory dell'app, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="f507f-156">Locate the *pom.xml* file in the directory of your app; for example:</span></span>
 
    `C:\SpringBoot\wingtiptoysdata\pom.xml`
 
-   <span data-ttu-id="db878-157">-oppure-</span><span class="sxs-lookup"><span data-stu-id="db878-157">-or-</span></span>
+   <span data-ttu-id="f507f-157">-oppure-</span><span class="sxs-lookup"><span data-stu-id="f507f-157">-or-</span></span>
 
    `/users/example/home/wingtiptoysdata/pom.xml`
 
    ![Individuare il file pom.xml][PM01]
 
-1. <span data-ttu-id="db878-159">Aprire il file *pom.xml* in un editor di testo e aggiungere Spring Data Gremlin Starter all'elenco di `<dependencies>`:</span><span class="sxs-lookup"><span data-stu-id="db878-159">Open the *pom.xml* file in a text editor, and add the Spring Data Gremlin Starter to list of `<dependencies>`:</span></span>
+1. <span data-ttu-id="f507f-159">Aprire il file *pom.xml* in un editor di testo e aggiungere Spring Data Gremlin Starter all'elenco di `<dependencies>`:</span><span class="sxs-lookup"><span data-stu-id="f507f-159">Open the *pom.xml* file in a text editor, and add the Spring Data Gremlin Starter to list of `<dependencies>`:</span></span>
 
    ```xml
    <dependency>
@@ -139,21 +139,21 @@ ms.locfileid: "52339025"
 
    ![Modifica del file pom.xml][PM02]
 
-1. <span data-ttu-id="db878-161">Salvare e chiudere il file *pom.xml*.</span><span class="sxs-lookup"><span data-stu-id="db878-161">Save and close the *pom.xml* file.</span></span>
+1. <span data-ttu-id="f507f-161">Salvare e chiudere il file *pom.xml*.</span><span class="sxs-lookup"><span data-stu-id="f507f-161">Save and close the *pom.xml* file.</span></span>
 
-## <a name="configure-your-spring-boot-app-to-use-your-azure-cosmos-db"></a><span data-ttu-id="db878-162">Configurare l'app Spring Boot per usare Azure Cosmos DB</span><span class="sxs-lookup"><span data-stu-id="db878-162">Configure your Spring Boot app to use your Azure Cosmos DB</span></span>
+## <a name="configure-your-spring-boot-app-to-use-your-azure-cosmos-db"></a><span data-ttu-id="f507f-162">Configurare l'app Spring Boot per usare Azure Cosmos DB</span><span class="sxs-lookup"><span data-stu-id="f507f-162">Configure your Spring Boot app to use your Azure Cosmos DB</span></span>
 
-1. <span data-ttu-id="db878-163">Individuare la directory *resources* dell'app e creare un nuovo file denominato *application.yml*.</span><span class="sxs-lookup"><span data-stu-id="db878-163">Locate the *resources* directory of your app, and create a new file named *application.yml*.</span></span> <span data-ttu-id="db878-164">Ad esempio: </span><span class="sxs-lookup"><span data-stu-id="db878-164">For example:</span></span>
+1. <span data-ttu-id="f507f-163">Individuare la directory *resources* dell'app e creare un nuovo file denominato *application.yml*.</span><span class="sxs-lookup"><span data-stu-id="f507f-163">Locate the *resources* directory of your app, and create a new file named *application.yml*.</span></span> <span data-ttu-id="f507f-164">Ad esempio: </span><span class="sxs-lookup"><span data-stu-id="f507f-164">For example:</span></span>
 
    `C:\SpringBoot\wingtiptoysdata\src\main\resources\application.yml`
 
-   <span data-ttu-id="db878-165">-oppure-</span><span class="sxs-lookup"><span data-stu-id="db878-165">-or-</span></span>
+   <span data-ttu-id="f507f-165">-oppure-</span><span class="sxs-lookup"><span data-stu-id="f507f-165">-or-</span></span>
 
    `/users/example/home/wingtiptoysdata/src/main/resources/application.yml`
 
    ![Creare il file application.yml][RE01]
 
-1. <span data-ttu-id="db878-167">Aprire il file *application.yml* in un editor di testo, quindi aggiungere le righe seguenti al file e sostituire i valori di esempio con le proprietà appropriate per il database:</span><span class="sxs-lookup"><span data-stu-id="db878-167">Open the *application.yml* file in a text editor, and add the following lines to the file, and replace the sample values with the appropriate properties for your database:</span></span>
+1. <span data-ttu-id="f507f-167">Aprire il file *application.yml* in un editor di testo, quindi aggiungere le righe seguenti al file e sostituire i valori di esempio con le proprietà appropriate per il database:</span><span class="sxs-lookup"><span data-stu-id="f507f-167">Open the *application.yml* file in a text editor, and add the following lines to the file, and replace the sample values with the appropriate properties for your database:</span></span>
 
    ```yaml
    gremlin:
@@ -164,35 +164,35 @@ ms.locfileid: "52339025"
       telemetryAllowed: false
    ```
    
-   <span data-ttu-id="db878-168">Dove:</span><span class="sxs-lookup"><span data-stu-id="db878-168">Where:</span></span>
+   <span data-ttu-id="f507f-168">Dove:</span><span class="sxs-lookup"><span data-stu-id="f507f-168">Where:</span></span>
    
-   | <span data-ttu-id="db878-169">Campo</span><span class="sxs-lookup"><span data-stu-id="db878-169">Field</span></span> | <span data-ttu-id="db878-170">DESCRIZIONE</span><span class="sxs-lookup"><span data-stu-id="db878-170">Description</span></span> |
+   | <span data-ttu-id="f507f-169">Campo</span><span class="sxs-lookup"><span data-stu-id="f507f-169">Field</span></span> | <span data-ttu-id="f507f-170">DESCRIZIONE</span><span class="sxs-lookup"><span data-stu-id="f507f-170">Description</span></span> |
    |---|---|
-   | `endpoint` | <span data-ttu-id="db878-171">Specifica l'URI Gremlin per il database, derivante dall'**ID** univoco specificato quando è stata creata l'istanza di Azure Cosmos DB in un passaggio precedente dell'esercitazione.</span><span class="sxs-lookup"><span data-stu-id="db878-171">Specifies the Gremlin URI for your database, which is derived from the unique **ID** that you specified when you created your Azure Cosmos DB earlier in this tutorial.</span></span> |
-   | `port` | <span data-ttu-id="db878-172">Specifica la porta TCP/IP, che deve essere **443** per HTTPS.</span><span class="sxs-lookup"><span data-stu-id="db878-172">Specifies the TCP/IP port, which should be **443** for HTTPS.</span></span> |
-   | `username` | <span data-ttu-id="db878-173">Specifica l'**ID database** e l'**ID grafo** univoci usati quando è stato aggiunto il grafo in un passaggio precedente dell'esercitazione. Il valore deve essere immesso con la sintassi "/dbs/**{ID database}**/colls/**{ID grafo}**".</span><span class="sxs-lookup"><span data-stu-id="db878-173">Specifies the unique **Database id** and **Graph id** that you used when you added your graph earlier in this tutorial; this must be entered using the following syntax: "/dbs/**{Database id}**/colls/**{Graph id}**".</span></span> |
-   | `password` | <span data-ttu-id="db878-174">Specifica la **chiave di accesso** primaria o secondaria copiata in un passaggio precedente dell'esercitazione.</span><span class="sxs-lookup"><span data-stu-id="db878-174">Specifies either the primary or secondary **Access key** that you copied earlier in this tutorial.</span></span> |
-   | `telemetryAllowed` | <span data-ttu-id="db878-175">Specificare **true** se si vuole abilitare la telemetria, altrimenti **false**.</span><span class="sxs-lookup"><span data-stu-id="db878-175">Specify **true** if you want to enable telemetry; otherwise, **false**.</span></span>
+   | `endpoint` | <span data-ttu-id="f507f-171">Specifica l'URI Gremlin per il database, derivante dall'**ID** univoco specificato quando è stata creata l'istanza di Azure Cosmos DB in un passaggio precedente dell'esercitazione.</span><span class="sxs-lookup"><span data-stu-id="f507f-171">Specifies the Gremlin URI for your database, which is derived from the unique **ID** that you specified when you created your Azure Cosmos DB earlier in this tutorial.</span></span> |
+   | `port` | <span data-ttu-id="f507f-172">Specifica la porta TCP/IP, che deve essere **443** per HTTPS.</span><span class="sxs-lookup"><span data-stu-id="f507f-172">Specifies the TCP/IP port, which should be **443** for HTTPS.</span></span> |
+   | `username` | <span data-ttu-id="f507f-173">Specifica l'**ID database** e l'**ID grafo** univoci usati quando è stato aggiunto il grafo in un passaggio precedente dell'esercitazione. Il valore deve essere immesso con la sintassi "/dbs/**{ID database}**/colls/**{ID grafo}**".</span><span class="sxs-lookup"><span data-stu-id="f507f-173">Specifies the unique **Database id** and **Graph id** that you used when you added your graph earlier in this tutorial; this must be entered using the following syntax: "/dbs/**{Database id}**/colls/**{Graph id}**".</span></span> |
+   | `password` | <span data-ttu-id="f507f-174">Specifica la **chiave di accesso** primaria o secondaria copiata in un passaggio precedente dell'esercitazione.</span><span class="sxs-lookup"><span data-stu-id="f507f-174">Specifies either the primary or secondary **Access key** that you copied earlier in this tutorial.</span></span> |
+   | `telemetryAllowed` | <span data-ttu-id="f507f-175">Specificare **true** se si vuole abilitare la telemetria, altrimenti **false**.</span><span class="sxs-lookup"><span data-stu-id="f507f-175">Specify **true** if you want to enable telemetry; otherwise, **false**.</span></span>
 
-1. <span data-ttu-id="db878-176">Salvare e chiudere il file *application.yml*.</span><span class="sxs-lookup"><span data-stu-id="db878-176">Save and close the *application.yml* file.</span></span>
+1. <span data-ttu-id="f507f-176">Salvare e chiudere il file *application.yml*.</span><span class="sxs-lookup"><span data-stu-id="f507f-176">Save and close the *application.yml* file.</span></span>
 
-## <a name="add-sample-code-to-implement-basic-database-functionality"></a><span data-ttu-id="db878-177">Aggiungere il codice di esempio per implementare le funzionalità di base del database</span><span class="sxs-lookup"><span data-stu-id="db878-177">Add sample code to implement basic database functionality</span></span>
+## <a name="add-sample-code-to-implement-basic-database-functionality"></a><span data-ttu-id="f507f-177">Aggiungere il codice di esempio per implementare le funzionalità di base del database</span><span class="sxs-lookup"><span data-stu-id="f507f-177">Add sample code to implement basic database functionality</span></span>
 
-<span data-ttu-id="db878-178">In questa sezione si creano le classi Java necessarie per l'archiviazione dei dati nel database.</span><span class="sxs-lookup"><span data-stu-id="db878-178">In this section, you create the necessary Java classes for storing data in your database.</span></span>
+<span data-ttu-id="f507f-178">In questa sezione si creano le classi Java necessarie per l'archiviazione dei dati nel database.</span><span class="sxs-lookup"><span data-stu-id="f507f-178">In this section, you create the necessary Java classes for storing data in your database.</span></span>
 
-### <a name="modify-the-main-application-class"></a><span data-ttu-id="db878-179">Modificare la classe dell'applicazione main</span><span class="sxs-lookup"><span data-stu-id="db878-179">Modify the main application class</span></span>
+### <a name="modify-the-main-application-class"></a><span data-ttu-id="f507f-179">Modificare la classe dell'applicazione main</span><span class="sxs-lookup"><span data-stu-id="f507f-179">Modify the main application class</span></span>
 
-1. <span data-ttu-id="db878-180">Individuare il file Java dell'applicazione main nella directory del pacchetto dell'app, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="db878-180">Locate the main application Java file in the package directory of your app; for example:</span></span>
+1. <span data-ttu-id="f507f-180">Individuare il file Java dell'applicazione main nella directory del pacchetto dell'app, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="f507f-180">Locate the main application Java file in the package directory of your app; for example:</span></span>
 
    `C:\SpringBoot\wingtiptoysdata\src\main\java\com\example\wingtiptoysdata\WingtiptoysdataApplication.java`
 
-   <span data-ttu-id="db878-181">-oppure-</span><span class="sxs-lookup"><span data-stu-id="db878-181">-or-</span></span>
+   <span data-ttu-id="f507f-181">-oppure-</span><span class="sxs-lookup"><span data-stu-id="f507f-181">-or-</span></span>
 
    `/users/example/home/wingtiptoysdata/src/main/java/com/example/wingtiptoysdata/WingtiptoysdataApplication.java`
 
    ![Individuare il file Java dell'applicazione][JV01]
 
-1. <span data-ttu-id="db878-183">Aprire il file Java dell'applicazione main in un editor di testo e aggiungere le righe seguenti al file:</span><span class="sxs-lookup"><span data-stu-id="db878-183">Open the main application Java file in a text editor, and add the following lines to the file:</span></span>
+1. <span data-ttu-id="f507f-183">Aprire il file Java dell'applicazione main in un editor di testo e aggiungere le righe seguenti al file:</span><span class="sxs-lookup"><span data-stu-id="f507f-183">Open the main application Java file in a text editor, and add the following lines to the file:</span></span>
 
    ```java
    package com.example.wingtiptoysdata;
@@ -275,19 +275,19 @@ ms.locfileid: "52339025"
    }
    ```
 
-1. <span data-ttu-id="db878-184">Salvare e chiudere il file Java dell'applicazione main.</span><span class="sxs-lookup"><span data-stu-id="db878-184">Save and close the main application Java file.</span></span>
+1. <span data-ttu-id="f507f-184">Salvare e chiudere il file Java dell'applicazione main.</span><span class="sxs-lookup"><span data-stu-id="f507f-184">Save and close the main application Java file.</span></span>
 
-### <a name="define-a-basic-class-for-storing-configuration-information"></a><span data-ttu-id="db878-185">Definire una classe di base per l'archiviazione delle informazioni di configurazione</span><span class="sxs-lookup"><span data-stu-id="db878-185">Define a basic class for storing configuration information</span></span>
+### <a name="define-a-basic-class-for-storing-configuration-information"></a><span data-ttu-id="f507f-185">Definire una classe di base per l'archiviazione delle informazioni di configurazione</span><span class="sxs-lookup"><span data-stu-id="f507f-185">Define a basic class for storing configuration information</span></span>
 
-1. <span data-ttu-id="db878-186">Creare una cartella denominata *config* nella directory del pacchetto dell'app, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="db878-186">Create a folder named *config* under the package directory of your app; for example:</span></span>
+1. <span data-ttu-id="f507f-186">Creare una cartella denominata *config* nella directory del pacchetto dell'app, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="f507f-186">Create a folder named *config* under the package directory of your app; for example:</span></span>
 
    `C:\SpringBoot\wingtiptoysdata\src\main\java\com\example\wingtiptoysdata\config`
 
-   <span data-ttu-id="db878-187">-oppure-</span><span class="sxs-lookup"><span data-stu-id="db878-187">-or-</span></span>
+   <span data-ttu-id="f507f-187">-oppure-</span><span class="sxs-lookup"><span data-stu-id="f507f-187">-or-</span></span>
 
    `/users/example/home/wingtiptoysdata/src/main/java/com/example/wingtiptoysdata/config`
 
-1. <span data-ttu-id="db878-188">Creare un nuovo file Java denominato *UserRepositoryConfiguration.java* nella directory *config*, quindi aprire il file in un editor di testo e aggiungere le righe seguenti:</span><span class="sxs-lookup"><span data-stu-id="db878-188">Create a new Java file named *UserRepositoryConfiguration.java* in the *config* directory, then open the file in a text editor, and add the following lines:</span></span>
+1. <span data-ttu-id="f507f-188">Creare un nuovo file Java denominato *UserRepositoryConfiguration.java* nella directory *config*, quindi aprire il file in un editor di testo e aggiungere le righe seguenti:</span><span class="sxs-lookup"><span data-stu-id="f507f-188">Create a new Java file named *UserRepositoryConfiguration.java* in the *config* directory, then open the file in a text editor, and add the following lines:</span></span>
 
    ```java
    package com.example.wingtiptoysdata.config;
@@ -318,19 +318,19 @@ ms.locfileid: "52339025"
    }
    ```
 
-1. <span data-ttu-id="db878-189">Salvare e chiudere il file *UserRepositoryConfiguration.java*.</span><span class="sxs-lookup"><span data-stu-id="db878-189">Save and close the *UserRepositoryConfiguration.java* file.</span></span>
+1. <span data-ttu-id="f507f-189">Salvare e chiudere il file *UserRepositoryConfiguration.java*.</span><span class="sxs-lookup"><span data-stu-id="f507f-189">Save and close the *UserRepositoryConfiguration.java* file.</span></span>
 
-### <a name="define-a-set-of-classes-that-define-the-elements-of-your-graph-database"></a><span data-ttu-id="db878-190">Definire un insieme di classi che indicano gli elementi del database a grafo</span><span class="sxs-lookup"><span data-stu-id="db878-190">Define a set of classes that define the elements of your graph database</span></span>
+### <a name="define-a-set-of-classes-that-define-the-elements-of-your-graph-database"></a><span data-ttu-id="f507f-190">Definire un insieme di classi che indicano gli elementi del database a grafo</span><span class="sxs-lookup"><span data-stu-id="f507f-190">Define a set of classes that define the elements of your graph database</span></span>
 
-1. <span data-ttu-id="db878-191">Creare una cartella denominata *domain* nella directory del pacchetto dell'app, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="db878-191">Create a folder named *domain* under the package directory of your app; for example:</span></span>
+1. <span data-ttu-id="f507f-191">Creare una cartella denominata *domain* nella directory del pacchetto dell'app, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="f507f-191">Create a folder named *domain* under the package directory of your app; for example:</span></span>
 
    `C:\SpringBoot\wingtiptoysdata\src\main\java\com\example\wingtiptoysdata\domain`
 
-   <span data-ttu-id="db878-192">-oppure-</span><span class="sxs-lookup"><span data-stu-id="db878-192">-or-</span></span>
+   <span data-ttu-id="f507f-192">-oppure-</span><span class="sxs-lookup"><span data-stu-id="f507f-192">-or-</span></span>
 
    `/users/example/home/wingtiptoysdata/src/main/java/com/example/wingtiptoysdata/domain`
 
-1. <span data-ttu-id="db878-193">Creare un nuovo file Java denominato *Person.java* nella directory *domain*, quindi aprire il file in un editor di testo e aggiungere le righe seguenti:</span><span class="sxs-lookup"><span data-stu-id="db878-193">Create a new Java file named *Person.java* in the *domain* directory, then open the file in a text editor and add the following lines:</span></span>
+1. <span data-ttu-id="f507f-193">Creare un nuovo file Java denominato *Person.java* nella directory *domain*, quindi aprire il file in un editor di testo e aggiungere le righe seguenti:</span><span class="sxs-lookup"><span data-stu-id="f507f-193">Create a new Java file named *Person.java* in the *domain* directory, then open the file in a text editor and add the following lines:</span></span>
 
    ```java
    package com.example.wingtiptoysdata.domain;
@@ -356,9 +356,9 @@ ms.locfileid: "52339025"
    }
    ```
 
-1. <span data-ttu-id="db878-194">Salvare e chiudere il file *Person.java*.</span><span class="sxs-lookup"><span data-stu-id="db878-194">Save and close the *Person.java* file.</span></span>
+1. <span data-ttu-id="f507f-194">Salvare e chiudere il file *Person.java*.</span><span class="sxs-lookup"><span data-stu-id="f507f-194">Save and close the *Person.java* file.</span></span>
 
-1. <span data-ttu-id="db878-195">Creare un nuovo file Java denominato *Relation.java* nella directory *domain*, quindi aprire il file in un editor di testo e aggiungere le righe seguenti:</span><span class="sxs-lookup"><span data-stu-id="db878-195">Create a new Java file named *Relation.java* in the *domain* directory, then open the file in a text editor and add the following lines:</span></span>
+1. <span data-ttu-id="f507f-195">Creare un nuovo file Java denominato *Relation.java* nella directory *domain*, quindi aprire il file in un editor di testo e aggiungere le righe seguenti:</span><span class="sxs-lookup"><span data-stu-id="f507f-195">Create a new Java file named *Relation.java* in the *domain* directory, then open the file in a text editor and add the following lines:</span></span>
 
    ```java
    package com.example.wingtiptoysdata.domain;
@@ -390,9 +390,9 @@ ms.locfileid: "52339025"
    }
    ```
 
-1. <span data-ttu-id="db878-196">Salvare e chiudere il file *Relation.java*.</span><span class="sxs-lookup"><span data-stu-id="db878-196">Save and close the *Relation.java* file.</span></span>
+1. <span data-ttu-id="f507f-196">Salvare e chiudere il file *Relation.java*.</span><span class="sxs-lookup"><span data-stu-id="f507f-196">Save and close the *Relation.java* file.</span></span>
 
-1. <span data-ttu-id="db878-197">Creare un nuovo file Java denominato *Network.java* nella directory *domain*, quindi aprire il file in un editor di testo e aggiungere le righe seguenti:</span><span class="sxs-lookup"><span data-stu-id="db878-197">Create a new Java file named *Network.java* in the *domain* directory, then open the file in a text editor and add the following lines:</span></span>
+1. <span data-ttu-id="f507f-197">Creare un nuovo file Java denominato *Network.java* nella directory *domain*, quindi aprire il file in un editor di testo e aggiungere le righe seguenti:</span><span class="sxs-lookup"><span data-stu-id="f507f-197">Create a new Java file named *Network.java* in the *domain* directory, then open the file in a text editor and add the following lines:</span></span>
 
    ```java
    package com.example.wingtiptoysdata.domain;
@@ -427,19 +427,19 @@ ms.locfileid: "52339025"
    }
    ```
 
-1. <span data-ttu-id="db878-198">Salvare e chiudere il file *Network.java*.</span><span class="sxs-lookup"><span data-stu-id="db878-198">Save and close the *Network.java* file.</span></span>
+1. <span data-ttu-id="f507f-198">Salvare e chiudere il file *Network.java*.</span><span class="sxs-lookup"><span data-stu-id="f507f-198">Save and close the *Network.java* file.</span></span>
 
-### <a name="define-a-set-of-classes-that-define-the-repositories-for-your-graph-database"></a><span data-ttu-id="db878-199">Definire un insieme di classi che indicano i repository del database a grafo</span><span class="sxs-lookup"><span data-stu-id="db878-199">Define a set of classes that define the repositories for your graph database</span></span>
+### <a name="define-a-set-of-classes-that-define-the-repositories-for-your-graph-database"></a><span data-ttu-id="f507f-199">Definire un insieme di classi che indicano i repository del database a grafo</span><span class="sxs-lookup"><span data-stu-id="f507f-199">Define a set of classes that define the repositories for your graph database</span></span>
 
-1. <span data-ttu-id="db878-200">Creare una cartella denominata *repository* nella directory del pacchetto dell'app, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="db878-200">Create a folder named *repository* under the package directory of your app; for example:</span></span>
+1. <span data-ttu-id="f507f-200">Creare una cartella denominata *repository* nella directory del pacchetto dell'app, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="f507f-200">Create a folder named *repository* under the package directory of your app; for example:</span></span>
 
    `C:\SpringBoot\wingtiptoysdata\src\main\java\com\example\wingtiptoysdata\repository`
 
-   <span data-ttu-id="db878-201">-oppure-</span><span class="sxs-lookup"><span data-stu-id="db878-201">-or-</span></span>
+   <span data-ttu-id="f507f-201">-oppure-</span><span class="sxs-lookup"><span data-stu-id="f507f-201">-or-</span></span>
 
    `/users/example/home/wingtiptoysdata/src/main/java/com/example/wingtiptoysdata/repository`
 
-1. <span data-ttu-id="db878-202">Creare un nuovo file Java denominato *NetworkRepository.java* nella directory *repository*, quindi aprire il file in un editor di testo e aggiungere le righe seguenti:</span><span class="sxs-lookup"><span data-stu-id="db878-202">Create a new Java file named *NetworkRepository.java* in the *repository* directory, then open the file in a text editor and add the following lines:</span></span>
+1. <span data-ttu-id="f507f-202">Creare un nuovo file Java denominato *NetworkRepository.java* nella directory *repository*, quindi aprire il file in un editor di testo e aggiungere le righe seguenti:</span><span class="sxs-lookup"><span data-stu-id="f507f-202">Create a new Java file named *NetworkRepository.java* in the *repository* directory, then open the file in a text editor and add the following lines:</span></span>
 
    ```java
    package com.example.wingtiptoysdata.repository;
@@ -453,9 +453,9 @@ ms.locfileid: "52339025"
    }
    ```
 
-1. <span data-ttu-id="db878-203">Salvare e chiudere il file *NetworkRepository.java*.</span><span class="sxs-lookup"><span data-stu-id="db878-203">Save and close the *NetworkRepository.java* file.</span></span>
+1. <span data-ttu-id="f507f-203">Salvare e chiudere il file *NetworkRepository.java*.</span><span class="sxs-lookup"><span data-stu-id="f507f-203">Save and close the *NetworkRepository.java* file.</span></span>
 
-1. <span data-ttu-id="db878-204">Creare un nuovo file Java denominato *PersonRepository.java* nella directory *repository*, quindi aprire il file in un editor di testo e aggiungere le righe seguenti:</span><span class="sxs-lookup"><span data-stu-id="db878-204">Create a new Java file named *PersonRepository.java* in the *repository* directory, then open the file in a text editor and add the following lines:</span></span>
+1. <span data-ttu-id="f507f-204">Creare un nuovo file Java denominato *PersonRepository.java* nella directory *repository*, quindi aprire il file in un editor di testo e aggiungere le righe seguenti:</span><span class="sxs-lookup"><span data-stu-id="f507f-204">Create a new Java file named *PersonRepository.java* in the *repository* directory, then open the file in a text editor and add the following lines:</span></span>
 
    ```java
    package com.example.wingtiptoysdata.repository;
@@ -469,9 +469,9 @@ ms.locfileid: "52339025"
    }
    ```
 
-1. <span data-ttu-id="db878-205">Salvare e chiudere il file *PersonRepository.java*.</span><span class="sxs-lookup"><span data-stu-id="db878-205">Save and close the *PersonRepository.java* file.</span></span>
+1. <span data-ttu-id="f507f-205">Salvare e chiudere il file *PersonRepository.java*.</span><span class="sxs-lookup"><span data-stu-id="f507f-205">Save and close the *PersonRepository.java* file.</span></span>
 
-1. <span data-ttu-id="db878-206">Creare un nuovo file Java denominato *RelationRepository.java* nella directory *repository*, quindi aprire il file in un editor di testo e aggiungere le righe seguenti:</span><span class="sxs-lookup"><span data-stu-id="db878-206">Create a new Java file named *RelationRepository.java* in the *repository* directory, then open the file in a text editor and add the following lines:</span></span>
+1. <span data-ttu-id="f507f-206">Creare un nuovo file Java denominato *RelationRepository.java* nella directory *repository*, quindi aprire il file in un editor di testo e aggiungere le righe seguenti:</span><span class="sxs-lookup"><span data-stu-id="f507f-206">Create a new Java file named *RelationRepository.java* in the *repository* directory, then open the file in a text editor and add the following lines:</span></span>
 
    ```java
    package com.example.wingtiptoysdata.repository;
@@ -485,76 +485,82 @@ ms.locfileid: "52339025"
    }
    ```
 
-1. <span data-ttu-id="db878-207">Salvare e chiudere il file *RelationRepository.java*.</span><span class="sxs-lookup"><span data-stu-id="db878-207">Save and close the *RelationRepository.java* file.</span></span>
+1. <span data-ttu-id="f507f-207">Salvare e chiudere il file *RelationRepository.java*.</span><span class="sxs-lookup"><span data-stu-id="f507f-207">Save and close the *RelationRepository.java* file.</span></span>
 
-## <a name="build-and-test-your-app"></a><span data-ttu-id="db878-208">Compilare e testare l'app</span><span class="sxs-lookup"><span data-stu-id="db878-208">Build and test your app</span></span>
+## <a name="build-and-test-your-app"></a><span data-ttu-id="f507f-208">Compilare e testare l'app</span><span class="sxs-lookup"><span data-stu-id="f507f-208">Build and test your app</span></span>
 
-1. <span data-ttu-id="db878-209">Aprire un prompt dei comandi e cambiare la directory passando alla cartella in cui si trova il file *pom.xml*, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="db878-209">Open a command prompt and change directory to the folder where your *pom.xml* file is located; for example:</span></span>
+1. <span data-ttu-id="f507f-209">Aprire un prompt dei comandi e cambiare la directory passando alla cartella in cui si trova il file *pom.xml*, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="f507f-209">Open a command prompt and change directory to the folder where your *pom.xml* file is located; for example:</span></span>
 
    `cd C:\SpringBoot\wingtiptoysdata`
 
-   <span data-ttu-id="db878-210">-oppure-</span><span class="sxs-lookup"><span data-stu-id="db878-210">-or-</span></span>
+   <span data-ttu-id="f507f-210">-oppure-</span><span class="sxs-lookup"><span data-stu-id="f507f-210">-or-</span></span>
 
    `cd /users/example/home/wingtiptoysdata`
 
-1. <span data-ttu-id="db878-211">Compilare l'applicazione Spring Boot con Maven ed eseguirla, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="db878-211">Build your Spring Boot application with Maven and run it; for example:</span></span>
+1. <span data-ttu-id="f507f-211">Compilare l'applicazione Spring Boot con Maven ed eseguirla, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="f507f-211">Build your Spring Boot application with Maven and run it; for example:</span></span>
 
    ```shell
    mvn clean package
    mvn spring-boot:run
    ```
 
-1. <span data-ttu-id="db878-212">L'applicazione visualizzerà diversi messaggi di runtime e, in assenza di errori, è possibile usare il portale di Azure per visualizzare il contenuto della propria istanza di Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="db878-212">Your application will display several runtime messages, and if there were no errors, you can use the Azure portal to view the contents of your Azure Cosmos DB.</span></span> <span data-ttu-id="db878-213">A tale scopo, fare clic su **Esplora dati** nella pagina delle proprietà del database, quindi fare clic su **Esegui query Gremlin** e selezionare un elemento dall'elenco dei risultati per visualizzare i dati.</span><span class="sxs-lookup"><span data-stu-id="db878-213">To do so, click **Data Explorer** on the properties page for your database, then click **Execute Gremlin Query**, and then select an item from the list of results to view the data.</span></span>
+1. <span data-ttu-id="f507f-212">L'applicazione visualizzerà diversi messaggi di runtime e, in assenza di errori, è possibile usare il portale di Azure per visualizzare il contenuto della propria istanza di Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="f507f-212">Your application will display several runtime messages, and if there were no errors, you can use the Azure portal to view the contents of your Azure Cosmos DB.</span></span> <span data-ttu-id="f507f-213">A tale scopo, fare clic su **Esplora dati** nella pagina delle proprietà del database, quindi fare clic su **Esegui query Gremlin** e selezionare un elemento dall'elenco dei risultati per visualizzare i dati.</span><span class="sxs-lookup"><span data-stu-id="f507f-213">To do so, click **Data Explorer** on the properties page for your database, then click **Execute Gremlin Query**, and then select an item from the list of results to view the data.</span></span>
 
    ![Utilizzo di Esplora documenti per visualizzare i dati][JV03]
 
-## <a name="next-steps"></a><span data-ttu-id="db878-215">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="db878-215">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="f507f-215">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="f507f-215">Next steps</span></span>
 
-<span data-ttu-id="db878-216">Per altre informazioni sul supporto di Azure per Gremlin e l'API Graph, vedere gli articoli seguenti:</span><span class="sxs-lookup"><span data-stu-id="db878-216">For more information about Azure support for Gremlin and Graph API, see the following articles:</span></span>
+<span data-ttu-id="f507f-216">Per altre informazioni su Spring e Azure, passare al centro di documentazione di Spring in Azure.</span><span class="sxs-lookup"><span data-stu-id="f507f-216">To learn more about Spring and Azure, continue to the Spring on Azure documentation center.</span></span>
 
-* [<span data-ttu-id="db878-217">Introduzione ad Azure Cosmos DB: API Graph</span><span class="sxs-lookup"><span data-stu-id="db878-217">Introduction to Azure Cosmos DB: Graph API</span></span>](https://docs.microsoft.com/azure/cosmos-db/graph-introduction)
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="f507f-217">Spring in Azure</span><span class="sxs-lookup"><span data-stu-id="f507f-217">Spring on Azure</span></span>](/java/azure/spring-framework)
 
-* [<span data-ttu-id="db878-218">Supporto Gremlin Graph di Azure Cosmos DB</span><span class="sxs-lookup"><span data-stu-id="db878-218">Azure Cosmos DB Gremlin graph support</span></span>](https://docs.microsoft.com/azure/cosmos-db/gremlin-support)
+### <a name="additional-resources"></a><span data-ttu-id="f507f-218">Risorse aggiuntive</span><span class="sxs-lookup"><span data-stu-id="f507f-218">Additional Resources</span></span>
 
-* [<span data-ttu-id="db878-219">Azure Cosmos DB: Creare un database a grafo con Java e il portale di Azure</span><span class="sxs-lookup"><span data-stu-id="db878-219">Azure Cosmos DB: Create a graph database using Java and the Azure portal</span></span>](https://docs.microsoft.com/azure/cosmos-db/create-graph-java)
+<span data-ttu-id="f507f-219">Per altre informazioni sul supporto di Azure per Gremlin e l'API Graph, vedere gli articoli seguenti:</span><span class="sxs-lookup"><span data-stu-id="f507f-219">For more information about Azure support for Gremlin and Graph API, see the following articles:</span></span>
 
-* [<span data-ttu-id="db878-220">Esercitazione: Eseguire query nell'API Graph di Azure Cosmos DB con Gremlin</span><span class="sxs-lookup"><span data-stu-id="db878-220">Tutorial: Query Azure Cosmos DB Graph API by using Gremlin</span></span>](https://docs.microsoft.com/azure/cosmos-db/tutorial-query-graph)
+* [<span data-ttu-id="f507f-220">Introduzione ad Azure Cosmos DB: API Graph</span><span class="sxs-lookup"><span data-stu-id="f507f-220">Introduction to Azure Cosmos DB: Graph API</span></span>](/azure/cosmos-db/graph-introduction)
 
-* <span data-ttu-id="db878-221">[Spring Data Gremlin Starter]</span><span class="sxs-lookup"><span data-stu-id="db878-221">[Spring Data Gremlin Starter]</span></span>
+* [<span data-ttu-id="f507f-221">Supporto Gremlin Graph di Azure Cosmos DB</span><span class="sxs-lookup"><span data-stu-id="f507f-221">Azure Cosmos DB Gremlin graph support</span></span>](/azure/cosmos-db/gremlin-support)
 
-<span data-ttu-id="db878-222">Per altre informazioni sull'utilizzo di Azure Cosmos DB e Java, vedere gli articoli seguenti:</span><span class="sxs-lookup"><span data-stu-id="db878-222">For more information about using Azure Cosmos DB and Java, see the following articles:</span></span>
+* [<span data-ttu-id="f507f-222">Azure Cosmos DB: creare un database di grafi con Java e il portale di Azure</span><span class="sxs-lookup"><span data-stu-id="f507f-222">Azure Cosmos DB: Create a graph database using Java and the Azure portal</span></span>](/azure/cosmos-db/create-graph-java)
 
-* <span data-ttu-id="db878-223">[Documentazione di Azure Cosmos DB].</span><span class="sxs-lookup"><span data-stu-id="db878-223">[Azure Cosmos DB Documentation].</span></span>
+* [<span data-ttu-id="f507f-223">Esercitazione: Eseguire query nell'API Graph di Azure Cosmos DB con Gremlin</span><span class="sxs-lookup"><span data-stu-id="f507f-223">Tutorial: Query Azure Cosmos DB Graph API by using Gremlin</span></span>](/azure/cosmos-db/tutorial-query-graph)
 
-* <span data-ttu-id="db878-224">[Azure Cosmos DB: Creare un database di documenti con Java e il portale di Azure][Build a SQL API app with Java]</span><span class="sxs-lookup"><span data-stu-id="db878-224">[Azure Cosmos DB: Create a document database using Java and the Azure portal][Build a SQL API app with Java]</span></span>
+* <span data-ttu-id="f507f-224">[Spring Data Gremlin Starter]</span><span class="sxs-lookup"><span data-stu-id="f507f-224">[Spring Data Gremlin Starter]</span></span>
 
-* <span data-ttu-id="db878-225">[Spring Data per l'API SQL Azure Cosmos DB]</span><span class="sxs-lookup"><span data-stu-id="db878-225">[Spring Data for Azure Cosmos DB SQL API]</span></span>
+<span data-ttu-id="f507f-225">Per altre informazioni sull'utilizzo di Azure Cosmos DB e Java, vedere gli articoli seguenti:</span><span class="sxs-lookup"><span data-stu-id="f507f-225">For more information about using Azure Cosmos DB and Java, see the following articles:</span></span>
 
-<span data-ttu-id="db878-226">Per altre informazioni sull'uso delle applicazioni Spring Boot in Azure, vedere gli articoli seguenti:</span><span class="sxs-lookup"><span data-stu-id="db878-226">For more information about using Spring Boot applications on Azure, see the following articles:</span></span>
+* <span data-ttu-id="f507f-226">[Documentazione di Azure Cosmos DB].</span><span class="sxs-lookup"><span data-stu-id="f507f-226">[Azure Cosmos DB Documentation].</span></span>
 
-* [<span data-ttu-id="db878-227">Distribuire un'applicazione Spring Boot nel servizio app di Azure</span><span class="sxs-lookup"><span data-stu-id="db878-227">Deploy a Spring Boot Application to the Azure App Service</span></span>](deploy-spring-boot-java-web-app-on-azure.md)
+* <span data-ttu-id="f507f-227">[Azure Cosmos DB: creare un database di documenti con Java e il portale di Azure][Build a SQL API app with Java]</span><span class="sxs-lookup"><span data-stu-id="f507f-227">[Azure Cosmos DB: Create a document database using Java and the Azure portal][Build a SQL API app with Java]</span></span>
 
-* [<span data-ttu-id="db878-228">Eseguire un'applicazione Spring Boot in un cluster Kubernetes nel servizio contenitore di Azure</span><span class="sxs-lookup"><span data-stu-id="db878-228">Running a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service</span></span>](deploy-spring-boot-java-app-on-kubernetes.md)
+* <span data-ttu-id="f507f-228">[Spring Data per l'API SQL Azure Cosmos DB]</span><span class="sxs-lookup"><span data-stu-id="f507f-228">[Spring Data for Azure Cosmos DB SQL API]</span></span>
 
-<span data-ttu-id="db878-229">Per altre informazioni su come usare Azure con Java, vedere [Azure per sviluppatori Java] e [Strumenti Java per Visual Studio Team Services].</span><span class="sxs-lookup"><span data-stu-id="db878-229">For more information about using Azure with Java, see the [Azure for Java Developers] and the [Java Tools for Visual Studio Team Services].</span></span>
+<span data-ttu-id="f507f-229">Per altre informazioni sull'uso delle applicazioni Spring Boot in Azure, vedere gli articoli seguenti:</span><span class="sxs-lookup"><span data-stu-id="f507f-229">For more information about using Spring Boot applications on Azure, see the following articles:</span></span>
 
-<span data-ttu-id="db878-230">**[Spring Framework]** è una soluzione open source che consente agli sviluppatori Java di creare applicazioni di livello enterprise.</span><span class="sxs-lookup"><span data-stu-id="db878-230">The **[Spring Framework]** is an open-source solution that helps Java developers create enterprise-level applications.</span></span> <span data-ttu-id="db878-231">Uno dei progetti più comuni che si basa su questa piattaforma è [Spring Boot], che fornisce un approccio semplificato per la creazione di applicazioni Java autonome.</span><span class="sxs-lookup"><span data-stu-id="db878-231">One of the more-popular projects that is built on top of that platform is [Spring Boot], which provides a simplified approach for creating stand-alone Java applications.</span></span> <span data-ttu-id="db878-232">Per semplificare le operazioni iniziali con Spring Boot per gli sviluppatori, alcuni pacchetti Spring Boot di esempio sono disponibili all'indirizzo <https://github.com/spring-guides/>.</span><span class="sxs-lookup"><span data-stu-id="db878-232">To help developers get started with Spring Boot, several sample Spring Boot packages are available at <https://github.com/spring-guides/>.</span></span> <span data-ttu-id="db878-233">Oltre a consentire di scegliere dall'elenco di progetti Spring Boot di base, **[Spring Initializr]** semplifica le operazioni iniziali degli sviluppatori per la creazione di applicazioni Spring Boot personalizzate.</span><span class="sxs-lookup"><span data-stu-id="db878-233">In addition to choosing from the list of basic Spring Boot projects, the **[Spring Initializr]** helps developers get started with creating custom Spring Boot applications.</span></span>
+* [<span data-ttu-id="f507f-230">Distribuire un'applicazione Spring Boot nel servizio app di Azure</span><span class="sxs-lookup"><span data-stu-id="f507f-230">Deploy a Spring Boot Application to the Azure App Service</span></span>](deploy-spring-boot-java-web-app-on-azure.md)
 
+* [<span data-ttu-id="f507f-231">Eseguire un'applicazione Spring Boot in un cluster Kubernetes nel servizio contenitore di Azure</span><span class="sxs-lookup"><span data-stu-id="f507f-231">Running a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service</span></span>](deploy-spring-boot-java-app-on-kubernetes.md)
+
+<span data-ttu-id="f507f-232">Per altre informazioni sull'uso di Azure con Java, vedere [Azure per sviluppatori Java] e la documentazione relativa all'[uso di Azure DevOps e Java].</span><span class="sxs-lookup"><span data-stu-id="f507f-232">For more information about using Azure with Java, see the [Azure for Java Developers] and the [Working with Azure DevOps and Java].</span></span>
+
+<span data-ttu-id="f507f-233">**[Spring Framework]** è una soluzione open source che consente agli sviluppatori Java di creare applicazioni di livello enterprise.</span><span class="sxs-lookup"><span data-stu-id="f507f-233">The **[Spring Framework]** is an open-source solution that helps Java developers create enterprise-level applications.</span></span> <span data-ttu-id="f507f-234">Uno dei progetti più comuni che si basa su questa piattaforma è [Spring Boot], che fornisce un approccio semplificato per la creazione di applicazioni Java autonome.</span><span class="sxs-lookup"><span data-stu-id="f507f-234">One of the more-popular projects that is built on top of that platform is [Spring Boot], which provides a simplified approach for creating stand-alone Java applications.</span></span> <span data-ttu-id="f507f-235">Per semplificare le operazioni iniziali con Spring Boot per gli sviluppatori, alcuni pacchetti Spring Boot di esempio sono disponibili all'indirizzo <https://github.com/spring-guides/>.</span><span class="sxs-lookup"><span data-stu-id="f507f-235">To help developers get started with Spring Boot, several sample Spring Boot packages are available at <https://github.com/spring-guides/>.</span></span> <span data-ttu-id="f507f-236">Oltre a consentire di scegliere dall'elenco di progetti Spring Boot di base, **[Spring Initializr]** semplifica le operazioni iniziali degli sviluppatori per la creazione di applicazioni Spring Boot personalizzate.</span><span class="sxs-lookup"><span data-stu-id="f507f-236">In addition to choosing from the list of basic Spring Boot projects, the **[Spring Initializr]** helps developers get started with creating custom Spring Boot applications.</span></span>
 
 <!-- URL List -->
 
 [Documentazione di Azure Cosmos DB]: /azure/cosmos-db/
 [Azure Cosmos DB Documentation]: /azure/cosmos-db/
-[Azure per sviluppatori Java]: https://docs.microsoft.com/java/azure/
-[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
-[Build a SQL API app with Java]: https://docs.microsoft.com/azure/cosmos-db/create-sql-api-java 
+[Azure per sviluppatori Java]: /java/azure/
+[Azure for Java Developers]: /java/azure/
+[Build a SQL API app with Java]: /azure/cosmos-db/create-sql-api-java 
 [Spring Data per l'API SQL Azure Cosmos DB]: https://azure.microsoft.com/blog/spring-data-azure-cosmos-db-nosql-data-access-on-azure/
 [Spring Data for Azure Cosmos DB SQL API]: https://azure.microsoft.com/blog/spring-data-azure-cosmos-db-nosql-data-access-on-azure/
 [Spring Data Gremlin Starter]: https://github.com/Microsoft/spring-data-gremlin
 [Account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
 [free Azure account]: https://azure.microsoft.com/pricing/free-trial/
-[Strumenti Java per Visual Studio Team Services]: https://java.visualstudio.com/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Uso di Azure DevOps e Java]: /azure/devops/
+[Working with Azure DevOps and Java]: /azure/devops/
 [vantaggi per i sottoscrittori di MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
