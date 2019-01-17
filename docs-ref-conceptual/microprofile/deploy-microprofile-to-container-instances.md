@@ -1,6 +1,6 @@
 ---
 title: Distribuire un'app MicroProfile nel cloud con Docker e Azure
-description: Informazioni su come distribuire un'app MicroProfile nel cloud usando Docker e Istanze di contenitore di Azure.
+description: Informazioni su come distribuire un'app MicroProfile nel cloud usando Docker e Istanze di Azure Container.
 services: container-instances;container-retistry
 documentationcenter: java
 author: brunoborges
@@ -23,7 +23,7 @@ ms.locfileid: "52338785"
 ---
 # <a name="deploy-a-microprofile-application-to-the-cloud-with-docker-and-azure"></a>Distribuire un'applicazione MicroProfile nel cloud con Docker e Azure
 
-Questo articolo mostra come creare un pacchetto dell'applicazione [MicroProfile.io] in un contenitore Docker ed eseguire l'applicazione in Istanze di contenitore di Azure.
+Questo articolo mostra come creare un pacchetto dell'applicazione [MicroProfile.io] in un contenitore Docker ed eseguire l'applicazione in Istanze di Azure Container.
 
 > [!NOTE]
 >
@@ -76,10 +76,10 @@ Per compilare l'immagine e predisporre l'esecuzione in Azure, è necessario segu
 
 1. Installare l'interfaccia della riga di comando di Azure ed eseguire l'accesso con l'interfaccia stessa
 1. Creare un gruppo di risorse di Azure
-1. Creare un'istanza di Registro contenitori di Azure
+1. Creare un'istanza di Registro Azure Container
 1. Compilare l'immagine Docker
-1. Pubblicare l'immagine Docker nell'istanza di Registro contenitori di Azure creata in precedenza
-1. (Facoltativo) Eseguire la compilazione e la pubblicazione nel Registro contenitori di Azure con un solo comando
+1. Pubblicare l'immagine Docker nell'istanza di Registro Azure Container creata in precedenza
+1. (Facoltativo) Eseguire la compilazione e la pubblicazione in Registro Azure Container con un solo comando
 
 
 #### <a name="set-up-azure-cli"></a>Configurare l'interfaccia della riga di comando di Azure
@@ -127,9 +127,9 @@ Build complete
 Build ID: aa1 was successful after 1m2.674577892s
 ```
 
-#### <a name="deploy-docker-image-from-azure-container-registry-acr-into-container-instances-aci"></a>Distribuire l'immagine Docker dal Registro contenitori di Azure a Istanze di contenitore di Azure
+#### <a name="deploy-docker-image-from-azure-container-registry-acr-into-container-instances-aci"></a>Distribuire l'immagine Docker da Registro Azure Container a Istanze di Azure Container
 
-Ora che l'immagine è disponibile nel Registro contenitori di Azure, eseguire il push di un'istanza di contenitore in Istanze di contenitore di Azure. Prima di tutto occorre tuttavia verificare che sia possibile eseguire l'autenticazione nel Registro contenitori di Azure:
+Ora che l'immagine è disponibile in Registro Azure Container, eseguire il push di un'istanza di contenitore in Istanze di Azure Container. Prima di tutto occorre tuttavia verificare che sia possibile eseguire l'autenticazione in Registro Azure Container:
 
 ```bash
 export ACR_REPO=`az acr show --name $ACR -g $ARG --query loginServer -o tsv`

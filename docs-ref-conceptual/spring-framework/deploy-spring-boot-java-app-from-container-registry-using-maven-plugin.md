@@ -1,6 +1,6 @@
 ---
-title: Come usare il plug-in Maven per App Web di Azure per distribuire un'app Spring Boot del registro contenitori di Azure nel servizio app di Azure
-description: Questa esercitazione illustra in modo dettagliato la procedura per distribuire un'applicazione Spring Boot del registro contenitori di Azure nel servizio app di Azure usando un plug-in Maven.
+title: Come usare il plug-in Maven per App Web di Azure per distribuire un'app Spring Boot di Registro Azure Container nel servizio app di Azure
+description: Questa esercitazione illustra in modo dettagliato la procedura per distribuire un'applicazione Spring Boot di Registro Azure Container nel servizio app di Azure usando un plug-in Maven.
 services: container-registry
 documentationcenter: java
 author: rmcmurray
@@ -21,9 +21,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/03/2019
 ms.locfileid: "53991375"
 ---
-# <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>Come usare il plug-in Maven per App Web di Azure per distribuire un'app Spring Boot del registro contenitori di Azure nel servizio app di Azure
+# <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>Come usare il plug-in Maven per App Web di Azure per distribuire un'app Spring Boot di Registro Azure Container nel servizio app di Azure
 
-Questo articolo illustra come distribuire un'applicazione [Spring Boot] di esempio nel registro contenitori di Azure e quindi usare il plug-in Maven per App Web di Azure per distribuire l'applicazione nel servizio app di Azure.
+Questo articolo illustra come distribuire un'applicazione [Spring Boot] di esempio in Registro Azure Container e quindi usare il plug-in Maven per App Web di Azure per distribuire l'applicazione nel servizio app di Azure.
 
 > [!NOTE]
 > 
@@ -139,7 +139,7 @@ In questa sezione si crea un'entità servizio di Azure che verrà usata dal plug
    >
    >
 
-## <a name="create-an-azure-container-registry-using-the-azure-cli"></a>Creare un registro contenitori di Azure usando l'interfaccia della riga di comando di Azure
+## <a name="create-an-azure-container-registry-using-the-azure-cli"></a>Creare un'istanza di Registro Azure Container usando l'interfaccia della riga di comando di Azure
 
 1. Aprire un prompt dei comandi.
 
@@ -179,7 +179,7 @@ In questa sezione si crea un'entità servizio di Azure che verrà usata dal plug
    * `%ProgramFiles%\apache-maven\3.5.0\conf\settings.xml`
    * `$HOME/.m2/settings.xml`
 
-2. Aggiungere le impostazioni di accesso per il registro contenitori di Azure della sezione precedente di questo articolo alla raccolta `<servers>` nel file *settings.xml*. Ad esempio:
+2. Aggiungere le impostazioni di accesso per Registro Azure Container della sezione precedente di questo articolo alla raccolta `<servers>` nel file *settings.xml*. Ad esempio:
 
    ```xml
    <servers>
@@ -227,11 +227,11 @@ In questa sezione si crea un'entità servizio di Azure che verrà usata dal plug
 
 4. Salvare e chiudere il file *settings.xml*.
 
-## <a name="build-your-docker-container-image-and-push-it-to-your-azure-container-registry"></a>Compilare l'immagine del contenitore Docker ed eseguirne il push nel registro contenitori di Azure
+## <a name="build-your-docker-container-image-and-push-it-to-your-azure-container-registry"></a>Compilare l'immagine del contenitore Docker ed eseguirne il push in Registro Azure Container
 
 1. Passare alla directory del progetto completato per l'applicazione Spring Boot (ad esempio, "*C:\SpringBoot\gs-spring-boot-docker\complete*" o "*/users/robert/SpringBoot/gs-spring-boot-docker/complete*") e aprire il file *pom.xml* con un editor di testo.
 
-2. Aggiornare la raccolta `<properties>` nel file *pom.xml* con il valore del server di accesso per il Registro contenitori di Azure dalla sezione precedente di questa esercitazione. Ad esempio:
+2. Aggiornare la raccolta `<properties>` nel file *pom.xml* con il valore del server di accesso per Registro Azure Container dalla sezione precedente di questa esercitazione. Ad esempio:
 
    ```xml
    <properties>

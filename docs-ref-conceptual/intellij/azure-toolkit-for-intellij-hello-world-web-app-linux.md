@@ -61,9 +61,9 @@ Questo articolo indica i passaggi necessari per creare un'app Web Hello World di
    
    ![Specificare il nome del progetto][project-name]
 
-## <a name="create-an-azure-container-registry-to-use-as-a-private-docker-registry"></a>Creare un registro contenitori di Azure da usare come registro Docker privato
+## <a name="create-an-azure-container-registry-to-use-as-a-private-docker-registry"></a>Creare un'istanza di Registro Azure Container da usare come registro Docker privato
 
-La procedura seguente illustra come usare il portale di Azure per creare un Registro contenitori di Azure.
+La procedura seguente illustra come usare il portale di Azure per creare un'istanza di Registro Azure Container.
 
 > [!NOTE]
 >
@@ -74,21 +74,21 @@ La procedura seguente illustra come usare il portale di Azure per creare un Regi
 
    Dopo aver effettuato l'accesso all'account nel portale di Azure, è possibile seguire la procedura illustrata nell'articolo [Creare un registro per contenitori Docker privati con il portale di Azure], parafrasata per semplicità nei passaggi seguenti.
 
-1. Fare clic sull'icona di menu **+ Nuovo**, su **Contenitori** e quindi su **Registro contenitori di Azure**.
+1. Fare clic sull'icona di menu **+ Nuovo**, su **Contenitori** e quindi su **Registro Azure Container**.
    
-   ![Creare un nuovo Registro contenitori di Azure][AR01]
+   ![Creare una nuova istanza di Registro Azure Container][AR01]
 
-1. Quando viene visualizzata la pagina delle informazioni per il modello di Registro contenitori di Azure, fare clic su **Crea**. 
+1. Quando viene visualizzata la pagina delle informazioni per il modello di Registro Azure Container, fare clic su **Crea**. 
 
-   ![Creare un nuovo Registro contenitori di Azure][AR02]
+   ![Creare una nuova istanza di Registro Azure Container][AR02]
 
 1. Quando viene visualizzata la pagina **Crea registro contenitori**, immettere **Nome registro** e **Gruppo di risorse**, scegliere **Abilita** per **Utente amministratore** e quindi fare clic su **Crea**.
 
-   ![Configurare le impostazioni del Registro contenitori di Azure][AR03]
+   ![Configurare le impostazioni di Registro Azure Container][AR03]
 
 1. Una volta creato il registro contenitori, passare al registro contenitori stesso nel portale di Azure e quindi fare clic su **Chiavi di accesso**. Prendere nota del nome utente e della password per i passaggi successivi.
 
-   ![Chiavi di accesso al Registro contenitori di Azure][AR04]
+   ![Chiavi di accesso a Registro Azure Container][AR04]
 
 ## <a name="deploy-your-web-app-in-a-docker-container"></a>Distribuire l'app Web in un contenitore Docker
 

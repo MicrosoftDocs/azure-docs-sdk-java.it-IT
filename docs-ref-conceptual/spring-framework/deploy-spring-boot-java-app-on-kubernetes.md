@@ -196,7 +196,7 @@ I valori `id` e `username` corrispondono al nome del registro. Usare il valore `
 >
 > `docker push wingtiptoysregistry.azurecr.io/gs-spring-boot-docker`
 
-## <a name="create-a-kubernetes-cluster-on-aks-using-the-azure-cli"></a>Creare un cluster Kubernetes nel servizio contenitore di Azure usando l'interfaccia della riga di comando di Azure
+## <a name="create-a-kubernetes-cluster-on-aks-using-the-azure-cli"></a>Creare un cluster Kubernetes nel servizio Azure Container usando l'interfaccia della riga di comando di Azure
 
 1. Creare un cluster Kubernetes nel servizio Azure Kubernetes. Il comando seguente crea un cluster *kubernetes* nel gruppo di risorse *wingtiptoys-kubernetes*, con *wingtiptoys-akscluster* come nome del cluster e *wingtiptoys-kubernetes* come prefisso DNS:
    ```azurecli

@@ -302,7 +302,7 @@ La procedura seguente illustra come creare un'applicazione Web di Spring Boot e 
 
 3. Passare alla directory di configurazione dell'installazione di Maven (impostazione predefinita: ~/.m2/ or C:\Users\nomeutente\.m2) e aprire il file *settings.xml* con un editor di testo.
 
-4. Aggiungere l'URL, il nome utente e la password di Registro contenitori di Azure a una nuova raccolta `<server>` nel file *settings.xml*.
+4. Aggiungere l'URL, il nome utente e la password di Registro Azure Container a una nuova raccolta `<server>` nel file *settings.xml*.
    I valori `id` e `username` corrispondono al nome del registro. Usare il valore `password` del comando precedente, senza virgolette.
 
    ```xml
@@ -317,7 +317,7 @@ La procedura seguente illustra come creare un'applicazione Web di Spring Boot e 
 
 5. Passare alla directory del progetto completato per l'applicazione Spring Boot (ad esempio, "*C:\SpringBoot\gs-spring-boot-docker\complete*" o "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*") e aprire il file *pom.xml* con un editor di testo.
 
-6. Aggiornare la raccolta `<properties>` nel file *pom.xml* con il valore del server di accesso per il registro contenitori di Azure.
+6. Aggiornare la raccolta `<properties>` nel file *pom.xml* con il valore del server di accesso per Registro Azure Container.
 
    ```xml
    <properties>
@@ -326,7 +326,7 @@ La procedura seguente illustra come creare un'applicazione Web di Spring Boot e 
    </properties>
    ```
 
-7. Aggiornare la raccolta `<plugins>` nel file *pom.xml* in modo che `<plugin>` contenga l'indirizzo del server di accesso e il nome del registro per il registro contenitori di Azure.
+7. Aggiornare la raccolta `<plugins>` nel file *pom.xml* in modo che `<plugin>` contenga l'indirizzo del server di accesso e il nome del registro per Registro Azure Container.
 
    ```xml
    <plugin>

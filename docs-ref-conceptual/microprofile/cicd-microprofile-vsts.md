@@ -77,12 +77,12 @@ In questa attività, Azure DevOps usa un Dockerfile con un'immagine di base di P
 
 3. Selezionare &quot;Docker&quot; nell'elenco di modelli e quindi fare clic sul pulsante <strong>Aggiungi</strong>.
 4. Immettere un nome descrittivo nel campo <strong>Nome visualizzato</strong>.
-5. Verificare che nel menu a discesa per <strong>Tipo di registro contenitori</strong> sia selezionata l'opzione <strong>Registro contenitori di Azure</strong>.
+5. Verificare che nel menu a discesa per <strong>Tipo di registro contenitori</strong> sia selezionata l'opzione <strong>Registro Azure Container</strong>.
 &gt; [!NOTE]
 &gt; &gt;Se si usa l'hub Docker o un altro registro, selezionare invece &quot;Registro contenitori&quot;.  Fare quindi clic sul pulsante &quot;+ Nuovo&quot; per specificare le relative credenziali e informazioni di connessione. Ignorare quindi la sezione Comandi e continuare.
 
 6. Usare il menu a discesa **Sottoscrizione di Azure** per selezionare l'ID sottoscrizione di Azure.  Fare quindi clic sul pulsante **Autorizza**.
-7. Nel menu a discesa **Registro contenitori di Azure** selezionare il nome del registro creato in Azure.
+7. Nel menu a discesa **Registro Azure Container** selezionare il nome del registro creato in Azure.
 8. Verificare che nel menu a discesa **Comando** sia selezionata l'opzione **build**.
 9. Per **Dockerfile** fare clic sull'icona per lo spostamento tra i percorsi accanto alla casella di testo per selezionare il Dockerfile del progetto GitHub.  Fare quindi clic sul pulsante **OK**.
 
@@ -93,7 +93,7 @@ In questa attività, Azure DevOps usa un Dockerfile con un'immagine di base di P
 
 ## <a name="push-docker-image-to-acr"></a>Eseguire il push dell'immagine Docker in Registro Azure Container
 
-In questa attività, Azure DevOps eseguirà il push dell'immagine Docker nel registro contenitori di Azure,  che verrà usato per eseguire l'applicazione per le API MicroProfile come app Web Java in contenitore.
+In questa attività, Azure DevOps eseguirà il push dell'immagine Docker in Registro Azure Container,  che verrà usato per eseguire l'applicazione per le API MicroProfile come app Web Java in contenitore.
 
 1. Dato che si usa Docker in Azure DevOps, creare un nuovo modello Docker ripetendo i passaggi da 1 a 7 riportati sopra nella sezione **Creare un'immagine di compilazione Docker**.
 2. Selezionare **push** nel menu a discesa **Comando**.

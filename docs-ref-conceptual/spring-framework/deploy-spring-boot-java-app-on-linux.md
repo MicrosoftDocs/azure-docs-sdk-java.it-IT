@@ -87,9 +87,9 @@ I passaggi seguenti illustrano i passaggi necessari per creare una semplice appl
 
    ![Esplorare l'app di esempio in locale][SB01]
 
-## <a name="create-an-azure-container-registry-to-use-as-a-private-docker-registry"></a>Creare un Registro contenitori di Azure da usare come registro Docker privato
+## <a name="create-an-azure-container-registry-to-use-as-a-private-docker-registry"></a>Creare un'istanza di Registro Azure Container da usare come registro Docker privato
 
-La procedura seguente illustra come usare il portale di Azure per creare un Registro contenitori di Azure.
+La procedura seguente illustra come usare il portale di Azure per creare un'istanza di Registro Azure Container.
 
 > [!NOTE]
 >
@@ -100,27 +100,27 @@ La procedura seguente illustra come usare il portale di Azure per creare un Regi
 
    Dopo aver effettuato l'accesso all'account nel portale di Azure, è possibile seguire la procedura illustrata nell'articolo [Creare un registro per contenitori Docker privati con il portale di Azure], parafrasata per semplicità nei passaggi seguenti.
 
-1. Fare clic sull'icona di menu **+ Nuovo**, su **Contenitori** e quindi su **Registro contenitori di Azure**.
+1. Fare clic sull'icona di menu **+ Nuovo**, su **Contenitori** e quindi su **Registro Azure Container**.
    
-   ![Creare un nuovo Registro contenitori di Azure][AR01]
+   ![Creare una nuova istanza di Registro Azure Container][AR01]
 
-1. Quando viene visualizzata la pagina delle informazioni per il modello di Registro contenitori di Azure, fare clic su **Crea**. 
+1. Quando viene visualizzata la pagina delle informazioni per il modello di Registro Azure Container, fare clic su **Crea**. 
 
-   ![Creare un nuovo Registro contenitori di Azure][AR02]
+   ![Creare una nuova istanza di Registro Azure Container][AR02]
 
 1. Quando viene visualizzata la pagina **Crea registro contenitori**, immettere **Nome registro** e **Gruppo di risorse**, scegliere **Abilita** per **Utente amministratore** e quindi fare clic su **Crea**.
 
-   ![Configurare le impostazioni del Registro contenitori di Azure][AR03]
+   ![Configurare le impostazioni di Registro Azure Container][AR03]
 
 1. Una volta creato il registro contenitori, passare al registro contenitori stesso nel portale di Azure e quindi fare clic su **Chiavi di accesso**. Prendere nota del nome utente e della password per i passaggi successivi.
 
-   ![Chiavi di accesso al Registro contenitori di Azure][AR04]
+   ![Chiavi di accesso a Registro Azure Container][AR04]
 
-## <a name="configure-maven-to-use-your-azure-container-registry-access-keys"></a>Configurare Maven per l'uso delle chiavi di accesso del Registro contenitori di Azure
+## <a name="configure-maven-to-use-your-azure-container-registry-access-keys"></a>Configurare Maven per l'uso delle chiavi di accesso di Registro Azure Container
 
 1. Passare alla directory di configurazione dell'installazione di Maven e aprire il file *settings.xml* con un editor di testo.
 
-1. Aggiungere le impostazioni di accesso al Registro contenitori di Azure dalla sezione precedente di questa esercitazione alla raccolta `<servers>` nel file *settings.xml* file. Ad esempio:
+1. Aggiungere le impostazioni di accesso a Registro Azure Container dalla sezione precedente di questa esercitazione alla raccolta `<servers>` nel file *settings.xml* file. Ad esempio:
 
    ```xml
    <servers>
@@ -134,7 +134,7 @@ La procedura seguente illustra come usare il portale di Azure per creare un Regi
 
 1. Passare alla directory del progetto completato per l'applicazione Spring Boot (ad esempio "*C:\SpringBoot\gs-spring-boot-docker\complete*" o "*/users/robert/SpringBoot/gs-spring-boot-docker/complete*") e aprire il file *pom.xml* con un editor di testo.
 
-1. Aggiornare la raccolta `<properties>` nel file *pom.xml* con il valore del server di accesso per il Registro contenitori di Azure dalla sezione precedente di questa esercitazione. Ad esempio:
+1. Aggiornare la raccolta `<properties>` nel file *pom.xml* con il valore del server di accesso per Registro Azure Container dalla sezione precedente di questa esercitazione. Ad esempio:
 
    ```xml
    <properties>
@@ -143,7 +143,7 @@ La procedura seguente illustra come usare il portale di Azure per creare un Regi
    </properties>
    ```
 
-1. Aggiornare la raccolta `<plugins>` nel file *pom.xml* in modo che `<plugin>` contenga l'indirizzo del server di accesso e il nome del registro per il Registro contenitori di Azure dalla sezione precedente di questa esercitazione. Ad esempio: 
+1. Aggiornare la raccolta `<plugins>` nel file *pom.xml* in modo che `<plugin>` contenga l'indirizzo del server di accesso e il nome del registro per Registro Azure Container dalla sezione precedente di questa esercitazione. Ad esempio: 
 
    ```xml
    <plugin>
@@ -166,7 +166,7 @@ La procedura seguente illustra come usare il portale di Azure per creare un Regi
    </plugin>
    ```
 
-1. Passare alla directory del progetto completato per l'applicazione Spring Boot ed eseguire il comando seguente per ricompilare l'applicazione ed effettuare il push del contenitore nel Registro contenitori di Azure:
+1. Passare alla directory del progetto completato per l'applicazione Spring Boot ed eseguire il comando seguente per ricompilare l'applicazione ed effettuare il push del contenitore in Registro Azure Container:
 
    ```
    mvn package docker:build -DpushImage 
