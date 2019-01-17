@@ -36,7 +36,7 @@ Il processo di inserimento in un contenitore di Azure DevOps verrà avviato comp
 - Copiare e salvare l'URL GIT da [GitHub](https://github.com/Azure-Samples/microprofile-hello-azure)
 - Eseguire la registrazione o l'accesso all'account [Azure DevOps](https://dev.azure.com)
 - Creare un nuovo [progetto DevOps di Azure](https://docs.microsoft.com/en-us/vsts/organizations/projects/create-project?view=vsts&tabs=new-nav) e usare l'URL GIT precedente per **importare un repository**
-- Creare un [registro contenitori di Azure](https://azure.microsoft.com/en-us/services/container-registry)
+- Creare un [Registro Azure Container](https://azure.microsoft.com/en-us/services/container-registry)
 - Creare un'app web per contenitori di Azure
   > [!NOTE]
   >
@@ -91,7 +91,7 @@ In questa attività, Azure DevOps usa un Dockerfile con un'immagine di base di P
 10. In **Nome immagine** selezionare la casella di controllo **Includi tag latest**. 
 11. Usare il menu a discesa **Salva e accoda** per selezionare l'opzione **Salva**.
 
-## <a name="push-docker-image-to-acr"></a>Eseguire il push dell'immagine Docker in Registro contenitori di Azure
+## <a name="push-docker-image-to-acr"></a>Eseguire il push dell'immagine Docker in Registro Azure Container
 
 In questa attività, Azure DevOps eseguirà il push dell'immagine Docker nel registro contenitori di Azure,  che verrà usato per eseguire l'applicazione per le API MicroProfile come app Web Java in contenitore.
 

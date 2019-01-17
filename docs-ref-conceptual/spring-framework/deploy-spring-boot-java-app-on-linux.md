@@ -1,5 +1,5 @@
 ---
-title: Distribuire un'app Web Spring Boot su Linux nel servizio contenitore di Azure
+title: Distribuire un'app Web Spring Boot su Linux nel servizio Azure Container
 description: Questa esercitazione illustra in modo dettagliato la procedura per la distribuzione di un'applicazione Spring Boot come app Web Linux in Microsoft Azure.
 services: container-service
 documentationcenter: java
@@ -22,9 +22,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/03/2019
 ms.locfileid: "53991505"
 ---
-# <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>Distribuire un'applicazione Spring Boot in Linux nel servizio contenitore di Azure
+# <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>Distribuire un'applicazione Spring Boot in Linux nel servizio Azure Container
 
-Questa esercitazione illustra l'uso di [Docker] per sviluppare e distribuire un'applicazione [Spring Boot] in un host Linux nel [servizio contenitore di Azure].
+Questa esercitazione illustra l'uso di [Docker] per sviluppare e distribuire un'applicazione [Spring Boot] in un host Linux nel [Servizio contenitore di Azure].
 
 ## <a name="prerequisites"></a>Prerequisiti
 

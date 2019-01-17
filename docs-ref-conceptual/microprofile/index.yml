@@ -33,7 +33,7 @@ sections:
     items:
     - image:
         src: https://docs.microsoft.com/en-us/azure/media/index/ContainerInstances.svg
-      text: Eseguire la distribuzione in Istanze di contenitore di Azure
+      text: Eseguire la distribuzione in Istanze di Azure Container
       href: deploy-microprofile-to-container-instances.md
     - image:
         src: https://docs.microsoft.com/en-us/azure/media/index/AppService.svg

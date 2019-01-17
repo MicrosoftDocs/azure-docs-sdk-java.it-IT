@@ -6,7 +6,7 @@ items:
     href: https://github.com/Azure/azure-microprofile
   - name: Esercitazioni
     items:
-    - name: Eseguire la distribuzione in Istanze di contenitore di Azure
+    - name: Eseguire la distribuzione in Istanze di Azure Container
       href: deploy-microprofile-to-container-instances.md
     - name: Eseguire la distribuzione in app Web di Azure
       href: deploy-microprofile-to-web-app-for-containers.md

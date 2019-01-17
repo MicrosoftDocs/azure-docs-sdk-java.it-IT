@@ -25,7 +25,7 @@ ms.locfileid: "53991605"
 
 **[Fabric8]**  è una soluzione open source basata su  **[Kubernetes]** che consente agli sviluppatori di creare applicazioni in contenitori Linux.
 
-Questa esercitazione illustra l'uso del plug-in Fabric8 per Maven per sviluppare e distribuire un'applicazione in un host Linux nel [servizio contenitore di Azure].
+Questa esercitazione illustra l'uso del plug-in Fabric8 per Maven per sviluppare e distribuire un'applicazione in un host Linux nel [Servizio contenitore di Azure].
 
 ## <a name="prerequisites"></a>Prerequisiti
 
