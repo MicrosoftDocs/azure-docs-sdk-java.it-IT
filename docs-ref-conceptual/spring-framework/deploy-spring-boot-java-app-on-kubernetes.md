@@ -1,5 +1,5 @@
 ---
-title: Distribuire un'app Spring Boot in Kubernetes nel servizio Kubernetes di Azure
+title: Distribuire un'app Spring Boot in Kubernetes nel servizio Azure Kubernetes
 description: Questa esercitazione illustra in modo dettagliato la procedura per la distribuzione di un'applicazione Spring Boot in un cluster Kubernetes in Microsoft Azure.
 services: container-service
 documentationcenter: java
@@ -22,7 +22,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/03/2019
 ms.locfileid: "53991475"
 ---
-# <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Distribuire un'applicazione Spring Boot in un cluster Kubernetes nel servizio Kubernetes di Azure
+# <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Distribuire un'applicazione Spring Boot in un cluster Kubernetes nel servizio Azure Kubernetes
 
 **[Kubernetes]** e **[Docker]** sono soluzioni open source che consentono agli sviluppatori di automatizzare la distribuzione, il ridimensionamento e la gestione delle applicazioni eseguite in contenitori.
 
@@ -198,14 +198,14 @@ I valori `id` e `username` corrispondono al nome del registro. Usare il valore `
 
 ## <a name="create-a-kubernetes-cluster-on-aks-using-the-azure-cli"></a>Creare un cluster Kubernetes nel servizio contenitore di Azure usando l'interfaccia della riga di comando di Azure
 
-1. Creare un cluster Kubernetes nel servizio Kubernetes di Azure. Il comando seguente crea un cluster *kubernetes* nel gruppo di risorse *wingtiptoys-kubernetes*, con *wingtiptoys-akscluster* come nome del cluster e *wingtiptoys-kubernetes* come prefisso DNS:
+1. Creare un cluster Kubernetes nel servizio Azure Kubernetes. Il comando seguente crea un cluster *kubernetes* nel gruppo di risorse *wingtiptoys-kubernetes*, con *wingtiptoys-akscluster* come nome del cluster e *wingtiptoys-kubernetes* come prefisso DNS:
    ```azurecli
    az aks create --resource-group=wingtiptoys-kubernetes --name=wingtiptoys-akscluster \ 
     --dns-name-prefix=wingtiptoys-kubernetes --generate-ssh-keys
    ```
    Il completamento di questo comando può richiedere alcuni minuti.
 
-1. Quando si usa Registro contenitori di Azure (ACR) con il servizio Kubernetes di Azure (AKS), è necessario definire un meccanismo di autenticazione. Seguire la procedura descritta in [Eseguire l'autenticazione con Registro contenitori di Azure dal servizio Kubernetes di Azure] per concedere al servizio Kubernetes di Azure l'accesso a Registro contenitori di Azure.
+1. Quando si usa Registro Azure Container con il servizio Azure Kubernetes, è necessario definire un meccanismo di autenticazione. Seguire la procedura descritta in [Eseguire l'autenticazione con Registro contenitori di Azure dal servizio Kubernetes di Azure] per concedere al servizio Azure Kubernetes l'accesso a Registro Azure Container.
 
 
 1. Installare `kubectl` usando l'interfaccia della riga di comando di Azure. È possibile che gli utenti Linux debbano aggiungere al comando il prefisso `sudo`, perché distribuisce l'interfaccia della riga di comando di Kubernetes in `/usr/local/bin`.
