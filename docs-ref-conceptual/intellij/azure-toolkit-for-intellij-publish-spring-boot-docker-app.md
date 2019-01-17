@@ -33,7 +33,7 @@ Questa esercitazione illustra i passaggi per distribuire un'applicazione Spring 
 
 ## <a name="clone-the-default-spring-boot-docker-repo"></a>Clonare il repository predefinito per Docker Spring Boot
 
-I passaggi seguenti illustrano la clonazione del repository Docker Spring Boot tramite IntelliJ. Se si intende usare una riga di comando, vedere [Distribuire un'applicazione Spring Boot in Linux nel servizio contenitore di Azure][Deploy Spring Boot on Linux in AKS].
+I passaggi seguenti illustrano la clonazione del repository Docker Spring Boot tramite IntelliJ. Se si intende usare una riga di comando, vedere [Deploy a Spring Boot application on Linux in Azure Container Service][Deploy Spring Boot on Linux in AKS] (Distribuire un'applicazione Spring Boot in Linux nel servizio Azure Container).
 
 1. Aprire IntelliJ.
 

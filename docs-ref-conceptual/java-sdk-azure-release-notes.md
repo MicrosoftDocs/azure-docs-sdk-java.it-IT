@@ -39,7 +39,7 @@ Alcune API disponibili come Beta nelle versioni precedenti sono ora disponibili 
 
 Servizio o funzionalità | Disponibile a livello generale | Disponibile come anteprima 
 ---------|---------|---------|-
-Calcolo  | Macchine virtuali ed estensioni di VM, set di scalabilità di macchine virtuali, Managed Disks   | Servizio contenitore di Azure, Registro contenitori di Azure 
+Calcolo  | Macchine virtuali ed estensioni di VM, set di scalabilità di macchine virtuali, Managed Disks   | servizio Azure Container, Registro Azure Container 
 Archiviazione   |  Account di archiviazione       |    Crittografia     
 Database SQL  | Database, firewall, pool elastici              
 Rete    |  Reti virtuali, interfacce di rete, indirizzi IP, tabelle di routing, gruppi di sicurezza di rete, DNS, strumenti di gestione traffico gateway, applicazione  |    Servizi di bilanciamento del carico, peering reti, gateway di rete virtuale, watcher di rete 

@@ -35,7 +35,7 @@ Questa esercitazione illustra i passaggi per distribuire un'applicazione Spring 
 
 ### <a name="import-the-public-repository"></a>Importare il repository pubblico
 
-I passaggi seguenti illustrano la clonazione del repository Docker Spring Boot nel computer locale tramite IntelliJ. Se si intende usare una riga di comando, vedere [Deploy a Spring Boot application on Linux in Azure Container Service][Deploy Spring Boot on Linux in AKS] (Distribuire un'applicazione Spring Boot in Linux nel servizio contenitore di Azure).
+I passaggi seguenti illustrano la clonazione del repository Docker Spring Boot nel computer locale tramite IntelliJ. Se si intende usare una riga di comando, vedere [Deploy a Spring Boot application on Linux in Azure Container Service][Deploy Spring Boot on Linux in AKS] (Distribuire un'applicazione Spring Boot in Linux nel servizio Azure Container).
 
 1. Aprire Eclipse.
 

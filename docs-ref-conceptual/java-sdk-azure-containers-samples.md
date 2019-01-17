@@ -1,6 +1,6 @@
 ---
-title: Esempi Java per il servizio contenitore di Azure
-description: Ottenere codice di esempio per usare il servizio contenitore di Azure dalle app Java.
+title: Esempi Java per il servizio Azure Container
+description: Ottenere codice di esempio per usare il servizio Azure Container dalle app Java.
 keywords: Azure, Java, SDK, API, Kubernetes, contenitori, Docker, servizio contenitore di Azure, registro, immagini
 author: rloutlaw
 ms.author: routlaw
@@ -18,7 +18,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/09/2018
 ms.locfileid: "48893642"
 ---
-# <a name="java-samples-for-azure-container-service"></a>Esempi Java per il servizio contenitore di Azure
+# <a name="java-samples-for-azure-container-service"></a>Esempi Java per il servizio Azure Container
 
 La tabella seguente offre collegamenti a codice sorgente Java che è possibile usare per la creazione e la configurazione di applicazioni eseguite in contenitori.
 
