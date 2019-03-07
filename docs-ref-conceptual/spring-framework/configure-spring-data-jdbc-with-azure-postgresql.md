@@ -13,18 +13,18 @@ ms.devlang: java
 ms.service: postgresql
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 371a8c686f7ad045443328d02a32a4e65af55981
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: 29f3c957dd0ccd754eedef12e3fc01c3484dddf3
+ms.sourcegitcommit: 1c1412ad5d8960975c3fc7fd3d1948152ef651ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53992339"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335394"
 ---
 # <a name="how-to-use-spring-data-jdbc-with-azure-postgresql"></a>Come usare Spring Data JDBC con Azure PostgreSQL
 
 ## <a name="overview"></a>Panoramica
 
-Questo articolo illustra la creazione di un'applicazione di esempio che usa [Spring Data] per archiviare e recuperare le informazioni in un database [PostgreSQL]https://www.postgresql.org/ di Azure con [Java Database Connectivity (JDBC)](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/).
+Questo articolo illustra la creazione di un'applicazione di esempio che usa [Spring Data] per archiviare e recuperare le informazioni in un database [PostgreSQL](https://www.postgresql.org/) di Azure con [Java Database Connectivity (JDBC)](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -54,7 +54,7 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
 1. Immettere le seguenti informazioni:
 
    - **Nome server**: scegliere un nome univoco per il server PostgreSQL. Tale nome verrà usato per creare un nome di dominio completo, ad esempio *wingtiptoyspostgresql.postgres.database.azure.com*.
-   - **Sottoscrizione**: specificare la sottoscrizione di Azure da usare.
+   - **Sottoscrizione** specificare la sottoscrizione di Azure da usare.
    - **Gruppo di risorse**: specificare se creare un nuovo gruppo di risorse o sceglierne uno esistente.
    - **Selezionare l'origine**: per questa esercitazione selezionare `Blank` per creare un nuovo database.
    - **Account di accesso amministratore server**: specificare il nome dell'amministratore del database.
@@ -215,7 +215,7 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
    [{"id":1,"name":"dog","species":"canine"},{"id":2,"name":"cat","species":"feline"}]
    ```
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 In questa esercitazione è stata creata un'applicazione Java di esempio che usa Spring Data per archiviare e recuperare le informazioni in un database PostgreSQL di Azure con JDBC.
 
