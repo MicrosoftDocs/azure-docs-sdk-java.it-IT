@@ -15,18 +15,18 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: 89a7a6900e5e0a544b4dc3fde960f62aeab6ebef
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: 87bbf46fe5b22c4a147d6010d3813334caa774fb
+ms.sourcegitcommit: 1c1412ad5d8960975c3fc7fd3d1948152ef651ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991475"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335414"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Distribuire un'applicazione Spring Boot in un cluster Kubernetes nel servizio Azure Kubernetes
 
 **[Kubernetes]** e **[Docker]** sono soluzioni open source che consentono agli sviluppatori di automatizzare la distribuzione, il ridimensionamento e la gestione delle applicazioni eseguite in contenitori.
 
-Questa esercitazione illustra come combinare queste due diffuse tecnologie open source per sviluppare e distribuire un'applicazione Spring Boot in Microsoft Azure. In particolare, si userà *[Spring Boot]* per lo sviluppo dell'applicazione, *[Kubernetes]* per la distribuzione del contenitore e il [servizio Kubernetes di Azure] per l'hosting dell'applicazione.
+Questa esercitazione illustra come combinare queste due diffuse tecnologie open source per sviluppare e distribuire un'applicazione Spring Boot in Microsoft Azure. In particolare, si userà *[Spring Boot]* per lo sviluppo dell'applicazione, *[Kubernetes]* per la distribuzione del contenitore e il [servizio Azure Kubernetes] per l'hosting dell'applicazione.
 
 ### <a name="prerequisites"></a>Prerequisiti
 
@@ -82,7 +82,7 @@ La procedura seguente illustra come creare un'applicazione Web di Spring Boot e 
 
    ![Esplorare l'app di esempio in locale][SB01]
 
-## <a name="create-an-azure-container-registry-using-the-azure-cli"></a>Creare un registro contenitori di Azure usando l'interfaccia della riga di comando di Azure
+## <a name="create-an-azure-container-registry-using-the-azure-cli"></a>Creare un'istanza di Registro Azure Container usando l'interfaccia della riga di comando di Azure
 
 1. Aprire un prompt dei comandi.
 
@@ -123,7 +123,7 @@ La procedura seguente illustra come creare un'applicazione Web di Spring Boot e 
    }
    ```
 
-1. Aggiungere l'ID e la password del registro contenitori di Azure a una nuova raccolta `<server>` nel file *settings.xml*.
+1. Aggiungere l'ID e la password di Registro Azure Container a una nuova raccolta `<server>` nel file *settings.xml*.
 I valori `id` e `username` corrispondono al nome del registro. Usare il valore `password` del comando precedente, senza virgolette.
 
    ```xml
@@ -138,7 +138,7 @@ I valori `id` e `username` corrispondono al nome del registro. Usare il valore `
 
 1. Passare alla directory del progetto completato per l'applicazione Spring Boot (ad esempio, "*C:\SpringBoot\gs-spring-boot-docker\complete*" o "*/users/robert/SpringBoot/gs-spring-boot-docker/complete*") e aprire il file *pom.xml* con un editor di testo.
 
-1. Aggiornare la raccolta `<properties>` nel file *pom.xml* con il valore del server di accesso per il registro contenitori di Azure.
+1. Aggiornare la raccolta `<properties>` nel file *pom.xml* con il valore del server di accesso per Registro Azure Container.
 
    ```xml
    <properties>
@@ -147,7 +147,7 @@ I valori `id` e `username` corrispondono al nome del registro. Usare il valore `
    </properties>
    ```
 
-1. Aggiornare la raccolta `<plugins>` nel file *pom.xml* in modo che `<plugin>` contenga l'indirizzo del server di accesso e il nome del registro per il registro contenitori di Azure.
+1. Aggiornare la raccolta `<plugins>` nel file *pom.xml* in modo che `<plugin>` contenga l'indirizzo del server di accesso e il nome del registro per Registro Azure Container.
 
    ```xml
    <plugin>
@@ -177,7 +177,7 @@ I valori `id` e `username` corrispondono al nome del registro. Usare il valore `
 1. Passare alla directory del progetto completato per l'applicazione Spring Boot ed eseguire il comando seguente per creare il contenitore Docker ed effettuare il push dell'immagine nel registro:
 
    ```
-   mvn package docker:build -DpushImage
+   mvn package dockerfile:build -DpushImage
    ```
 
 > [!NOTE]
@@ -205,7 +205,7 @@ I valori `id` e `username` corrispondono al nome del registro. Usare il valore `
    ```
    Il completamento di questo comando può richiedere alcuni minuti.
 
-1. Quando si usa Registro Azure Container con il servizio Azure Kubernetes, è necessario definire un meccanismo di autenticazione. Seguire la procedura descritta in [Eseguire l'autenticazione con Registro contenitori di Azure dal servizio Kubernetes di Azure] per concedere al servizio Azure Kubernetes l'accesso a Registro Azure Container.
+1. Quando si usa Registro Azure Container con il servizio Azure Kubernetes, è necessario definire un meccanismo di autenticazione. Seguire la procedura descritta in [Eseguire l'autenticazione con Registro Azure Container dal servizio Azure Kubernetes] per concedere al servizio Azure Kubernetes l'accesso a Registro Azure Container.
 
 
 1. Installare `kubectl` usando l'interfaccia della riga di comando di Azure. È possibile che gli utenti Linux debbano aggiungere al comando il prefisso `sudo`, perché distribuisce l'interfaccia della riga di comando di Kubernetes in `/usr/local/bin`.
@@ -314,7 +314,7 @@ Per altre informazioni su Spring e Azure, passare al centro di documentazione di
 Per altre informazioni sull'uso di Spring Boot in Azure, vedere gli articoli seguenti:
 
 * [Distribuire un'applicazione Spring Boot nel servizio app di Azure](deploy-spring-boot-java-web-app-on-azure.md)
-* [Distribuire un'applicazione Spring Boot in Linux nel servizio contenitore di Azure](deploy-spring-boot-java-app-on-linux.md)
+* [Distribuire un'applicazione Spring Boot in Linux nel servizio Azure Container](deploy-spring-boot-java-app-on-linux.md)
 
 Per altre informazioni sull'uso di Azure con Java, vedere [Azure per sviluppatori Java] e la documentazione relativa all'[uso di Azure DevOps e Java].
 
@@ -328,7 +328,7 @@ I collegamenti seguenti forniscono informazioni aggiuntive sulla creazione di ap
 
 I collegamenti seguenti forniscono informazioni aggiuntive sull'uso di Kubernetes con Azure:
 
-* [Introduzione ai cluster Kubernetes nel servizio Kubernetes di Azure](/azure/aks/intro-kubernetes)
+* [Introduzione ai cluster Kubernetes nel servizio Azure Kubernetes](/azure/aks/intro-kubernetes)
 
 Per altre informazioni sull'uso dell'interfaccia della riga di comando di Kubernetes, vedere la guida dell'utente di **kubectl** all'indirizzo <https://kubernetes.io/docs/user-guide/kubectl/>.
 
@@ -343,7 +343,7 @@ Per altri esempi sull'uso delle immagini personalizzate di Docker con Azure, ved
 <!-- URL List -->
 
 [Interfaccia della riga di comando di Azure]: /cli/azure/overview
-[servizio Kubernetes di Azure]: https://azure.microsoft.com/services/kubernetes-service/
+[Servizio Azure Kubernetes]: https://azure.microsoft.com/services/kubernetes-service/
 [Azure per sviluppatori Java]: /java/azure/
 [Azure portal]: https://portal.azure.com/
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
@@ -367,7 +367,7 @@ Per altri esempi sull'uso delle immagini personalizzate di Docker con Azure, ved
 <!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- Newly added -->
-[Eseguire l'autenticazione con Registro contenitori di Azure dal servizio Kubernetes di Azure]: /azure/container-registry/container-registry-auth-aks/
+[Eseguire l'autenticazione con Registro Azure Container dal servizio Azure Kubernetes]: /azure/container-registry/container-registry-auth-aks/
 [Esercitazioni su Java in Visual Studio Code]: https://code.visualstudio.com/docs/java/java-kubernetes/
 
 <!-- IMG List -->

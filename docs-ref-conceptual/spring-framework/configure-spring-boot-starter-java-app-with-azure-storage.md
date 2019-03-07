@@ -14,12 +14,12 @@ ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: cdd157abdb993517f7c880a7edaff10f0e3d1033
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: a1f35df5939a51fa5ce50c29752226b6c7649a9d
+ms.sourcegitcommit: 1c1412ad5d8960975c3fc7fd3d1948152ef651ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991585"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335384"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Come usare l'utilità di avvio Spring Boot per Archiviazione di Azure
 
@@ -167,8 +167,9 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
        }
      }
    ]
+   ```
 
-1. Specify the GUID for the subscription you want to use with Azure; for example:
+1. Specificare il GUID per la sottoscrizione che si vuole usare con Azure, ad esempio:
 
    ```azurecli
    az account set -s 11111111-1111-1111-1111-111111111111
@@ -347,7 +348,7 @@ In questa sezione si creano le classi Java necessarie per archiviare un BLOB nel
 
      Verrà visualizzato il testo "Hello World" che è stato inserito.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 In questa esercitazione si è creata una nuova applicazione Java con **[Spring Initializr]**, si è aggiunta l'utilità di avvio per Archiviazione di Azure all'applicazione e quindi si è configurata l'applicazione per il caricamento di un BLOB nell'account di archiviazione di Azure.
 

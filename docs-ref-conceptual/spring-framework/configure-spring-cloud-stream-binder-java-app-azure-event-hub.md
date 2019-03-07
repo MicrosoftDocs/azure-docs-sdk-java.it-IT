@@ -14,12 +14,12 @@ ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 98b3dc1243bf293ede121eafd51b041649d165db
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: 9223cc425fcef28369431fa1c7a7b93062a210c2
+ms.sourcegitcommit: 1c1412ad5d8960975c3fc7fd3d1948152ef651ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991425"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335404"
 ---
 # <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>Come creare un'applicazione Spring Cloud Stream Binder con Hub eventi di Azure
 
@@ -143,12 +143,10 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
    ```xml
    <dependency>
       <groupId>com.microsoft.azure</groupId>
-      <artifactId>spring-cloud-azure-eventhub-stream-binder</artifactId>
-      <version>1.0.0.M2</version>
+      <artifactId>spring-cloud-azure-eventhubs-stream-binder</artifactId>
+      <version>1.1.0.RC2</version>
    </dependency>
    ```
-
-   ![Modificare il file pom.xml][SI03]
 
 1. Salvare e chiudere il file *pom.xml*.
 
@@ -197,6 +195,7 @@ I prerequisiti seguenti sono necessari per seguire le procedure disponibili in q
      }
    ]
    ```
+   
 1. Specificare il GUID per la sottoscrizione che si vuole usare con Azure, ad esempio:
 
    ```azurecli
@@ -417,6 +416,7 @@ Per altre informazioni sull'uso di Azure con Java, vedere [Azure per sviluppator
 <!-- URL List -->
 
 [Account Azure gratuito]: https://azure.microsoft.com/pricing/free-trial/
+[Azure per sviluppatori Java]: https://docs.microsoft.com/java/azure/
 [Uso di Azure DevOps e Java]: /azure/devops/
 [vantaggi per i sottoscrittori di MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
