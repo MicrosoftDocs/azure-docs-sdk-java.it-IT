@@ -1,7 +1,7 @@
 ---
-title: Distribuire un'app Web Spring Boot su Linux nel servizio Azure Container
+title: Distribuire un'app Web Spring Boot nel servizio app di Azure per Container
 description: Questa esercitazione illustra in modo dettagliato la procedura per la distribuzione di un'applicazione Spring Boot come app Web Linux in Microsoft Azure.
-services: container-service
+services: azure app service
 documentationcenter: java
 author: rmcmurray
 manager: mbaldwin
@@ -10,21 +10,21 @@ ms.assetid: ''
 ms.author: robmcm
 ms.date: 12/19/2018
 ms.devlang: java
-ms.service: container-service
+ms.service: azure app service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: aa8fa6d15d868e55b252483993d001d19746244b
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: a9d4bd5a1677078431b5502b276b17cd973cbea0
+ms.sourcegitcommit: a108a82414bd35be896e3c4e7047f5eb7b1518cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991505"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58489659"
 ---
-# <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>Distribuire un'applicazione Spring Boot in Linux nel servizio Azure Container
+# <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Distribuire un'applicazione Web Spring Boot nel servizio app di Azure per Container
 
-Questa esercitazione illustra l'uso di [Docker] per sviluppare e distribuire un'applicazione [Spring Boot] in un host Linux nel [Servizio contenitore di Azure].
+Questa esercitazione illustra l'uso di [Docker] per distribuire l'applicazione [Spring Boot] in contenitori e distribuire l'immagine Docker in un host Linux nel [servizio app di Azure](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -273,7 +273,7 @@ Per altre informazioni su Spring e Azure, passare al centro di documentazione di
 Per altre informazioni sull'uso delle applicazioni Spring Boot in Azure, vedere gli articoli seguenti:
 
 * [Distribuire un'applicazione Spring Boot nel servizio app di Azure](deploy-spring-boot-java-web-app-on-azure.md)
-* [Distribuire un'applicazione Spring Boot in un cluster Kubernetes nel servizio contenitore di Azure](deploy-spring-boot-java-app-on-kubernetes.md)
+* [Distribuire un'applicazione Spring Boot in un cluster Kubernetes nel servizio Azure Container](deploy-spring-boot-java-app-on-kubernetes.md)
 
 Per altre informazioni sull'uso di Azure con Java, vedere [Azure per sviluppatori Java] e la documentazione relativa all'[uso di Azure DevOps e Java].
 
@@ -288,7 +288,7 @@ Per altri esempi sull'uso delle immagini personalizzate di Docker con Azure, ved
 <!-- URL List -->
 
 [Interfaccia della riga di comando di Azure]: /cli/azure/overview
-[Servizio contenitore di Azure]: https://azure.microsoft.com/services/container-service/
+[Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
 [Azure per sviluppatori Java]: /java/azure/
 [Portale di Azure]: https://portal.azure.com/
 [Creare un registro per contenitori Docker privati con il portale di Azure]: /azure/container-registry/container-registry-get-started-portal
