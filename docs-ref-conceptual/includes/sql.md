@@ -1,7 +1,15 @@
-<span data-ttu-id="a7066-101">[Configurare il database SQL di Azure con l'API di gestione][1] </span><span class="sxs-lookup"><span data-stu-id="a7066-101">[Configure Azure SQL Database with the management API][1] </span></span>  
-<span data-ttu-id="a7066-102">[Distribuire il database SQL con tecnologia WordPress][4] </span><span class="sxs-lookup"><span data-stu-id="a7066-102">[Deploy WordPress powered by SQL Database][4] </span></span>  
-<span data-ttu-id="a7066-103">[Ridimensionare il database SQL in più aree di Azure][2] </span><span class="sxs-lookup"><span data-stu-id="a7066-103">[Scale SQL Database across multiple Azure regions][2] </span></span>  
-<span data-ttu-id="a7066-104">[Gestire carichi di lavoro condivisi dei database SQL con pool elastici][3]</span><span class="sxs-lookup"><span data-stu-id="a7066-104">[Manage shared SQL database workloads with elastic pools][3]</span></span>
+---
+ms.openlocfilehash: 7b344fcc60c89af1867f65abe8c22e56d00de1d8
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61593389"
+---
+<span data-ttu-id="fc27a-101">[Configurare il database SQL di Azure con l'API di gestione][1] </span><span class="sxs-lookup"><span data-stu-id="fc27a-101">[Configure Azure SQL Database with the management API][1] </span></span>  
+<span data-ttu-id="fc27a-102">[Distribuire il database SQL con tecnologia WordPress][4] </span><span class="sxs-lookup"><span data-stu-id="fc27a-102">[Deploy WordPress powered by SQL Database][4] </span></span>  
+<span data-ttu-id="fc27a-103">[Ridimensionare il database SQL in più aree di Azure][2] </span><span class="sxs-lookup"><span data-stu-id="fc27a-103">[Scale SQL Database across multiple Azure regions][2] </span></span>  
+<span data-ttu-id="fc27a-104">[Gestire carichi di lavoro condivisi dei database SQL con pool elastici][3]</span><span class="sxs-lookup"><span data-stu-id="fc27a-104">[Manage shared SQL database workloads with elastic pools][3]</span></span>
 
 [1]: https://github.com/Azure-Samples/sql-database-java-manage-db
 [2]: https://github.com/Azure-Samples/sql-database-java-manage-sql-databases-across-regions
