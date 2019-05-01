@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 8d8ca00d6707927c0664908f1e79deddf63d80d7
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61592649"
+---
 |  |  |
 |---------|---------|
 | [Connettersi ai dati ed eseguire query dal database SQL di Azure usando JDBC][4] | Configurare un database di esempio e quindi eseguire comandi di selezione, inserimento, aggiornamento ed eliminazione. |

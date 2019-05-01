@@ -10,12 +10,12 @@ ms.devlang: java
 ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
-ms.openlocfilehash: 9ec0cf3083b8659fa850b798ca0ecf18b2757234
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 59d2601ef21b91a364887fe0548cb95023c79b5e
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61592686"
 ---
 # <a name="manage-azure-sql-databases-in-elastic-pools-from-your-java-applications"></a>Gestire database SQL di Azure nei pool elastici dalle applicazioni Java
 
