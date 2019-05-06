@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: be76733bffa36160d6e366c383672a15374a9996
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 4eb159bef52b384de32ada18937b0b9a47a93afc
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48898921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61590788"
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a>Pubblicare un'app Web come contenitore Docker usando il Toolkit di Azure per Eclipse
 
@@ -64,19 +64,19 @@ I contenitori Docker sono un metodo molto diffuso per la distribuzione di applic
 
 4. Nella finestra **Configure the new virtual machine** (Configura la nuova macchina virtuale) specificare le opzioni seguenti per l'host Docker. La procedura guidata genera automaticamente la maggior parte delle opzioni, ma è possibile modificarle.
 
-   a. **Name** (Nome): immettere un nome univoco per l'host Docker. Questo non è lo stesso nome immagine Docker specificato in precedenza.
+   a. **Nome**: immettere un nome univoco per l'host Docker. Questo non è lo stesso nome immagine Docker specificato in precedenza.
 
-   b. **Subscription** (Sottoscrizione): immettere la sottoscrizione di Azure usata per l'host.
+   b. **Sottoscrizione** immettere la sottoscrizione di Azure usata per l'host.
 
-   c. **Region** (Area): immettere l'area geografica in cui si trova l'host.
+   c. **Area**: immettere l'area geografica in cui si trova l'host.
 
    d. Nella scheda **Host OS and Size** (Sistema operativo e dimensioni host) specificare le opzioni seguenti: 
    * **Host OS** (Sistema operativo host): immettere il sistema operativo della macchina virtuale in cui è presente l'host.
-   * **Size** (Dimensioni): immettere le dimensioni della macchina virtuale per l'host.
+   * **Dimensione**: immettere le dimensioni della macchina virtuale per l'host.
 
    e. Nella scheda **Resource Group** (Gruppo di risorse) specificare le opzioni seguenti: 
    * **New resource group** (Nuovo gruppo di risorse): creare un nuovo gruppo di risorse per l'host.
-   * **Existing resource group** (Gruppo di risorse esistente): immettere un gruppo di risorse dal proprio account Azure.
+   * **Existing resource group** (Gruppo di risorse esistente): immettere un gruppo di risorse esistente dal proprio account Azure.
 
    f. Nella scheda **Network** (Rete) specificare le opzioni seguenti: 
    * **New virtual network** (Nuova rete virtuale): creare una nuova rete virtuale per l'host.
@@ -100,10 +100,10 @@ I contenitori Docker sono un metodo molto diffuso per la distribuzione di applic
     
      * Nella scheda **VM Credentials** (Credenziali VM) scegliere una delle opzioni seguenti per l'accesso a macchine virtuali dell'host di Docker: 
 
-       * **Username** (Nome utente): immettere il nome utente per le credenziali di accesso alla macchina virtuale. 
+       * **Nome utente**: immettere il nome utente per le credenziali di accesso alla macchina virtuale. 
        * **Password** e **Confirm** (Conferma): immettere la password per le credenziali di accesso alla macchina virtuale. 
        * **SSH**: immettere le impostazioni Secure Shell (SSH) per l'host Docker. È possibile scegliere tra le opzioni seguenti: 
-          * **None** (Nessuna): specifica che la macchina virtuale non consentirà connessioni SSH. 
+          * **Nessuna**: specifica che la macchina virtuale non consentirà connessioni SSH. 
           * **Auto-generate** (Genera automaticamente): crea automaticamente le impostazioni necessarie per la connessione tramite SSH. 
           * **Import from directory** (Importa da directory): specifica una directory che contiene un set di impostazioni SSH salvate in precedenza. La directory deve contenere i due file seguenti: 
              * *id_rsa*: contiene l'identificazione RSA per un utente. 
@@ -114,9 +114,9 @@ I contenitori Docker sono un metodo molto diffuso per la distribuzione di applic
      * Nella scheda **Docker Daemon Credentials** (Credenziali daemon Docker) specificare le opzioni seguenti: 
 
        * **Docker Daemon port** (Porta Daemon Docker): immettere la porta TCP univoca per l'host Docker. 
-       * **Sicurezza TLS**: immettere le impostazioni Transport Layer Security per l'host Docker. È possibile scegliere tra le opzioni seguenti: 
-          * **None** (Nessuna): specifica che la macchina virtuale non consentirà connessioni TLS. 
-          * **Auto-generate** (Genera automaticamente): crea automaticamente le impostazioni necessarie per la connessione tramite TLS. 
+       * **TLS Security** (Sicurezza TLS): immettere le impostazioni Transport Layer Security per l'host Docker. È possibile scegliere tra le opzioni seguenti: 
+          * **Nessuna**: specifica che la macchina virtuale non consentirà connessioni TLS. 
+          * **Auto-generate** (Genera automaticamente): crea automaticamente le impostazioni necessarie per la connessione tramite SSH. 
           * **Import from directory** (Importa da directory): specifica una directory che contiene un set di impostazioni TLS salvate in precedenza. In particolare, la directory deve contenere i sei file seguenti: 
              * *ca.pem* e *ca-key.pem*: contengono il certificato e la chiave pubblica per l'Autorità di certificazione TLS. 
              * *cert.pem* e *key.pem*: contengono il certificato client e la chiave pubblica usati per l'autenticazione TLS. 
@@ -139,7 +139,7 @@ I contenitori Docker sono un metodo molto diffuso per la distribuzione di applic
    * **Predefined Docker image** (Immagine Docker predefinita): specifica un'immagine preesistente in Azure. 
 
      >[!NOTE]
-     >L'elenco di immagini Docker in questa casella è costituito da diverse immagini per cui il Toolkit di Azure è stato configurato per l'applicazione automatica delle patch, in modo che l'elemento venga distribuito automaticamente.
+     >L'elenco di immagini Docker in questa casella è costituito da diverse immagini per cui Azure Toolkit è stato configurato per l'applicazione automatica delle patch, in modo che l'elemento venga distribuito automaticamente.
      >
 
    * **Custom Dockerfile** (Dockerfile personalizzato): specifica un Dockerfile salvato in precedenza nel computer locale.
