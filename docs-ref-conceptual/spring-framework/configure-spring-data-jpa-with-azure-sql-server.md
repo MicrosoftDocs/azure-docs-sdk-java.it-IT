@@ -13,12 +13,12 @@ ms.devlang: java
 ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 7119283bec250a4ab0854ba2c29b0906624448e9
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: 02b6eff059c8b7dff1c7473d0460ca44e76f6f2e
+ms.sourcegitcommit: 04cff6e3c6d3a9c15f7d88d5d3c238f0bdc787fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53992334"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64673960"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-sql-database"></a>Come usare Spring Data JPA con un database SQL di Azure
 
@@ -36,7 +36,7 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
 * [Curl](https://curl.haxx.se/) o utilità HTTP simile per testare il funzionamento.
 * Un client [Git](https://git-scm.com/downloads).
 
-## <a name="create-an-azure-sql-satabase"></a>Creare un database SQL di Azure
+## <a name="create-an-azure-sql-database"></a>Creare un database SQL di Azure
 
 ### <a name="create-a-sql-database-server-using-the-azure-portal"></a>Creare un server di database SQL con il portale di Azure
 
@@ -53,7 +53,7 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
 1. Specificare le informazioni seguenti.
 
    - **Nome database**: scegliere un nome univoco per il database SQL, che verrà creato nel server SQL specificato in seguito.
-   - **Sottoscrizione**: specificare la sottoscrizione di Azure da usare.
+   - **Sottoscrizione** specificare la sottoscrizione di Azure da usare.
    - **Gruppo di risorse**: specificare se creare un nuovo gruppo di risorse o sceglierne uno esistente.
    - **Selezionare l'origine**: per questa esercitazione selezionare `Blank database` per creare un nuovo database.
 
@@ -171,7 +171,7 @@ I prerequisiti seguenti sono necessari per completare le procedure disponibili i
    [{"id":1,"name":"dog","species":"canine"},{"id":2,"name":"cat","species":"feline"}]
    ```
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 In questa esercitazione è stata creata un'applicazione Java di esempio che usa Spring Data per archiviare e recuperare le informazioni in un database SQL di Azure con JPA.
 
