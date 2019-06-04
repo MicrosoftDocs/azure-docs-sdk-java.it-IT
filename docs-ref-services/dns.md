@@ -11,38 +11,38 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: dns
-ms.openlocfilehash: 364c51f985b7bf3a8c445cd7e03a5e91a8e589ba
-ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
+ms.openlocfilehash: 90751d2134b218e16415effeb336a62c6c737cb3
+ms.sourcegitcommit: 733115fe0a7b5109b511b4a32490f8264cf91217
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61593436"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626063"
 ---
-# <a name="azure-traffic-manager-libraries-for-java"></a><span data-ttu-id="87221-104">Librerie di Gestione traffico di Azure per Java</span><span class="sxs-lookup"><span data-stu-id="87221-104">Azure Traffic Manager libraries for Java</span></span>
+# <a name="azure-dns-libraries-for-java"></a><span data-ttu-id="2eddd-104">Librerie di DNS di Azure per Java</span><span class="sxs-lookup"><span data-stu-id="2eddd-104">Azure DNS libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="87221-105">Panoramica</span><span class="sxs-lookup"><span data-stu-id="87221-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="2eddd-105">Panoramica</span><span class="sxs-lookup"><span data-stu-id="2eddd-105">Overview</span></span>
 
-<span data-ttu-id="87221-106">[DNS di Azure](/azure/dns/dns-overview) consente di offrire la risoluzione dei nomi di dominio e gestire i record DNS con le credenziali, le API, gli strumenti e la fatturazione usati per gli altri servizi di Azure.</span><span class="sxs-lookup"><span data-stu-id="87221-106">Provide domain name resolution and manage your DNS records using the same credentials, APIs, tools, and billing as your other Azure services with [Azure DNS](/azure/dns/dns-overview).</span></span>
+<span data-ttu-id="2eddd-106">[DNS di Azure](/azure/dns/dns-overview) consente di offrire la risoluzione dei nomi di dominio e gestire i record DNS con le credenziali, le API, gli strumenti e la fatturazione usati per gli altri servizi di Azure.</span><span class="sxs-lookup"><span data-stu-id="2eddd-106">Provide domain name resolution and manage your DNS records using the same credentials, APIs, tools, and billing as your other Azure services with [Azure DNS](/azure/dns/dns-overview).</span></span>
 
-<span data-ttu-id="87221-107">Per iniziare a usare DNS di Azure, vedere [Introduzione a DNS di Azure con l'interfaccia della riga di comando di Azure 2.0](/azure/dns/dns-getstarted-cli).</span><span class="sxs-lookup"><span data-stu-id="87221-107">To get started with Azure DNS, see [Get started with Azure DNS using the Azure CLI 2.0](/azure/dns/dns-getstarted-cli).</span></span>
+<span data-ttu-id="2eddd-107">Per iniziare a usare DNS di Azure, vedere [Introduzione a DNS di Azure con l'interfaccia della riga di comando di Azure 2.0](/azure/dns/dns-getstarted-cli).</span><span class="sxs-lookup"><span data-stu-id="2eddd-107">To get started with Azure DNS, see [Get started with Azure DNS using the Azure CLI 2.0](/azure/dns/dns-getstarted-cli).</span></span>
 
-## <a name="management-api"></a><span data-ttu-id="87221-108">API di gestione</span><span class="sxs-lookup"><span data-stu-id="87221-108">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="2eddd-108">API di gestione</span><span class="sxs-lookup"><span data-stu-id="2eddd-108">Management API</span></span>
 
-<span data-ttu-id="87221-109">Creare zone DNS e aggiungere record alle zone con l'API di gestione.</span><span class="sxs-lookup"><span data-stu-id="87221-109">Create DNS zones and add records to zones with the management API.</span></span>
+<span data-ttu-id="2eddd-109">Creare zone DNS e aggiungere record alle zone con l'API di gestione.</span><span class="sxs-lookup"><span data-stu-id="2eddd-109">Create DNS zones and add records to zones with the management API.</span></span>
 
-<span data-ttu-id="87221-110">[Aggiungere una dipendenza](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) al file `pom.xml` di Maven per usare la libreria client nel progetto.</span><span class="sxs-lookup"><span data-stu-id="87221-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>
+<span data-ttu-id="2eddd-110">[Aggiungere una dipendenza](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) al file `pom.xml` di Maven per usare la libreria client nel progetto.</span><span class="sxs-lookup"><span data-stu-id="2eddd-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>
 
 ```XML
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-dns</artifactId>
-    <version>1.3.0</version>
+    <version>1.22.0</version>
 </dependency>
 ```   
 
-### <a name="example"></a><span data-ttu-id="87221-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="87221-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="2eddd-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="2eddd-111">Example</span></span>
 
-<span data-ttu-id="87221-112">Creare una zona DNS radice e aggiungere un record CNAME `www` in un gruppo di risorse esistente.</span><span class="sxs-lookup"><span data-stu-id="87221-112">Create a root DNS zone and add a `www` CNAME record in an existing resource group.</span></span>
+<span data-ttu-id="2eddd-112">Creare una zona DNS radice e aggiungere un record CNAME `www` in un gruppo di risorse esistente.</span><span class="sxs-lookup"><span data-stu-id="2eddd-112">Create a root DNS zone and add a `www` CNAME record in an existing resource group.</span></span>
 
 ```java
 DnsZone rootDnsZone = azure.dnsZones().define("contoso.com")
@@ -54,12 +54,12 @@ rootDnsZone = rootDnsZone.update()
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="87221-113">Esplorare le API di gestione</span><span class="sxs-lookup"><span data-stu-id="87221-113">Explore the Management APIs</span></span>](/java/api/overview/azure/dns/management)
+> [<span data-ttu-id="2eddd-113">Esplorare le API di gestione</span><span class="sxs-lookup"><span data-stu-id="2eddd-113">Explore the Management APIs</span></span>](/java/api/overview/azure/dns/management)
 
-## <a name="samples"></a><span data-ttu-id="87221-114">Esempi</span><span class="sxs-lookup"><span data-stu-id="87221-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="2eddd-114">Esempi</span><span class="sxs-lookup"><span data-stu-id="2eddd-114">Samples</span></span>
 
-[<span data-ttu-id="87221-115">Ospitare e gestire i domini con DNS di Azure</span><span class="sxs-lookup"><span data-stu-id="87221-115">Host and manage your domains with Azure DNS</span></span>](https://github.com/Azure-Samples/dns-java-host-and-manage-your-domains)
+[<span data-ttu-id="2eddd-115">Ospitare e gestire i domini con DNS di Azure</span><span class="sxs-lookup"><span data-stu-id="2eddd-115">Host and manage your domains with Azure DNS</span></span>](https://github.com/Azure-Samples/dns-java-host-and-manage-your-domains)
 
-<span data-ttu-id="87221-116">Esplorare altri [esempi di codice Java per DNS di Azure](https://azure.microsoft.com/resources/samples/?platform=java&term=dns) disponibili per l'uso nelle app.</span><span class="sxs-lookup"><span data-stu-id="87221-116">Explore more [sample Java code for Azure DNS](https://azure.microsoft.com/resources/samples/?platform=java&term=dns) you can use in your apps.</span></span>
+<span data-ttu-id="2eddd-116">Esplorare altri [esempi di codice Java per DNS di Azure](https://azure.microsoft.com/resources/samples/?platform=java&term=dns) disponibili per l'uso nelle app.</span><span class="sxs-lookup"><span data-stu-id="2eddd-116">Explore more [sample Java code for Azure DNS](https://azure.microsoft.com/resources/samples/?platform=java&term=dns) you can use in your apps.</span></span>
 
 <!---Loc Comment: Please, refer to conversation section to check the issue. Thanks.--->
