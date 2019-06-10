@@ -1,7 +1,8 @@
 ---
-title: Creare un'app Web Hello World per Azure con Eclipse
+title: Creare un'app Web Hello World per Servizio app di Azure con Eclipse
 description: Questa esercitazione descrive come usare il toolkit di Azure per Eclipse per creare un'app Web Hello World per Azure.
 services: app-service
+keywords: java, eclipse, app web, servizio app di azure, hello world, avvio rapido
 documentationcenter: java
 author: selvasingh
 manager: routlaw
@@ -14,38 +15,56 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: c98f966eb17e3fbde877451c8f8fefb21e6bf686
-ms.sourcegitcommit: dca98b953fa3149fb2e6aa49e27e843b6df0c6c2
+ms.openlocfilehash: 7e88298afaf0b4601d85d6063b7096c79e677421
+ms.sourcegitcommit: 733115fe0a7b5109b511b4a32490f8264cf91217
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57786890"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65625925"
 ---
-# <a name="create-a-hello-world-web-app-for-azure-using-eclipse"></a>Creare un'app Web Hello World per Azure con Eclipse
+# <a name="create-a-hello-world-web-app-for-azure-app-service-using-eclipse"></a>Creare un'app Web Hello World per Servizio app di Azure con Eclipse
 
-Questa esercitazione descrive come creare e distribuire un'applicazione Hello World di base in Azure come app Web usando [Azure Toolkit for Eclipse].
+Usando il plug-in open source [Azure Toolkit for Eclipse](https://marketplace.eclipse.org/content/azure-toolkit-eclipse), è possibile creare e distribuire in pochi minuti un'applicazione Hello World di base come app Web in Servizio app di Azure.
 
 > [!NOTE]
 >
-> Per una versione di questo articolo che fa uso di [Azure Toolkit for IntelliJ], vedere [Creare un'app Web Hello World per Azure con IntelliJ][intellij-hello-world].
+> Se si preferisce usare IntelliJ IDEA, vedere l'[esercitazione simile per IntelliJ][intellij-hello-world].
+>
+>[!INCLUDE [quickstarts-free-trial-note](../includes/quickstarts-free-trial-note.md)]
+>
+> Dopo aver completato questa esercitazione, non dimenticare di pulire le risorse. In tal modo, con l'esecuzione di questa guida non si supererà la quota dell'account gratuito.
 >
 
-> [!IMPORTANT]
-> 
-> Azure Toolkit for Eclipse è stato aggiornato ad agosto 2017, introducendo un flusso di lavoro diverso. Questo articolo descrive come creare un'app Web Hello World usando la versione 3.0.7 (o versioni successive) di Azure Toolkit for Eclipse. Se si usa la versione 3.0.6 (o versioni precedenti) del toolkit, è necessario seguire la procedura illustrata in [Creare un'app Web Hello World per Azure con il toolkit legacy per Eclipse][Legacy Version].
-> 
+[!INCLUDE [azure-toolkit-for-intellij-basic-prerequisites](../includes/azure-toolkit-for-eclipse-basic-prerequisites.md)]
 
-Al termine di questa esercitazione, l'applicazione visualizzata in un browser Web avrà un aspetto simile al seguente:
+## <a name="installation-and-sign-in"></a>Installazione e accesso
 
-![Anteprima dell'app Hello World][browse-web-app]
+1. Trascinare il pulsante seguente nell'area di lavoro di Eclipse in esecuzione per installare il plug-in Azure Toolkit for Eclipse ([altre opzioni di installazione](azure-toolkit-for-eclipse-installation.md)).
 
-[!INCLUDE [azure-toolkit-for-eclipse-prerequisites](../includes/azure-toolkit-for-eclipse-prerequisites.md)]
+    [![Trascinare nell'area di lavoro di Eclipse* in esecuzione. *Richiede il client Eclipse Marketplace](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png)](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1919278 "Trascinare nell'area di lavoro di Eclipse* in esecuzione. *Richiede il client Eclipse Marketplace")
 
-## <a name="create-a-new-web-app-project"></a>Creare un nuovo progetto di app Web
+1. Per accedere all'account Azure, fare clic su **Tools** (Strumenti), su **Azure** e quindi su **Sign In** (Accedi).
+   ![Menu di Eclipse per l'accesso ad Azure][I01]
 
-1. Avviare Eclipse e accedere all'account Azure seguendo le istruzioni contenute nell'articolo [Istruzioni di accesso ad Azure per Azure Toolkit for Eclipse][eclipse-sign-in-instructions].
+1. Nella finestra **Azure Sign In** (Accesso ad Azure) selezionare **Device Login** (Accesso dispositivo) e quindi fare clic su **Sign in** (Accedi) ([altre opzioni di accesso](azure-toolkit-for-eclipse-sign-in-instructions.md)).
 
-1. Fare clic su **File**, **New** (Nuovo) e quindi su **Dynamic Web Project** (Progetto Web dinamico). Se **Dynamic Web Project** non è elencato tra i progetti disponibili dopo aver fatto clic su **File** e **New**, fare clic su **File**, **New**, **Project...**, espandere **Web**, fare clic su **Dynamic Web Project** e fare clic su **Next**.
+   ![Finestra di accesso ad Azure con l'accesso dispositivo selezionato][I02]
+
+1. Nella finestra di dialogo **Azure Device Login** (Accesso dispositivo Azure) fare clic su **Copy&Open** (Copia e apri).
+
+   ![Finestra di dialogo di accesso ad Azure][I03]
+
+1. Nel browser incollare il codice dispositivo (copiato facendo clic su **Copy&Open** nell'ultimo passaggio) e quindi fare clic su **Avanti**.
+
+   ![Accesso al dispositivo nel browser][I04]
+
+1. Infine, nella finestra di dialogo **Select Subscriptions** (Seleziona sottoscrizioni) selezionare le sottoscrizioni da usare e quindi fare clic su **OK**.
+
+   ![Finestra di dialogo Seleziona sottoscrizioni][I05]
+
+## <a name="creating-web-app-project"></a>Creazione del progetto di app Web
+
+1. Fare clic su **File**, **New** (Nuovo) e quindi su **Dynamic Web Project** (Progetto Web dinamico). Se **Dynamic Web Project** non è elencato tra i progetti disponibili dopo aver fatto clic su **File** e **New**, fare clic su **File**, **New**, **Project...** , espandere **Web**, fare clic su **Dynamic Web Project** e fare clic su **Next**.
 
    ![Creazione di un nuovo progetto Web dinamico][file-new-dynamic-web-project]
 
@@ -75,7 +94,7 @@ Al termine di questa esercitazione, l'applicazione visualizzata in un browser We
 
 8. Salvare index.jsp.
 
-## <a name="deploy-your-web-app-to-azure"></a>Distribuire l'app Web in Azure
+## <a name="deploying-web-app-to-azure"></a>Distribuzione dell'app Web in Azure
 
 1. Nella visualizzazione Project Explorer (Esplora progetti) di Eclipse fare clic con il pulsante destro del mouse sul progetto e scegliere **Azure**, quindi fare clic su **Publish as Azure Web App** (Pubblica come app Web di Azure).
    
@@ -109,7 +128,11 @@ Al termine di questa esercitazione, l'applicazione visualizzata in un browser We
 
    ![Collegamento all'app Web][browse-web-app]
 
-1. Dopo aver pubblicato l'app Web in Azure, è possibile gestirla facendo clic su di essa con il pulsante destro del mouse e selezionando una delle opzioni del menu di scelta rapida. Ad esempio, è possibile **avviare**, **arrestare** o **eliminare** l'app Web.
+[!INCLUDE [azure-toolkit-for-eclipse-show-azure-explorer](../includes/azure-toolkit-for-eclipse-show-azure-explorer.md)]
+
+## <a name="cleaning-up-resources"></a>Pulizia delle risorse
+
+1. Dopo aver pubblicato l'app Web in Azure, è possibile gestirla facendo clic con il pulsante destro del mouse in Azure Explorer e scegliendo una delle opzioni del menu di scelta rapida. È ad esempio possibile **eliminare** l'app Web per pulire le risorse per l'esercitazione.
 
    ![Gestire il servizio app][manage-app-service]
 
@@ -130,6 +153,11 @@ Per altre informazioni sulla creazione di App Web di Azure, vedere la [Panoramic
 [Legacy Version]: azure-toolkit-for-eclipse-create-hello-world-web-app-legacy-version.md
 
 <!-- IMG List -->
+[I01]: media/azure-toolkit-for-eclipse-sign-in-instructions/I01.png
+[I02]: media/azure-toolkit-for-eclipse-sign-in-instructions/I02.png
+[I03]: media/azure-toolkit-for-eclipse-sign-in-instructions/I03.png
+[I04]: media/azure-toolkit-for-eclipse-sign-in-instructions/I04.png
+[I05]: media/azure-toolkit-for-eclipse-sign-in-instructions/I05.png
 
 [browse-web-app]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/browse-web-app.png
 [file-new-dynamic-web-project]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/file-new-dynamic-web-project.png

@@ -12,12 +12,12 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.openlocfilehash: fdf0334a8796d636a1968943cc34d7ae98d6361c
-ms.sourcegitcommit: c2019ba6da6c7c28b17b5a85f89e49bb5e570ba4
+ms.openlocfilehash: 22389ce7346a1d97c072dcc82162c9286f21f178
+ms.sourcegitcommit: 04d0d92c46399976b58a9dfa107ba644378bf171
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44040259"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65986193"
 ---
 # <a name="get-started-with-cloud-development-using-java-on-azure"></a>Introduzione allo sviluppo per il cloud con Java in Azure
 
@@ -147,23 +147,23 @@ Aggiungere una voce `build` sotto l'elemento `project` di primo livello per usar
 
 ### <a name="install-the-azure-toolkit-for-intellij"></a>Installare Azure Toolkit for IntelliJ
 
-[Azure Toolkit](intellij/azure-toolkit-for-intellij-installation.md) è necessario se si prevede di distribuire app Web o API a livello di codice, ma non viene attualmente usato per altri tipi di sviluppo. Di seguito è riportato un riepilogo della procedura di installazione. Per i passaggi dettagliati, vedere [Installazione di Azure Toolkit for IntelliJ](intellij/azure-toolkit-for-intellij-installation.md).
+[Azure Toolkit](intellij/azure-toolkit-for-intellij-installation.md) è necessario se si prevede di distribuire app Web o API a livello di codice, ma non viene attualmente usato per altri tipi di sviluppo. Di seguito è riportato un riepilogo della procedura di installazione. Per una guida di avvio rapido, vedere [Azure Toolkit for IntelliJ](intellij/azure-toolkit-for-intellij-create-hello-world-web-app.md).
 
-Selezionare il menu **File** e quindi selezionare **Settings** (Impostazioni). 
+- Selezionare il menu **File** e quindi selezionare **Settings** (Impostazioni). 
 
-Selezionare **Browse repositories** (Sfoglia repository), quindi cercare "Azure" e installare **Azure toolkit for Intellij**.
+- Selezionare **Browse repositories** (Sfoglia repository), quindi cercare "Azure" e installare **Azure toolkit for Intellij**.
 
-Riavviare IntelliJ.
+- Riavviare IntelliJ.
 
 ### <a name="install-the-azure-toolkit-for-eclipse"></a>Installare Azure Toolkit for Eclipse
 
-[Azure Toolkit](eclipse/azure-toolkit-for-eclipse.md) è necessario se si prevede di distribuire app Web o API a livello di codice, ma non viene attualmente usato per altri tipi di sviluppo. Di seguito è riportato un riepilogo della procedura di installazione. Per i passaggi dettagliati, vedere [Installazione di Azure Toolkit for Eclipse](eclipse/azure-toolkit-for-eclipse.md).
+[Azure Toolkit](eclipse/azure-toolkit-for-eclipse.md) è necessario se si prevede di distribuire app Web o API a livello di codice, ma non viene attualmente usato per altri tipi di sviluppo. Di seguito è riportato un riepilogo della procedura di installazione. Per una guida di avvio rapido, vedere [Azure Toolkit for Eclipse](eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md).
 
-Dal menu **Help** (?) scegliere **Install New Software** (Installa nuovo software).
+- Dal menu **Help** (?) scegliere **Install New Software** (Installa nuovo software).
 
-Nel campo **Usa:** immettere `http://dl.microsoft.com/eclipse` e premere INVIO.
+- Nel campo **Usa:** immettere `http://dl.microsoft.com/eclipse` e premere INVIO.
 
-Selezionare quindi la casella di controllo accanto ad **Azure toolkit for Java** e deselezionare la casella di controllo **Contact all update sites during install to find required software** (Contatta tutti i siti di aggiornamento durante l'installazione per trovare il software richiesto). Selezionare Next (Avanti).
+- Selezionare quindi la casella di controllo accanto ad **Azure toolkit for Java** e deselezionare la casella di controllo **Contact all update sites during install to find required software** (Contatta tutti i siti di aggiornamento durante l'installazione per trovare il software richiesto). Selezionare Next (Avanti).
 
 ## <a name="create-a-linux-virtual-machine"></a>Creare una macchina virtuale Linux
 

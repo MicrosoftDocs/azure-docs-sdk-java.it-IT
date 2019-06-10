@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: a9d4bd5a1677078431b5502b276b17cd973cbea0
-ms.sourcegitcommit: a108a82414bd35be896e3c4e7047f5eb7b1518cb
+ms.openlocfilehash: 407b852e24ef88d2fb075bd064f1acf2b107ddc1
+ms.sourcegitcommit: 394521c47ac9895d00d9f97535cc9d1e27d08fe9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58489659"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270861"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Distribuire un'applicazione Web Spring Boot nel servizio app di Azure per Container
 
@@ -118,104 +118,86 @@ La procedura seguente illustra come usare il portale di Azure per creare un'ista
 
 ## <a name="configure-maven-to-use-your-azure-container-registry-access-keys"></a>Configurare Maven per l'uso delle chiavi di accesso di Registro Azure Container
 
-1. Passare alla directory di configurazione dell'installazione di Maven e aprire il file *settings.xml* con un editor di testo.
+1. Passare alla directory del progetto completato per l'applicazione Spring Boot (ad esempio "*C:\SpringBoot\gs-spring-boot-docker\complete*" o " */users/robert/SpringBoot/gs-spring-boot-docker/complete*") e aprire il file *pom.xml* con un editor di testo.
 
-1. Aggiungere le impostazioni di accesso a Registro Azure Container dalla sezione precedente di questa esercitazione alla raccolta `<servers>` nel file *settings.xml* file. Ad esempio:
-
-   ```xml
-   <servers>
-      <server>
-         <id>wingtiptoysregistry</id>
-         <username>wingtiptoysregistry</username>
-         <password>AbCdEfGhIjKlMnOpQrStUvWxYz</password>
-      </server>
-   </servers>
-   ```
-
-1. Passare alla directory del progetto completato per l'applicazione Spring Boot (ad esempio "*C:\SpringBoot\gs-spring-boot-docker\complete*" o "*/users/robert/SpringBoot/gs-spring-boot-docker/complete*") e aprire il file *pom.xml* con un editor di testo.
-
-1. Aggiornare la raccolta `<properties>` nel file *pom.xml* con il valore del server di accesso per Registro Azure Container dalla sezione precedente di questa esercitazione. Ad esempio:
+1. Aggiornare la raccolta `<properties>` nel file *pom.xml* con l'ultima versione di [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin), oltre che con il valore del server di accesso e le impostazioni di accesso per Registro Azure Container della sezione precedente di questa esercitazione. Ad esempio:
 
    ```xml
    <properties>
+      <jib-maven-plugin.version>1.2.0</jib-maven-plugin.version>
       <docker.image.prefix>wingtiptoysregistry.azurecr.io</docker.image.prefix>
       <java.version>1.8</java.version>
+      <username>wingtiptoysregistry</username>
+      <password>{put your Azure Container Registry access key here}</password>
    </properties>
    ```
 
-1. Aggiornare la raccolta `<plugins>` nel file *pom.xml* in modo che `<plugin>` contenga l'indirizzo del server di accesso e il nome del registro per Registro Azure Container dalla sezione precedente di questa esercitazione. Ad esempio: 
+1. Aggiungere [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) alla raccolta `<plugins>` nel file *pom.xml*, specificare l'immagine di base in `<from>/<image>` e il nome dell'immagine finale `<to>/<image>`, quindi specificare il nome utente e la password della sezione precedente in `<to>/<auth>`. Ad esempio:
 
    ```xml
    <plugin>
-      <groupId>com.spotify</groupId>
-      <artifactId>docker-maven-plugin</artifactId>
-      <version>0.4.11</version>
-      <configuration>
-         <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-         <dockerDirectory>src/main/docker</dockerDirectory>
-         <resources>
-            <resource>
-               <targetPath>/</targetPath>
-               <directory>${project.build.directory}</directory>
-               <include>${project.build.finalName}.jar</include>
-            </resource>
-         </resources>
-         <serverId>wingtiptoysregistry</serverId>
-         <registryUrl>https://wingtiptoysregistry.azurecr.io</registryUrl>
-      </configuration>
+     <artifactId>jib-maven-plugin</artifactId>
+     <groupId>com.google.cloud.tools</groupId>
+     <version>${jib-maven-plugin.version}</version>
+     <configuration>
+        <from>
+            <image>openjdk:8-jre-alpine</image>
+        </from>
+        <to>
+            <image>${docker.image.prefix}/${project.artifactId}</image>
+            <auth>
+               <username>${username}</username>
+               <password>${password}</password>
+            </auth>
+        </to>
+     </configuration>
    </plugin>
    ```
 
 1. Passare alla directory del progetto completato per l'applicazione Spring Boot ed eseguire il comando seguente per ricompilare l'applicazione ed effettuare il push del contenitore in Registro Azure Container:
 
-   ```
-   mvn package docker:build -DpushImage 
+   ```cmd
+   mvn compile jib:build
    ```
 
 > [!NOTE]
 >
-> Quando si effettua il push del contenitore Docker in Azure, è possibile che venga visualizzato un messaggio di errore simile a uno dei seguenti, anche se il contenitore Docker è stato creato correttamente:
->
-> * `[ERROR] Failed to execute goal com.spotify:docker-maven-plugin:0.4.11:build (default-cli) on project gs-spring-boot-docker: Exception caught: no basic auth credentials`
->
-> * `[ERROR] Failed to execute goal com.spotify:docker-maven-plugin:0.4.11:build (default-cli) on project gs-spring-boot-docker: Exception caught: Incomplete Docker registry authorization credentials. Please provide all of username, password, and email or none.`
->
-> In questo caso, è possibile che sia necessario accedere all'account Azure dalla riga di comando di Docker. Ad esempio:
->
-> `docker login -u wingtiptoysregistry -p "AbCdEfGhIjKlMnOpQrStUvWxYz" wingtiptoysregistry.azurecr.io`
->
-> È quindi possibile effettuare il push del contenitore dalla riga di comando. Ad esempio:
->
-> `docker push wingtiptoysregistry.azurecr.io/gs-spring-boot-docker`
+> Quando si usa Jib per eseguire il push dell'immagine nel Registro Azure Container, l'immagine non rispetterà *Dockerfile*. Per i dettagli, vedere [questo](https://cloudplatform.googleblog.com/2018/07/introducing-jib-build-java-docker-images-better.html) documento.
 >
 
 ## <a name="create-a-web-app-on-linux-on-azure-app-service-using-your-container-image"></a>Creare un'app Web in Linux nel servizio app di Azure usando l'immagine del contenitore
 
 1. Aprire il [portale di Azure] ed effettuare l'accesso.
 
-2. Fare clic sull'icona di menu **+ Nuovo**, su **Web e dispositivi mobili**, quindi su **App Web in Linux**.
+2. Fare clic sull'icona di menu **+ Crea una risorsa**, quindi su **Web** e infine su **App Web per contenitori**.
    
    ![Creare una nuova app Web nel portale di Azure][LX01]
 
 3. Quando viene visualizzata la pagina **App Web in Linux**, immettere le informazioni seguenti:
 
-   a. Immettere un nome univoco per il **Nome app**, ad esempio: "*wingtiptoyslinux*".
+   a. Immettere un nome univoco per **Nome app**, ad esempio "*wingtiptoyslinux*"
 
    b. Scegliere una **Sottoscrizione** dall'elenco a discesa.
 
    c. Selezionare un **Gruppo di risorse** esistente o specificare un nome per creare uno nuovo.
 
-   d. Fare clic su **Configura contenitore** e immettere le informazioni seguenti:
+   d. Scegliere *Linux* come **Sistema operativo**.
 
-   * Scegliere **Registro di sistema privato**.
+   e. Fare clic su **Piano di servizio app/Località**  e scegliere un piano esistente oppure fare clic su **Crea nuovo** per crearne uno nuovo.
 
-   * **Immagine e tag facoltativo**: specificare il nome del contenitore dei passaggi precedenti, ad esempio "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*".
+   f. Fare clic su **Configura contenitore** e immettere le informazioni seguenti:
 
-   * **URL del server**: specificare l'URL del registro dei passaggi precedenti, ad esempio "*<https://wingtiptoysregistry.azurecr.io>*".
+   * Scegliere **Contenitore singolo** e **Registro Azure Container**.
 
-   * **Nome utente di accesso** e **Password**: specificare le credenziali di accesso delle **chiavi di accesso** usate nei passaggi precedenti.
+   * **Registro di sistema**: scegliere il nome del contenitore creato in precedenza, ad esempio "*wingtiptoysregistry*"
+
+   * **Immagine**: scegliere il nome dell'immagine, ad esempio "*gs-spring-boot-docker*"
    
-   e. Dopo aver immesso tutte le informazioni precedenti, fare clic su **OK**.
+   * **Tag**: scegliere il tag per l'immagine, ad esempio "*latest*"
+   
+   * **File di avvio**: lasciare vuoto questo campo perché l'immagine include già un comando di avvio
+   
+   e. Dopo aver immesso tutte queste informazioni, fare clic su **Applica**.
 
    ![Configurare le impostazioni dell'app Web][LX02]
 
@@ -227,13 +209,11 @@ La procedura seguente illustra come usare il portale di Azure per creare un'ista
 >
 > 1. Aprire il [portale di Azure] ed effettuare l'accesso.
 > 
-> 2. Fare clic sull'icona per **Servizi app**. (Vedere l'elemento 1 nell'immagine seguente.)
+> 2. Fare clic sull'icona **Servizi app** e selezionare l'app Web nell'elenco.
 >
-> 3. Selezionare l'app Web dall'elenco. (Elemento 2 nell'immagine seguente.)
+> 4. Fare clic su **Configurazione**. (Elemento 1 nell'immagine seguente.)
 >
-> 4. Fare clic su **Impostazioni applicazione**. (Elemento 3 nell'immagine seguente.)
->
-> 5. Nella sezione **Impostazioni app** aggiungere una nuova variabile di ambiente denominata **PORT** e immettere il numero di porta personalizzato come valore. (Elemento 4 nell'immagine seguente.)
+> 5. Nella sezione **Impostazioni applicazione** aggiungere una nuova impostazione denominata **PORT** e immettere il numero di porta personalizzato come valore. (Elementi 2, 3 e 4 nell'immagine seguente.)
 >
 > 6. Fare clic su **Save**. (Elemento 5 nell'immagine seguente.)
 >
