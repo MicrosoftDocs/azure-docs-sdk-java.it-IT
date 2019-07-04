@@ -11,12 +11,12 @@ ms.date: 12/19/2018
 ms.devlang: java
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: 5df4ca6ae9f307d937d7dfa0f2c1765f2efde1a1
-ms.sourcegitcommit: 733115fe0a7b5109b511b4a32490f8264cf91217
+ms.openlocfilehash: b133290d1f14429cbf36d6ed5a67d27e1a637593
+ms.sourcegitcommit: 599405a9ce892d75073ef0776befa2fa22407b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65625707"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67237604"
 ---
 # <a name="deploy-a-spring-boot-jar-file-web-app-to-azure-app-service-on-linux"></a>Distribuire un'app Web Spring Boot basata su file JAR nel servizio app di Azure in Linux
 
@@ -100,38 +100,79 @@ In questa sezione si configurerà il progetto Spring Boot `pom.xml` in modo che 
    <plugin>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-webapp-maven-plugin</artifactId>
-    <version>1.5.4</version>
-    <configuration>
-      <deploymentType>jar</deploymentType>
-
-      <!-- configure app to run on port 80, required by App Service -->
-      <appSettings>
-        <property> 
-          <name>JAVA_OPTS</name> 
-          <value>-Dserver.port=80</value> 
-        </property> 
-      </appSettings>
-
-      <!-- Web App information -->
-      <resourceGroup>${RESOURCEGROUP_NAME}</resourceGroup>
-      <appName>${WEBAPP_NAME}</appName>
-      <region>${REGION}</region>  
-
-      <!-- Java Runtime Stack for Web App on Linux-->
-      <linuxRuntime>jre8</linuxRuntime>
-    </configuration>
+    <version>1.6.0</version>
    </plugin>
    ```
 
-3. Aggiornare i segnaposto seguenti nella configurazione del plug-in:
+3. È quindi possibile configurare la distribuzione, eseguire il comando maven `mvn azure-webapp:config` nel prompt dei comandi e usare il **numero** scegliere queste opzioni nel prompt:
+    * **OS**: linux  
+    * **javaVersion**: jre8
+    * **runtimeStack**: jre8
 
-| Placeholder | DESCRIZIONE |
-| ----------- | ----------- |
-| `RESOURCEGROUP_NAME` | Nome del nuovo gruppo di risorse in cui creare l'app Web. Inserendo tutte le risorse per un'app in un gruppo è possibile gestirle insieme. Ad esempio, eliminando il gruppo di risorse si eliminano tutte le risorse associate all'app. Aggiornare questo valore con un nuovo nome univoco di gruppo di risorse, ad esempio *TestResources*. Questo nome di gruppo di risorse verrà usato per pulire tutte le risorse di Azure in una sezione successiva. |
-| `WEBAPP_NAME` | Il nome dell'app sarà incluso nel nome host dell'app Web durante la distribuzione in Azure (WEBAPP_NAME.azurewebsites.net). Aggiornare questo valore con un nome univoco per l'app Web di Azure, che ospiterà l'app Java, ad esempio *contoso*. |
-| `REGION` | Un'area di Azure in cui l'app web è ospitata, ad esempio `westus2`. È possibile ottenere un elenco di aree da Cloud Shell o dall’interfaccia della riga di comando utilizzando il comando `az account list-locations`. |
+Quando viene visualizzato il prompt **Confirm (Y/N)** , premere **'y'** per completare la configurazione.
 
-Un elenco completo delle opzioni di configurazione è disponibile nelle [informazioni di riferimento sul plug-in Maven in GitHub](https://github.com/Microsoft/azure-maven-plugins/tree/develop/azure-webapp-maven-plugin).
+```cmd
+~@Azure:~/gs-spring-boot/complete$ mvn azure-webapp:config
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -----------------< org.springframework:gs-spring-boot >-----------------
+[INFO] Building gs-spring-boot 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- azure-webapp-maven-plugin:1.6.0:config (default-cli) @ gs-spring-boot ---
+[WARNING] The plugin may not work if you change the os of an existing webapp.
+Define value for OS(Default: Linux):
+1. linux [*]
+2. windows
+3. docker
+Enter index to use:
+Define value for javaVersion(Default: jre8):
+1. jre8 [*]
+2. java11
+Enter index to use:
+Define value for runtimeStack(Default: TOMCAT 8.5):
+1. TOMCAT 9.0
+2. jre8
+3. TOMCAT 8.5 [*]
+4. WILDFLY 14
+Enter index to use: 2
+Please confirm webapp properties
+AppName : gs-spring-boot-1559091271202
+ResourceGroup : gs-spring-boot-1559091271202-rg
+Region : westeurope
+PricingTier : Premium_P1V2
+OS : Linux
+RuntimeStack : JAVA 8-jre8
+Deploy to slot : false
+Confirm (Y/N)? : Y
+```
+
+4. Aggiungere la sezione `<appSettings>` alla sezione `<configuration>` di `<azure-webapp-maven-plugin>` per essere in ascolto sulla porta *80*.
+
+    ```xml
+   <plugin>
+       <groupId>com.microsoft.azure</groupId>
+       <artifactId>azure-webapp-maven-plugin</artifactId>
+       <version>1.6.0</version>
+       <configuration>
+          <schemaVersion>V2</schemaVersion>
+          <resourceGroup>gs-spring-boot-1559091271202-rg</resourceGroup>
+          <appName>gs-spring-boot-1559091271202</appName>
+          <region>westeurope</region>
+          <pricingTier>P1V2</pricingTier>
+
+          <!-- Begin of App Settings  -->
+          <appSettings>
+             <property>
+                   <name>JAVA_OPTS</name>
+                   <value>-Dserver.port=80</value>
+             </property>
+          </appSettings>
+          <!-- End of App Settings  -->
+          ...
+         </configuration>
+   </plugin>
+   ```
 
 ## <a name="deploy-the-app-to-azure"></a>Distribuire l'app in Azure
 
