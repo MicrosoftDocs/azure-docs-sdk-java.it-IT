@@ -1,15 +1,16 @@
-<span data-ttu-id="6b481-101">Per altre informazioni su Azure Toolkit for Eclipse, vedere i collegamenti seguenti:</span><span class="sxs-lookup"><span data-stu-id="6b481-101">For more information about the Azure Toolkit for Eclipse, see the following links:</span></span> 
+---
+ms.openlocfilehash: 93fd5e752d6b18a0c48e7a2bf9a307dbaf75c25c
+ms.sourcegitcommit: 599405a9ce892d75073ef0776befa2fa22407b4c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67237629"
+---
+<span data-ttu-id="bc8d9-101">Per segnalare bug o richiedere nuove funzionalità, creare problemi nel [repository GitHub](https://github.com/Microsoft/azure-tools-for-java/issues).</span><span class="sxs-lookup"><span data-stu-id="bc8d9-101">To report bugs or request new features, create issues on [our GitHub repository](https://github.com/Microsoft/azure-tools-for-java/issues).</span></span> <span data-ttu-id="bc8d9-102">È anche possibile porre domande su [Stack Overflow con il tag azure-java-tools](https://stackoverflow.com/questions/tagged/azure-java-tools).</span><span class="sxs-lookup"><span data-stu-id="bc8d9-102">Or, ask questions on [Stack Overflow with tag azure-java-tools](https://stackoverflow.com/questions/tagged/azure-java-tools).</span></span>
 
-* [<span data-ttu-id="6b481-102">Azure Toolkit for Eclipse</span><span class="sxs-lookup"><span data-stu-id="6b481-102">Azure Toolkit for Eclipse</span></span>](../eclipse/azure-toolkit-for-eclipse.md) 
-* [<span data-ttu-id="6b481-103">Note sulla versione</span><span class="sxs-lookup"><span data-stu-id="6b481-103">Release Notes</span></span>](https://github.com/Microsoft/azure-tools-for-java/releases) 
-* [<span data-ttu-id="6b481-104">Installare il Toolkit di Azure per Eclipse</span><span class="sxs-lookup"><span data-stu-id="6b481-104">Installing the Azure Toolkit for Eclipse</span></span>](../eclipse/azure-toolkit-for-eclipse-installation.md) 
-* [<span data-ttu-id="6b481-105">Creare un'app Web Hello World per Azure in Eclipse</span><span class="sxs-lookup"><span data-stu-id="6b481-105">Create a Hello World web app for Azure in Eclipse</span></span>](../eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md) 
-* [<span data-ttu-id="6b481-106">Istruzioni di accesso per Azure Toolkit for Eclipse</span><span class="sxs-lookup"><span data-stu-id="6b481-106">Sign-in instructions for the Azure Toolkit for Eclipse</span></span>](../eclipse/azure-toolkit-for-eclipse-sign-in-instructions.md) 
+<span data-ttu-id="bc8d9-103">Per altre informazioni sull'uso di Java con Azure, vedere i collegamenti seguenti:</span><span class="sxs-lookup"><span data-stu-id="bc8d9-103">For more information about using Java with Azure, see the following links:</span></span> 
 
-<span data-ttu-id="6b481-107">Per altre informazioni sull'uso di Java con Azure, vedere i collegamenti seguenti:</span><span class="sxs-lookup"><span data-stu-id="6b481-107">For more information about using Java with Azure, see the following links:</span></span> 
-
-* [<span data-ttu-id="6b481-108">Azure per sviluppatori Java</span><span class="sxs-lookup"><span data-stu-id="6b481-108">Azure for Java Developers</span></span>](https://docs.microsoft.com/java/azure/) 
-* [<span data-ttu-id="6b481-109">Strumenti Java per Visual Studio Team Services</span><span class="sxs-lookup"><span data-stu-id="6b481-109">Java Tools for Visual Studio Team Services</span></span>](/azure/devops/java/)
-* <span data-ttu-id="6b481-110">[Ottenere download e supporto di Java JDK nelle attività di sviluppo per Azure](https://aka.ms/azure-jdks)
-<!-- TODO: Add URLs for Java in VSCode here --></span><span class="sxs-lookup"><span data-stu-id="6b481-110">[Get Java JDK downloads and support when developing for Azure](https://aka.ms/azure-jdks)
-<!-- TODO: Add URLs for Java in VSCode here --></span></span> 
+* [<span data-ttu-id="bc8d9-104">Azure per sviluppatori Java</span><span class="sxs-lookup"><span data-stu-id="bc8d9-104">Azure for Java Developers</span></span>](/java/azure/) 
+* [<span data-ttu-id="bc8d9-105">Java con Azure DevOps Services</span><span class="sxs-lookup"><span data-stu-id="bc8d9-105">Java with Azure DevOps Services</span></span>](/azure/devops/java/)
+* [<span data-ttu-id="bc8d9-106">Ottenere download e supporto di Java JDK nelle attività di sviluppo per Azure</span><span class="sxs-lookup"><span data-stu-id="bc8d9-106">Get Java JDK downloads and support when developing for Azure</span></span>](https://aka.ms/azure-jdks)
+<!-- TODO: Add URLs for Java in VSCode here --> 
