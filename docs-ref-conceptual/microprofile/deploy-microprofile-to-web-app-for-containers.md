@@ -14,36 +14,39 @@ ms.service: container-registry;app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 1eb0e7d7a718a1c106adebbf89011f6e3fa1504e
-ms.sourcegitcommit: c2019ba6da6c7c28b17b5a85f89e49bb5e570ba4
+ms.openlocfilehash: 4ecfbf92bc30bc491c991e30111cce8375da7f1a
+ms.sourcegitcommit: f8faa4a14c714e148c513fd46f119524f3897abf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44040249"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533596"
 ---
 # <a name="deploy-a-java-based-microprofile-service-to-azure-web-app-for-containers"></a>Distribuire un servizio MicroProfile basato su Java in app Web per contenitori di Azure
 
-MicroProfile è un ottimo modo per compilare applicazioni Java estremamente piccole che possono essere rapidamente e facilmente distribuite in servizi come [app Web per contenitori di Azure](https://azure.microsoft.com/services/app-service/containers/). In questa esercitazione verrà creato un semplice microservizio basato su MicroProfile che verrà eseguito in un contenitore Docker, distribuito in un'istanza di [Registro Azure Container](https://azure.microsoft.com/services/container-registry/) e quindi ospitato con app Web per contenitori di Azure.
+MicroProfile è una soluzione ottimale per compilare applicazioni Java estremamente piccole che è possibile distribuire in modo semplice e rapido in servizi come l'[app Web per contenitori di Azure](https://azure.microsoft.com/services/app-service/containers/). In questa esercitazione viene creato un semplice microservizio basato su MicroProfile che viene eseguito in un contenitore Docker, distribuito in un'istanza di [Registro Azure Container](https://azure.microsoft.com/services/container-registry/) e quindi ospitato con l'app Web per contenitori di Azure.
 
 > [!NOTE]
->
-> Questa procedura funziona con qualsiasi implementazione di MicroProfile.io finché l'immagine del contenitore Docker è autoeseguibile, ovvero include il runtime.
+> Questa procedura funziona con qualsiasi implementazione di MicroProfile.io purché l'immagine del contenitore Docker sia autoeseguibile, ovvero includa il runtime.
 
-Più concretamente, questo esempio usa [Payara Micro](https://www.payara.fish/payara_micro) e [MicroProfile 1.3](https://microprofile.io/) per creare un piccolo file WAR Java (5.085 byte nel computer degli autori) e impacchettarlo in un'immagine Docker di circa 174 MB. Questa immagine Docker contiene tutto il necessario per una distribuzione in contenitori di questa app Web.
+In questo esempio si usano [Payara Micro](https://www.payara.fish/payara_micro) e [MicroProfile 1.3](https://microprofile.io/) per creare un file WAR (Web Application Requirement) Java di piccole dimensioni (all'incirca 5.000 byte) e quindi aggiungerlo a un pacchetto in un'immagine Docker di circa 174 MB. L'immagine Docker contiene tutto il necessario per una distribuzione in contenitori dell'app Web.
 
-Data la modalità di funzionamento di Docker, spesso non è necessario distribuire di nuovo l'intera immagine Docker da 174 MB ogni volta che si modifica il codice sorgente dell'applicazione. Docker caricherà infatti solo le differenze, che hanno dimensioni nettamente inferiori. L'esecuzione di una nuova versione di un'applicazione MicroProfile tramite una pipeline di integrazione continua/distribuzione continua è quindi estremamente efficiente e veloce, con una ridotta possibilità di errore e una rapida iterazione dello sviluppo.
+Non è necessario distribuire di nuovo l'intera immagine Docker da 174 MB ogni volta che si modifica il codice sorgente dell'applicazione perché Docker carica solo le differenze, che hanno dimensioni nettamente inferiori. Di conseguenza, l'esecuzione di una nuova versione di un'applicazione MicroProfile tramite una pipeline CI/CD è quindi estremamente efficiente e veloce, con una ridotta possibilità di errore e una rapida iterazione dello sviluppo.
 
-Questa esercitazione inizierà con la creazione e l'esecuzione del codice in locale, quindi il codice verrà distribuito come app Web in Azure. In entrambi i casi, Docker semplificherà e standardizzerà queste attività. Prima di iniziare, verrà creata un'istanza di Registro Azure Container nella quale archiviare i contenitori Docker.
+In questa esercitazione si inizierà con la creazione e l'esecuzione del codice in locale prima di distribuire il codice come app Web in Azure. In entrambe le fasi è possibile usare Docker per semplificare e standardizzare queste attività. Prima di iniziare, verrà creata un'istanza di Registro Azure Container nella quale archiviare i contenitori Docker.
 
-## <a name="creating-an-azure-container-registry"></a>Creazione di un'istanza di Registro Azure Container
+## <a name="create-an-azure-container-registry-instance"></a>Creare un'istanza di Registro Azure Container
 
-L'istanza di Registro Azure Container verrà creata usando il [portale di Azure](http://portal.azure.com), ma sono disponibili alternative come l'interfaccia della riga di comando di Azure. Seguire questa procedura per creare una nuova istanza di Registro Azure Container:
+Oltre al [portale di Azure](http://portal.azure.com) è possibile usare altri metodi per creare l'istanza di Registro Azure Container, ad esempio l'interfaccia della riga di comando di Azure. Per creare una nuova istanza di Registro Azure Container, seguire questa procedura:
 
-1. Accedere al [portale di Azure](http://portal.azure.com) e creare una nuova risorsa di Registro Azure Container. Specificare un nome per il registro. Questo nome dovrà essere impostato come proprietà `docker.registry` in `pom.xml`. Modificare le impostazioni predefinite secondo le esigenze, quindi fare clic su "Crea".
+1. Accedere al [portale di Azure](http://portal.azure.com) e creare una nuova risorsa di Registro Azure Container. Specificare un nome per il registro. Questo nome deve essere impostato come proprietà `docker.registry` nel file *pom.xml*. Modificare le impostazioni predefinite secondo le esigenze, quindi selezionare **Crea**.
 
-1. Quando il registro contenitori diventa disponibile (circa 30 secondi dopo aver fatto clic su "Crea"), fare clic sul registro contenitori, quindi sul collegamento "Chiavi di accesso" nell'area dei menu a sinistra. Qui è necessario abilitare l'impostazione "Utente amministratore" per rendere il registro contenitori accessibile dai computer (per il push dei contenitori Docker) e per consentire l'accesso dall'istanza di app Web per contenitori di Azure che verrà configurata più avanti nell'esercitazione.
+1. Dopo circa 30 secondi, quando l'istanza di Registro Container diventa disponibile, selezionare l'istanza e quindi, nel riquadro sinistro, selezionare il collegamento **Chiavi di accesso**. 
 
-1. Nell'area "Chiavi di accesso" notare i valori `username` e `password` che verranno copiati e incollati nel file Maven globale `settings.xml`. Per altre informazioni sulle impostazioni Maven, vedere il sito Web del [progetto Apache Maven](https://maven.apache.org/settings.html). A titolo di riferimento, di seguito è riportata una versione offuscata del file `${user.home}/.m2/settings.xml` presente nel sistema degli autori:
+    Assicurarsi di abilitare l'impostazione *Utente amministratore* in modo da poter accedere a questa istanza di Registro Container dai computer ed eseguirvi il push dei contenitori Docker, nonché per consentire l'accesso dall'istanza dell'app Web per contenitori di Azure che verrà configurata più avanti.
+
+1. Nel riquadro **Chiavi di accesso** copiare i valori di **nome utente** e **password** e incollarli nel file *settings.xml* globale di Maven. Per altre informazioni sulle impostazioni Maven, visitare il sito Web del [progetto Apache Maven](https://maven.apache.org/settings.html). 
+
+   Come riferimento, ecco un esempio di file *${user.home}/.m2/settings.xml*:
 
     ```xml
     <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
@@ -60,16 +63,19 @@ L'istanza di Registro Azure Container verrà creata usando il [portale di Azure]
     </settings>
     ```
 
-Terminata l'operazione si può passare alla compilazione e all'esecuzione dell'applicazione MicroProfile nell'ambiente locale.
+A questo punto, dopo aver creato l'istanza di Registro Container, si può passare alla compilazione e all'esecuzione dell'applicazione MicroProfile in locale.
 
-## <a name="creating-our-microprofile-application"></a>Creazione dell'applicazione MicroProfile
+## <a name="create-your-microprofile-application"></a>Creare l'applicazione MicroProfile
 
-Questo esempio si basa su un'applicazione di esempio disponibile in GitHub, che verrà clonata per poi esaminarne il codice. Seguire questa procedura per clonare il codice nel computer:
+Questo esempio di codice si basa su un'applicazione di esempio disponibile in GitHub. Per clonare il file nel computer, immettere i comandi seguenti:
 
-1. `git clone https://github.com/Azure-Samples/microprofile-docker-helloworld.git`
-1. `cd microprofile-docker-helloworld`
+```
+git clone https://github.com/Azure-Samples/microprofile-docker-helloworld.git
 
-In questa directory è presente un file `pom.xml` che viene usato per specificare il progetto nel formato usato dallo strumento di compilazione Maven. Questo file può essere modificato in base alle proprie esigenze. In particolare, le proprietà `docker.registry` e `docker.name` devono essere sostituite con i valori `docker.registry` e `docker.name` creati durante la configurazione di Registro Azure Container.
+cd microprofile-docker-helloworld
+```
+
+In questa directory è presente un file *pom.xml* che viene usato per specificare il progetto nel formato usato dallo strumento di compilazione Maven. Questo file può essere modificato in base alle proprie esigenze. In particolare, i valori delle proprietà `docker.registry` e `docker.name` devono essere sostituiti con i valori delle proprietà `docker.registry` e `docker.name` create durante la configurazione dell'istanza di Registro Azure Container.
 
 Un altro file importante presente in questa directory è il documento Dockerfile, riprodotto di seguito:
 
@@ -82,9 +88,9 @@ COPY target/${WAR_FILE} $DEPLOY_DIR
 EXPOSE 8080
 ```
 
-Questo documento Dockerfile crea semplicemente un nuovo contenitore Docker basato sul contenitore Docker Payara Micro ed esegue la copia nel file WAR creato nell'ambito del processo di compilazione. Espone anche la porta 8080 per rendere il servizio accessibile quando è in esecuzione in un contenitore Docker.
+Il documento Dockerfile crea un nuovo contenitore Docker basato sul contenitore Docker Payara Micro e ne esegue la copia nel file WAR creato durante il processo di compilazione. Espone inoltre la porta 8080 in modo che il servizio sia accessibile quando è in esecuzione in un contenitore Docker.
 
-Nella directory `src` è anche presente la classe `Application` riprodotta di seguito:
+Quando si apre la directory *src*, viene individuata la classe `Application` riprodotta di seguito:
 
 ```java
 package com.microsoft.azure.samples.microprofile.docker.helloworld;
@@ -95,9 +101,9 @@ import javax.ws.rs.ApplicationPath;
 public class Application extends javax.ws.rs.core.Application { }
 ```
 
-L'annotazione `@ApplicationPath("/api")` specifica l'endpoint di base per questo microservizio. In altre parole, in tutti gli endpoint `/api` precederà il resto dell'URL necessario per accedere a qualsiasi endpoint REST specifico.
+L'annotazione *@ApplicationPath("/api")* specifica l'endpoint di base per questo microservizio. In altre parole, in tutti gli endpoint l'annotazione */api* precede il resto dell'URL necessario per accedere a qualsiasi endpoint REST specifico.
 
-All'interno del pacchetto `api` è presente una classe denominata `API` che contiene il codice seguente:
+All'interno del pacchetto *api* è presente una classe denominata `API` che contiene il codice seguente:
 
 ```java
 package com.microsoft.azure.samples.microprofile.docker.helloworld.api;
@@ -122,41 +128,44 @@ public class API {
 }
 ```
 
-Con l'uso dell'annotazione `@Path("/helloworld")` è possibile vedere che questo endpoint REST, se in combinazione con il valore `/api` specificato nella classe `Application`, sarà `/api/helloworld`. Quando questo endpoint viene chiamato usando una richiesta HTTP GET, il metodo produrrà testo/HTML e si tratta semplicemente di una stringa "Hello, world!" hardcoded.
+Usando l'annotazione *@Path("/helloworld")* , è possibile vedere che questo endpoint REST, se combinato con l'annotazione */api* specificata nella classe `Application`, sarà */api/helloworld*. Quando si chiama questo endpoint usando una richiesta HTTP GET, il metodo produce testo/HTML e si tratta semplicemente di una stringa "Hello, world!" hardcoded.
 
-È stato così esaminato tutto il codice necessario per creare un microservizio con MicroProfile. Ora è possibile usare Maven per la compilazione, l'inserimento in un contenitore Docker e l'esecuzione nell'ambiente locale. A tale scopo seguire questa procedura:
+Fino a questo punto, in questo articolo è stato esaminato tutto il codice necessario per creare un microservizio con MicroProfile. Ora è possibile usare Maven per la compilazione, l'inserimento in un contenitore Docker e l'esecuzione nell'ambiente locale, eseguendo le operazioni seguenti:
 
-1. Eseguire `mvn clean package` e attendere il termine dell'operazione.
+1. Eseguire `mvn clean package` e attendere il completamento dell'operazione.
 
-1. Eseguire `docker run -it --rm -p 8080:8080 <docker.registry>/<docker.name>:latest`, ad esempio `docker run -it --rm -p 8080:8080 jogilescr.azurecr.io/samples/docker-helloworld:latest`, se `docker.registry` è `jogilescr.azurecr.io` e `docker.name` è `samples/docker-helloworld`.
+1. Eseguire `docker run -it --rm -p 8080:8080 <docker.registry>/<docker.name>:latest`. Ad esempio, *docker run -it --rm -p 8080:8080 jogilescr.azurecr.io/samples/docker-helloworld:latest*, dove *\<docker.registry>* è *jogilescr.azurecr.io* e *\<docker.name>* è *samples/docker-helloworld*.
 
 1. Provare ad accedere a [http://localhost:8080/microprofile/api/helloworld](http://localhost:8080/microprofile/api/helloworld) e [http://localhost:8080/health](http://localhost:8080/health) nel Web browser. Se viene visualizzata la risposta "Hello, world!" prevista (e informazioni relative all'integrità per l'endpoint [/health](http://localhost:8080/health)), l'applicazione MicroProfile è stata distribuita correttamente nel computer locale.
 
-## <a name="pushing-to-the-azure-container-registry"></a>Esecuzione del push in Registro Azure Container
+## <a name="push-the-container-to-the-azure-container-registry-instance"></a>Eseguire il push del contenitore nell'istanza di Registro Azure Container
 
-Ora che è stata compilata ed eseguita l'applicazione MicroProfile nel computer locale, il passo successivo è eseguire il push di questo contenitore nel registro contenitori. In questa esercitazione si usa Registro Azure Container, ma è possibile usare qualsiasi registro contenitori purché il file `pom.xml` venga modificato in modo da puntare al percorso corrispondente.
+Ora che è stata compilata ed eseguita l'applicazione MicroProfile nel computer locale, eseguire il push di questo contenitore nell'istanza di Registro Container. 
 
-1. Eseguire `mvn clean package` per pulire, compilare e creare un'immagine Docker locale.
-2. Eseguire `mvn dockerfile:push` per effettuare il push in Registro Azure Container.
+> [!NOTE]
+> Anche se in questo articolo si usa un'istanza di Registro Azure Container, è possibile usare qualsiasi altra istanza purché il file *pom.xml* venga modificato in modo da puntare al percorso corrispondente.
 
-A questo punto, l'immagine del contenitore Docker è stata caricata in Registro Azure Container, ma non è ancora in esecuzione perché è necessario distribuirla in un'istanza di app Web per contenitori di Azure. Questa operazione verrà eseguita ora.
+1. Per pulire, compilare e creare un'immagine Docker locale, eseguire `mvn clean package`.
+2. Per eseguire il push del contenitore nell'istanza di Registro Azure Container, eseguire `mvn dockerfile:push`.
 
-## <a name="creating-an-azure-web-app-for-containers-instance"></a>Creazione di un'istanza di app Web per contenitori di Azure
+L'immagine del contenitore Docker verrà ora caricata nell'istanza di Registro Azure Container, ma non è ancora in esecuzione. È necessario distribuirla in un'istanza dell'app Web per contenitori di Azure. 
 
-1. Tornare al [portale di Azure](http://portal.azure.com) e creare una nuova istanza di app Web per contenitori, sotto la voce "Web e dispositivi mobili" nel menu. Alcune informazioni utili:
+## <a name="create-an-azure-web-app-for-containers-instance"></a>Creare un'istanza dell'app Web per contenitori di Azure
 
-   1. Il nome specificato qui sarà l'URL pubblico dell'app Web (anche se è possibile aggiungere un dominio personalizzato in seguito), quindi è opportuno scegliere un nome facile da ricordare.
+1. Nel [portale di Azure](http://portal.azure.com), selezionare **Web e dispositivi mobili** nel riquadro sinistro e quindi eseguire le operazioni seguenti:
 
-   1. Quando si passa alla sezione "Configura contenitore" è possibile selezionare "Registro Azure Container" per "Origine immagine", quindi selezionare l'immagine corretta dagli elenchi a discesa.
+   a. Specificare un nome. Il nome diventerà l'URL pubblico dell'app Web, quindi è opportuno scegliere un nome facile da ricordare. Se si preferisce, è possibile aggiungere in seguito un nome di dominio personalizzato.
 
-   1. Non è necessario specificare alcun valore nel campo "File di avvio".
+   b. Nella sezione **Configura contenitore** selezionare **Registro Azure Container** in **Origine immagine** e quindi, nell'elenco a discesa, selezionare l'immagine corretta.
 
-1. Dopo aver creato l'istanza (operazione molto rapida), fare clic su di essa e quindi sulla voce di menu "Impostazioni applicazione". Qui è necessario aggiungere una nuova impostazione applicazione, in cui la chiave è `WEBSITES_PORT` e il valore è `8080`. Si indica così ad Azure quale porta si vuole esporre nel contenitore. Di questa porta verrà eseguito il mapping alla porta 80 esternamente.
+   c. Non è necessario specificare alcun valore nel campo **File di avvio**.
 
-1. Facoltativamente, fare clic sul collegamento "Contenitore Docker" e abilitare "Distribuzione continua" in modo che ogni volta che si aggiorna l'immagine di Registro Azure Container, questa venga aggiornata automaticamente nell'istanza di app Web per contenitori di Azure.
+1. Dopo aver creato l'istanza selezionarla e quindi scegliere **Impostazioni applicazione**. Come valore di **Chiave** immettere **WEBSITES_PORT** e come valore di **Valore** immettere **8080**. Queste impostazioni indicano ad Azure la porta da esporre nel contenitore, nonché il numero di porta (80) per il mapping esterno.
 
-1. Dovrebbe essere possibile accedere alle istanze ospitate in Azure agli indirizzi `http://<appname>.azurewebsites.net/microprofile/api/helloworld` e `http://<appname>.azurewebsites.net/health`.
+1. (Facoltativo) Selezionare il collegamento **Contenitore Docker** e quindi abilitare **Distribuzione continua**. In questo modo ogni volta che si aggiorna l'immagine dell'istanza di Registro Azure Container, questa viene aggiornata automaticamente nell'istanza dell'app Web per contenitori di Azure.
+
+1. A questo punto dovrebbe essere possibile accedere alle istanze ospitate in Azure agli indirizzi `http://<appname>.azurewebsites.net/microprofile/api/helloworld` e `http://<appname>.azurewebsites.net/health`.
 
 ## <a name="summary"></a>Summary
 
-Con questa esercitazione è stato esaminato il processo di creazione di un semplice microservizio basato su MicroProfile, successivamente inserito in un contenitore Docker e quindi eseguito nell'ambiente locale e pubblicato in Azure. L'estensione del microservizio per mettere a disposizione altre funzioni utili non rientra nell'ambito di questa esercitazione. Sono tuttavia disponibili molti consigli ed esercitazioni su MicroProfile in Internet. È consigliabile vedere [MicroProfile.io](https://microprofile.io/) per altri contenuti.
+In questa esercitazione è stato esaminato il processo di creazione di un semplice microservizio basato su MicroProfile, successivamente inserito in un contenitore Docker e quindi eseguito nell'ambiente locale e pubblicato in Azure. È possibile estendere il microservizio per offrire altre funzionalità utili. Per altre informazioni, vedere [MicroProfile.io](https://microprofile.io/).
